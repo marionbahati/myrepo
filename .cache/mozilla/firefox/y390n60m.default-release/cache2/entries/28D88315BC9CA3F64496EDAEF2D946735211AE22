@@ -1,0 +1,312 @@
+// src/main.ts
+import * as __NgCli_bootstrap_1 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_platform-browser.js?v=2c689aab";
+
+// src/app/app.module.ts
+import { NgModule as NgModule2 } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+import { BrowserModule, provideClientHydration } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_platform-browser.js?v=2c689aab";
+
+// src/app/app-routing.module.ts
+import { NgModule } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+import { RouterModule } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_router.js?v=2c689aab";
+import * as i0 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+var routes = [];
+var _AppRoutingModule = class _AppRoutingModule {
+};
+_AppRoutingModule.\u0275fac = function AppRoutingModule_Factory(t) {
+  return new (t || _AppRoutingModule)();
+};
+_AppRoutingModule.\u0275mod = /* @__PURE__ */ i0.\u0275\u0275defineNgModule({ type: _AppRoutingModule });
+_AppRoutingModule.\u0275inj = /* @__PURE__ */ i0.\u0275\u0275defineInjector({ imports: [RouterModule.forRoot(routes), RouterModule] });
+var AppRoutingModule = _AppRoutingModule;
+
+// src/app/app.component.ts
+import { Component, Inject, LOCALE_ID } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+import * as i02 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+import * as i1 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_common.js?v=2c689aab";
+function AppComponent_div_6_Template(rf, ctx) {
+  if (rf & 1) {
+    i02.\u0275\u0275elementStart(0, "div")(1, "a", 4);
+    i02.\u0275\u0275text(2);
+    i02.\u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    const locale_r1 = ctx.$implicit;
+    i02.\u0275\u0275advance();
+    i02.\u0275\u0275propertyInterpolate1("href", "/", locale_r1.localeCode, "/", i02.\u0275\u0275sanitizeUrl);
+    i02.\u0275\u0275advance();
+    i02.\u0275\u0275textInterpolate1(" ", locale_r1.label, " ");
+  }
+}
+var _AppComponent = class _AppComponent {
+  constructor(locale) {
+    this.locale = locale;
+    this.title = "translating";
+    this.url = "(https://stackblitz.com/~/github.com/TheSlimvReal/angular-runtime-translations)";
+    this.languageToggle = this.locale === "en" ? "DE" : "EN";
+    this.locales = [
+      { localeCode: "en-US", label: "English" },
+      { localeCode: "de", label: "Deutsch" }
+    ];
+  }
+};
+_AppComponent.\u0275fac = function AppComponent_Factory(t) {
+  return new (t || _AppComponent)(i02.\u0275\u0275directiveInject(LOCALE_ID));
+};
+_AppComponent.\u0275cmp = /* @__PURE__ */ i02.\u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], decls: 7, vars: 1, consts: () => {
+  let i18n_0;
+  if (false) {
+    const MSG_EXTERNAL_5205052306160815651$$SRC_APP_APP_COMPONENT_TS_0 = goog.getMsg("Trying out new stuff");
+    i18n_0 = MSG_EXTERNAL_5205052306160815651$$SRC_APP_APP_COMPONENT_TS_0;
+  } else {
+    i18n_0 = $localize`Trying out new stuff`;
+  }
+  let i18n_1;
+  if (false) {
+    const MSG_EXTERNAL_3183867941524564763$$SRC_APP_APP_COMPONENT_TS_1 = goog.getMsg("I hope it will work ");
+    i18n_1 = MSG_EXTERNAL_3183867941524564763$$SRC_APP_APP_COMPONENT_TS_1;
+  } else {
+    i18n_1 = $localize`I hope it will work `;
+  }
+  let i18n_2;
+  if (false) {
+    const MSG_EXTERNAL_2676607126198583031$$SRC_APP_APP_COMPONENT_TS_2 = goog.getMsg("Peace");
+    i18n_2 = MSG_EXTERNAL_2676607126198583031$$SRC_APP_APP_COMPONENT_TS_2;
+  } else {
+    i18n_2 = $localize`Peace`;
+  }
+  return [i18n_0, i18n_1, i18n_2, [4, "ngFor", "ngForOf"], [3, "href"]];
+}, template: function AppComponent_Template(rf, ctx) {
+  if (rf & 1) {
+    i02.\u0275\u0275elementStart(0, "h1");
+    i02.\u0275\u0275i18n(1, 0);
+    i02.\u0275\u0275elementEnd();
+    i02.\u0275\u0275elementStart(2, "h2");
+    i02.\u0275\u0275i18n(3, 1);
+    i02.\u0275\u0275elementEnd();
+    i02.\u0275\u0275elementStart(4, "H3");
+    i02.\u0275\u0275i18n(5, 2);
+    i02.\u0275\u0275elementEnd();
+    i02.\u0275\u0275template(6, AppComponent_div_6_Template, 3, 3, "div", 3);
+  }
+  if (rf & 2) {
+    i02.\u0275\u0275advance(6);
+    i02.\u0275\u0275property("ngForOf", ctx.locales);
+  }
+}, dependencies: [i1.NgForOf] });
+var AppComponent = _AppComponent;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && i02.\u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src/app/app.component.ts", lineNumber: 13 });
+})();
+
+// src/app/app.module.ts
+import * as i03 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+var _AppModule = class _AppModule {
+};
+_AppModule.\u0275fac = function AppModule_Factory(t) {
+  return new (t || _AppModule)();
+};
+_AppModule.\u0275mod = /* @__PURE__ */ i03.\u0275\u0275defineNgModule({ type: _AppModule, bootstrap: [AppComponent] });
+_AppModule.\u0275inj = /* @__PURE__ */ i03.\u0275\u0275defineInjector({ providers: [
+  provideClientHydration()
+], imports: [
+  BrowserModule,
+  AppRoutingModule
+] });
+var AppModule = _AppModule;
+
+// src/main.ts
+__NgCli_bootstrap_1.platformBrowser().bootstrapModule(AppModule).catch((err) => console.error(err));
+
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLm1vZHVsZS50cyIsInNyYy9hcHAvYXBwLXJvdXRpbmcubW9kdWxlLnRzIiwic3JjL2FwcC9hcHAuY29tcG9uZW50LnRzIiwic3JjL2FwcC9hcHAuY29tcG9uZW50Lmh0bWwiLCJzcmMvbWFpbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgQnJvd3Nlck1vZHVsZSwgcHJvdmlkZUNsaWVudEh5ZHJhdGlvbiB9IGZyb20gJ0Bhbmd1bGFyL3BsYXRmb3JtLWJyb3dzZXInO1xuXG5pbXBvcnQgeyBBcHBSb3V0aW5nTW9kdWxlIH0gZnJvbSAnLi9hcHAtcm91dGluZy5tb2R1bGUnO1xuaW1wb3J0IHsgQXBwQ29tcG9uZW50IH0gZnJvbSAnLi9hcHAuY29tcG9uZW50JztcblxuQE5nTW9kdWxlKHtcbiAgZGVjbGFyYXRpb25zOiBbXG4gICAgQXBwQ29tcG9uZW50XG4gIF0sXG4gIGltcG9ydHM6IFtcbiAgICBCcm93c2VyTW9kdWxlLFxuICAgIEFwcFJvdXRpbmdNb2R1bGVcbiAgXSxcbiAgcHJvdmlkZXJzOiBbXG4gICAgcHJvdmlkZUNsaWVudEh5ZHJhdGlvbigpXG4gIF0sXG4gIGJvb3RzdHJhcDogW0FwcENvbXBvbmVudF1cbn0pXG5leHBvcnQgY2xhc3MgQXBwTW9kdWxlIHsgfVxuIiwiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IFJvdXRlck1vZHVsZSwgUm91dGVzIH0gZnJvbSAnQGFuZ3VsYXIvcm91dGVyJztcblxuY29uc3Qgcm91dGVzOiBSb3V0ZXMgPSBbXTtcblxuQE5nTW9kdWxlKHtcbiAgaW1wb3J0czogW1JvdXRlck1vZHVsZS5mb3JSb290KHJvdXRlcyldLFxuICBleHBvcnRzOiBbUm91dGVyTW9kdWxlXVxufSlcbmV4cG9ydCBjbGFzcyBBcHBSb3V0aW5nTW9kdWxlIHsgfVxuIiwiaW1wb3J0IHsgQ29tcG9uZW50LCBJbmplY3QsIExPQ0FMRV9JRCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5pbnRlcmZhY2UgTG9jYWxlIHtcbiAgbG9jYWxlQ29kZTogc3RyaW5nO1xuICBsYWJlbDogc3RyaW5nO1xufVxuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdhcHAtcm9vdCcsXG4gIHRlbXBsYXRlVXJsOiAnLi9hcHAuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybDogJy4vYXBwLmNvbXBvbmVudC5jc3MnXG59KVxuZXhwb3J0IGNsYXNzIEFwcENvbXBvbmVudCB7XG4gIHRpdGxlID0gJ3RyYW5zbGF0aW5nJztcbiAgdXJsOiBhbnkgPSBcIihodHRwczovL3N0YWNrYmxpdHouY29tL34vZ2l0aHViLmNvbS9UaGVTbGltdlJlYWwvYW5ndWxhci1ydW50aW1lLXRyYW5zbGF0aW9ucylcIjtcblxuICBsYW5ndWFnZVRvZ2dsZSA9IHRoaXMubG9jYWxlID09PSBcImVuXCIgPyBcIkRFXCIgOiBcIkVOXCJcblxuICBjb25zdHJ1Y3RvcihASW5qZWN0KExPQ0FMRV9JRCkgcHVibGljIGxvY2FsZTogc3RyaW5nKSB7XG4gIH1cblxuICBsb2NhbGVzOiBMb2NhbGVbXSA9IFtcblxuICAgIHsgbG9jYWxlQ29kZTogJ2VuLVVTJywgbGFiZWw6ICdFbmdsaXNoJyB9LFxuICAgIHsgbG9jYWxlQ29kZTogJ2RlJywgbGFiZWw6ICdEZXV0c2NoJyB9LFxuICBdO1xuXG5cbiAgLy8gY2hhbmdlTG9jYWxlKCkge1xuICAvLyAgIC8vIFNhdmluZyBzZWxlY3RlZCBsb2NhbGUgdG8gbG9jYWwgc3RvcmFnZSBhbmQgcmVsb2FkaW5nIHBhZ2VcbiAgLy8gICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbShcImxvY2FsZVwiLCB0aGlzLmxhbmd1YWdlVG9nZ2xlLnRvTG93ZXJDYXNlKCkpXG4gIC8vICAgd2luZG93LmxvY2F0aW9uLnJlbG9hZCgpXG4gIC8vIH1cblxufVxuXG4iLCI8aDEgaTE4bj5Ucnlpbmcgb3V0IG5ldyBzdHVmZjwvaDE+XG48aDIgaTE4bj5JIGhvcGUgaXQgd2lsbCB3b3JrIDwvaDI+XG48SDMgaTE4bj5QZWFjZTwvSDM+XG48IS0tIDxidXR0b24gKGNsaWNrKT1cImNoYW5nZUxvY2FsZSgpXCI+e3sgbGFuZ3VhZ2VUb2dnbGUgfX08L2J1dHRvbj5cbjxidXR0b24gKGNsaWNrKT1cImNoYW5nZUxvY2FsZSgpXCI+ZGU8L2J1dHRvbj4gLS0+XG5cbjxkaXYgKm5nRm9yPVwibGV0IGxvY2FsZSBvZiBsb2NhbGVzXCI+XG4gICAgPGEgaHJlZj1cIi97eyBsb2NhbGUubG9jYWxlQ29kZSB9fS9cIj5cbiAgICAgICAge3sgbG9jYWxlLmxhYmVsIH19XG4gICAgPC9hPlxuPC9kaXY+IiwiLy8vIDxyZWZlcmVuY2UgdHlwZXM9XCJAYW5ndWxhci9sb2NhbGl6ZVwiIC8+XG5cbmltcG9ydCB7IHBsYXRmb3JtQnJvd3NlckR5bmFtaWMgfSBmcm9tICdAYW5ndWxhci9wbGF0Zm9ybS1icm93c2VyLWR5bmFtaWMnO1xuXG5pbXBvcnQgeyBBcHBNb2R1bGUgfSBmcm9tICcuL2FwcC9hcHAubW9kdWxlJztcblxuXG5wbGF0Zm9ybUJyb3dzZXJEeW5hbWljKCkuYm9vdHN0cmFwTW9kdWxlKEFwcE1vZHVsZSlcbiAgLmNhdGNoKGVyciA9PiBjb25zb2xlLmVycm9yKGVycikpO1xuIl0sIm1hcHBpbmdzIjoiOzs7O0FBQUEsU0FBUyxZQUFBQSxpQkFBZ0I7QUFDekIsU0FBUyxlQUFlLDhCQUE4Qjs7O0FDRHRELFNBQVMsZ0JBQWdCO0FBQ3pCLFNBQVMsb0JBQTRCOztBQUVyQyxJQUFNLFNBQWlCLENBQUE7QUFNakIsSUFBTyxvQkFBUCxNQUFPLGtCQUFnQjs7O21CQUFoQixtQkFBZ0I7QUFBQTtvRkFBaEIsa0JBQWdCLENBQUE7d0ZBSGpCLGFBQWEsUUFBUSxNQUFNLEdBQzNCLFlBQVksRUFBQSxDQUFBO0FBRWxCLElBQU8sbUJBQVA7OztBQ1ROLFNBQVMsV0FBVyxRQUFRLGlCQUFpQjs7Ozs7QUNNN0MsSUFBQSw2QkFBQSxHQUFBLEtBQUEsRUFBb0MsR0FBQSxLQUFBLENBQUE7QUFFNUIsSUFBQSxxQkFBQSxDQUFBO0FBQ0osSUFBQSwyQkFBQSxFQUFJOzs7O0FBRkQsSUFBQSx3QkFBQTtBQUFBLElBQUEscUNBQUEsUUFBQSxLQUFBLFVBQUEsWUFBQSxLQUFBLDJCQUFBO0FBQ0MsSUFBQSx3QkFBQTtBQUFBLElBQUEsaUNBQUEsS0FBQSxVQUFBLE9BQUEsR0FBQTs7O0FESUYsSUFBTyxnQkFBUCxNQUFPLGNBQVk7RUFNdkIsWUFBc0MsUUFBYztBQUFkLFNBQUEsU0FBQTtBQUx0QyxTQUFBLFFBQVE7QUFDUixTQUFBLE1BQVc7QUFFWCxTQUFBLGlCQUFpQixLQUFLLFdBQVcsT0FBTyxPQUFPO0FBSy9DLFNBQUEsVUFBb0I7TUFFbEIsRUFBRSxZQUFZLFNBQVMsT0FBTyxVQUFTO01BQ3ZDLEVBQUUsWUFBWSxNQUFNLE9BQU8sVUFBUzs7RUFMdEM7OzttQkFQVyxlQUFZLGdDQU1ILFNBQVMsQ0FBQTtBQUFBO2tGQU5sQixlQUFZLFdBQUEsQ0FBQSxDQUFBLFVBQUEsQ0FBQSxHQUFBLE9BQUEsR0FBQSxNQUFBLEdBQUEsUUFBQSxNQUFBO0FBQUEsTUFBQTtBQUFBLE1BQUEsT0FBQTs7OzthQ1poQjs7Ozs7OzthQUNBOzs7Ozs7O2FBQ0E7Ozs7O0FBRlQsSUFBQSw2QkFBQSxHQUFBLElBQUE7QUFBQSxJQUFBLHFCQUFBLEdBQUEsQ0FBQTtBQUE2QixJQUFBLDJCQUFBO0FBQzdCLElBQUEsNkJBQUEsR0FBQSxJQUFBO0FBQUEsSUFBQSxxQkFBQSxHQUFBLENBQUE7QUFBNkIsSUFBQSwyQkFBQTtBQUM3QixJQUFBLDZCQUFBLEdBQUEsSUFBQTtBQUFBLElBQUEscUJBQUEsR0FBQSxDQUFBO0FBQWMsSUFBQSwyQkFBQTtBQUlkLElBQUEseUJBQUEsR0FBQSw2QkFBQSxHQUFBLEdBQUEsT0FBQSxDQUFBOzs7QUFBd0IsSUFBQSx3QkFBQSxDQUFBO0FBQUEsSUFBQSx5QkFBQSxXQUFBLElBQUEsT0FBQTs7O0FETWxCLElBQU8sZUFBUDs7aUZBQU8sY0FBWSxFQUFBLFdBQUEsZ0JBQUEsVUFBQSw0QkFBQSxZQUFBLEdBQUEsQ0FBQTtBQUFBLEdBQUE7Ozs7QUZPbkIsSUFBTyxhQUFQLE1BQU8sV0FBUzs7O21CQUFULFlBQVM7QUFBQTs4RUFBVCxZQUFTLFdBQUEsQ0FGUixZQUFZLEVBQUEsQ0FBQTttRkFIYjtFQUNULHVCQUFzQjtHQUN2QixTQUFBO0VBTEM7RUFDQTtBQUFnQixFQUFBLENBQUE7QUFPZCxJQUFPLFlBQVA7OztBSVpOLG9DQUFBLEVBQXlCLGdCQUFnQixTQUFTLEVBQy9DLE1BQU0sU0FBTyxRQUFRLE1BQU0sR0FBRyxDQUFDOyIsIm5hbWVzIjpbIk5nTW9kdWxlIl19        0x  x0xœá   20231211174248-8lx  9«Z†   http://localhost:34991/main.jsÅ  d a t a : a p p l i c a t i o n / j s o n ; b a s e 6 4 , e y J 2 Z X J z a W 9 u I j o z L C J z b 3 V y Y 2 V z I j p b I n N y Y y 9 h c H A v Y X B w L m 1 v Z H V s Z S 5 0 c y I s I n N y Y y 9 h c H A v Y X B w L X J v d X R p b m c u b W 9 k d W x l L n R z I i w i c 3 J j L 2 F w c C 9 h c H A u Y 2 9 t c G 9 u Z W 5 0 L n R z I i w i c 3 J j L 2 F w c C 9 h c H A u Y 2 9 t c G 9 u Z W 5 0 L m h 0 b W w i L C J z c m M v b W F p b i 5 0 c y J d L C J z b 3 V y Y 2 V z Q 2 9 u d G V u d C I 6 W y J p b X B v c n Q g e y B O Z 0 1 v Z H V s Z S B 9 I G Z y b 2 0 g J 0 B h b m d 1 b G F y L 2 N v c m U n O 1 x u a W 1 w b 3 J 0 I H s g Q n J v d 3 N l c k 1 v Z H V s Z S w g c H J v d m l k Z U N s a W V u d E h 5 Z H J h d G l v b i B 9 I G Z y b 2 0 g J 0 B h b m d 1 b G F y L 3 B s Y X R m b 3 J t L W J y b 3 d z Z X I n O 1 x u X G 5 p b X B v c n Q g e y B B c H B S b 3 V 0 a W 5 n T W 9 k d W x l I H 0 g Z n J v b S A n L i 9 h c H A t c m 9 1 d G l u Z y 5 t b 2 R 1 b G U n O 1 x u a W 1 w b 3 J 0 I H s g Q X B w Q 2 9 t c G 9 u Z W 5 0 I H 0 g Z n J v b S A n L i 9 h c H A u Y 2 9 t c G 9 u Z W 5 0 J z t c b l x u Q E 5 n T W 9 k d W x l K H t c b i A g Z G V j b G F y Y X R p b 2 5 z O i B b X G 4 g I C A g Q X B w Q 2 9 t c G 9 u Z W 5 0 X G 4 g I F 0 s X G 4 g I G l t c G 9 y d H M 6 I F t c b i A g I C B C c m 9 3 c 2 V y T W 9 k d W x l L F x u I C A g I E F w c F J v d X R p b m d N b 2 R 1 b G V c b i A g X S x c b i A g c H J v d m l k Z X J z O i B b X G 4 g I C A g c H J v d m l k Z U N s a W V u d E h 5 Z H J h d G l v b i g p X G 4 g I F 0 s X G 4 g I G J v b 3 R z d H J h c D o g W 0 F w c E N v b X B v b m V u d F 1 c b n 0 p X G 5 l e H B v c n Q g Y 2 x h c 3 M g Q X B w T W 9 k d W x l I H s g f V x u I i w i a W 1 w b 3 J 0 I H s g T m d N b 2 R 1 b G U g f S B m c m 9 t I C d A Y W 5 n d W x h c i 9 j b 3 J l J z t c b m l t c G 9 y d C B 7 I F J v d X R l c k 1 v Z H V s Z S w g U m 9 1 d G V z I H 0 g Z n J v b S A n Q G F u Z 3 V s Y X I v c m 9 1 d G V y J z t c b l x u Y 2 9 u c 3 Q g c m 9 1 d G V z O i B S b 3 V 0 Z X M g P S B b X T t c b l x u Q E 5 n T W 9 k d W x l K H t c b i A g a W 1 w b 3 J 0 c z o g W 1 J v d X R l c k 1 v Z H V s Z S 5 m b 3 J S b 2 9 0 K H J v d X R l c y l d L F x u I C B l e H B v c n R z O i B b U m 9 1 d G V y T W 9 k d W x l X V x u f S l c b m V 4 c G 9 y d C B j b G F z c y B B c H B S b 3 V 0 a W 5 n T W 9 k d W x l I H s g f V x u I i w i a W 1 w b 3 J 0 I H s g Q 2 9 t c G 9 u Z W 5 0 L C B J b m p l Y 3 Q s I E x P Q 0 F M R V 9 J R C B 9 I G Z y b 2 0 g J 0 B h b m d 1 b G F y L 2 N v c m U n O 1 x u X G 5 p b n R l c m Z h Y 2 U g T G 9 j Y W x l I H t c b i A g b G 9 j Y W x l Q 2 9 k Z T o g c 3 R y a W 5 n O 1 x u I C B s Y W J l b D o g c 3 R y a W 5 n O 1 x u f V x u X G 5 A Q 2 9 t c G 9 u Z W 5 0 K H t c b i A g c 2 V s Z W N 0 b 3 I 6 I C d h c H A t c m 9 v d C c s X G 4 g I H R l b X B s Y X R l V X J s O i A n L i 9 h c H A u Y 2 9 t c G 9 u Z W 5 0 L m h 0 b W w n L F x u I C B z d H l s Z V V y b D o g J y 4 v Y X B w L m N v b X B v b m V u d C 5 j c 3 M n X G 5 9 K V x u Z X h w b 3 J 0 I G N s Y X N z I E F w c E N v b X B v b m V u d C B 7 X G 4 g I H R p d G x l I D 0 g J 3 R y Y W 5 z b G F 0 a W 5 n J z t c b i A g d X J s O i B h b n k g P S B c I i h o d H R w c z o v L 3 N 0 Y W N r Y m x p d H o u Y 2 9 t L 3 4 v Z 2 l 0 a H V i L m N v b S 9 U a G V T b G l t d l J l Y W w v Y W 5 n d W x h c i 1 y d W 5 0 a W 1 l L X R y Y W 5 z b G F 0 a W 9 u c y l c I j t c b l x u I C B s Y W 5 n d W F n Z V R v Z 2 d s Z S A 9 I H R o a X M u b G 9 j Y W x l I D 0 9 P S B c I m V u X C I g P y B c I k R F X C I g O i B c I k V O X C J c b l x u I C B j b 2 5 z d H J 1 Y 3 R v c i h A S W 5 q Z W N 0 K E x P Q 0 F M R V 9 J R C k g c H V i b G l j I G x v Y 2 F s Z T o g c 3 R y a W 5 n K S B 7 X G 4 g I H 1 c b l x u I C B s b 2 N h b G V z O i B M b 2 N h b G V b X S A 9 I F t c b l x u I C A g I H s g b G 9 j Y W x l Q 2 9 k Z T o g J 2 V u L V V T J y w g b G F i Z W w 6 I C d F b m d s a X N o J y B 9 L F x u I C A g I H s g b G 9 j Y W x l Q 2 9 k Z T o g J 2 R l J y w g b G F i Z W w 6 I C d E Z X V 0 c 2 N o J y B 9 L F x u I C B d O 1 x u X G 5 c b i A g L y 8 g Y 2 h h b m d l T G 9 j Y W x l K C k g e 1 x u I C A v L y A g I C 8 v I F N h d m l u Z y B z Z W x l Y 3 R l Z C B s b 2 N h b G U g d G 8 g b G 9 j Y W w g c 3 R v c m F n Z S B h b m Q g c m V s b 2 F k a W 5 n I H B h Z 2 V c b i A g L y 8 g I C B s b 2 N h b F N 0 b 3 J h Z 2 U u c 2 V 0 S X R l b S h c I m x v Y 2 F s Z V w i L C B 0 a G l z L m x h b m d 1 Y W d l V G 9 n Z 2 x l L n R v T G 9 3 Z X J D Y X N l K C k p X G 4 g I C 8 v I C A g d 2 l u Z G 9 3 L m x v Y 2 F 0 a W 9 u L n J l b G 9 h Z C g p X G 4 g I C 8 v I H 1 c b l x u f V x u X G 4 i L C I 8 a D E g a T E 4 b j 5 U c n l p b m c g b 3 V 0 I G 5 l d y B z d H V m Z j w v a D E + X G 4 8 a D I g a T E 4 b j 5 J I G h v c G U g a X Q g d 2 l s b C B 3 b 3 J r I D w v a D I + X G 4 8 S D M g a T E 4 b j 5 Q Z W F j Z T w v S D M + X G 4 8 I S 0 t I D x i d X R 0 b 2 4 g K G N s a W N r K T 1 c I m N o Y W 5 n Z U x v Y 2 F s Z S g p X C I + e 3 s g b G F u Z 3 V h Z 2 V U b 2 d n b G U g f X 0 8 L 2 J 1 d H R v b j 5 c b j x i d X R 0 b 2 4 g K G N s a W N r K T 1 c I m N o Y W 5 n Z U x v Y 2 F s Z S g p X C I + Z G U 8 L 2 J 1 d H R v b j 4 g L S 0 + X G 5 c b j x k a X Y g K m 5 n R m 9 y P V w i b G V 0 I G x v Y 2 F s Z S B v Z i B s b 2 N h b G V z X C I + X G 4 g I C A g P G E g a H J l Z j 1 c I i 9 7 e y B s b 2 N h b G U u b G 9 j Y W x l Q 2 9 k Z S B 9 f S 9 c I j 5 c b i A g I C A g I C A g e 3 s g b G 9 j Y W x l L m x h Y m V s I H 1 9 X G 4 g I C A g P C 9 h P l x u P C 9 k a X Y + I i w i L y 8 v I D x y Z W Z l c m V u Y 2 U g d H l w Z X M 9 X C J A Y W 5 n d W x h c i 9 s b 2 N h b G l 6 Z V w i I C 8 + X G 5 c b m l t c G 9 y d C B 7 I H B s Y X R m b 3 J t Q n J v d 3 N l c k R 5 b m F t a W M g f S B m c m 9 t I C d A Y W 5 n d W x h c i 9 w b G F 0 Z m 9 y b S 1 i c m 9 3 c 2 V y L W R 5 b m F t a W M n O 1 x u X G 5 p b X B v c n Q g e y B B c H B N b 2 R 1 b G U g f S B m c m 9 t I C c u L 2 F w c C 9 h c H A u b W 9 k d W x l J z t c b l x u X G 5 w b G F 0 Z m 9 y b U J y b 3 d z Z X J E e W 5 h b W l j K C k u Y m 9 v d H N 0 c m F w T W 9 k d W x l K E F w c E 1 v Z H V s Z S l c b i A g L m N h d G N o K G V y c i A 9 P i B j b 2 5 z b 2 x l L m V y c m 9 y K G V y c i k p O 1 x u I l 0 s I m 1 h c H B p b m d z I j o i O z s 7 O 0 F B Q U E s U 0 F B U y x Z Q U F B Q S x p Q k F B Z 0 I 7 Q U F D e k I s U 0 F B U y x l Q U F l L D h C Q U E 4 Q j s 7 O 0 F D R H R E L F N B Q V M s Z 0 J B Q W d C O 0 F B Q 3 p C L F N B Q V M s b 0 J B Q T R C O z t B Q U V y Q y x J Q U F N L F N B Q W l C L E N B Q U E 7 Q U F N a k I s S U F B T y x v Q k F B U C x N Q U F P L G t C Q U F n Q j s 7 O 2 1 C Q U F o Q i x t Q k F B Z 0 I 7 Q U F B Q T t v R k F B a E I s a 0 J B Q W d C L E N B Q U E 7 d 0 Z B S G p C L G F B Q W E s U U F B U S x N Q U F N L E d B Q z N C L F l B Q V k s R U F B Q S x D Q U F B O 0 F B R W x C L E l B Q U 8 s b U J B Q V A 7 O z t B Q 1 R O L F N B Q V M s V 0 F B V y x R Q U F R L G l C Q U F p Q j s 7 O z s 7 Q U N N N 0 M s S U F B Q S w 2 Q k F B Q S x H Q U F B L E t B Q U E s R U F B b 0 M s R 0 F B Q S x L Q U F B L E N B Q U E 7 Q U F F N U I s S U F B Q S x x Q k F B Q S x D Q U F B O 0 F B Q 0 o s S U F B Q S w y Q k F B Q S x F Q U F J O z s 7 O 0 F B R k Q s S U F B Q S x 3 Q k F B Q T t B Q U F B L E l B Q U E s c U N B Q U E s U U F B Q S x L Q U F B L F V B Q U E s W U F B Q S x L Q U F B L D J C Q U F B O 0 F B Q 0 M s S U F B Q S x 3 Q k F B Q T t B Q U F B L E l B Q U E s a U N B Q U E s S 0 F B Q S x V Q U F B L E 9 B Q U E s R 0 F B Q T s 7 O 0 F E S U Y s S U F B T y x n Q k F B U C x N Q U F P L G N B Q V k 7 R U F N d k I s W U F B c 0 M s U U F B Y z t B Q U F k L F N B Q U E s U 0 F B Q T t B Q U x 0 Q y x T Q U F B L F F B Q V E 7 Q U F D U i x T Q U F B L E 1 B Q V c 7 Q U F F W C x T Q U F B L G l C Q U F p Q i x L Q U F L L F d B Q V c s T 0 F B T y x P Q U F P O 0 F B S y 9 D L F N B Q U E s V U F B b 0 I 7 T U F F b E I s R U F B R S x Z Q U F Z L F N B Q V M s T 0 F B T y x V Q U F T O 0 1 B Q 3 Z D L E V B Q U U s W U F B W S x N Q U F N L E 9 B Q U 8 s V U F B U z s 7 R U F M d E M 7 O z t t Q k F Q V y x l Q U F Z L G d D Q U 1 I L F N B Q V M s Q 0 F B Q T t B Q U F B O 2 t G Q U 5 s Q i x l Q U F Z L F d B Q U E s Q 0 F B Q S x D Q U F B L F V B Q U E s Q 0 F B Q S x H Q U F B L E 9 B Q U E s R 0 F B Q S x N Q U F B L E d B Q U E s U U F B Q S x N Q U F B O 0 F B Q U E s T U F B Q T t B Q U F B L E 1 B Q U E s T 0 F B Q T s 7 O z t h Q 1 p o Q j s 7 O z s 7 O z t h Q U N B O z s 7 O z s 7 O 2 F B Q 0 E 7 O z s 7 O 0 F B R l Q s S U F B Q S w 2 Q k F B Q S x H Q U F B L E l B Q U E 7 Q U F B Q S x J Q U F B L H F C Q U F B L E d B Q U E s Q 0 F B Q T t B Q U E 2 Q i x J Q U F B L D J C Q U F B O 0 F B Q z d C L E l B Q U E s N k J B Q U E s R 0 F B Q S x J Q U F B O 0 F B Q U E s S U F B Q S x x Q k F B Q S x H Q U F B L E N B Q U E 7 Q U F B N k I s S U F B Q S w y Q k F B Q T t B Q U M 3 Q i x J Q U F B L D Z C Q U F B L E d B Q U E s S U F B Q T t B Q U F B L E l B Q U E s c U J B Q U E s R 0 F B Q S x D Q U F B O 0 F B Q W M s S U F B Q S w y Q k F B Q T t B Q U l k L E l B Q U E s e U J B Q U E s R 0 F B Q S w 2 Q k F B Q S x H Q U F B L E d B Q U E s T 0 F B Q S x D Q U F B O z s 7 Q U F B d 0 I s S U F B Q S x 3 Q k F B Q S x D Q U F B O 0 F B Q U E s S U F B Q S x 5 Q k F B Q S x X Q U F B L E l B Q U E s T 0 F B Q T s 7 O 0 F E T W x C L E l B Q U 8 s Z U F B U D s 7 a U Z B Q U 8 s Y 0 F B W S x F Q U F B L F d B Q U E s Z 0 J B Q U E s V U F B Q S w 0 Q k F B Q S x Z Q U F B L E d B Q U E s Q 0 F B Q T t B Q U F B L E d B Q U E 7 O z s 7 Q U Z P b k I s S U F B T y x h Q U F Q L E 1 B Q U 8 s V 0 F B U z s 7 O 2 1 C Q U F U L F l B Q V M 7 Q U F B Q T s 4 R U F B V C x Z Q U F T L F d B Q U E s Q 0 F G U i x Z Q U F Z L E V B Q U E s Q 0 F B Q T t t R k F I Y j t F Q U N U L H V C Q U F z Q j t H Q U N 2 Q i x T Q U F B O 0 V B T E M 7 R U F D Q T t B Q U F n Q i x F Q U F B L E N B Q U E 7 Q U F P Z C x J Q U F P L F l B Q V A 7 O z t B S V p O L G 9 D Q U F B L E V B Q X l C L G d C Q U F n Q i x T Q U F T L E V B Q y 9 D L E 1 B Q U 0 s U 0 F B T y x R Q U F R L E 1 B Q U 0 s R 0 F B R y x D Q U F D O y I s I m 5 h b W V z I j p b I k 5 n T W 9 k d W x l I l 1 9       ±*  // src/main.ts
+import * as __NgCli_bootstrap_1 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_platform-browser.js?v=2c689aab";
+
+// src/app/app.module.ts
+import { NgModule as NgModule2 } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+import { BrowserModule, provideClientHydration } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_platform-browser.js?v=2c689aab";
+
+// src/app/app-routing.module.ts
+import { NgModule } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+import { RouterModule } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_router.js?v=2c689aab";
+import * as i0 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+var routes = [];
+var _AppRoutingModule = class _AppRoutingModule {
+};
+_AppRoutingModule.\u0275fac = function AppRoutingModule_Factory(t) {
+  return new (t || _AppRoutingModule)();
+};
+_AppRoutingModule.\u0275mod = /* @__PURE__ */ i0.\u0275\u0275defineNgModule({ type: _AppRoutingModule });
+_AppRoutingModule.\u0275inj = /* @__PURE__ */ i0.\u0275\u0275defineInjector({ imports: [RouterModule.forRoot(routes), RouterModule] });
+var AppRoutingModule = _AppRoutingModule;
+
+// src/app/app.component.ts
+import { Component, Inject, LOCALE_ID } from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+import * as i02 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+import * as i1 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_common.js?v=2c689aab";
+function AppComponent_div_6_Template(rf, ctx) {
+  if (rf & 1) {
+    i02.\u0275\u0275elementStart(0, "div")(1, "a", 4);
+    i02.\u0275\u0275text(2);
+    i02.\u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    const locale_r1 = ctx.$implicit;
+    i02.\u0275\u0275advance();
+    i02.\u0275\u0275propertyInterpolate1("href", "/", locale_r1.localeCode, "/", i02.\u0275\u0275sanitizeUrl);
+    i02.\u0275\u0275advance();
+    i02.\u0275\u0275textInterpolate1(" ", locale_r1.label, " ");
+  }
+}
+var _AppComponent = class _AppComponent {
+  constructor(locale) {
+    this.locale = locale;
+    this.title = "translating";
+    this.url = "(https://stackblitz.com/~/github.com/TheSlimvReal/angular-runtime-translations)";
+    this.languageToggle = this.locale === "en" ? "DE" : "EN";
+    this.locales = [
+      { localeCode: "en-US", label: "English" },
+      { localeCode: "de", label: "Deutsch" }
+    ];
+  }
+};
+_AppComponent.\u0275fac = function AppComponent_Factory(t) {
+  return new (t || _AppComponent)(i02.\u0275\u0275directiveInject(LOCALE_ID));
+};
+_AppComponent.\u0275cmp = /* @__PURE__ */ i02.\u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], decls: 7, vars: 1, consts: () => {
+  let i18n_0;
+  if (false) {
+    const MSG_EXTERNAL_5205052306160815651$$SRC_APP_APP_COMPONENT_TS_0 = goog.getMsg("Trying out new stuff");
+    i18n_0 = MSG_EXTERNAL_5205052306160815651$$SRC_APP_APP_COMPONENT_TS_0;
+  } else {
+    i18n_0 = $localize`Trying out new stuff`;
+  }
+  let i18n_1;
+  if (false) {
+    const MSG_EXTERNAL_3183867941524564763$$SRC_APP_APP_COMPONENT_TS_1 = goog.getMsg("I hope it will work ");
+    i18n_1 = MSG_EXTERNAL_3183867941524564763$$SRC_APP_APP_COMPONENT_TS_1;
+  } else {
+    i18n_1 = $localize`I hope it will work `;
+  }
+  let i18n_2;
+  if (false) {
+    const MSG_EXTERNAL_2676607126198583031$$SRC_APP_APP_COMPONENT_TS_2 = goog.getMsg("Peace");
+    i18n_2 = MSG_EXTERNAL_2676607126198583031$$SRC_APP_APP_COMPONENT_TS_2;
+  } else {
+    i18n_2 = $localize`Peace`;
+  }
+  return [i18n_0, i18n_1, i18n_2, [4, "ngFor", "ngForOf"], [3, "href"]];
+}, template: function AppComponent_Template(rf, ctx) {
+  if (rf & 1) {
+    i02.\u0275\u0275elementStart(0, "h1");
+    i02.\u0275\u0275i18n(1, 0);
+    i02.\u0275\u0275elementEnd();
+    i02.\u0275\u0275elementStart(2, "h2");
+    i02.\u0275\u0275i18n(3, 1);
+    i02.\u0275\u0275elementEnd();
+    i02.\u0275\u0275elementStart(4, "H3");
+    i02.\u0275\u0275i18n(5, 2);
+    i02.\u0275\u0275elementEnd();
+    i02.\u0275\u0275template(6, AppComponent_div_6_Template, 3, 3, "div", 3);
+  }
+  if (rf & 2) {
+    i02.\u0275\u0275advance(6);
+    i02.\u0275\u0275property("ngForOf", ctx.locales);
+  }
+}, dependencies: [i1.NgForOf] });
+var AppComponent = _AppComponent;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && i02.\u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src/app/app.component.ts", lineNumber: 13 });
+})();
+
+// src/app/app.module.ts
+import * as i03 from "/@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab";
+var _AppModule = class _AppModule {
+};
+_AppModule.\u0275fac = function AppModule_Factory(t) {
+  return new (t || _AppModule)();
+};
+_AppModule.\u0275mod = /* @__PURE__ */ i03.\u0275\u0275defineNgModule({ type: _AppModule, bootstrap: [AppComponent] });
+_AppModule.\u0275inj = /* @__PURE__ */ i03.\u0275\u0275defineInjector({ providers: [
+  provideClientHydration()
+], imports: [
+  BrowserModule,
+  AppRoutingModule
+] });
+var AppModule = _AppModule;
+
+// src/main.ts
+__NgCli_bootstrap_1.platformBrowser().bootstrapModule(AppModule).catch((err) => console.error(err));
+
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLm1vZHVsZS50cyIsInNyYy9hcHAvYXBwLXJvdXRpbmcubW9kdWxlLnRzIiwic3JjL2FwcC9hcHAuY29tcG9uZW50LnRzIiwic3JjL2FwcC9hcHAuY29tcG9uZW50Lmh0bWwiLCJzcmMvbWFpbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuaW1wb3J0IHsgQnJvd3Nlck1vZHVsZSwgcHJvdmlkZUNsaWVudEh5ZHJhdGlvbiB9IGZyb20gJ0Bhbmd1bGFyL3BsYXRmb3JtLWJyb3dzZXInO1xuXG5pbXBvcnQgeyBBcHBSb3V0aW5nTW9kdWxlIH0gZnJvbSAnLi9hcHAtcm91dGluZy5tb2R1bGUnO1xuaW1wb3J0IHsgQXBwQ29tcG9uZW50IH0gZnJvbSAnLi9hcHAuY29tcG9uZW50JztcblxuQE5nTW9kdWxlKHtcbiAgZGVjbGFyYXRpb25zOiBbXG4gICAgQXBwQ29tcG9uZW50XG4gIF0sXG4gIGltcG9ydHM6IFtcbiAgICBCcm93c2VyTW9kdWxlLFxuICAgIEFwcFJvdXRpbmdNb2R1bGVcbiAgXSxcbiAgcHJvdmlkZXJzOiBbXG4gICAgcHJvdmlkZUNsaWVudEh5ZHJhdGlvbigpXG4gIF0sXG4gIGJvb3RzdHJhcDogW0FwcENvbXBvbmVudF1cbn0pXG5leHBvcnQgY2xhc3MgQXBwTW9kdWxlIHsgfVxuIiwiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IFJvdXRlck1vZHVsZSwgUm91dGVzIH0gZnJvbSAnQGFuZ3VsYXIvcm91dGVyJztcblxuY29uc3Qgcm91dGVzOiBSb3V0ZXMgPSBbXTtcblxuQE5nTW9kdWxlKHtcbiAgaW1wb3J0czogW1JvdXRlck1vZHVsZS5mb3JSb290KHJvdXRlcyldLFxuICBleHBvcnRzOiBbUm91dGVyTW9kdWxlXVxufSlcbmV4cG9ydCBjbGFzcyBBcHBSb3V0aW5nTW9kdWxlIHsgfVxuIiwiaW1wb3J0IHsgQ29tcG9uZW50LCBJbmplY3QsIExPQ0FMRV9JRCB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xuXG5pbnRlcmZhY2UgTG9jYWxlIHtcbiAgbG9jYWxlQ29kZTogc3RyaW5nO1xuICBsYWJlbDogc3RyaW5nO1xufVxuXG5AQ29tcG9uZW50KHtcbiAgc2VsZWN0b3I6ICdhcHAtcm9vdCcsXG4gIHRlbXBsYXRlVXJsOiAnLi9hcHAuY29tcG9uZW50Lmh0bWwnLFxuICBzdHlsZVVybDogJy4vYXBwLmNvbXBvbmVudC5jc3MnXG59KVxuZXhwb3J0IGNsYXNzIEFwcENvbXBvbmVudCB7XG4gIHRpdGxlID0gJ3RyYW5zbGF0aW5nJztcbiAgdXJsOiBhbnkgPSBcIihodHRwczovL3N0YWNrYmxpdHouY29tL34vZ2l0aHViLmNvbS9UaGVTbGltdlJlYWwvYW5ndWxhci1ydW50aW1lLXRyYW5zbGF0aW9ucylcIjtcblxuICBsYW5ndWFnZVRvZ2dsZSA9IHRoaXMubG9jYWxlID09PSBcImVuXCIgPyBcIkRFXCIgOiBcIkVOXCJcblxuICBjb25zdHJ1Y3RvcihASW5qZWN0KExPQ0FMRV9JRCkgcHVibGljIGxvY2FsZTogc3RyaW5nKSB7XG4gIH1cblxuICBsb2NhbGVzOiBMb2NhbGVbXSA9IFtcblxuICAgIHsgbG9jYWxlQ29kZTogJ2VuLVVTJywgbGFiZWw6ICdFbmdsaXNoJyB9LFxuICAgIHsgbG9jYWxlQ29kZTogJ2RlJywgbGFiZWw6ICdEZXV0c2NoJyB9LFxuICBdO1xuXG5cbiAgLy8gY2hhbmdlTG9jYWxlKCkge1xuICAvLyAgIC8vIFNhdmluZyBzZWxlY3RlZCBsb2NhbGUgdG8gbG9jYWwgc3RvcmFnZSBhbmQgcmVsb2FkaW5nIHBhZ2VcbiAgLy8gICBsb2NhbFN0b3JhZ2Uuc2V0SXRlbShcImxvY2FsZVwiLCB0aGlzLmxhbmd1YWdlVG9nZ2xlLnRvTG93ZXJDYXNlKCkpXG4gIC8vICAgd2luZG93LmxvY2F0aW9uLnJlbG9hZCgpXG4gIC8vIH1cblxufVxuXG4iLCI8aDEgaTE4bj5Ucnlpbmcgb3V0IG5ldyBzdHVmZjwvaDE+XG48aDIgaTE4bj5JIGhvcGUgaXQgd2lsbCB3b3JrIDwvaDI+XG48SDMgaTE4bj5QZWFjZTwvSDM+XG48IS0tIDxidXR0b24gKGNsaWNrKT1cImNoYW5nZUxvY2FsZSgpXCI+e3sgbGFuZ3VhZ2VUb2dnbGUgfX08L2J1dHRvbj5cbjxidXR0b24gKGNsaWNrKT1cImNoYW5nZUxvY2FsZSgpXCI+ZGU8L2J1dHRvbj4gLS0+XG5cbjxkaXYgKm5nRm9yPVwibGV0IGxvY2FsZSBvZiBsb2NhbGVzXCI+XG4gICAgPGEgaHJlZj1cIi97eyBsb2NhbGUubG9jYWxlQ29kZSB9fS9cIj5cbiAgICAgICAge3sgbG9jYWxlLmxhYmVsIH19XG4gICAgPC9hPlxuPC9kaXY+IiwiLy8vIDxyZWZlcmVuY2UgdHlwZXM9XCJAYW5ndWxhci9sb2NhbGl6ZVwiIC8+XG5cbmltcG9ydCB7IHBsYXRmb3JtQnJvd3NlckR5bmFtaWMgfSBmcm9tICdAYW5ndWxhci9wbGF0Zm9ybS1icm93c2VyLWR5bmFtaWMnO1xuXG5pbXBvcnQgeyBBcHBNb2R1bGUgfSBmcm9tICcuL2FwcC9hcHAubW9kdWxlJztcblxuXG5wbGF0Zm9ybUJyb3dzZXJEeW5hbWljKCkuYm9vdHN0cmFwTW9kdWxlKEFwcE1vZHVsZSlcbiAgLmNhdGNoKGVyciA9PiBjb25zb2xlLmVycm9yKGVycikpO1xuIl0sIm1hcHBpbmdzIjoiOzs7O0FBQUEsU0FBUyxZQUFBQSxpQkFBZ0I7QUFDekIsU0FBUyxlQUFlLDhCQUE4Qjs7O0FDRHRELFNBQVMsZ0JBQWdCO0FBQ3pCLFNBQVMsb0JBQTRCOztBQUVyQyxJQUFNLFNBQWlCLENBQUE7QUFNakIsSUFBTyxvQkFBUCxNQUFPLGtCQUFnQjs7O21CQUFoQixtQkFBZ0I7QUFBQTtvRkFBaEIsa0JBQWdCLENBQUE7d0ZBSGpCLGFBQWEsUUFBUSxNQUFNLEdBQzNCLFlBQVksRUFBQSxDQUFBO0FBRWxCLElBQU8sbUJBQVA7OztBQ1ROLFNBQVMsV0FBVyxRQUFRLGlCQUFpQjs7Ozs7QUNNN0MsSUFBQSw2QkFBQSxHQUFBLEtBQUEsRUFBb0MsR0FBQSxLQUFBLENBQUE7QUFFNUIsSUFBQSxxQkFBQSxDQUFBO0FBQ0osSUFBQSwyQkFBQSxFQUFJOzs7O0FBRkQsSUFBQSx3QkFBQTtBQUFBLElBQUEscUNBQUEsUUFBQSxLQUFBLFVBQUEsWUFBQSxLQUFBLDJCQUFBO0FBQ0MsSUFBQSx3QkFBQTtBQUFBLElBQUEsaUNBQUEsS0FBQSxVQUFBLE9BQUEsR0FBQTs7O0FESUYsSUFBTyxnQkFBUCxNQUFPLGNBQVk7RUFNdkIsWUFBc0MsUUFBYztBQUFkLFNBQUEsU0FBQTtBQUx0QyxTQUFBLFFBQVE7QUFDUixTQUFBLE1BQVc7QUFFWCxTQUFBLGlCQUFpQixLQUFLLFdBQVcsT0FBTyxPQUFPO0FBSy9DLFNBQUEsVUFBb0I7TUFFbEIsRUFBRSxZQUFZLFNBQVMsT0FBTyxVQUFTO01BQ3ZDLEVBQUUsWUFBWSxNQUFNLE9BQU8sVUFBUzs7RUFMdEM7OzttQkFQVyxlQUFZLGdDQU1ILFNBQVMsQ0FBQTtBQUFBO2tGQU5sQixlQUFZLFdBQUEsQ0FBQSxDQUFBLFVBQUEsQ0FBQSxHQUFBLE9BQUEsR0FBQSxNQUFBLEdBQUEsUUFBQSxNQUFBO0FBQUEsTUFBQTtBQUFBLE1BQUEsT0FBQTs7OzthQ1poQjs7Ozs7OzthQUNBOzs7Ozs7O2FBQ0E7Ozs7O0FBRlQsSUFBQSw2QkFBQSxHQUFBLElBQUE7QUFBQSxJQUFBLHFCQUFBLEdBQUEsQ0FBQTtBQUE2QixJQUFBLDJCQUFBO0FBQzdCLElBQUEsNkJBQUEsR0FBQSxJQUFBO0FBQUEsSUFBQSxxQkFBQSxHQUFBLENBQUE7QUFBNkIsSUFBQSwyQkFBQTtBQUM3QixJQUFBLDZCQUFBLEdBQUEsSUFBQTtBQUFBLElBQUEscUJBQUEsR0FBQSxDQUFBO0FBQWMsSUFBQSwyQkFBQTtBQUlkLElBQUEseUJBQUEsR0FBQSw2QkFBQSxHQUFBLEdBQUEsT0FBQSxDQUFBOzs7QUFBd0IsSUFBQSx3QkFBQSxDQUFBO0FBQUEsSUFBQSx5QkFBQSxXQUFBLElBQUEsT0FBQTs7O0FETWxCLElBQU8sZUFBUDs7aUZBQU8sY0FBWSxFQUFBLFdBQUEsZ0JBQUEsVUFBQSw0QkFBQSxZQUFBLEdBQUEsQ0FBQTtBQUFBLEdBQUE7Ozs7QUZPbkIsSUFBTyxhQUFQLE1BQU8sV0FBUzs7O21CQUFULFlBQVM7QUFBQTs4RUFBVCxZQUFTLFdBQUEsQ0FGUixZQUFZLEVBQUEsQ0FBQTttRkFIYjtFQUNULHVCQUFzQjtHQUN2QixTQUFBO0VBTEM7RUFDQTtBQUFnQixFQUFBLENBQUE7QUFPZCxJQUFPLFlBQVA7OztBSVpOLG9DQUFBLEVBQXlCLGdCQUFnQixTQUFTLEVBQy9DLE1BQU0sU0FBTyxRQUFRLE1BQU0sR0FBRyxDQUFDOyIsIm5hbWVzIjpbIk5nTW9kdWxlIl19”ò¿Ÿ_   Z       AïJ      __NgCli_bootstrap_1    úV{Ñ      /@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_platform-browser.js?v=2c689aab   U%ù      NgModule   9–5N	      NgModule2      ©ˇ=x      /@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_core.js?v=2c689aab   é§˙      BrowserModule      Lz*      provideClientHydration     íH¥      RouterModule   ‚Á† z      /@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_router.js?v=2c689aab	     ﬂoÅÇ      routes
+     lD â      _AppRoutingModule      ¸˝°      uf a c    ’Û>      AppRoutingModule_Factory   &öÓ¡      um o d    ‚r≤      uud e f i n e N g M o d u l e    bY—◊      ui n j    §,      uud e f i n e I n j e c t o r    |o-      imports    E®±â      forRoot    waÃ      AppRoutingModule   ≤xi	      Component      úãÍÇ      Inject     !⁄°Å	      LOCALE_ID      !à,      i02    òa‡z      /@fs/home/marion/Documents/angular-projects/trsn/translating/.angular/cache/17.3.6/vite/deps/@angular_common.js?v=2c689aab     4‡e      AppComponent_div_6_Template    kR`      ctx    ÑN       uue l e m e n t S t a r t    ú≥ÊŸ      div    ûÎK˘      uut e x t    F”CÓ      uue l e m e n t E n d    }Zˆ‘	      locale_r1       ¿ÎLd	      $implicit!      e*Qµ	      uua d v a n c e "     È˜      uup r o p e r t y I n t e r p o l a t e 1 #   ª©`X      href$   €∂˜s
+      localeCode%     2Óí      uus a n i t i z e U r l &     ≈Áb/      uut e x t I n t e r p o l a t e 1 '   1ò°      _AppComponent(      “E      title)      jÙP      translating*    zÚ∞O      (https://stackblitz.com/~/github.com/TheSlimvReal/angular-runtime-translations)+    «´îF      languageToggle,     »=“      locales-    gîí˚      en-US.      Ö≤fs      English/    hÌK|      Deutsch0    …õÌ~      AppComponent_Factory1   Ípøü      uud i r e c t i v e I n j e c t 2     à†áµ      uc m p 3   i»n      uud e f i n e C o m p o n e n t 4     ˇX•	      selectors5      ﬂ–„      app-root6   ΩÄ®      decls7      ]¥¿      vars8   %9T€      consts9     ÑÒ*      i18n_0=     9P#∑      Trying out new stuff>   d·	      $localize?      =kbü      i18n_1A     ¨ÚûQ      I hope it will work B   ˆ‰ô=      i18n_2D     ∫8i›      PeaceE      l¿ªπ      ngForF      ˝PR      ngForOfG    êséÍ      templateH   õ¶Àt      AppComponent_TemplateI      ä{Ã      uui 1 8 n J   hTS
+      uut e m p l a t e K   R√ªù
+      uup r o p e r t y L   †x¿      dependenciesM   …iÑ“      NgForOfN    ÊC<6      AppComponentO   ˜5ﬁ§	      ngDevModeP      øãl      us e t C l a s s D e b u g I n f o Q   6CY>	      classNameR      áhr      filePathS   e0oõ      src/app/app.component.tsT   h‚ç      i03U    XúO.
+      _AppModuleV     ßl:¡      AppModule_FactoryW      }~h	      bootstrapX      ◊ˇÈK	      providersY      —*Jπ	      AppModuleZ      ä\      platformBrowser[    ≤Íâ      bootstrapModule\    ºoò      err]    ˛Q1      console^    ˛tuW      error      Ç  Ô%,â                                                                                                                                                                             	                                                                                                                                    	                                  
+                        ≥Oåc                               	  
+  P    P'  PN  PU  PY     PÄ`  PÅ`T  P’ `          
+                É                            t               œ                         '              3  É             0               t                           9  ?  B            H               œ                             U                É             V               t               \  Ø¬0∞IÙ$KEÆ˙ö                        
+     $  )     
+    $  )     #      4  6  7  8  G  L      	       5              =      =             A      A             D      D         Q  R  0     
+     W     
+    X    á&’™ç!´!   ∞    H5[Ä  í                ?       g    »   ⁄¨≠  ⁄7l   ﬂ›=   <   ⁄≠  Õ…   ⁄º   l   L   ⁄º   º   ±   ‹I   ﬂ8   º   ;	   r L
+   ⁄º   º   ‹I   ﬂ8   g   æ   ‹I   ﬂπ   r h    æ   h   ;   r L   ⁄º   »  ⁄¨≠  ⁄7l   ﬂ›=   <   ⁄≠  Õ…   ⁄º   l   L   ⁄º   º 	  ± 	  ‹I   ﬂ8   º   ;	   g   9   h    ;   ;   ;   l   ;   l   ;   g   º 
+  ± 
+  I   h    ;    r L!   ⁄º   …   ⁄l"    v  ⁄¨≠  ⁄7l$   ﬂ›=   <   ⁄≠  Õ…   ⁄º   l%   L   ⁄º   º   ±   ‹I   ﬂ8&   º   ;	   g   º   h    ;'   r L
+   ⁄º   º   ‹I   ﬂ8(   g   æ)    r  h    ;*   g   æ+   h    π  h   ;   r L   ⁄º   »  ⁄º   ±   ‹I,   ﬂr  ‹I-   ﬂπ  r ‹I.   ﬂl/   v ⁄£00 `*`§0`ê0`ñ L
+ˇˇˇ„P`ë L
+ˇˇˇ¯PˇˇˇªP)`:@'`§03`ê06`ñ J
+
+	JMJ^ô@6/PI_`+`FbP4e `§0h`ê0k`ñ F
+ˇˇˇ≈P`ë F%V-%*Nl,PIr`:u`ë P
+"ˇˇˇP
+!ˇˇˇ˙PDxÄ óPÄÄÄ∞     
+      ˇˇˇˇ   ¡      ˇˇˇˇ#   ã     ˇˇˇˇ(   ˚{⁄ì(                            Ÿ»   ⁄£L   9ÏL   "                        ∑  õ   ï   ⁄º   ï   ﬁ  Ä  †£ `ù PQå  Á•†,|                        ∑  òW   ï   º 	  ± 	  ‹I   ﬂ   r     v ⁄º 	  ‹I   ﬂv ⁄º 	  ‹I   ﬂr   v  ⁄ï
+   ∑  òò   ï   ¨≠   ⁄∑ I   ≠   ⁄º 	  ± 	  ‹I   ﬂv  ⁄º 	  ‹I	   ﬂ
+      π   I      º 	  I   v ⁄º 	  ‹I   ﬂv  ⁄º 	  ‹I   ﬂ   π   I      v ⁄Õï   £ `/`ó P"P$`P$`PPI`ê &`-`ë P$`ñ 2
+ˇˇˇ∑P$`P$`ë &ˇˇˇﬁP:PÄÄå     q   é   ˇˇˇˇ¸   +™áΩ¸   π                      Ÿ»   ⁄π   ∑  L   ⁄π      L   ⁄π      L   ⁄π   π   I      ò   ï      ó   ï      ï   L	   ⁄π   g   8
+      ;      ;   h    8      ;      ;   h   L   ⁄£&`-`/`/`º `)
+/
+ï@	PÄt   «ùΩt   ;                        ∑  õ   ï   ⁄º   ï   º 	  ± 	  ‹I   ﬂæ   r ﬁ  Ä †£ `ô  ë  ˇˇˇ‰Pˇˇˇ„PQÄD  #Ä≤$  æ                 	       ¨≠   ≠  ≠  ⁄ ≠   ⁄∂    ~   r »   ⁄ ≠  ⁄∂    ~   r »  ⁄ ≠  ⁄∂    ~   r »  ⁄g   π   h    π  h   π  h   g   h       h      h   h   g   h       h   h   ¢Õ£Õ£ 6 `ˇˇˇ˜P86 `ˇˇˇ˜P86 `ˇˇˇ˜PH`			• õTÄD         Ω   ˇˇˇˇ    ª          ∏  DJ∏  2                       ∑  òﬁ   ï   º 	  ± 	  ‹I   ﬂ   v ⁄º 	  ‹I   ﬂv ⁄º 	  ‹I   ﬂv  ⁄º 	  ‹I   ﬂ   v ⁄º 	  ‹I   ﬂv ⁄º 	  ‹I   ﬂv  ⁄º 	  ‹I   ﬂ   v ⁄º 	  ‹I   ﬂv ⁄º 	  ‹I   ﬂv  ⁄º 	  ‹I   ﬂº   	   v ⁄ï   ∑  ò>   ï   º 	  ± 	  ‹I
+   ﬂv ⁄º 	  ‹I   ﬂ   ∑ I   v ⁄ï   £ `/`ó P$`P$`P$`ì P$`P$`P$`ì P$`ê P$`P$`ê ˇˇˇËPI`ê `ì P$`ë $ˇˇˇ‡P9PÄ§   .ΩÀ§   l                          ∂      õ   ï   ⁄∂   ï   öD   ï   ⁄º 	  ± 	  ‹I   ﬂº   8      ;      ;   ;	   v ï   ⁄£ `Ω N
+
+&ˇˇˇóPPÄ(   ˚{⁄ì(                            Ÿ»   ⁄£L   3QÄ£L   "                        ∑  õ   ï   ⁄º   ï   ﬁ  Ä  †£ `ù PQD   Ÿ‘4D                            ∂   ‹I   ﬂ∑  r † 	`ˇˇˇ˙P	ÄÄÄ3ıÿ  `  `  `  `    a        `   !  "  #  /  $  %  &     )    `3  )  (  *    ó Ë	 1
+ +    @-  $  .  )    @N /  ,  	  `
+  `1      `  `>    @  @  @E  F  #    `  `  A I    B √
+ J    !  K  F  ,    `O  C  P  	  @N  Q  S  R  0    `  `  `  `]  ^     `  `  p£  L     p       @        @          p  `  p  p3    @  @4  6  7    p8    pG  M  L  2    p  `	  p
+  p
+  @W    @  X    Z  [  ;     pˇXÑR   0                     
+      £              †             †        '      £  '      0      † +   	   8      !
+ 4      H      † B   
+           ! L      U      £  M      V      † O              ! ùH©“      ±*      ±*                 A  \  A  \                  ù  Õ  |  Õ     @            ¯  ∏	  ‘  ∏	     %           	  R  Õ	  T  )               ç  „  p  „  4   8          #  |  È  |  È  7   ò               3  ı  3  N   ,            w  5  w  5  a               ˆ  
+  ˆ  
+  g                =  f  #  f  i   2            ˚    ˚    v   H          mŒ˝î
+                                                                                     &                     '                  
+                                 Ä            
+                                                   
+   	   T          f   
+                                      
+                 
+      Å            
+                   
+              	   
+              
+   
+                 
+                         5°›¿dèú‡1}c	      fA˛ûfA˛ûF„ê∑       M    O^partitionKey=%28http%2Clocalhost%2C34991%29,:http://localhost:34991/main.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Content-Type: text/javascript
+Cache-Control: no-cache
+Etag: W/"161a-PJpqatkfbSFRvyAxN6Hml5zdEHI"
+Content-Length: 10929
+Date: Mon, 13 May 2024 11:50:54 GMT
+Access-Control-Allow-Origin: *
+ original-response-headers Access-Control-Allow-Origin: *
+Content-Type: text/javascript
+Cache-Control: no-cache
+Etag: W/"161a-PJpqatkfbSFRvyAxN6Hml5zdEHI"
+Date: Mon, 13 May 2024 11:50:46 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 10929
+ ctid 2 uncompressed-len 0 net-response-time-onstart 46 net-response-time-onstop 47 alt-data 1;10929,javascript/moz-module-bytecode-20231211174248-8l alt-data-from-child 1   ¢¯

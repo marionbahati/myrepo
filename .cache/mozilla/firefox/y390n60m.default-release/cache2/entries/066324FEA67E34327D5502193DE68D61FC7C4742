@@ -1,0 +1,2599 @@
+import {
+  ChangeDetectorRef,
+  Directive,
+  ElementRef,
+  EventEmitter,
+  Inject,
+  Injectable,
+  InjectionToken,
+  Input,
+  NgModule,
+  Pipe,
+  setClassMetadata,
+  ÉµÉµdefineDirective,
+  ÉµÉµdefineInjectable,
+  ÉµÉµdefineInjector,
+  ÉµÉµdefineNgModule,
+  ÉµÉµdefinePipe,
+  ÉµÉµdirectiveInject,
+  ÉµÉµgetInheritedFactory,
+  ÉµÉµinject
+} from "/@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/chunk-HAFZABSX.js?v=6ba1be97";
+import {
+  concat,
+  concatMap,
+  defer,
+  forkJoin,
+  isObservable,
+  map,
+  of,
+  shareReplay,
+  switchMap,
+  take
+} from "/@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/chunk-WSA2QMXP.js?v=6ba1be97";
+import {
+  __spreadValues
+} from "/@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/chunk-WKYGNSYM.js?v=6ba1be97";
+
+// node_modules/@ngx-translate/core/dist/fesm2022/ngx-translate-core.mjs
+var TranslateLoader = class {
+};
+var TranslateFakeLoader = class _TranslateFakeLoader extends TranslateLoader {
+  getTranslation(lang) {
+    return of({});
+  }
+  static Éµfac = /* @__PURE__ */ (() => {
+    let ÉµTranslateFakeLoader_BaseFactory;
+    return function TranslateFakeLoader_Factory(t) {
+      return (ÉµTranslateFakeLoader_BaseFactory || (ÉµTranslateFakeLoader_BaseFactory = ÉµÉµgetInheritedFactory(_TranslateFakeLoader)))(t || _TranslateFakeLoader);
+    };
+  })();
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslateFakeLoader,
+    factory: _TranslateFakeLoader.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateFakeLoader, [{
+    type: Injectable
+  }], null, null);
+})();
+var MissingTranslationHandler = class {
+};
+var FakeMissingTranslationHandler = class _FakeMissingTranslationHandler {
+  handle(params) {
+    return params.key;
+  }
+  static Éµfac = function FakeMissingTranslationHandler_Factory(t) {
+    return new (t || _FakeMissingTranslationHandler)();
+  };
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _FakeMissingTranslationHandler,
+    factory: _FakeMissingTranslationHandler.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FakeMissingTranslationHandler, [{
+    type: Injectable
+  }], null, null);
+})();
+function equals(o1, o2) {
+  if (o1 === o2)
+    return true;
+  if (o1 === null || o2 === null)
+    return false;
+  if (o1 !== o1 && o2 !== o2)
+    return true;
+  let t1 = typeof o1, t2 = typeof o2, length, key, keySet;
+  if (t1 == t2 && t1 == "object") {
+    if (Array.isArray(o1)) {
+      if (!Array.isArray(o2))
+        return false;
+      if ((length = o1.length) == o2.length) {
+        for (key = 0; key < length; key++) {
+          if (!equals(o1[key], o2[key]))
+            return false;
+        }
+        return true;
+      }
+    } else {
+      if (Array.isArray(o2)) {
+        return false;
+      }
+      keySet = /* @__PURE__ */ Object.create(null);
+      for (key in o1) {
+        if (!equals(o1[key], o2[key])) {
+          return false;
+        }
+        keySet[key] = true;
+      }
+      for (key in o2) {
+        if (!(key in keySet) && typeof o2[key] !== "undefined") {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
+  return false;
+}
+function isDefined(value) {
+  return typeof value !== "undefined" && value !== null;
+}
+function isObject(item) {
+  return item && typeof item === "object" && !Array.isArray(item);
+}
+function mergeDeep(target, source) {
+  let output = Object.assign({}, target);
+  if (isObject(target) && isObject(source)) {
+    Object.keys(source).forEach((key) => {
+      if (isObject(source[key])) {
+        if (!(key in target)) {
+          Object.assign(output, {
+            [key]: source[key]
+          });
+        } else {
+          output[key] = mergeDeep(target[key], source[key]);
+        }
+      } else {
+        Object.assign(output, {
+          [key]: source[key]
+        });
+      }
+    });
+  }
+  return output;
+}
+var TranslateParser = class {
+};
+var TranslateDefaultParser = class _TranslateDefaultParser extends TranslateParser {
+  templateMatcher = /{{\s?([^{}\s]*)\s?}}/g;
+  interpolate(expr, params) {
+    let result;
+    if (typeof expr === "string") {
+      result = this.interpolateString(expr, params);
+    } else if (typeof expr === "function") {
+      result = this.interpolateFunction(expr, params);
+    } else {
+      result = expr;
+    }
+    return result;
+  }
+  getValue(target, key) {
+    let keys = typeof key === "string" ? key.split(".") : [key];
+    key = "";
+    do {
+      key += keys.shift();
+      if (isDefined(target) && isDefined(target[key]) && (typeof target[key] === "object" || !keys.length)) {
+        target = target[key];
+        key = "";
+      } else if (!keys.length) {
+        target = void 0;
+      } else {
+        key += ".";
+      }
+    } while (keys.length);
+    return target;
+  }
+  interpolateFunction(fn, params) {
+    return fn(params);
+  }
+  interpolateString(expr, params) {
+    if (!params) {
+      return expr;
+    }
+    return expr.replace(this.templateMatcher, (substring, b) => {
+      let r = this.getValue(params, b);
+      return isDefined(r) ? r : substring;
+    });
+  }
+  static Éµfac = /* @__PURE__ */ (() => {
+    let ÉµTranslateDefaultParser_BaseFactory;
+    return function TranslateDefaultParser_Factory(t) {
+      return (ÉµTranslateDefaultParser_BaseFactory || (ÉµTranslateDefaultParser_BaseFactory = ÉµÉµgetInheritedFactory(_TranslateDefaultParser)))(t || _TranslateDefaultParser);
+    };
+  })();
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslateDefaultParser,
+    factory: _TranslateDefaultParser.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDefaultParser, [{
+    type: Injectable
+  }], null, null);
+})();
+var TranslateCompiler = class {
+};
+var TranslateFakeCompiler = class _TranslateFakeCompiler extends TranslateCompiler {
+  compile(value, lang) {
+    return value;
+  }
+  compileTranslations(translations, lang) {
+    return translations;
+  }
+  static Éµfac = /* @__PURE__ */ (() => {
+    let ÉµTranslateFakeCompiler_BaseFactory;
+    return function TranslateFakeCompiler_Factory(t) {
+      return (ÉµTranslateFakeCompiler_BaseFactory || (ÉµTranslateFakeCompiler_BaseFactory = ÉµÉµgetInheritedFactory(_TranslateFakeCompiler)))(t || _TranslateFakeCompiler);
+    };
+  })();
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslateFakeCompiler,
+    factory: _TranslateFakeCompiler.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateFakeCompiler, [{
+    type: Injectable
+  }], null, null);
+})();
+var TranslateStore = class {
+  /**
+   * The default lang to fallback when translations are missing on the current lang
+   */
+  defaultLang;
+  /**
+   * The lang currently used
+   */
+  currentLang = this.defaultLang;
+  /**
+   * a list of translations per lang
+   */
+  translations = {};
+  /**
+   * an array of langs
+   */
+  langs = [];
+  /**
+   * An EventEmitter to listen to translation change events
+   * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
+     *     // do something
+     * });
+   */
+  onTranslationChange = new EventEmitter();
+  /**
+   * An EventEmitter to listen to lang change events
+   * onLangChange.subscribe((params: LangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  onLangChange = new EventEmitter();
+  /**
+   * An EventEmitter to listen to default lang change events
+   * onDefaultLangChange.subscribe((params: DefaultLangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  onDefaultLangChange = new EventEmitter();
+};
+var USE_STORE = new InjectionToken("USE_STORE");
+var USE_DEFAULT_LANG = new InjectionToken("USE_DEFAULT_LANG");
+var DEFAULT_LANGUAGE = new InjectionToken("DEFAULT_LANGUAGE");
+var USE_EXTEND = new InjectionToken("USE_EXTEND");
+var TranslateService = class _TranslateService {
+  store;
+  currentLoader;
+  compiler;
+  parser;
+  missingTranslationHandler;
+  useDefaultLang;
+  isolate;
+  extend;
+  loadingTranslations;
+  pending = false;
+  _onTranslationChange = new EventEmitter();
+  _onLangChange = new EventEmitter();
+  _onDefaultLangChange = new EventEmitter();
+  _defaultLang;
+  _currentLang;
+  _langs = [];
+  _translations = {};
+  _translationRequests = {};
+  /**
+   * An EventEmitter to listen to translation change events
+   * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
+     *     // do something
+     * });
+   */
+  get onTranslationChange() {
+    return this.isolate ? this._onTranslationChange : this.store.onTranslationChange;
+  }
+  /**
+   * An EventEmitter to listen to lang change events
+   * onLangChange.subscribe((params: LangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  get onLangChange() {
+    return this.isolate ? this._onLangChange : this.store.onLangChange;
+  }
+  /**
+   * An EventEmitter to listen to default lang change events
+   * onDefaultLangChange.subscribe((params: DefaultLangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  get onDefaultLangChange() {
+    return this.isolate ? this._onDefaultLangChange : this.store.onDefaultLangChange;
+  }
+  /**
+   * The default lang to fallback when translations are missing on the current lang
+   */
+  get defaultLang() {
+    return this.isolate ? this._defaultLang : this.store.defaultLang;
+  }
+  set defaultLang(defaultLang) {
+    if (this.isolate) {
+      this._defaultLang = defaultLang;
+    } else {
+      this.store.defaultLang = defaultLang;
+    }
+  }
+  /**
+   * The lang currently used
+   */
+  get currentLang() {
+    return this.isolate ? this._currentLang : this.store.currentLang;
+  }
+  set currentLang(currentLang) {
+    if (this.isolate) {
+      this._currentLang = currentLang;
+    } else {
+      this.store.currentLang = currentLang;
+    }
+  }
+  /**
+   * an array of langs
+   */
+  get langs() {
+    return this.isolate ? this._langs : this.store.langs;
+  }
+  set langs(langs) {
+    if (this.isolate) {
+      this._langs = langs;
+    } else {
+      this.store.langs = langs;
+    }
+  }
+  /**
+   * a list of translations per lang
+   */
+  get translations() {
+    return this.isolate ? this._translations : this.store.translations;
+  }
+  set translations(translations) {
+    if (this.isolate) {
+      this._translations = translations;
+    } else {
+      this.store.translations = translations;
+    }
+  }
+  /**
+   *
+   * @param store an instance of the store (that is supposed to be unique)
+   * @param currentLoader An instance of the loader currently used
+   * @param compiler An instance of the compiler currently used
+   * @param parser An instance of the parser currently used
+   * @param missingTranslationHandler A handler for missing translations.
+   * @param useDefaultLang whether we should use default language translation when current language translation is missing.
+   * @param isolate whether this service should use the store or not
+   * @param extend To make a child module extend (and use) translations from parent modules.
+   * @param defaultLanguage Set the default language using configuration
+   */
+  constructor(store, currentLoader, compiler, parser, missingTranslationHandler, useDefaultLang = true, isolate = false, extend = false, defaultLanguage) {
+    this.store = store;
+    this.currentLoader = currentLoader;
+    this.compiler = compiler;
+    this.parser = parser;
+    this.missingTranslationHandler = missingTranslationHandler;
+    this.useDefaultLang = useDefaultLang;
+    this.isolate = isolate;
+    this.extend = extend;
+    if (defaultLanguage) {
+      this.setDefaultLang(defaultLanguage);
+    }
+  }
+  /**
+   * Sets the default language to use as a fallback
+   */
+  setDefaultLang(lang) {
+    if (lang === this.defaultLang) {
+      return;
+    }
+    let pending = this.retrieveTranslations(lang);
+    if (typeof pending !== "undefined") {
+      if (this.defaultLang == null) {
+        this.defaultLang = lang;
+      }
+      pending.pipe(take(1)).subscribe((res) => {
+        this.changeDefaultLang(lang);
+      });
+    } else {
+      this.changeDefaultLang(lang);
+    }
+  }
+  /**
+   * Gets the default language used
+   */
+  getDefaultLang() {
+    return this.defaultLang;
+  }
+  /**
+   * Changes the lang currently used
+   */
+  use(lang) {
+    if (lang === this.currentLang) {
+      return of(this.translations[lang]);
+    }
+    let pending = this.retrieveTranslations(lang);
+    if (typeof pending !== "undefined") {
+      if (!this.currentLang) {
+        this.currentLang = lang;
+      }
+      pending.pipe(take(1)).subscribe((res) => {
+        this.changeLang(lang);
+      });
+      return pending;
+    } else {
+      this.changeLang(lang);
+      return of(this.translations[lang]);
+    }
+  }
+  /**
+   * Retrieves the given translations
+   */
+  retrieveTranslations(lang) {
+    let pending;
+    if (typeof this.translations[lang] === "undefined" || this.extend) {
+      this._translationRequests[lang] = this._translationRequests[lang] || this.getTranslation(lang);
+      pending = this._translationRequests[lang];
+    }
+    return pending;
+  }
+  /**
+   * Gets an object of translations for a given language with the current loader
+   * and passes it through the compiler
+   */
+  getTranslation(lang) {
+    this.pending = true;
+    const loadingTranslations = this.currentLoader.getTranslation(lang).pipe(shareReplay(1), take(1));
+    this.loadingTranslations = loadingTranslations.pipe(map((res) => this.compiler.compileTranslations(res, lang)), shareReplay(1), take(1));
+    this.loadingTranslations.subscribe({
+      next: (res) => {
+        this.translations[lang] = this.extend && this.translations[lang] ? __spreadValues(__spreadValues({}, res), this.translations[lang]) : res;
+        this.updateLangs();
+        this.pending = false;
+      },
+      error: (err) => {
+        this.pending = false;
+      }
+    });
+    return loadingTranslations;
+  }
+  /**
+   * Manually sets an object of translations for a given language
+   * after passing it through the compiler
+   */
+  setTranslation(lang, translations, shouldMerge = false) {
+    translations = this.compiler.compileTranslations(translations, lang);
+    if ((shouldMerge || this.extend) && this.translations[lang]) {
+      this.translations[lang] = mergeDeep(this.translations[lang], translations);
+    } else {
+      this.translations[lang] = translations;
+    }
+    this.updateLangs();
+    this.onTranslationChange.emit({
+      lang,
+      translations: this.translations[lang]
+    });
+  }
+  /**
+   * Returns an array of currently available langs
+   */
+  getLangs() {
+    return this.langs;
+  }
+  /**
+   * Add available langs
+   */
+  addLangs(langs) {
+    langs.forEach((lang) => {
+      if (this.langs.indexOf(lang) === -1) {
+        this.langs.push(lang);
+      }
+    });
+  }
+  /**
+   * Update the list of available langs
+   */
+  updateLangs() {
+    this.addLangs(Object.keys(this.translations));
+  }
+  /**
+   * Returns the parsed result of the translations
+   */
+  getParsedResult(translations, key, interpolateParams) {
+    let res;
+    if (key instanceof Array) {
+      let result = {}, observables = false;
+      for (let k of key) {
+        result[k] = this.getParsedResult(translations, k, interpolateParams);
+        if (isObservable(result[k])) {
+          observables = true;
+        }
+      }
+      if (observables) {
+        const sources = key.map((k) => isObservable(result[k]) ? result[k] : of(result[k]));
+        return forkJoin(sources).pipe(map((arr) => {
+          let obj = {};
+          arr.forEach((value, index) => {
+            obj[key[index]] = value;
+          });
+          return obj;
+        }));
+      }
+      return result;
+    }
+    if (translations) {
+      res = this.parser.interpolate(this.parser.getValue(translations, key), interpolateParams);
+    }
+    if (typeof res === "undefined" && this.defaultLang != null && this.defaultLang !== this.currentLang && this.useDefaultLang) {
+      res = this.parser.interpolate(this.parser.getValue(this.translations[this.defaultLang], key), interpolateParams);
+    }
+    if (typeof res === "undefined") {
+      let params = {
+        key,
+        translateService: this
+      };
+      if (typeof interpolateParams !== "undefined") {
+        params.interpolateParams = interpolateParams;
+      }
+      res = this.missingTranslationHandler.handle(params);
+    }
+    return typeof res !== "undefined" ? res : key;
+  }
+  /**
+   * Gets the translated value of a key (or an array of keys)
+   * @returns the translated key, or an object of translated keys
+   */
+  get(key, interpolateParams) {
+    if (!isDefined(key) || !key.length) {
+      throw new Error(`Parameter "key" required`);
+    }
+    if (this.pending) {
+      return this.loadingTranslations.pipe(concatMap((res) => {
+        res = this.getParsedResult(res, key, interpolateParams);
+        return isObservable(res) ? res : of(res);
+      }));
+    } else {
+      let res = this.getParsedResult(this.translations[this.currentLang], key, interpolateParams);
+      return isObservable(res) ? res : of(res);
+    }
+  }
+  /**
+   * Returns a stream of translated values of a key (or an array of keys) which updates
+   * whenever the translation changes.
+   * @returns A stream of the translated key, or an object of translated keys
+   */
+  getStreamOnTranslationChange(key, interpolateParams) {
+    if (!isDefined(key) || !key.length) {
+      throw new Error(`Parameter "key" required`);
+    }
+    return concat(defer(() => this.get(key, interpolateParams)), this.onTranslationChange.pipe(switchMap((event) => {
+      const res = this.getParsedResult(event.translations, key, interpolateParams);
+      if (typeof res.subscribe === "function") {
+        return res;
+      } else {
+        return of(res);
+      }
+    })));
+  }
+  /**
+   * Returns a stream of translated values of a key (or an array of keys) which updates
+   * whenever the language changes.
+   * @returns A stream of the translated key, or an object of translated keys
+   */
+  stream(key, interpolateParams) {
+    if (!isDefined(key) || !key.length) {
+      throw new Error(`Parameter "key" required`);
+    }
+    return concat(defer(() => this.get(key, interpolateParams)), this.onLangChange.pipe(switchMap((event) => {
+      const res = this.getParsedResult(event.translations, key, interpolateParams);
+      return isObservable(res) ? res : of(res);
+    })));
+  }
+  /**
+   * Returns a translation instantly from the internal state of loaded translation.
+   * All rules regarding the current language, the preferred language of even fallback languages will be used except any promise handling.
+   */
+  instant(key, interpolateParams) {
+    if (!isDefined(key) || !key.length) {
+      throw new Error(`Parameter "key" required`);
+    }
+    let res = this.getParsedResult(this.translations[this.currentLang], key, interpolateParams);
+    if (isObservable(res)) {
+      if (key instanceof Array) {
+        let obj = {};
+        key.forEach((value, index) => {
+          obj[key[index]] = key[index];
+        });
+        return obj;
+      }
+      return key;
+    } else {
+      return res;
+    }
+  }
+  /**
+   * Sets the translated value of a key, after compiling it
+   */
+  set(key, value, lang = this.currentLang) {
+    this.translations[lang][key] = this.compiler.compile(value, lang);
+    this.updateLangs();
+    this.onTranslationChange.emit({
+      lang,
+      translations: this.translations[lang]
+    });
+  }
+  /**
+   * Changes the current lang
+   */
+  changeLang(lang) {
+    this.currentLang = lang;
+    this.onLangChange.emit({
+      lang,
+      translations: this.translations[lang]
+    });
+    if (this.defaultLang == null) {
+      this.changeDefaultLang(lang);
+    }
+  }
+  /**
+   * Changes the default lang
+   */
+  changeDefaultLang(lang) {
+    this.defaultLang = lang;
+    this.onDefaultLangChange.emit({
+      lang,
+      translations: this.translations[lang]
+    });
+  }
+  /**
+   * Allows to reload the lang file from the file
+   */
+  reloadLang(lang) {
+    this.resetLang(lang);
+    return this.getTranslation(lang);
+  }
+  /**
+   * Deletes inner translation
+   */
+  resetLang(lang) {
+    this._translationRequests[lang] = void 0;
+    this.translations[lang] = void 0;
+  }
+  /**
+   * Returns the language code name from the browser, e.g. "de"
+   */
+  getBrowserLang() {
+    if (typeof window === "undefined" || typeof window.navigator === "undefined") {
+      return void 0;
+    }
+    let browserLang = window.navigator.languages ? window.navigator.languages[0] : null;
+    browserLang = browserLang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+    if (typeof browserLang === "undefined") {
+      return void 0;
+    }
+    if (browserLang.indexOf("-") !== -1) {
+      browserLang = browserLang.split("-")[0];
+    }
+    if (browserLang.indexOf("_") !== -1) {
+      browserLang = browserLang.split("_")[0];
+    }
+    return browserLang;
+  }
+  /**
+   * Returns the culture language code name from the browser, e.g. "de-DE"
+   */
+  getBrowserCultureLang() {
+    if (typeof window === "undefined" || typeof window.navigator === "undefined") {
+      return void 0;
+    }
+    let browserCultureLang = window.navigator.languages ? window.navigator.languages[0] : null;
+    browserCultureLang = browserCultureLang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+    return browserCultureLang;
+  }
+  static Éµfac = function TranslateService_Factory(t) {
+    return new (t || _TranslateService)(ÉµÉµinject(TranslateStore), ÉµÉµinject(TranslateLoader), ÉµÉµinject(TranslateCompiler), ÉµÉµinject(TranslateParser), ÉµÉµinject(MissingTranslationHandler), ÉµÉµinject(USE_DEFAULT_LANG), ÉµÉµinject(USE_STORE), ÉµÉµinject(USE_EXTEND), ÉµÉµinject(DEFAULT_LANGUAGE));
+  };
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslateService,
+    factory: _TranslateService.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateService, [{
+    type: Injectable
+  }], function() {
+    return [{
+      type: TranslateStore
+    }, {
+      type: TranslateLoader
+    }, {
+      type: TranslateCompiler
+    }, {
+      type: TranslateParser
+    }, {
+      type: MissingTranslationHandler
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Inject,
+        args: [USE_DEFAULT_LANG]
+      }]
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Inject,
+        args: [USE_STORE]
+      }]
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Inject,
+        args: [USE_EXTEND]
+      }]
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Inject,
+        args: [DEFAULT_LANGUAGE]
+      }]
+    }];
+  }, null);
+})();
+var TranslateDirective = class _TranslateDirective {
+  translateService;
+  element;
+  _ref;
+  key;
+  lastParams;
+  currentParams;
+  onLangChangeSub;
+  onDefaultLangChangeSub;
+  onTranslationChangeSub;
+  set translate(key) {
+    if (key) {
+      this.key = key;
+      this.checkNodes();
+    }
+  }
+  set translateParams(params) {
+    if (!equals(this.currentParams, params)) {
+      this.currentParams = params;
+      this.checkNodes(true);
+    }
+  }
+  constructor(translateService, element, _ref) {
+    this.translateService = translateService;
+    this.element = element;
+    this._ref = _ref;
+    if (!this.onTranslationChangeSub) {
+      this.onTranslationChangeSub = this.translateService.onTranslationChange.subscribe((event) => {
+        if (event.lang === this.translateService.currentLang) {
+          this.checkNodes(true, event.translations);
+        }
+      });
+    }
+    if (!this.onLangChangeSub) {
+      this.onLangChangeSub = this.translateService.onLangChange.subscribe((event) => {
+        this.checkNodes(true, event.translations);
+      });
+    }
+    if (!this.onDefaultLangChangeSub) {
+      this.onDefaultLangChangeSub = this.translateService.onDefaultLangChange.subscribe((event) => {
+        this.checkNodes(true);
+      });
+    }
+  }
+  ngAfterViewChecked() {
+    this.checkNodes();
+  }
+  checkNodes(forceUpdate = false, translations) {
+    let nodes = this.element.nativeElement.childNodes;
+    if (!nodes.length) {
+      this.setContent(this.element.nativeElement, this.key);
+      nodes = this.element.nativeElement.childNodes;
+    }
+    for (let i = 0; i < nodes.length; ++i) {
+      let node = nodes[i];
+      if (node.nodeType === 3) {
+        let key;
+        if (forceUpdate) {
+          node.lastKey = null;
+        }
+        if (isDefined(node.lookupKey)) {
+          key = node.lookupKey;
+        } else if (this.key) {
+          key = this.key;
+        } else {
+          let content = this.getContent(node);
+          let trimmedContent = content.trim();
+          if (trimmedContent.length) {
+            node.lookupKey = trimmedContent;
+            if (content !== node.currentValue) {
+              key = trimmedContent;
+              node.originalContent = content || node.originalContent;
+            } else if (node.originalContent) {
+              key = node.originalContent.trim();
+            } else if (content !== node.currentValue) {
+              key = trimmedContent;
+              node.originalContent = content || node.originalContent;
+            }
+          }
+        }
+        this.updateValue(key, node, translations);
+      }
+    }
+  }
+  updateValue(key, node, translations) {
+    if (key) {
+      if (node.lastKey === key && this.lastParams === this.currentParams) {
+        return;
+      }
+      this.lastParams = this.currentParams;
+      let onTranslation = (res) => {
+        if (res !== key) {
+          node.lastKey = key;
+        }
+        if (!node.originalContent) {
+          node.originalContent = this.getContent(node);
+        }
+        node.currentValue = isDefined(res) ? res : node.originalContent || key;
+        this.setContent(node, this.key ? node.currentValue : node.originalContent.replace(key, node.currentValue));
+        this._ref.markForCheck();
+      };
+      if (isDefined(translations)) {
+        let res = this.translateService.getParsedResult(translations, key, this.currentParams);
+        if (isObservable(res)) {
+          res.subscribe({
+            next: onTranslation
+          });
+        } else {
+          onTranslation(res);
+        }
+      } else {
+        this.translateService.get(key, this.currentParams).subscribe(onTranslation);
+      }
+    }
+  }
+  getContent(node) {
+    return isDefined(node.textContent) ? node.textContent : node.data;
+  }
+  setContent(node, content) {
+    if (isDefined(node.textContent)) {
+      node.textContent = content;
+    } else {
+      node.data = content;
+    }
+  }
+  ngOnDestroy() {
+    if (this.onLangChangeSub) {
+      this.onLangChangeSub.unsubscribe();
+    }
+    if (this.onDefaultLangChangeSub) {
+      this.onDefaultLangChangeSub.unsubscribe();
+    }
+    if (this.onTranslationChangeSub) {
+      this.onTranslationChangeSub.unsubscribe();
+    }
+  }
+  static Éµfac = function TranslateDirective_Factory(t) {
+    return new (t || _TranslateDirective)(ÉµÉµdirectiveInject(TranslateService), ÉµÉµdirectiveInject(ElementRef), ÉµÉµdirectiveInject(ChangeDetectorRef));
+  };
+  static Éµdir = ÉµÉµdefineDirective({
+    type: _TranslateDirective,
+    selectors: [["", "translate", ""], ["", "ngx-translate", ""]],
+    inputs: {
+      translate: "translate",
+      translateParams: "translateParams"
+    }
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDirective, [{
+    type: Directive,
+    args: [{
+      selector: "[translate],[ngx-translate]"
+    }]
+  }], function() {
+    return [{
+      type: TranslateService
+    }, {
+      type: ElementRef
+    }, {
+      type: ChangeDetectorRef
+    }];
+  }, {
+    translate: [{
+      type: Input
+    }],
+    translateParams: [{
+      type: Input
+    }]
+  });
+})();
+var TranslatePipe = class _TranslatePipe {
+  translate;
+  _ref;
+  value = "";
+  lastKey = null;
+  lastParams = [];
+  onTranslationChange;
+  onLangChange;
+  onDefaultLangChange;
+  constructor(translate, _ref) {
+    this.translate = translate;
+    this._ref = _ref;
+  }
+  updateValue(key, interpolateParams, translations) {
+    let onTranslation = (res) => {
+      this.value = res !== void 0 ? res : key;
+      this.lastKey = key;
+      this._ref.markForCheck();
+    };
+    if (translations) {
+      let res = this.translate.getParsedResult(translations, key, interpolateParams);
+      if (isObservable(res.subscribe)) {
+        res.subscribe(onTranslation);
+      } else {
+        onTranslation(res);
+      }
+    }
+    this.translate.get(key, interpolateParams).subscribe(onTranslation);
+  }
+  transform(query, ...args) {
+    if (!query || !query.length) {
+      return query;
+    }
+    if (equals(query, this.lastKey) && equals(args, this.lastParams)) {
+      return this.value;
+    }
+    let interpolateParams = void 0;
+    if (isDefined(args[0]) && args.length) {
+      if (typeof args[0] === "string" && args[0].length) {
+        let validArgs = args[0].replace(/(\')?([a-zA-Z0-9_]+)(\')?(\s)?:/g, '"$2":').replace(/:(\s)?(\')(.*?)(\')/g, ':"$3"');
+        try {
+          interpolateParams = JSON.parse(validArgs);
+        } catch (e) {
+          throw new SyntaxError(`Wrong parameter in TranslatePipe. Expected a valid Object, received: ${args[0]}`);
+        }
+      } else if (typeof args[0] === "object" && !Array.isArray(args[0])) {
+        interpolateParams = args[0];
+      }
+    }
+    this.lastKey = query;
+    this.lastParams = args;
+    this.updateValue(query, interpolateParams);
+    this._dispose();
+    if (!this.onTranslationChange) {
+      this.onTranslationChange = this.translate.onTranslationChange.subscribe((event) => {
+        if (this.lastKey && event.lang === this.translate.currentLang) {
+          this.lastKey = null;
+          this.updateValue(query, interpolateParams, event.translations);
+        }
+      });
+    }
+    if (!this.onLangChange) {
+      this.onLangChange = this.translate.onLangChange.subscribe((event) => {
+        if (this.lastKey) {
+          this.lastKey = null;
+          this.updateValue(query, interpolateParams, event.translations);
+        }
+      });
+    }
+    if (!this.onDefaultLangChange) {
+      this.onDefaultLangChange = this.translate.onDefaultLangChange.subscribe(() => {
+        if (this.lastKey) {
+          this.lastKey = null;
+          this.updateValue(query, interpolateParams);
+        }
+      });
+    }
+    return this.value;
+  }
+  /**
+   * Clean any existing subscription to change events
+   */
+  _dispose() {
+    if (typeof this.onTranslationChange !== "undefined") {
+      this.onTranslationChange.unsubscribe();
+      this.onTranslationChange = void 0;
+    }
+    if (typeof this.onLangChange !== "undefined") {
+      this.onLangChange.unsubscribe();
+      this.onLangChange = void 0;
+    }
+    if (typeof this.onDefaultLangChange !== "undefined") {
+      this.onDefaultLangChange.unsubscribe();
+      this.onDefaultLangChange = void 0;
+    }
+  }
+  ngOnDestroy() {
+    this._dispose();
+  }
+  static Éµfac = function TranslatePipe_Factory(t) {
+    return new (t || _TranslatePipe)(ÉµÉµdirectiveInject(TranslateService, 16), ÉµÉµdirectiveInject(ChangeDetectorRef, 16));
+  };
+  static Éµpipe = ÉµÉµdefinePipe({
+    name: "translate",
+    type: _TranslatePipe,
+    pure: false
+  });
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslatePipe,
+    factory: _TranslatePipe.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslatePipe, [{
+    type: Injectable
+  }, {
+    type: Pipe,
+    args: [{
+      name: "translate",
+      pure: false
+      // required to update the value when the promise is resolved
+    }]
+  }], function() {
+    return [{
+      type: TranslateService
+    }, {
+      type: ChangeDetectorRef
+    }];
+  }, null);
+})();
+var TranslateModule = class _TranslateModule {
+  /**
+   * Use this method in your root module to provide the TranslateService
+   */
+  static forRoot(config = {}) {
+    return {
+      ngModule: _TranslateModule,
+      providers: [config.loader || {
+        provide: TranslateLoader,
+        useClass: TranslateFakeLoader
+      }, config.compiler || {
+        provide: TranslateCompiler,
+        useClass: TranslateFakeCompiler
+      }, config.parser || {
+        provide: TranslateParser,
+        useClass: TranslateDefaultParser
+      }, config.missingTranslationHandler || {
+        provide: MissingTranslationHandler,
+        useClass: FakeMissingTranslationHandler
+      }, TranslateStore, {
+        provide: USE_STORE,
+        useValue: config.isolate
+      }, {
+        provide: USE_DEFAULT_LANG,
+        useValue: config.useDefaultLang
+      }, {
+        provide: USE_EXTEND,
+        useValue: config.extend
+      }, {
+        provide: DEFAULT_LANGUAGE,
+        useValue: config.defaultLanguage
+      }, TranslateService]
+    };
+  }
+  /**
+   * Use this method in your other (non root) modules to import the directive/pipe
+   */
+  static forChild(config = {}) {
+    return {
+      ngModule: _TranslateModule,
+      providers: [config.loader || {
+        provide: TranslateLoader,
+        useClass: TranslateFakeLoader
+      }, config.compiler || {
+        provide: TranslateCompiler,
+        useClass: TranslateFakeCompiler
+      }, config.parser || {
+        provide: TranslateParser,
+        useClass: TranslateDefaultParser
+      }, config.missingTranslationHandler || {
+        provide: MissingTranslationHandler,
+        useClass: FakeMissingTranslationHandler
+      }, {
+        provide: USE_STORE,
+        useValue: config.isolate
+      }, {
+        provide: USE_DEFAULT_LANG,
+        useValue: config.useDefaultLang
+      }, {
+        provide: USE_EXTEND,
+        useValue: config.extend
+      }, {
+        provide: DEFAULT_LANGUAGE,
+        useValue: config.defaultLanguage
+      }, TranslateService]
+    };
+  }
+  static Éµfac = function TranslateModule_Factory(t) {
+    return new (t || _TranslateModule)();
+  };
+  static Éµmod = ÉµÉµdefineNgModule({
+    type: _TranslateModule,
+    declarations: [TranslatePipe, TranslateDirective],
+    exports: [TranslatePipe, TranslateDirective]
+  });
+  static Éµinj = ÉµÉµdefineInjector({});
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateModule, [{
+    type: NgModule,
+    args: [{
+      declarations: [TranslatePipe, TranslateDirective],
+      exports: [TranslatePipe, TranslateDirective]
+    }]
+  }], null, null);
+})();
+export {
+  DEFAULT_LANGUAGE,
+  FakeMissingTranslationHandler,
+  MissingTranslationHandler,
+  TranslateCompiler,
+  TranslateDefaultParser,
+  TranslateDirective,
+  TranslateFakeCompiler,
+  TranslateFakeLoader,
+  TranslateLoader,
+  TranslateModule,
+  TranslateParser,
+  TranslatePipe,
+  TranslateService,
+  TranslateStore,
+  USE_DEFAULT_LANG,
+  USE_EXTEND,
+  USE_STORE
+};
+//# sourceMappingURL=@ngx-translate_core.js.map
+        à x ÿÿ     20231211174248-8lÃ íúS™   http://localhost:4200/@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/@ngx-translate_core.js?v=6ba1be97   @ n g x - t r a n s l a t e _ c o r e . j s . m a p       İ‡  import {
+  ChangeDetectorRef,
+  Directive,
+  ElementRef,
+  EventEmitter,
+  Inject,
+  Injectable,
+  InjectionToken,
+  Input,
+  NgModule,
+  Pipe,
+  setClassMetadata,
+  ÉµÉµdefineDirective,
+  ÉµÉµdefineInjectable,
+  ÉµÉµdefineInjector,
+  ÉµÉµdefineNgModule,
+  ÉµÉµdefinePipe,
+  ÉµÉµdirectiveInject,
+  ÉµÉµgetInheritedFactory,
+  ÉµÉµinject
+} from "/@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/chunk-HAFZABSX.js?v=6ba1be97";
+import {
+  concat,
+  concatMap,
+  defer,
+  forkJoin,
+  isObservable,
+  map,
+  of,
+  shareReplay,
+  switchMap,
+  take
+} from "/@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/chunk-WSA2QMXP.js?v=6ba1be97";
+import {
+  __spreadValues
+} from "/@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/chunk-WKYGNSYM.js?v=6ba1be97";
+
+// node_modules/@ngx-translate/core/dist/fesm2022/ngx-translate-core.mjs
+var TranslateLoader = class {
+};
+var TranslateFakeLoader = class _TranslateFakeLoader extends TranslateLoader {
+  getTranslation(lang) {
+    return of({});
+  }
+  static Éµfac = /* @__PURE__ */ (() => {
+    let ÉµTranslateFakeLoader_BaseFactory;
+    return function TranslateFakeLoader_Factory(t) {
+      return (ÉµTranslateFakeLoader_BaseFactory || (ÉµTranslateFakeLoader_BaseFactory = ÉµÉµgetInheritedFactory(_TranslateFakeLoader)))(t || _TranslateFakeLoader);
+    };
+  })();
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslateFakeLoader,
+    factory: _TranslateFakeLoader.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateFakeLoader, [{
+    type: Injectable
+  }], null, null);
+})();
+var MissingTranslationHandler = class {
+};
+var FakeMissingTranslationHandler = class _FakeMissingTranslationHandler {
+  handle(params) {
+    return params.key;
+  }
+  static Éµfac = function FakeMissingTranslationHandler_Factory(t) {
+    return new (t || _FakeMissingTranslationHandler)();
+  };
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _FakeMissingTranslationHandler,
+    factory: _FakeMissingTranslationHandler.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FakeMissingTranslationHandler, [{
+    type: Injectable
+  }], null, null);
+})();
+function equals(o1, o2) {
+  if (o1 === o2)
+    return true;
+  if (o1 === null || o2 === null)
+    return false;
+  if (o1 !== o1 && o2 !== o2)
+    return true;
+  let t1 = typeof o1, t2 = typeof o2, length, key, keySet;
+  if (t1 == t2 && t1 == "object") {
+    if (Array.isArray(o1)) {
+      if (!Array.isArray(o2))
+        return false;
+      if ((length = o1.length) == o2.length) {
+        for (key = 0; key < length; key++) {
+          if (!equals(o1[key], o2[key]))
+            return false;
+        }
+        return true;
+      }
+    } else {
+      if (Array.isArray(o2)) {
+        return false;
+      }
+      keySet = /* @__PURE__ */ Object.create(null);
+      for (key in o1) {
+        if (!equals(o1[key], o2[key])) {
+          return false;
+        }
+        keySet[key] = true;
+      }
+      for (key in o2) {
+        if (!(key in keySet) && typeof o2[key] !== "undefined") {
+          return false;
+        }
+      }
+      return true;
+    }
+  }
+  return false;
+}
+function isDefined(value) {
+  return typeof value !== "undefined" && value !== null;
+}
+function isObject(item) {
+  return item && typeof item === "object" && !Array.isArray(item);
+}
+function mergeDeep(target, source) {
+  let output = Object.assign({}, target);
+  if (isObject(target) && isObject(source)) {
+    Object.keys(source).forEach((key) => {
+      if (isObject(source[key])) {
+        if (!(key in target)) {
+          Object.assign(output, {
+            [key]: source[key]
+          });
+        } else {
+          output[key] = mergeDeep(target[key], source[key]);
+        }
+      } else {
+        Object.assign(output, {
+          [key]: source[key]
+        });
+      }
+    });
+  }
+  return output;
+}
+var TranslateParser = class {
+};
+var TranslateDefaultParser = class _TranslateDefaultParser extends TranslateParser {
+  templateMatcher = /{{\s?([^{}\s]*)\s?}}/g;
+  interpolate(expr, params) {
+    let result;
+    if (typeof expr === "string") {
+      result = this.interpolateString(expr, params);
+    } else if (typeof expr === "function") {
+      result = this.interpolateFunction(expr, params);
+    } else {
+      result = expr;
+    }
+    return result;
+  }
+  getValue(target, key) {
+    let keys = typeof key === "string" ? key.split(".") : [key];
+    key = "";
+    do {
+      key += keys.shift();
+      if (isDefined(target) && isDefined(target[key]) && (typeof target[key] === "object" || !keys.length)) {
+        target = target[key];
+        key = "";
+      } else if (!keys.length) {
+        target = void 0;
+      } else {
+        key += ".";
+      }
+    } while (keys.length);
+    return target;
+  }
+  interpolateFunction(fn, params) {
+    return fn(params);
+  }
+  interpolateString(expr, params) {
+    if (!params) {
+      return expr;
+    }
+    return expr.replace(this.templateMatcher, (substring, b) => {
+      let r = this.getValue(params, b);
+      return isDefined(r) ? r : substring;
+    });
+  }
+  static Éµfac = /* @__PURE__ */ (() => {
+    let ÉµTranslateDefaultParser_BaseFactory;
+    return function TranslateDefaultParser_Factory(t) {
+      return (ÉµTranslateDefaultParser_BaseFactory || (ÉµTranslateDefaultParser_BaseFactory = ÉµÉµgetInheritedFactory(_TranslateDefaultParser)))(t || _TranslateDefaultParser);
+    };
+  })();
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslateDefaultParser,
+    factory: _TranslateDefaultParser.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDefaultParser, [{
+    type: Injectable
+  }], null, null);
+})();
+var TranslateCompiler = class {
+};
+var TranslateFakeCompiler = class _TranslateFakeCompiler extends TranslateCompiler {
+  compile(value, lang) {
+    return value;
+  }
+  compileTranslations(translations, lang) {
+    return translations;
+  }
+  static Éµfac = /* @__PURE__ */ (() => {
+    let ÉµTranslateFakeCompiler_BaseFactory;
+    return function TranslateFakeCompiler_Factory(t) {
+      return (ÉµTranslateFakeCompiler_BaseFactory || (ÉµTranslateFakeCompiler_BaseFactory = ÉµÉµgetInheritedFactory(_TranslateFakeCompiler)))(t || _TranslateFakeCompiler);
+    };
+  })();
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslateFakeCompiler,
+    factory: _TranslateFakeCompiler.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateFakeCompiler, [{
+    type: Injectable
+  }], null, null);
+})();
+var TranslateStore = class {
+  /**
+   * The default lang to fallback when translations are missing on the current lang
+   */
+  defaultLang;
+  /**
+   * The lang currently used
+   */
+  currentLang = this.defaultLang;
+  /**
+   * a list of translations per lang
+   */
+  translations = {};
+  /**
+   * an array of langs
+   */
+  langs = [];
+  /**
+   * An EventEmitter to listen to translation change events
+   * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
+     *     // do something
+     * });
+   */
+  onTranslationChange = new EventEmitter();
+  /**
+   * An EventEmitter to listen to lang change events
+   * onLangChange.subscribe((params: LangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  onLangChange = new EventEmitter();
+  /**
+   * An EventEmitter to listen to default lang change events
+   * onDefaultLangChange.subscribe((params: DefaultLangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  onDefaultLangChange = new EventEmitter();
+};
+var USE_STORE = new InjectionToken("USE_STORE");
+var USE_DEFAULT_LANG = new InjectionToken("USE_DEFAULT_LANG");
+var DEFAULT_LANGUAGE = new InjectionToken("DEFAULT_LANGUAGE");
+var USE_EXTEND = new InjectionToken("USE_EXTEND");
+var TranslateService = class _TranslateService {
+  store;
+  currentLoader;
+  compiler;
+  parser;
+  missingTranslationHandler;
+  useDefaultLang;
+  isolate;
+  extend;
+  loadingTranslations;
+  pending = false;
+  _onTranslationChange = new EventEmitter();
+  _onLangChange = new EventEmitter();
+  _onDefaultLangChange = new EventEmitter();
+  _defaultLang;
+  _currentLang;
+  _langs = [];
+  _translations = {};
+  _translationRequests = {};
+  /**
+   * An EventEmitter to listen to translation change events
+   * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
+     *     // do something
+     * });
+   */
+  get onTranslationChange() {
+    return this.isolate ? this._onTranslationChange : this.store.onTranslationChange;
+  }
+  /**
+   * An EventEmitter to listen to lang change events
+   * onLangChange.subscribe((params: LangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  get onLangChange() {
+    return this.isolate ? this._onLangChange : this.store.onLangChange;
+  }
+  /**
+   * An EventEmitter to listen to default lang change events
+   * onDefaultLangChange.subscribe((params: DefaultLangChangeEvent) => {
+     *     // do something
+     * });
+   */
+  get onDefaultLangChange() {
+    return this.isolate ? this._onDefaultLangChange : this.store.onDefaultLangChange;
+  }
+  /**
+   * The default lang to fallback when translations are missing on the current lang
+   */
+  get defaultLang() {
+    return this.isolate ? this._defaultLang : this.store.defaultLang;
+  }
+  set defaultLang(defaultLang) {
+    if (this.isolate) {
+      this._defaultLang = defaultLang;
+    } else {
+      this.store.defaultLang = defaultLang;
+    }
+  }
+  /**
+   * The lang currently used
+   */
+  get currentLang() {
+    return this.isolate ? this._currentLang : this.store.currentLang;
+  }
+  set currentLang(currentLang) {
+    if (this.isolate) {
+      this._currentLang = currentLang;
+    } else {
+      this.store.currentLang = currentLang;
+    }
+  }
+  /**
+   * an array of langs
+   */
+  get langs() {
+    return this.isolate ? this._langs : this.store.langs;
+  }
+  set langs(langs) {
+    if (this.isolate) {
+      this._langs = langs;
+    } else {
+      this.store.langs = langs;
+    }
+  }
+  /**
+   * a list of translations per lang
+   */
+  get translations() {
+    return this.isolate ? this._translations : this.store.translations;
+  }
+  set translations(translations) {
+    if (this.isolate) {
+      this._translations = translations;
+    } else {
+      this.store.translations = translations;
+    }
+  }
+  /**
+   *
+   * @param store an instance of the store (that is supposed to be unique)
+   * @param currentLoader An instance of the loader currently used
+   * @param compiler An instance of the compiler currently used
+   * @param parser An instance of the parser currently used
+   * @param missingTranslationHandler A handler for missing translations.
+   * @param useDefaultLang whether we should use default language translation when current language translation is missing.
+   * @param isolate whether this service should use the store or not
+   * @param extend To make a child module extend (and use) translations from parent modules.
+   * @param defaultLanguage Set the default language using configuration
+   */
+  constructor(store, currentLoader, compiler, parser, missingTranslationHandler, useDefaultLang = true, isolate = false, extend = false, defaultLanguage) {
+    this.store = store;
+    this.currentLoader = currentLoader;
+    this.compiler = compiler;
+    this.parser = parser;
+    this.missingTranslationHandler = missingTranslationHandler;
+    this.useDefaultLang = useDefaultLang;
+    this.isolate = isolate;
+    this.extend = extend;
+    if (defaultLanguage) {
+      this.setDefaultLang(defaultLanguage);
+    }
+  }
+  /**
+   * Sets the default language to use as a fallback
+   */
+  setDefaultLang(lang) {
+    if (lang === this.defaultLang) {
+      return;
+    }
+    let pending = this.retrieveTranslations(lang);
+    if (typeof pending !== "undefined") {
+      if (this.defaultLang == null) {
+        this.defaultLang = lang;
+      }
+      pending.pipe(take(1)).subscribe((res) => {
+        this.changeDefaultLang(lang);
+      });
+    } else {
+      this.changeDefaultLang(lang);
+    }
+  }
+  /**
+   * Gets the default language used
+   */
+  getDefaultLang() {
+    return this.defaultLang;
+  }
+  /**
+   * Changes the lang currently used
+   */
+  use(lang) {
+    if (lang === this.currentLang) {
+      return of(this.translations[lang]);
+    }
+    let pending = this.retrieveTranslations(lang);
+    if (typeof pending !== "undefined") {
+      if (!this.currentLang) {
+        this.currentLang = lang;
+      }
+      pending.pipe(take(1)).subscribe((res) => {
+        this.changeLang(lang);
+      });
+      return pending;
+    } else {
+      this.changeLang(lang);
+      return of(this.translations[lang]);
+    }
+  }
+  /**
+   * Retrieves the given translations
+   */
+  retrieveTranslations(lang) {
+    let pending;
+    if (typeof this.translations[lang] === "undefined" || this.extend) {
+      this._translationRequests[lang] = this._translationRequests[lang] || this.getTranslation(lang);
+      pending = this._translationRequests[lang];
+    }
+    return pending;
+  }
+  /**
+   * Gets an object of translations for a given language with the current loader
+   * and passes it through the compiler
+   */
+  getTranslation(lang) {
+    this.pending = true;
+    const loadingTranslations = this.currentLoader.getTranslation(lang).pipe(shareReplay(1), take(1));
+    this.loadingTranslations = loadingTranslations.pipe(map((res) => this.compiler.compileTranslations(res, lang)), shareReplay(1), take(1));
+    this.loadingTranslations.subscribe({
+      next: (res) => {
+        this.translations[lang] = this.extend && this.translations[lang] ? __spreadValues(__spreadValues({}, res), this.translations[lang]) : res;
+        this.updateLangs();
+        this.pending = false;
+      },
+      error: (err) => {
+        this.pending = false;
+      }
+    });
+    return loadingTranslations;
+  }
+  /**
+   * Manually sets an object of translations for a given language
+   * after passing it through the compiler
+   */
+  setTranslation(lang, translations, shouldMerge = false) {
+    translations = this.compiler.compileTranslations(translations, lang);
+    if ((shouldMerge || this.extend) && this.translations[lang]) {
+      this.translations[lang] = mergeDeep(this.translations[lang], translations);
+    } else {
+      this.translations[lang] = translations;
+    }
+    this.updateLangs();
+    this.onTranslationChange.emit({
+      lang,
+      translations: this.translations[lang]
+    });
+  }
+  /**
+   * Returns an array of currently available langs
+   */
+  getLangs() {
+    return this.langs;
+  }
+  /**
+   * Add available langs
+   */
+  addLangs(langs) {
+    langs.forEach((lang) => {
+      if (this.langs.indexOf(lang) === -1) {
+        this.langs.push(lang);
+      }
+    });
+  }
+  /**
+   * Update the list of available langs
+   */
+  updateLangs() {
+    this.addLangs(Object.keys(this.translations));
+  }
+  /**
+   * Returns the parsed result of the translations
+   */
+  getParsedResult(translations, key, interpolateParams) {
+    let res;
+    if (key instanceof Array) {
+      let result = {}, observables = false;
+      for (let k of key) {
+        result[k] = this.getParsedResult(translations, k, interpolateParams);
+        if (isObservable(result[k])) {
+          observables = true;
+        }
+      }
+      if (observables) {
+        const sources = key.map((k) => isObservable(result[k]) ? result[k] : of(result[k]));
+        return forkJoin(sources).pipe(map((arr) => {
+          let obj = {};
+          arr.forEach((value, index) => {
+            obj[key[index]] = value;
+          });
+          return obj;
+        }));
+      }
+      return result;
+    }
+    if (translations) {
+      res = this.parser.interpolate(this.parser.getValue(translations, key), interpolateParams);
+    }
+    if (typeof res === "undefined" && this.defaultLang != null && this.defaultLang !== this.currentLang && this.useDefaultLang) {
+      res = this.parser.interpolate(this.parser.getValue(this.translations[this.defaultLang], key), interpolateParams);
+    }
+    if (typeof res === "undefined") {
+      let params = {
+        key,
+        translateService: this
+      };
+      if (typeof interpolateParams !== "undefined") {
+        params.interpolateParams = interpolateParams;
+      }
+      res = this.missingTranslationHandler.handle(params);
+    }
+    return typeof res !== "undefined" ? res : key;
+  }
+  /**
+   * Gets the translated value of a key (or an array of keys)
+   * @returns the translated key, or an object of translated keys
+   */
+  get(key, interpolateParams) {
+    if (!isDefined(key) || !key.length) {
+      throw new Error(`Parameter "key" required`);
+    }
+    if (this.pending) {
+      return this.loadingTranslations.pipe(concatMap((res) => {
+        res = this.getParsedResult(res, key, interpolateParams);
+        return isObservable(res) ? res : of(res);
+      }));
+    } else {
+      let res = this.getParsedResult(this.translations[this.currentLang], key, interpolateParams);
+      return isObservable(res) ? res : of(res);
+    }
+  }
+  /**
+   * Returns a stream of translated values of a key (or an array of keys) which updates
+   * whenever the translation changes.
+   * @returns A stream of the translated key, or an object of translated keys
+   */
+  getStreamOnTranslationChange(key, interpolateParams) {
+    if (!isDefined(key) || !key.length) {
+      throw new Error(`Parameter "key" required`);
+    }
+    return concat(defer(() => this.get(key, interpolateParams)), this.onTranslationChange.pipe(switchMap((event) => {
+      const res = this.getParsedResult(event.translations, key, interpolateParams);
+      if (typeof res.subscribe === "function") {
+        return res;
+      } else {
+        return of(res);
+      }
+    })));
+  }
+  /**
+   * Returns a stream of translated values of a key (or an array of keys) which updates
+   * whenever the language changes.
+   * @returns A stream of the translated key, or an object of translated keys
+   */
+  stream(key, interpolateParams) {
+    if (!isDefined(key) || !key.length) {
+      throw new Error(`Parameter "key" required`);
+    }
+    return concat(defer(() => this.get(key, interpolateParams)), this.onLangChange.pipe(switchMap((event) => {
+      const res = this.getParsedResult(event.translations, key, interpolateParams);
+      return isObservable(res) ? res : of(res);
+    })));
+  }
+  /**
+   * Returns a translation instantly from the internal state of loaded translation.
+   * All rules regarding the current language, the preferred language of even fallback languages will be used except any promise handling.
+   */
+  instant(key, interpolateParams) {
+    if (!isDefined(key) || !key.length) {
+      throw new Error(`Parameter "key" required`);
+    }
+    let res = this.getParsedResult(this.translations[this.currentLang], key, interpolateParams);
+    if (isObservable(res)) {
+      if (key instanceof Array) {
+        let obj = {};
+        key.forEach((value, index) => {
+          obj[key[index]] = key[index];
+        });
+        return obj;
+      }
+      return key;
+    } else {
+      return res;
+    }
+  }
+  /**
+   * Sets the translated value of a key, after compiling it
+   */
+  set(key, value, lang = this.currentLang) {
+    this.translations[lang][key] = this.compiler.compile(value, lang);
+    this.updateLangs();
+    this.onTranslationChange.emit({
+      lang,
+      translations: this.translations[lang]
+    });
+  }
+  /**
+   * Changes the current lang
+   */
+  changeLang(lang) {
+    this.currentLang = lang;
+    this.onLangChange.emit({
+      lang,
+      translations: this.translations[lang]
+    });
+    if (this.defaultLang == null) {
+      this.changeDefaultLang(lang);
+    }
+  }
+  /**
+   * Changes the default lang
+   */
+  changeDefaultLang(lang) {
+    this.defaultLang = lang;
+    this.onDefaultLangChange.emit({
+      lang,
+      translations: this.translations[lang]
+    });
+  }
+  /**
+   * Allows to reload the lang file from the file
+   */
+  reloadLang(lang) {
+    this.resetLang(lang);
+    return this.getTranslation(lang);
+  }
+  /**
+   * Deletes inner translation
+   */
+  resetLang(lang) {
+    this._translationRequests[lang] = void 0;
+    this.translations[lang] = void 0;
+  }
+  /**
+   * Returns the language code name from the browser, e.g. "de"
+   */
+  getBrowserLang() {
+    if (typeof window === "undefined" || typeof window.navigator === "undefined") {
+      return void 0;
+    }
+    let browserLang = window.navigator.languages ? window.navigator.languages[0] : null;
+    browserLang = browserLang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+    if (typeof browserLang === "undefined") {
+      return void 0;
+    }
+    if (browserLang.indexOf("-") !== -1) {
+      browserLang = browserLang.split("-")[0];
+    }
+    if (browserLang.indexOf("_") !== -1) {
+      browserLang = browserLang.split("_")[0];
+    }
+    return browserLang;
+  }
+  /**
+   * Returns the culture language code name from the browser, e.g. "de-DE"
+   */
+  getBrowserCultureLang() {
+    if (typeof window === "undefined" || typeof window.navigator === "undefined") {
+      return void 0;
+    }
+    let browserCultureLang = window.navigator.languages ? window.navigator.languages[0] : null;
+    browserCultureLang = browserCultureLang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+    return browserCultureLang;
+  }
+  static Éµfac = function TranslateService_Factory(t) {
+    return new (t || _TranslateService)(ÉµÉµinject(TranslateStore), ÉµÉµinject(TranslateLoader), ÉµÉµinject(TranslateCompiler), ÉµÉµinject(TranslateParser), ÉµÉµinject(MissingTranslationHandler), ÉµÉµinject(USE_DEFAULT_LANG), ÉµÉµinject(USE_STORE), ÉµÉµinject(USE_EXTEND), ÉµÉµinject(DEFAULT_LANGUAGE));
+  };
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslateService,
+    factory: _TranslateService.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateService, [{
+    type: Injectable
+  }], function() {
+    return [{
+      type: TranslateStore
+    }, {
+      type: TranslateLoader
+    }, {
+      type: TranslateCompiler
+    }, {
+      type: TranslateParser
+    }, {
+      type: MissingTranslationHandler
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Inject,
+        args: [USE_DEFAULT_LANG]
+      }]
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Inject,
+        args: [USE_STORE]
+      }]
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Inject,
+        args: [USE_EXTEND]
+      }]
+    }, {
+      type: void 0,
+      decorators: [{
+        type: Inject,
+        args: [DEFAULT_LANGUAGE]
+      }]
+    }];
+  }, null);
+})();
+var TranslateDirective = class _TranslateDirective {
+  translateService;
+  element;
+  _ref;
+  key;
+  lastParams;
+  currentParams;
+  onLangChangeSub;
+  onDefaultLangChangeSub;
+  onTranslationChangeSub;
+  set translate(key) {
+    if (key) {
+      this.key = key;
+      this.checkNodes();
+    }
+  }
+  set translateParams(params) {
+    if (!equals(this.currentParams, params)) {
+      this.currentParams = params;
+      this.checkNodes(true);
+    }
+  }
+  constructor(translateService, element, _ref) {
+    this.translateService = translateService;
+    this.element = element;
+    this._ref = _ref;
+    if (!this.onTranslationChangeSub) {
+      this.onTranslationChangeSub = this.translateService.onTranslationChange.subscribe((event) => {
+        if (event.lang === this.translateService.currentLang) {
+          this.checkNodes(true, event.translations);
+        }
+      });
+    }
+    if (!this.onLangChangeSub) {
+      this.onLangChangeSub = this.translateService.onLangChange.subscribe((event) => {
+        this.checkNodes(true, event.translations);
+      });
+    }
+    if (!this.onDefaultLangChangeSub) {
+      this.onDefaultLangChangeSub = this.translateService.onDefaultLangChange.subscribe((event) => {
+        this.checkNodes(true);
+      });
+    }
+  }
+  ngAfterViewChecked() {
+    this.checkNodes();
+  }
+  checkNodes(forceUpdate = false, translations) {
+    let nodes = this.element.nativeElement.childNodes;
+    if (!nodes.length) {
+      this.setContent(this.element.nativeElement, this.key);
+      nodes = this.element.nativeElement.childNodes;
+    }
+    for (let i = 0; i < nodes.length; ++i) {
+      let node = nodes[i];
+      if (node.nodeType === 3) {
+        let key;
+        if (forceUpdate) {
+          node.lastKey = null;
+        }
+        if (isDefined(node.lookupKey)) {
+          key = node.lookupKey;
+        } else if (this.key) {
+          key = this.key;
+        } else {
+          let content = this.getContent(node);
+          let trimmedContent = content.trim();
+          if (trimmedContent.length) {
+            node.lookupKey = trimmedContent;
+            if (content !== node.currentValue) {
+              key = trimmedContent;
+              node.originalContent = content || node.originalContent;
+            } else if (node.originalContent) {
+              key = node.originalContent.trim();
+            } else if (content !== node.currentValue) {
+              key = trimmedContent;
+              node.originalContent = content || node.originalContent;
+            }
+          }
+        }
+        this.updateValue(key, node, translations);
+      }
+    }
+  }
+  updateValue(key, node, translations) {
+    if (key) {
+      if (node.lastKey === key && this.lastParams === this.currentParams) {
+        return;
+      }
+      this.lastParams = this.currentParams;
+      let onTranslation = (res) => {
+        if (res !== key) {
+          node.lastKey = key;
+        }
+        if (!node.originalContent) {
+          node.originalContent = this.getContent(node);
+        }
+        node.currentValue = isDefined(res) ? res : node.originalContent || key;
+        this.setContent(node, this.key ? node.currentValue : node.originalContent.replace(key, node.currentValue));
+        this._ref.markForCheck();
+      };
+      if (isDefined(translations)) {
+        let res = this.translateService.getParsedResult(translations, key, this.currentParams);
+        if (isObservable(res)) {
+          res.subscribe({
+            next: onTranslation
+          });
+        } else {
+          onTranslation(res);
+        }
+      } else {
+        this.translateService.get(key, this.currentParams).subscribe(onTranslation);
+      }
+    }
+  }
+  getContent(node) {
+    return isDefined(node.textContent) ? node.textContent : node.data;
+  }
+  setContent(node, content) {
+    if (isDefined(node.textContent)) {
+      node.textContent = content;
+    } else {
+      node.data = content;
+    }
+  }
+  ngOnDestroy() {
+    if (this.onLangChangeSub) {
+      this.onLangChangeSub.unsubscribe();
+    }
+    if (this.onDefaultLangChangeSub) {
+      this.onDefaultLangChangeSub.unsubscribe();
+    }
+    if (this.onTranslationChangeSub) {
+      this.onTranslationChangeSub.unsubscribe();
+    }
+  }
+  static Éµfac = function TranslateDirective_Factory(t) {
+    return new (t || _TranslateDirective)(ÉµÉµdirectiveInject(TranslateService), ÉµÉµdirectiveInject(ElementRef), ÉµÉµdirectiveInject(ChangeDetectorRef));
+  };
+  static Éµdir = ÉµÉµdefineDirective({
+    type: _TranslateDirective,
+    selectors: [["", "translate", ""], ["", "ngx-translate", ""]],
+    inputs: {
+      translate: "translate",
+      translateParams: "translateParams"
+    }
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateDirective, [{
+    type: Directive,
+    args: [{
+      selector: "[translate],[ngx-translate]"
+    }]
+  }], function() {
+    return [{
+      type: TranslateService
+    }, {
+      type: ElementRef
+    }, {
+      type: ChangeDetectorRef
+    }];
+  }, {
+    translate: [{
+      type: Input
+    }],
+    translateParams: [{
+      type: Input
+    }]
+  });
+})();
+var TranslatePipe = class _TranslatePipe {
+  translate;
+  _ref;
+  value = "";
+  lastKey = null;
+  lastParams = [];
+  onTranslationChange;
+  onLangChange;
+  onDefaultLangChange;
+  constructor(translate, _ref) {
+    this.translate = translate;
+    this._ref = _ref;
+  }
+  updateValue(key, interpolateParams, translations) {
+    let onTranslation = (res) => {
+      this.value = res !== void 0 ? res : key;
+      this.lastKey = key;
+      this._ref.markForCheck();
+    };
+    if (translations) {
+      let res = this.translate.getParsedResult(translations, key, interpolateParams);
+      if (isObservable(res.subscribe)) {
+        res.subscribe(onTranslation);
+      } else {
+        onTranslation(res);
+      }
+    }
+    this.translate.get(key, interpolateParams).subscribe(onTranslation);
+  }
+  transform(query, ...args) {
+    if (!query || !query.length) {
+      return query;
+    }
+    if (equals(query, this.lastKey) && equals(args, this.lastParams)) {
+      return this.value;
+    }
+    let interpolateParams = void 0;
+    if (isDefined(args[0]) && args.length) {
+      if (typeof args[0] === "string" && args[0].length) {
+        let validArgs = args[0].replace(/(\')?([a-zA-Z0-9_]+)(\')?(\s)?:/g, '"$2":').replace(/:(\s)?(\')(.*?)(\')/g, ':"$3"');
+        try {
+          interpolateParams = JSON.parse(validArgs);
+        } catch (e) {
+          throw new SyntaxError(`Wrong parameter in TranslatePipe. Expected a valid Object, received: ${args[0]}`);
+        }
+      } else if (typeof args[0] === "object" && !Array.isArray(args[0])) {
+        interpolateParams = args[0];
+      }
+    }
+    this.lastKey = query;
+    this.lastParams = args;
+    this.updateValue(query, interpolateParams);
+    this._dispose();
+    if (!this.onTranslationChange) {
+      this.onTranslationChange = this.translate.onTranslationChange.subscribe((event) => {
+        if (this.lastKey && event.lang === this.translate.currentLang) {
+          this.lastKey = null;
+          this.updateValue(query, interpolateParams, event.translations);
+        }
+      });
+    }
+    if (!this.onLangChange) {
+      this.onLangChange = this.translate.onLangChange.subscribe((event) => {
+        if (this.lastKey) {
+          this.lastKey = null;
+          this.updateValue(query, interpolateParams, event.translations);
+        }
+      });
+    }
+    if (!this.onDefaultLangChange) {
+      this.onDefaultLangChange = this.translate.onDefaultLangChange.subscribe(() => {
+        if (this.lastKey) {
+          this.lastKey = null;
+          this.updateValue(query, interpolateParams);
+        }
+      });
+    }
+    return this.value;
+  }
+  /**
+   * Clean any existing subscription to change events
+   */
+  _dispose() {
+    if (typeof this.onTranslationChange !== "undefined") {
+      this.onTranslationChange.unsubscribe();
+      this.onTranslationChange = void 0;
+    }
+    if (typeof this.onLangChange !== "undefined") {
+      this.onLangChange.unsubscribe();
+      this.onLangChange = void 0;
+    }
+    if (typeof this.onDefaultLangChange !== "undefined") {
+      this.onDefaultLangChange.unsubscribe();
+      this.onDefaultLangChange = void 0;
+    }
+  }
+  ngOnDestroy() {
+    this._dispose();
+  }
+  static Éµfac = function TranslatePipe_Factory(t) {
+    return new (t || _TranslatePipe)(ÉµÉµdirectiveInject(TranslateService, 16), ÉµÉµdirectiveInject(ChangeDetectorRef, 16));
+  };
+  static Éµpipe = ÉµÉµdefinePipe({
+    name: "translate",
+    type: _TranslatePipe,
+    pure: false
+  });
+  static Éµprov = ÉµÉµdefineInjectable({
+    token: _TranslatePipe,
+    factory: _TranslatePipe.Éµfac
+  });
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslatePipe, [{
+    type: Injectable
+  }, {
+    type: Pipe,
+    args: [{
+      name: "translate",
+      pure: false
+      // required to update the value when the promise is resolved
+    }]
+  }], function() {
+    return [{
+      type: TranslateService
+    }, {
+      type: ChangeDetectorRef
+    }];
+  }, null);
+})();
+var TranslateModule = class _TranslateModule {
+  /**
+   * Use this method in your root module to provide the TranslateService
+   */
+  static forRoot(config = {}) {
+    return {
+      ngModule: _TranslateModule,
+      providers: [config.loader || {
+        provide: TranslateLoader,
+        useClass: TranslateFakeLoader
+      }, config.compiler || {
+        provide: TranslateCompiler,
+        useClass: TranslateFakeCompiler
+      }, config.parser || {
+        provide: TranslateParser,
+        useClass: TranslateDefaultParser
+      }, config.missingTranslationHandler || {
+        provide: MissingTranslationHandler,
+        useClass: FakeMissingTranslationHandler
+      }, TranslateStore, {
+        provide: USE_STORE,
+        useValue: config.isolate
+      }, {
+        provide: USE_DEFAULT_LANG,
+        useValue: config.useDefaultLang
+      }, {
+        provide: USE_EXTEND,
+        useValue: config.extend
+      }, {
+        provide: DEFAULT_LANGUAGE,
+        useValue: config.defaultLanguage
+      }, TranslateService]
+    };
+  }
+  /**
+   * Use this method in your other (non root) modules to import the directive/pipe
+   */
+  static forChild(config = {}) {
+    return {
+      ngModule: _TranslateModule,
+      providers: [config.loader || {
+        provide: TranslateLoader,
+        useClass: TranslateFakeLoader
+      }, config.compiler || {
+        provide: TranslateCompiler,
+        useClass: TranslateFakeCompiler
+      }, config.parser || {
+        provide: TranslateParser,
+        useClass: TranslateDefaultParser
+      }, config.missingTranslationHandler || {
+        provide: MissingTranslationHandler,
+        useClass: FakeMissingTranslationHandler
+      }, {
+        provide: USE_STORE,
+        useValue: config.isolate
+      }, {
+        provide: USE_DEFAULT_LANG,
+        useValue: config.useDefaultLang
+      }, {
+        provide: USE_EXTEND,
+        useValue: config.extend
+      }, {
+        provide: DEFAULT_LANGUAGE,
+        useValue: config.defaultLanguage
+      }, TranslateService]
+    };
+  }
+  static Éµfac = function TranslateModule_Factory(t) {
+    return new (t || _TranslateModule)();
+  };
+  static Éµmod = ÉµÉµdefineNgModule({
+    type: _TranslateModule,
+    declarations: [TranslatePipe, TranslateDirective],
+    exports: [TranslatePipe, TranslateDirective]
+  });
+  static Éµinj = ÉµÉµdefineInjector({});
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TranslateModule, [{
+    type: NgModule,
+    args: [{
+      declarations: [TranslatePipe, TranslateDirective],
+      exports: [TranslatePipe, TranslateDirective]
+    }]
+  }], null, null);
+})();
+export {
+  DEFAULT_LANGUAGE,
+  FakeMissingTranslationHandler,
+  MissingTranslationHandler,
+  TranslateCompiler,
+  TranslateDefaultParser,
+  TranslateDirective,
+  TranslateFakeCompiler,
+  TranslateFakeLoader,
+  TranslateLoader,
+  TranslateModule,
+  TranslateParser,
+  TranslatePipe,
+  TranslateService,
+  TranslateStore,
+  USE_DEFAULT_LANG,
+  USE_EXTEND,
+  USE_STORE
+};
+//# sourceMappingURL=@ngx-translate_core.js.map
+Ó˜ÀÙ           ÷î      ChangeDetectorRef      !ø'	      Directive      íë@
+      ElementRef     ûÇ¿      EventEmitter   œ‹ê‚      Inject     ®D
+      Injectable     ¿Áå*      InjectionToken     ñÛ,±      Input      U%      NgModule	   Ê\9*      Pipe
+   <0)í      setClassMetadata   aû–_      uud e f i n e D i r e c t i v e      Ğ?(      uud e f i n e I n j e c t a b l e    ¤,      uud e f i n e I n j e c t o r    âr²      uud e f i n e N g M o d u l e    ÚåÌ      uud e f i n e P i p e    êp¿Ÿ      uud i r e c t i v e I n j e c t      ò²³ó      uug e t I n h e r i t e d F a c t o r y      ŠóĞ      uui n j e c t    Kû°      /@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/chunk-HAFZABSX.js?v=6ba1be97    ¦¢‚      concat     5O'	      concatMap      •»]      defer      e5Áw      forkJoin   ’ºk      isObservable   9Ì      map    Íp™      shareReplay    ¡Kèk	      switchMap      ¼Uq÷      take   ZË       /@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/chunk-WSA2QMXP.js?v=6ba1be97    ¾;˜Œ      __spreadValues     @Æµ’      /@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/chunk-WKYGNSYM.js?v=6ba1be97     `¬ô      TranslateLoader!    Ò”šs      TranslateFakeLoader"    ÷EL      _TranslateFakeLoader#   ÁˆqM      getTranslation$     +~,      lang%   üı¡      uf a c &   (	Á       uT r a n s l a t e F a k e L o a d e r _ B a s e F a c t o r y '   êeÃì      TranslateFakeLoader_Factory(    à¨v      up r o v )     £í>      token*      ‚¨î      factory+    ÷5Ş¤	      ngDevMode,      5¶'      MissingTranslationHandler-      ×´¸      FakeMissingTranslationHandler.      8{J0      _FakeMissingTranslationHandler/     vş%      handle0     ËË&<      params1     Bü¿;      key2    ql¼%      FakeMissingTranslationHandler_Factory3      —Ê      equals4     ô³—a      keySet5     ¢]Áì      isArray6    :	¶#      create7     î\õ	      isDefined8      t¬˜å      isObject9   ı„Ìº      item:   =´Ë!	      mergeDeep;      [>Ãÿ      output<     •n.      assign=     næ¬¬      TranslateParser>    À;Jæ      TranslateDefaultParser?     8¦İ=      _TranslateDefaultParser@    çê      templateMatcherA    ×fê      {{\s?([^{}\s]*)\s?}}B   @o‰Q      interpolateC    –RÎù      exprD   @Ñ”      interpolateStringE      &>·      interpolateFunctionF    ÆÚü      getValueG   ‚=ŠO      shiftH      ßYã	      substringI      ~5#      uT r a n s l a t e D e f a u l t P a r s e r _ B a s e F a c t o r y J     ÚúŸÓ      TranslateDefaultParser_FactoryK     ø|`      TranslateCompilerL      ÿ:      TranslateFakeCompilerM      YM      _TranslateFakeCompilerN     ØMr¾      compileO    y,      compileTranslationsP    o†©      translationsQ   ‡´¤±"      uT r a n s l a t e F a k e C o m p i l e r _ B a s e F a c t o r y R   ³R5      TranslateFakeCompiler_FactoryS      Ä¥-R      TranslateStoreT     ¿xÓq      defaultLangU    b×Ÿğ      currentLangV    øy¯      langsW      Æ@°]      onTranslationChangeX    3 ÿ      onLangChangeY   EƒZ      onDefaultLangChangeZ    tXC 	      USE_STORE[      .®¼      USE_DEFAULT_LANG\   ËOÛ      DEFAULT_LANGUAGE]   2Êÿw
+      USE_EXTEND^     Í-›&      TranslateService_   ×)      _TranslateService`      ‚N/      storea      Ğ@.¨      currentLoaderb      ı(…      compilerc   úBæ      parserd     ”`hq      missingTranslationHandlere      ¢«¡      useDefaultLangf     hÇ”      isolateg    »làô      extendh     hŸŠÂ      loadingTranslationsi    –‰mƒ      _onTranslationChangej   Áöw4      _onLangChangek      1ÿÑ:      _onDefaultLangChangel   Ë¤—]      _defaultLangm   t–      _currentLangn   ©ì      _langso     ò×       _translationsp      ab°‰      _translationRequestsq   o®ŸO      get onTranslationChanger    '°¹O      get onLangChanges   §´uó      get onDefaultLangChanget    Ãwè      get defaultLangu    ğ§«      set defaultLangv    Dİ”S      get currentLangw    	(ÏM      set currentLangx    Ê	      get langsy      R=9	      set langsz      DªÉ%      get translations{   ŞFÑÓ      set translations|   è-S      defaultLanguage}    ¨Î¸õ      setDefaultLang~     Öc¸      retrieveTranslations   ÓÎä]      pipe€   Däì	      subscribe      »:0      res‚    =Hy      changeDefaultLangƒ      ¿ Èí      getDefaultLang„     vZƒ      use…    á“x
+      changeLang†     ¯½ê%      updateLangs‡    ştuW      errorˆ      ¼ğo˜      err‰    Ü×\À      setTranslationŠ     L¦Ûï      shouldMerge‹    (¿|V      emitŒ   f–&      getLangs   ¢œAÜ      addLangs   ÚEœÁ      indexOf    ğ„u2      push   o.¢3      getParsedResult‘    ÿ7ìÔ      interpolateParams’      µ=U      observables“    ğQ7      sources”    ›cˆ      arr•    ßN#9      obj–    Ëï      translateService—   PSu      Parameter "key" required˜   úùa      getStreamOnTranslationChange™   II·P      eventš      õ&.      stream›     ¼*Æ      instantœ    âÒ
+      reloadLang     v278	      resetLang      <Úßö      getBrowserLangŸ     ø2‡‰      window      ¹ã+	      navigator¡      ¤>Qw      browserLang¢    ñç}	      languages£      jZì„      browserLanguage¤    TœÊu      userLanguage¥   d~OS      getBrowserCultureLang¦      m„Ã      browserCultureLang§     á„ìÀ      TranslateService_Factory¨   î,ì
+      decorators©     ÜÙœÉ      argsª   Å^®“      TranslateDirective«     ·…¦      _TranslateDirective¬    O]½Ö      _ref­   ¬ê£‘
+      lastParams®     ¶ÒÍŞ      currentParams¯      ‹ğgß      onLangChangeSub°    GÉ«ı      onDefaultLangChangeSub±      tçØ      onTranslationChangeSub²     uU~1	      translate³      òZ		      set translate´      *è…0
+      checkNodesµ     0GÆs      translateParams¶    Û3É      set translateParams·    ½ÚÛc      ngAfterViewChecked¸     F      forceUpdate¹    hÅ²      nodesº      Îqn      nativeElement»      ³†Ba
+      childNodes¼     f
+      setContent½     &`¡İ      node¾   'J¯(      nodeType¿   Ï2€      lastKeyÀ    t:fW	      lookupKeyÁ      4WÈ      contentÂ    Ï~ı1
+      getContentÃ     hzNˆ      trimmedContentÄ     —–™b      trimÅ   àºæ      currentValueÆ   Î-.Ø      originalContentÇ    †m<      updateValueÈ    —'sÙ      onTranslationÉ      …/Ò>      markForCheckÊ   bÈÅe      textContentË    6—(      dataÌ   ‰»0È      ngOnDestroyÍ    X&EÃ      unsubscribeÎ    {Ñ
+      TranslateDirective_FactoryÏ     ]Fa˜      ud i r Ğ   ÿX¥ğ	      selectorsÑ      ’¹¼      ngx-translateÒ      4ó¼Õ      inputsÓ      _l$      selectorÔ   jzÆ      [translate],[ngx-translate]Õ    `ù7      TranslatePipeÖ      „2ÖI      _TranslatePipe×     Rè|	      transformØ      XN_ÿ      queryÙ      ïùİá	      validArgsÚ      j/      (\')?([a-zA-Z0-9_]+)(\')?(\s)?:Û    x•,      "$2":Ü      İØ¾o      :(\s)?(\')(.*?)(\')İ    ÉÃŞ      :"$3"Ş      5õ‡Æ      parseß      E?ºnE      Wrong parameter in TranslatePipe. Expected a valid Object, received: à      æOU      _disposeá   ãs4      TranslatePipe_Factoryâ      ¦1sø      up i p e ã     Á¸ß¼      pureä   ó½µ      TranslateModuleå    §–Éõ      _TranslateModuleæ   E¨±‰      forRootç    ~4      configè     ´VÖ8      ngModuleé   ×ÿéK	      providersê      ¶Ú      loaderë     ÿØ³Ï      provideì    ŠğÑì      useClassí   ª˜Ñ=      useValueî   ƒb g      forChildï   ^ıaì      TranslateModule_Factoryğ    &šîÁ      um o d ñ   Œö_Ó      declarationsò   ,Æè      exportsó    bYÑ×      ui n j ô   b~/ì      TranslateFakeLoader<õ   ©få      TranslateFakeLoader</<÷     Ä¬      FakeMissingTranslationHandler<ù     BÛË‰      mergeDeep/<ú     ïLË      TranslateDefaultParser<û    .PM      interpolateString/<ü    Œ      TranslateDefaultParser</<ş      LÓÛØ      TranslateFakeCompiler<ÿ     LÙ¹      TranslateFakeCompiler</<  †Î      TranslateStore<   Øöãˆ      TranslateService<     -=ô      setDefaultLang/<  j9â‹      use/<     ÊnÏÍ(      getTranslation/this.loadingTranslations<  Í9!
+      addLangs/<	    ¡Ê7Å      getParsedResult/sources<
+  -¤BÏ      getParsedResult/<     GËX      getParsedResult/</<   m'h       get/<     ßÆÁª      getStreamOnTranslationChange/<    ÿ“W       stream/<  ¦šm	      instant/<     œ,¤      TranslateDirective<   ~¨øk0      _TranslateDirective/this.onTranslationChangeSub<  "S)      _TranslateDirective/this.onLangChangeSub<     k‹Äó0      _TranslateDirective/this.onDefaultLangChangeSub<  ê_¤»      TranslatePipe<    Æ‘#      transform/this.onTranslationChange<   …3ÚŞ      transform/this.onLangChange<  ğÀÕ#      transform/this.onDefaultLangChange<   z}+¨      TranslateModule<     ´   |  ö   ´          P   ï%,‰                                                                                                                                                                                                                                           	                                                                                                                                       
+                                                                                                                                                                                                                     !                 !                                    $                 %                &                '                                                     *                                  ,                                                    /                 0                             !                  "                       4                 5           )      5           %      7           &      8                9                :           '      5           (      5           #      5           $                  *                       @           +      @           ,      @           -      @           .      @           /      @           0      @           1      @           2                       I                 J               K           3      K           4      K           5      K           6      K           7      K           8      K           9      K           :      K           ;      K           <      K           =      K           >      K           ?      K           @      K           A      K           B      K           C      K           D      K           P      J           u      _                `           v      J           w      J           E      J           F      J           G      J           H      J           I      J           J      J           K      J           L      J           M      J           N      J           O      J          Q      n                 o           R      J           S      J          T      r                 s           U      J           V      u                J          W      w                 x           X      x           Y      x           Z      J           [      J           \      J          ]      ~           ^      J           _      J          `                      ‚               ƒ                ƒ                …           a      …           b      ‡                ˆ           c      ‚                J          d      ‹           e      ‹                 J          f                 g                 h                       J          i      ’           j      ’           k      ”                 J          l      –                —               ˜           m      J           n      J           o      J           p      J           q      J           r      J           s      Ÿ                 J           t      ¡                             x      £           y                       ¥                 ¦               §           z      §           {      §           |      §           }      §           ~      §                 §           €      §                 §           ‚      §          …      ±           †      ±           ‡      ±           ˆ      ¦                 µ                ¶           ‘      ¦           ’      ¦           ƒ      ¦           „      ¦           ‰      ¦           Š      ¼                ½                ¾                ¿                À                ¦          ‹      Â                 Ã           Œ      Ã                ¦                 ¦                 ¦                             “      É           ”                       Ë                 Ì               Í           •      Í           –      Í           —      Í           ˜      Í           ™      Í           š      Í           ›      Í           œ      Í                 Ì           ¦      ×                Ø           §      Ì           ¨      Ì           ©      Ì                Ü                 İ           Ÿ      İ                Ì                 à                á                 â                á           ¡      á           ¢      á           £      Ì           ¤      Ì           ¥                  ª      é           «                       ë                 ì           ²      ì           ®      î                ï           ¯      ì           °      ì           ±      ì           ¬      ì           ­                  ³      ³OŒc4          3   3           	                                      
+              ]  P3  P8  PÕ  P=  P   P-  Pª  P:  PZ  P\  Pä  PL  P7  P^  P,  P[  PS  P>  PK  P!  PÕ `              ƒ              "  P         ‚               {   ƒ                    ƒ                             &  P          '               t                ƒ                $                                ƒ              .  P         ‚                 ƒ                 ƒ             2               t                ƒ                0                                          A B -  1  4               "               9               å `Ò `          ;  P             1                ƒ              ?  P         ‚            ~  `              ƒ               {   ƒ                    ƒ                             I  P          J               t                ƒ               C  0  ƒ            µ               å  1           (               × 0               C  0  Pƒ  `             H  b           r                                ƒ              M  P         ‚               {   ƒ                    ƒ                             Q  P          R               t                ƒ                "  $               P  $                            ~  `              ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ              _  P         ‚            ~  `              ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ   
+   
+      	 	 `  a  b  c  d  e  f  g  |  ƒ                 ƒ             §               t                ƒ                 ƒ                 ƒ                 ƒ                 ƒ               T  ƒ                 ƒ               U  ƒ                 ƒ               V  ƒ                 ƒ               P  ƒ                $  Pƒ  `         ”                               ƒ                $  Pƒ  `         ”                             $  ƒ            ”               $  Pƒ  `          h                                             ˆ             $  P  Š  ƒ                 ƒ                V  ƒ  `             $                ƒ               P  1  P‘  ƒ                       µ `’           k            “               k               ”            •  P             "  ò            0               1  P‘  Pƒ  `                                       1  P‘  Pƒ  `                             ™                           1  P‘  Pƒ  `                             ™                          1  P‘  ƒ                       •  P             "  ò              1  "  $  ƒ               $  ƒ               $  ƒ               $  ƒ               $  ƒ                            ¡                           ¦                                             «  P         ‚            ~  `              ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                –  …   ¬  ƒ  `             ™               ™               ™                ƒ             Î               t                ƒ               1  ƒ               0  ƒ                 ƒ              ¸  P  ƒ            ¹           i           ½           1     	      Á  Ã               1  P½  PP  ƒ  `         È                                         ½               ½  Á                ƒ                                              Ö  P         ‚            ~  `              ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ                 ƒ               ²  ¬  ƒ                 ƒ             á               t                ƒ                 ƒ                1  P‘  P  ƒ  `         È                                         Ø  P©  ƒ  `          ‘  P         Ù           e               ™               ™                                ƒ                 ƒ                                              å  P         ‚                 ƒ                 ƒ             ï               t                ƒ                 ƒ              ç             ç                  ¯Â0°A     Ú     Ü     Iô$KE®úš   
+      )  *                     
+     )  *                      
+    )  *              
+     )  *                                      
+      )  *     
+    e  ‡             
+   $  P                     
+      1  –             
+   $  P     
+    $  P     
+    $  P                                                                
+       ¨     
+      ©     
+      ¨     
+      ©     
+      ¨     
+      ©     
+      ¨     
+      ©           Ğ  Ò     
+   ²  µ         e     
+       ©         Ó                                   
+     ²  µ                             ^    ã     
+   )  *              
+       ©     
+    ^  ã                               ñ  ò                     
+     è  é     
+    ë  ì     
+    ë  ì     
+    ë  ì     
+    ë  ì     
+    ë  í     
+    ë  í     
+    ë  í     
+    ë  í             
+   è  é     
+    ë  ì     
+    ë  ì     
+    ë  ì     
+    ë  ì     
+    ë  í     
+    ë  í     
+    ë  í     
+    ë  í     
+      ©     
+    ñ  ò  ‡&Õª!«!´   |    /m_,  	                “       7l   ßİ=   <   ÚÉ   ÚË   ¼  oÜ˜   •   ÜI   —   •   Úq	•   :ßp   ßİ=   <   g   l   h    l   h   ­   Úl	   <
+   Ú¯   ¹   ÜJŞ  v  ÚJŞ  v  Ú È   ÚÍÌÉ   Úl    v  Ú7l   ßİ=   <   ÚÉ   ÚË   7l   ßİ=   <   g   l   h    l   h   ­   Úl   <   Ú¯   ¹   ÜJŞ  v  ÚJŞ  v  Ú È   ÚÍÌÉ   Úl    v  Ú7l   ßİ=   <   ÚÉ   ÚË   ¼  oÜ˜   •!   ÜI   —   •"   Úq	•"   :ßË   g   l   h    ¯   Úp   Ìßİ=   <   g   l   h    l    h   ­   Úl!   <"   l#   <$   l%   <&   l'   <(   Ú¯   ¹   ÜJŞ  v  ÚJŞ  v  Ú È   ÚÍÌÉ   Úl)    v  Ú7l*   ßİ=   <   ÚÉ   ÚË+   ¼  oÜ˜   •4   ÜI   —   •5   Úq	•5   :ßp-   ßİ=   <   g   l.   h    l/   h   ­   Úl0   <1   l2   <3   Ú¯   ¹   ÜJŞ  v  ÚJŞ  v  Ú È   ÚÍÌÉ   Úl4    v  Ú7Ë5   g   l6   h    l7   h   l8   h   l9   h   l:   h   l;   h   l<   h   ¯   Úl=   Ìßİ=   <   ÚÉ   Ú¾>   ?   Ş  € É   Ú¾>   @   Ş  € É   Ú¾>   A   Ş  € É   Ú¾>   B   Ş  € É   ÚËC   7ËE   g   lF   h    lG   h   lH   h   lI   h   lJ   h   lK   h   lL   h   lM   h   lN   h   lO   h	   lP   h
+   lQ   h   lR   h   lS   h   lT   h   lU   h   lV   h   lW   h   ¯   ÚlX   Ìßİ=   <   g   lY   h    lZ   h   ­   Úl[   B\   l]   B^   l_   B`   la   Bb   lc   Fb   ld   Be   lf   Fe   lg   Bh   li   Fh   lj   Bk   ll   Fk   lm   <n   lo   <p   lq   <r   ls   <t   lu   <
+   lv   <w   lx   <y   lz   <{   l|   <}   l~   <   l€   <   l‚   <ƒ   l„   <…   l†   <‡   lˆ   <‰   lŠ   <‹   lŒ   <   l   <   l   <‘   l’   <“   l”   <•   Ú¯   ¹   ÜJŞ  v  ÚJŞ  v  Ú È   ÚÍÌÉ   Úl–    v  ÚË—   7Ë™   g	   lš   h    l›   h   lœ   h   l   h   l   h   lŸ   h   l    h   l¡   h   l¢   h   ¯   Úl£   Ìßİ=   <   g   l¤   h    l¥   h   ­   Úl¦   F§   l¨   F©   lª   <«   l¬   <­   l®   <¯   l°   <±   l²   <³   l´   <µ   Ú¯   ¹   ÜJŞ  v  ÚJŞ  v  Ú È   ÚÍÌÉ 	  Úl¶    v  ÚË·   7Ë¹   g   lº   h    l»   h   l¼   h   l½   h   l¾   h   l¿   h   lÀ   h   lÁ   h   ¯   ÚlÂ   Ìßİ=   <   g   lÃ   h    lÄ   h   lÅ   h   ­   ÚlÆ   <¯   lÇ   <È   lÉ   <Ê   lË   <µ   Ú¯   ¹   ÜJŞ  v  ÚÜJŞ  v  ÚJŞ  v  Ú È   ÚÍÌÉ   ÚlÌ    v  ÚËÍ   7lÏ   ßİ=   <   g   lĞ   h    lÑ   h   lÒ   h   ­   ÚİÚlÓ   <Ô   ÚİÚlÕ   <Ö   ÚÚ¯   ¹   ÜJŞ  v  ÚÜJŞ  v  ÚJŞ  v  Ú È   ÚÍÌÉ   Úl×    v  Ú£00!@&`™@(`eİ ·@7`F;P$!`™@>%`µ ·@J`FNPD€  ’`™ `eø J€  ¡J€  ± ·@€  È` P$`™ `eİ  ·@€  á` P$`ğ@€ `˜ `˜ `˜ `˜ `ÿû@€ *J€ 3J€ <J€ B J€ O J€ \ J€ i J€ J€ ¢J€ ¨J€ ½J€ ÉJ€ İJ€ íJ€ óJ€ ıJ€ J€ /J€ BJ€ TJ€ aJ€ vJ€ J€ J€ ˜J€ ŸJ€ ¦J€ º·@€ Ê`F€ òP$`ÿ¡@€ ıJ€ J€  J€ GJ€ f J€ p·@€ ‡`F€ P$`ÿ¡@€ «J€ »J€ ğJ€ şÃ@€ `F€ P$`¿ 
+M€ E
+Æ@€ m`F€ uP0€ ŠP€|           ÿÿÿÿ   #   ˆ          Ú   a   ÿÿÿÿ   Ú   `         i  Ç   ÿÿÿÿ   n  Á         œ        +   ^  ˜   ÿÿÿÿ,   c  ’      5     W   ÿÿÿÿC   Û  \  ÿÿÿÿD   Û  [  
+   E   á  Å      —   L    ÿÿÿÿ˜   L       ™   R  k      ·   s  ö   ÿÿÿÿ¸   s  õ      ¹   y  a      Í   ~  ‡   ÿÿÿÿÎ   ~  †      (   û{Ú“(                            ÙÈ   Ú£@   RI¥@                            ¾    8   r  £ `
+ÿÿÿıP#Q€H   ]£‡ûH                          ÙÈ   Ú¹   l    r  ;   Ú£f04 FP	P€h   717H                             Ë    ¯   Úl   ¢Ì£Ì£ '`ET€€€h            ÿÿÿÿ                 ÎòîÄ   U                        ¼   ±   ›#   •   Ú¾    ¼  ±  r É   •    ·  ›   •   Ú¼  ±  •   r  £ `› f
+ÿÿÿêP. ÿÿÿÿP#Q€€p   Æ:ˆ$p   =                       ÙÈ   Ú¹   ¾    8   ¼   ±   ;   ¼   I   ;   r ;   Ú£f0D %+/O PIPP   I^y…P   .                        ÙÈ   Ú4È  ÚØÇ  ÚÁ…·  ¹  „¹   †Ú­   Ú¹   ¤¢£€”   ù-‡”   \                  
+        ¶      ›   •   Ú¶   •   š4   •   Ú¾    ¼   g   8   ¾   ;   h    v •
+   Ú£ `² C%B6P9P€€€(   û{Ú“(                            ÙÈ   Ú£4   ’R]4   
+                         ·  I    £ `(Q€€€<   4 )<                          ÙÈ   Ú¹   l   ;   Ú£f@_T   ×R…6T   '                        ·  ›   •   Ú¼   ±   •   Ş  €   £ `¢ P#Q€€p   Æ:ˆ$p   =                       ÙÈ   Ú¹   ¾    8   ¼   ±   ;   ¼   I   ;   r ;   Ú£f0D %+/O PIP(   û{Ú“(                            ÙÈ   Ú£”   °–Y;”   \                  
+        ¶      ›   •   Ú¶   •   š4   •   Ú¾    ¼   g   8   ¾   ;   h    v •
+   Ú£ `² C%B6P9P€€€¬  éµMF¼  ¼                ;      $¬­   ­  ­  ­  ­  Ú·  · ˜   •   ¢Í£•   ·  ›   •   Ú· •   ˜   •   ¢Í£•   ·  ·  š   •   Ú· · •	   ˜   •
+   ¢Í£•
+   ·  ­   Ú· ­  Ú ­  Ú ­  Ú ­  Ú¹   ¹  š   •   Ú¹      •   ˜Ü  •   ¶   ÜI   ß·  r ˜¼   •   ¶   ÜI   ß· r ™   •   ¢Í£•   ·  I   È  · I   ˜n   •   È  Ú–   ¹  ¹  ˜F   •   ¼    ·  ¹  J· ¹  Jr ™   •"   ¢Í£•"   ¹  /'È  Ú—°ÿÿÿ•$   ¢Í£•$   —	  •$   ¶   ÜI   ß· r ˜   •(   ¢Í£•(   ¶   ÜI   ßr È  Ú·  ]–,   ^_™L   •-   È  ¼    ·  ¹  J· ¹  Jr ™   •1   ¢`Í£•1   ¹  ¹  NÚÚ—±ÿÿÿ•2   `· ]–3   ^_™Q   •4   È  ¹  ¹  !š   •7   Ú· ¹  J   •:   ˜   •;   ¢`Í£•;   Ú—¬ÿÿÿ•;   `¢Í£•;   ¢Í£Í£ 	– `.`1'H`¤ `1'H`’ “ `1'H`	`› `© 	`ÿÿÿøP-`ÿÿÿøP-	`1'H`“ `	f/`	ÿÿÿğP-`1'H%`•@	`1'’0 `ÿÿÿøP-	`1'H` P(`š `	ÿÿÿğP-`1'I	`KL`š `	‘  `1'IL#`1'H&`T€€€¬  |         »  ÿÿÿÿ    *              W              ˆ                           „             ¢             Ñ             -             ›             °             ¹                E  U         ğ  T         N  Y   L   ƒ¦E~L   !                         ·     š   •   Ú·  •    £ ` ŸQ€€p   !Æ¶p   =                         ·  š3   •   Ú·     š   •   Ú¶   ÜI   ß·  r •    £ `• ÿÿÿøPQ$  ùw@  Ÿ                       ¸  É   Ú¸ É   ÚË   ¶   ÜI   ß8   ¼  r ¯   Ú¼   ¼  r š   •   Ú¼   ¼  r •   ˜.   •   ¶   ÜI   ß¼  r ÜI   ßl   v Ú•   ¼   ¢Ì£Ì£’ %`ÿÿÿõP)`	ÿÿÿÿP” ÿÿÿ÷P’ `ÿÿÿûP
+ÿÿÿøPI`T€€$        ‡   ÿÿÿÿ    œ          0  2W„û0  Ê                         ¼   ¼  ·  Jr ˜„   •   ·  ¼  !™8   •   ¶   ÜI   ß¼   ±   7·  .¼  ·  J>v Ú—4   •   ¼   ±   ·  ¼
+   ¼  ·  J¼  ·  Jr NÚ•   —3   •   ¶   ÜI   ß¼   ±   7·  .¼  ·  J>v Ú•   £ `		ÿÿÿÿP-`	 `
+!NP> `“ 		ÿÿÿéP”0	 	`
+!N
+PIP€€€(   û{Ú“(                            ÙÈ   Ú£<   ‰”L†<                          ÙÈ   Ú¹   k   ;   Ú£f)P€  °¸µğ   –                
+      ÙÈ   Ú¬­  Ú ­  Ú·     ˜(   •   ¹   ÜI   ß·  · r È  Ú—I   •   ·     ˜(   •   ¹   ÜI   ß·  · r È  Ú—   •
+   ·  È  Ú•
+   ¹  ¢Í£Í£&	`” ` ÿÿÿèP’ `” `"ÿÿÿæP’ `M	`$T€€€           ÿÿÿÿ    “          ø  ›¬¬3È  G                      $¬­   Ú·    ˜!   •   · ÜI   ß   r —   •   g   · h    •   ­   Ú   Ç Úâ–   · ¹   ÜI   ßr  %-Ç Ú¼   ·  r šI   •   Ú¼   ·  · Jr š.   •   Ú·  · J   ›   •   Ú¹   I   •   ˜#   •   ·  · JÇ  Ú   Ç Ú—;   •   ¹   I   ™   •   Ç  Ú—   •   ·    %-Ç Ú•   ¹   I   ™"ÿÿÿ•   ·  ¢Í£Í£ &`£ P’ ’ `)!6 `P)`
+ÿÿÿÿP” ÿÿÿöP™ #™ 	`+	`“ `“ 	` 	 	`“@`“ `#T€ø  è         F  ÿÿÿÿ    D                W   ã   <   IŠĞ<                            ·   · r  £ `
+ÿÿÿıP#Q€„   6-æ7„   F                        ¸ É   ÚÙÉ   Ú¼   ™   •   ·   •   ·  ÜI   ß¼   I   l   r  £ 	`/`CF`
+
+ÿÿÿâPCQ€¸   Uœ´Â˜   T                       ¬­   Ú¼   ÜI   ß¼   · r ­   Ú¼   ¹   r ˜   •   ¹   —   •   ·  •   ¢Í£Í£ &`ÿÿÿïP(`ÿÿÿöP£ T€¸          S   ÿÿÿÿ    Q          H   ]£‡ûH                          ÙÈ   Ú¹   l    r  ;   Ú£f04 FP	P€h   717H                             Ë    ¯   Úl   ¢Ì£Ì£ '`ET€€€h            ÿÿÿÿ                 üsQ   U                        ¼   ±   ›#   •   Ú¾    ¼  ±  r É   •    ·  ›   •   Ú¼  ±  •   r  £ `› l
+ÿÿÿêP1 ÿÿÿÿP#Q€€p   Æ:ˆ$p   =                       ÙÈ   Ú¹   ¾    8   ¼   ±   ;   ¼   I   ;   r ;   Ú£f0D %+/O PIPd   1ÑÉ†d   B                       ÙÈ   Ú4È  ÚØÇ  ÚÁ…·  ¹  „¹   †Ú­   ¼   ±   J¹   v  ÚÚ¹   ¤¢£€”   ;TŒô”   \                  
+        ¶      ›   •   Ú¶   •   š4   •   Ú¾    ¼   g   8   ¾   ;   h    v •
+   Ú£ `² C%B6P9P€€€(   û{Ú“(                            ÙÈ   Ú£,   ë¨”Ü,                             ·   £ `#Q,   ë¨”Ü,                             ·   £ `#QH   ]£‡ûH                          ÙÈ   Ú¹   l    r  ;   Ú£f04 FP	P€h   717H                             Ë    ¯   Úl   ¢Ì£Ì£ '`ET€€€h            ÿÿÿÿ                 tÁ0   U                        ¼   ±   ›#   •   Ú¾    ¼  ±  r É   •    ·  ›   •   Ú¼  ±  •   r  £ `› j
+ÿÿÿêP0 ÿÿÿÿP#Q€€p   Æ:ˆ$p   =                       ÙÈ   Ú¹   ¾    8   ¼   ±   ;   ¼   I   ;   r ;   Ú£f0D %+/O PIPP   I^y…P   .                        ÙÈ   Ú4È  ÚØÇ  ÚÁ…·  ¹  „¹   †Ú­   Ú¹   ¤¢£€”   IùˆÁ”   \                  
+        ¶      ›   •   Ú¶   •   š4   •   Ú¾    ¼   g   8   ¾   ;   h    v •
+   Ú£ `² C%B6P9P€€€8   =Ç—±8                          ÙÈ   Ú¹    ;   Ú£fP€@   IÔ;@                          ÙÈ   Ú¹   ¹   I   ;   Ú£f“ P<   Êy+<                          ÙÈ   Ú¹   8   ;   Ú£fP€<   tİQ-<                          ÙÈ   Ú¹   g    ;   Ú£f
+P€H  áb šİH                          ÙÈ   Ú¹   ¾   Ş  €  ;   Ú£fP	P€€H   ÷‘H                          ÙÈ   Ú¹   ¾   Ş  €  ;   Ú£fP	P€€H   šİH                          ÙÈ   Ú¹   ¾   Ş  €  ;   Ú£fP	P€€„   9Ø÷„   b                       ÙÈ   Ú¼   ±   ÜJ¹   v  ÚÜJ¹   v  ÚÜJ¹   v  ÚÜJ¹   v  ÚÜJ¹   v  ÚÜJ¹   v  ÚJ¹   v  Ú£€8   =q½d8                          ÙÈ   Ú¹    ;   Ú£fP€8   =9‹ 8                          ÙÈ   Ú¹    ;   Ú£fP€8   =œ*8                          ÙÈ   Ú¹    ;   Ú£fP€8   =*7œ8                          ÙÈ   Ú¹    ;   Ú£fP€8   =å?º8                          ÙÈ   Ú¹    ;   Ú£fP€8   =òX8                          ÙÈ   Ú¹    ;   Ú£fP€8   =ã°Ó8                          ÙÈ   Ú¹    ;   Ú£fP€8   =*7œ8                          ÙÈ   Ú¹    ;   Ú£fP€8   =em8                          ÙÈ   Ú¹    ;   Ú£fP€8   Û(8                          ÙÈ   Ú¹   ;   Ú£fP€H   WŒH                          ÙÈ   Ú¹   ¾   Ş  €  ;   Ú£fP	P€€H   ÷±äœH                          ÙÈ   Ú¹   ¾   Ş  €  ;   Ú£fP	P€€H   WŒH                          ÙÈ   Ú¹   ¾   Ş  €  ;   Ú£fP	P€€8   =€é8                          ÙÈ   Ú¹    ;   Ú£fP€8   =€é8                          ÙÈ   Ú¹    ;   Ú£fP€<   åªjc<                          ÙÈ   Ú¹   g    ;   Ú£fP€<   ©t’<                          ÙÈ   Ú¹   8   ;   Ú£fP€<   zó»I<                          ÙÈ   Ú¹   8   ;   Ú£fP€l   C“ çl   A                        ÙÈ   Ú¹   I   ˜   •   ¹   I   —   •   ¹   I   I   •    £&`¹ Q€€€l   C“ çl   A                        ÙÈ   Ú¹   I   ˜   •   ¹   I   —   •   ¹   I   I   •    £&`¹ Q€€€l   C“ çl   A                        ÙÈ   Ú¹   I   ˜   •   ¹   I   —   •   ¹   I   I   •    £&`¹ Q€€€l   C“ çl   A                        ÙÈ   Ú¹   I   ˜   •   ¹   I   —   •   ¹   I   I   •    £&`¹ Q€€€|   w òw|   H                      ÙÈ   Ú¹   I   ˜   •   ¹   ·  L   Ú—   •   ¹   I   ·  L   Ú•   £&	`“ `— `—@P€€l   C“ çl   A                        ÙÈ   Ú¹   I   ˜   •   ¹   I   —   •   ¹   I   I   •    £&`¹ Q€€€|   w òw|   H                      ÙÈ   Ú¹   I   ˜   •   ¹   ·  L   Ú—   •   ¹   I   ·  L   Ú•   £&	`“ `— `—@P€€l   C“ çl   A                        ÙÈ   Ú¹   I   ˜   •   ¹   I   —   •   ¹   I   I   •    £&`¹ Q€€€|   w òw|   H                      ÙÈ   Ú¹   I   ˜   •   ¹   ·  L   Ú—   •   ¹   I   ·  L   Ú•   £&	`“ `— `—@P€€l   C“ çl   A                        ÙÈ   Ú¹   I   ˜   •   ¹   I   —   •   ¹   I   I   •    £&`¹ Q€€€|   w òw|   H                      ÙÈ   Ú¹   I   ˜   •   ¹   ·  L   Ú—   •   ¹   I   ·  L   Ú•   £&	`“ `— `—@P€€x  ³SoÉx  &  &   
+          5      ¬­   ­  ­  ­  ­  ­  ­  ­  ­  ÚÙÈ	  Ú¼   ±   ÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜ	J¹	  v  ÚÜ
+J¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚÜJ¹	  v  ÚJ¹	  v  Ú·  ­   Ú· ­  Ú· ­  Ú· ­  Ú· ­  Ú· Ü ˜   •&   Ú•&   ­  Ú· Ü ˜   •(   Ú•(   ­  Ú· Ü ˜   •*   Ú•*   ­  Ú· ­  Ú¹	  ¹   L   Ú¹	  ¹  L   Ú¹	  ¹  L   Ú¹	  ¹  L   Ú¹	  ¹  L   Ú¹	  ¹  L   Ú¹	  ¹  L   Ú¹	  ¹  L   Ú¹  ˜   •3   ¹	  ÜI	   ß¹  v Ú•5   £ÿÿÿ’ `.`.`.`.`.`.`.`.	`.`ÿÿÿñPIP€€€t  ¾òÒT  à                     ¸  É   ÚÙÉ   Ú¬­   Ú¼   ¼   I   ˜   •    ¢Í£•   ¼   ÜI   ß¼   r ­   Ú¹      ˜b   •   ¼   I   ˜   •   ¼   ¼   L   Ú•   ¹   ÜI   ß¾    r r ÜI   ßl   v Ú—   •   ¼   ÜI	   ß¼   v Ú•   Í£ &	`	• `AH`ÿÿÿëP(	`• `– 	`•@	`WÿÿÿûP
+ÿÿÿöP> `ÿÿÿîPJP€€t        Ï   ÿÿÿÿ    3          H   áMòAH                            ¼   ÜI   ß¼   v Ú£ 	`ÿÿÿîP$P€€€8   a74§8                           ÙÈ   Ú¹   I    £&`)Qè  iOE¨                      ¸  É   ÚÙÉ   Ú¬­   Ú¼   ¼   I   ˜&   •   ¾    ¼   I   ¼   Jr ¢Í£•   ¼   ÜI   ß¼   r ­   Ú¹      ˜g   •   ¼   I   ™   •   ¼   ¼   L   Ú•   ¹   ÜI   ß¾    r r ÜI	   ßl
+   v Ú¹   ¢Í£—;   •   ¼   ÜI   ß¼   v Ú¾    ¼   I   ¼   Jr ¢Í£•   Í£ &	`	• `
+ ÿÿÿıPCH`ÿÿÿëP(	`• `” 	`•@	`WÿÿÿûP
+ÿÿÿöPD`D= `ÿÿÿõP$`
+ ÿÿÿıPCY€è          ÿÿÿÿ    K              Ö                       H   É)RH                            ¼   ÜI   ß¼   v Ú£ 	`ÿÿÿõP$P€€€   Nzè   ¥                      ÙÈ   Ú¬­  Ú ­  Ú¹   I   ·  J   ›   •   Ú¹   I   •   ˜X   •   ¹   I   ·  ¹   I   ·  J›   •   Ú¹   ÜI   ß·  r •   NÚ¹   I   ·  JÈ  Ú•   ¹  ¢Í£Í£&	`· `¯ YÿÿÿñP*`—@`$T           ÿÿÿÿ    ¢          d  >ç	hD  Ğ         	            ¸  É   ÚÙÉ   Ú¬­   Ú¼   L   Ú¼   I   ÜI   ß¼   r ÜI   ß¾    r ¾    r r ­   Ú¼   ¹   ÜI   ß¾    l	   r ¾    r ¾    r r L
+   Ú¼   I
+   ÜI   ß8   l   ;   l   ;   v Ú¹   ¢Í£Í£ &`,!`‘ "ÿÿÿñP
+WWÿÿÿëP(` 4ÿÿÿüP<WWÿÿÿ¯P)`‘ #%J
+JPD`$T€d        ¿   ÿÿÿÿ    Í          P   8ñÍP                            ¼   I   ÜI   ß·  ¼   r   	`‘ "ÿÿÿçP€€è   û½G”è                           ¼   I   ¼   ¼   I   š   •   Ú¼   I   ¼   J•   ˜9   •   ¾    ¾    8   ·  r ¼   I   ¼   Jr —   •   ·  •   NÚ¼   ÜI   ßv  Ú¼   L   Ú£ 	`É RÿÿÿíP ÿÿÿØP— 	`P$	`,P€€€4   Goz4                           ¼   L   Ú£ 	`,P˜  åÀ˜  6        
+              ¬­   ­  ­  ÚÙÈ  Ú·  ­   Ú· ­  Ú· Ü ˜   •   Ú•   ­  Ú¹  I   ÜI   ß¹  ¹   r È  Ú¹  ›   •   Ú¹  I   •   š   •   Ú¹  I   ¹   J•
+   ˜9   •   ¹  I   ¹   ¼
+   ¹  I   ¹   J¹  r NÚ—   •   ¹  I   ¹   ¹  NÚ•   ¹  ÜI   ßv  Ú¹  I   ÜI   ß8   ¹   ;	   ¹  I   ¹   J;   v Ú£À ` 1ÿÿÿŞP(
+`Å `“ $ÿÿÿİP `˜@`P$` %)“@PDP€8   a74§8                           ÙÈ   Ú¹   I    £&`)QL   ½¢¯L                           ÙÉ   Ú·  ÜI   ßl   v Ú£'`
+ÿÿÿøPDP€€   ²¤¨/€   B                         ¼   I   ÜI   ß·  r ÿ˜"   •   ¼   I   ÜI   ß·  v Ú•   £ `‘ ÿÿÿøP 	`‘ ÿÿÿûPIPh   ıãÍìh   .                        ÙÈ   Ú¹   ÜI   ß¶   ÜI   ß¹   I   r v Ú£&`	ÿÿÿûPÿÿÿğP$P€€€  ğ›êÛ$                 E      $¸ É   ÚÙÈ   Ú¬­  Ú ­  Ú¼   ¶    ˜F  •   Ë   ¬­  Ú8   ¯   Ú­  Ú¬­  Ú¼  ÜJßt  cÜI   ß–   ¬­  Úİr  c ÜI   ™|   •
+   I   ¨­  ¼   ¹  ¹   ÜI	   ß·  ¹  · r NÚ¾
+    ¼   ¹  Jr ˜   •   È  Ú•   —   •   ªŞ  a¥•   Ú—qÿÿÿ•   Û Í¹  ˜T   •   ¬­  Ú¼  ÜI   ßl   r ­  Ú¾    ¹  r ÜI   ß¾    l   r r ¢ÍÌÍ£Í•   ¼   ¢ÌÍ£Ì•   ·  ˜@   •   ¹   I   ÜI   ß¹   I   ÜI   ß·  ¼   r · r È  Ú•    ¹     šH   •#   Ú¹   I   š2   •&   Ú¹   I   ¹   I   š   •*   Ú¹   I   •+   ˜P   •,   ¹   I   ÜI   ß¹   I   ÜI   ß¹   I   ¹   I   J¼   r · r È  Ú•5   ¹     ˜p   •8   ¬­  Ú8   ¼   ;   ¹   ;   ­  Ú·    ˜   •>   ¹  · L   Ú•?   ¹   I   ÜI   ß¹  r È  ÚÍ•B   ¹     ˜   •E   ¹  —   •E   ¼   •E   ¢Í£Í£'&	` +``&f¢ ÿÿÿòœ $	`” !ÿÿÿßP%`
+ÿÿÿÿP-`¢@O
+`&`ÿÿÿüP(	`ÿÿÿ÷P
+ÿÿÿüPÿÿÿûPC'K`E'J	`-`  ÿÿÿéPÿÿÿËPM	`µ O­ `  “ %ÿÿÿÒP4ÿÿÿ´PM	`• &`%	*	N!`” 	`’@$` ,ÿÿÿùPN&` ­ T€  Ô          ÿÿÿÿ   5   7         L   ¹           J         Y           Z            [           i            j           {  f                           î                T         h   ”   „   óT×ğ„   L                         ¾    ¼   ±   ·  Jr ˜   •   ¼   ·  J—   •   ¾    ¼   ·  Jr •     `ÿÿÿÿP¦ 	ÿÿÿıP€Œ   Nöbl   -                        Ë   8   ¯   Ú·  ÜI   ßl   v Ú¼   ¢Ì£Ì£ 	%`+`
+ÿÿÿøPD`%	T€€€Œ         '   ÿÿÿÿ    *          D   Ù1D                            ¼   ±   ¼  · J·  NÚ£ `˜ P€€€È  4Û]k¨                        ¸  É   Ú¸ É   ÚÙÉ   Ú¼   ¼   r ›   •   Ú¼   I   •   ˜   •   ¶      Ş  € ¥•   ¼   I   ˜2   •
+   ¼   I   ÜI   ß¾    l   r r  —~   •   ¬­   Ú¼   ÜI
+   ß¼   I   ¼   I   J¼   ¼   r ­   Ú¾    ¹   r ˜   •   ¹   —   •   ¾    ¹   r •   ¢Í£Í•   £™ 	`ÿÿÿöPš `	ÿÿÿöPI	`” `‘ %
+ÿÿÿöPÿÿÿûPCK	&`• %ÿÿÿÆP(`ÿÿÿóP¡ ÿÿÿıPHY€€È  	   ¦   t   ÿÿÿÿ                 n;Şã    V                         ¼   ÜI   ß·  ¼   ¼   r Ç  Ú¾    ·  r ˜   •   ·  —   •   ¾    ·  r •    £ 	`ÿÿÿæP'	`ÿÿÿóP  ÿÿÿıP(Q€€€  Œù¾                           ¸  É   Ú¸ É   ÚÙÉ   Ú¼   ¼   r ›   •   Ú¼   I   •   ˜   •   ¶      Ş  € ¥•   ¾    ¾    l   r ¼   I   ÜI   ß¾	    l
+   r r r  £™ 	`ÿÿÿöPš `	ÿÿÿöPI`ÿÿÿúP/‘ 
+ÿÿÿöPÿÿÿûPÿÿÿ±PCQ€€L   ³ÓbL                             ¼   ÜI   ß¼   ¼   r   `	ÿÿÿ÷P€€ğ   ÙÔ½‰À   n                       ¬­   Ú¼   ÜI   ß·  I   ¼   ¼   r ­   Ú¹   I      ˜   •   ¹   ¢Í£—   •   ¾    ¹   r ¢Í£•   Í£ &`ÿÿÿ×P(`š 	`D= 	`
+ÿÿÿıPCY€ğ          m   ÿÿÿÿ    L              f            ßmÁ                           ¸  É   Ú¸ É   ÚÙÉ   Ú¼   ¼   r ›   •   Ú¼   I   •   ˜   •   ¶      Ş  € ¥•   ¾    ¾    l   r ¼   I   ÜI   ß¾	    l
+   r r r  £™ 	`ÿÿÿöPš `	ÿÿÿöPI`ÿÿÿúP/‘ 
+ÿÿÿöPÿÿÿûPÿÿÿ¸PCQ€€L   ³ÓbL                             ¼   ÜI   ß¼   ¼   r   `	ÿÿÿ÷P€€Ø   ^!cD¸   h                       ¬­   Ú¼   ÜI   ß·  I   ¼   ¼   r ­   Ú¾    ¹   r ˜   •   ¹   —   •   ¾    ¹   r •   ¢Í£Í£ &`ÿÿÿ×P(`ÿÿÿóP¡ ÿÿÿıP(T€€€Ø          g   ÿÿÿÿ    e          ø  ó\A‹˜                       ¸  É   ÚÙÈ   Ú¬­  Ú¼   ¼   r ›   •   Ú¼   I   •   ˜   •   ¶      Ş  € ¥•   ¹   ÜI   ß¹   I   ¹   I   J¼   · r ­  Ú¾    ¹  r ˜`   •   ¼   ¶	    ˜9   •   Ë
+   8   ¯   Ú¼  ÜI   ßl   v Ú¼   ¢ÌÍ£Ì•   ¼   ¢Í£—   •   ¹  ¢Í£•   Í£&	`ÿÿÿöPš `	ÿÿÿöPI`“ %ÿÿÿÆP(	`ÿÿÿÿP-` %`+	`ÿÿÿøPD	`EJ`E= `DYø        ÿ   ÿÿÿÿ
+   À   *          ç             è             ö                       H   ßeğ’H                            ¼   ±   ¼  · J¼  · JNÚ£ ` 	P€  ˜ğé±  ¼         
+              ¬­   ­  ­  ÚÙÈ  Ú·  ­   Ú· ­  Ú· Ü ˜   •   Ú¹  I   •   ­  Ú¹  I   ¹  J¹   ¹  I   ÜI   ß¹  ¹  r NÚ¹  ÜI   ßv  Ú¹  I   ÜI   ß8   ¹  ;	   ¹  I   ¹  J;   v Ú£È `¢ 5ÿÿÿñP%`P$` %)“@PDP€€€¼   zä6½¼   s                      ÙÈ   Ú¹   ·  L   Ú¹   I   ÜI   ß8   ·  ;   ¹   I   ·  J;   v Ú¹   I   ˜   •   ¹   ÜI   ß·  v Ú•   £&`-` %(’@PD	`• `ÿÿÿîPI	P€€€   i8Ï€   G                	      ÙÈ   Ú¹   ·  L   Ú¹   I   ÜI   ß8   ·  ;   ¹   I   ·  J;   v Ú£&`-` %(’@PDP€€h   öÑh   +                       ÙÈ   Ú¹   ÜI   ß·  v Ú¹   ÜI   ß·  r  £&`ÿÿÿöP$`ÿÿÿñP#Q€€€X   
+‡¿X   '                       ÙÈ   Ú¹   I   ·  NÚ¹   I   ·  NÚ£&`"$`$P€€€<  3b¨ü  ˆ                .       ¬­   Ú¶      ›   •   Ú¶   I      •   ˜   •	   ¢Í£•	   ¶   I   I   ˜    •   ¶   I   I   J—   •   •   ­   Ú¹   ›N   •   Ú¶   I   I   ›4   •   Ú¶   I   I   ›   •   Ú¶   I   I   •   È   Ú¹      ˜   •    ¢Í£•    ¹   ÜI	   ß
+   r ÿ˜$   •$   ¹   ÜI   ß
+   r JÈ   Ú•'   ¹   ÜI	   ß   r ÿ˜$   •+   ¹   ÜI   ß   r JÈ   Ú•.   ¹   ¢Í£Í£ &	`— !  ` BH`¿ `Ü 	`• ` BH		` P ` PO	` P ` PO`$T€€<         ‡  ÿÿÿÿ    A              û              …         `  ›ËÎ0  ë                        ¬­   Ú¶      ›   •   Ú¶   I      •   ˜   •	   ¢Í£•	   ¶   I   I   ˜    •   ¶   I   I   J—   •   •   ­   Ú¹   ›N   •   Ú¶   I   I   ›4   •   Ú¶   I   I   ›   •   Ú¶   I   I   •   È   Ú¹   ¢Í£Í£ &	`— !  ` BH`¿ `Ü `$T`         ê   ÿÿÿÿ    A              è          <   4 )<                          ÙÈ   Ú¹   l   ;   Ú£f@_0  %b0  ¥                        ·  ›   •   Ú¼   ±   •   ¾    ¼  r ¾    ¼  r ¾    ¼  r ¾    ¼  r ¾    ¼  r ¾    ¼  r ¾    ¼  r ¾    ¼  r ¾    ¼  r Ş
+  €	  £ ` $	ÿÿÿ÷P	ÿÿÿ÷P	ÿÿÿ÷P	ÿÿÿ÷P	ÿÿÿ÷P%	ÿÿÿ÷P	ÿÿÿ÷P	ÿÿÿ÷P	ÿÿÿ÷Pÿÿÿ
+P#Q€€€p   Æ:ˆ$p   =                       ÙÈ   Ú¹   ¾    8   ¼   ±   ;   ¼   I   ;   r ;   Ú£f0D %+/O PIP˜   Ñ%»˜   `                  
+        ¶      ›   •   Ú¶   •   š8   •   Ú¾    ¼   g   8   ¾   ;   h    l   v •
+   Ú£ `² C%/5'A6P9(Pü  kÎa•ü  w                 +        g	   8   ¼   ;   h    8   ¼   ;   h   8   ¼   ;   h   8   ¼   ;   h   8   ¼   ;   h   8   ;   g   8   ¾	   ;   g   ¼   h    ;
+   h    ;   h   8   ;   g   8   ¾	   ;   g   ¼   h    ;
+   h    ;   h   8   ;   g   8   ¾	   ;   g   ¼   h    ;
+   h    ;   h   8   ;   g   8   ¾	   ;   g   ¼   h    ;
+   h    ;   h    £ `%/%/%/%/%/% '%	*	@% '%	*	@% '%	*	@% '%	*	@$Q€€8   =døÆ8                          ÙÈ   Ú¹    ;   Ú£fP€8   =ã°Ó8                          ÙÈ   Ú¹    ;   Ú£fP€8   =¸C-8                          ÙÈ   Ú¹    ;   Ú£fP€8   =ÿÉõ8                          ÙÈ   Ú¹    ;   Ú£fP€8   =z8                          ÙÈ   Ú¹    ;   Ú£f
+P€8   =9‹ 8                          ÙÈ   Ú¹    ;   Ú£fP€8   =«~8                          ÙÈ   Ú¹    ;   Ú£fP€8   =ºÒ8                          ÙÈ   Ú¹    ;   Ú£fP€8   =ºÒ8                          ÙÈ   Ú¹    ;   Ú£fP€h   ]7h   5                      ÙÈ   Ú·  ˜&   •   ¹   ·  L   Ú¹   ÜI   ßv  Ú•   £&	`-`-`PIP€€„   9<ù±„   H                      ÙÈ   Ú¼   ¹   I   ·  r ™'   •   ¹   ·  L   Ú¹   ÜI   ßv Ú•   £&	`	ÿÿÿåP-`-`PIP€Ø  VÙèËØ  t                *      ÙÉ   Ú¼  ±  ÜJ¼   v  ÚÜJ¼   v  ÚÜJ¼   v  ÚÜJ¼   v  ÚÜJ¼   v  ÚÜJ¼   v  ÚÜJ¼   v  ÚÜJ¼   v  ÚJ¼   v  Ú¼   ·  L   Ú¼   · L   Ú¼   · L   Ú¼   I   ™3   •   ¼   ¼   I   I   ÜI   ßl   r L   Ú•   ¼   I   ™3   •   ¼   ¼   I   I	   ÜI   ßl
+   r L   Ú•#   ¼   I   ™3   •%   ¼   ¼   I   I   ÜI   ßl   r L   Ú•*   £ÿ$`.`.`.	`” `› RÿÿÿöPN	`” `› DÿÿÿöPN	`” `› RÿÿÿöPNP€€€x   ú_wax   A                         ·  I   ¼   I   I   ˜#   •   ¼   ÜI   ß·  I   v Ú•   £ `š `ÿÿÿïPIP€L   ßÓçEL                            ¼   ÜI   ß·  I   v Ú£ 	`ÿÿÿïP$P€€€<   CPzŸ<                            ¼   ÜI   ßv Ú£ 	`P$P@   BZ"º@                           ÙÈ   Ú¹   ÜI   ßv  Ú£&`P$P$  N£WÈÄ  î  
+   	          ;       $¬­   ­  ÚÙÈ  Ú·  Ü ˜   •   Ú•   ­   Ú· ­  Ú¬­  Ú¹  I   I   I   ­  Ú¹  I   ™H   •   ¹  ÜI   ß¹  I   I   ¹  I   v Ú¹  I   I   I   È  Ú•   ¬­  Ú­  Ú–   ¹  ¹  I   ˜  •   ¬­  Ú¹  ¹  J­  Ú¹  I
+   ˜Ş  •   ¬­  Ú ­  Ú¹   ˜   •   ¹  L   Ú•   ¼   ¹  I   r ˜   •   ¹  I   È  Ú—_  •   ¹  I   ˜   •   ¹  I   È  Ú—4  •   ¬­  ­  Ú¹  ÜI   ß¹  r ­  Ú¹  ÜI   ßr  ­  Ú¹  I   ˜ç   •%   ¹  ¹  L   Ú¹  ¹  I   ˜?   •)   ¹  È  Ú¹  ¹  ›   •*   Ú¹  I   •+   L   Ú—‡   •,   ¹  I   ˜'   •.   ¹  I   ÜI   ßr  È  Ú—R   •1   ¹  ¹  I   ˜:   •4   ¹  È  Ú¹  ¹  ›   •5   Ú¹  I   •6   L   Ú•7   Í•7   ¹  ÜI   ß¹  ¹  ¹  v ÚÍ•9   Í¹  /'È  Ú—Óıÿÿ•;   ÍÍ£´ $&`˜ 	`“ `	ÿÿÿÙP$`@
+`f” &`.`– &`.`@`
+	ÿÿÿÿP-`˜ `“ `˜ *`ÿÿÿõP( `P(`“ `.`” `)`± `“ ` P’ `” `)`²@!	`ÿÿÿéPK'`—@$P€$       4   ¹  ÿÿÿÿ   ¨   D      	   Ò           ü   Ô        …  *            ´   2  H  aiµÜ  u                    ¸  É   Ú¸ É   ÚÙÉ   Ú¼   ˜Q  •   ¬­   Ú¼   I   ¼   š    •   Ú¼   I   ¼   I   •   ˜   •    ¢Í£•   ¼   ¼   I   L   Úl   ­   Ú¼   · r ˜‘   •   ¬­  Ú¼   I   ÜI   ß· ¼   ¼   I   r ­  Ú¾	    ¹  r ˜,   •   ¹  ÜI
+   ß8   ¹   ;   v Ú—   •   ¹    ¹  v Ú•   Í—<   •   ¼   I   ÜI   ß¼   ¼   I   r ÜI
+   ß¹   v Ú•   Í•   £™ 	`&`
+› š 	`AH`• `J`
+ÿÿÿÿP&`‘ &
+ÿÿÿİP(`ÿÿÿÿP-`%IP> `ÿÿÿÿP”0 	`‘ 
+ÿÿÿ÷P
+'ÿÿÿöPOP€€€H     (   G  ÿÿÿÿ    p             «   ‚       ”  ùp4 ”  (                        ·  ¼   ˜   •   ¼   ¼   L   Ú•   ¼   I   ™)   •   ¼   ¼   ÜI   ß¼   r L   Ú•   ¼   ¼   ·  r ˜   •
+   ·  —$   •
+   ¼   I   ›   •   Ú¼   •   L   Ú¼   ÜI   ß¼   ¼   I   ˜   •   ¼   I   —-   •   ¼   I   ÜI   ß¼   ¼   I   r •   v Ú¼   I   ÜI	   ßv  Ú£ ` `•@`” `‘ 'ÿÿÿõPN	`ÿÿÿöP¿ 	`¹ <
+ÿÿÿóPÿÿÿ»P$	`‘ 
+P$P€l   Xtÿl   <                         ¼   ·  I   r ˜   •   ·  I   —   •   ·  I   •    £ `ÿÿÿöP¬ Q|   ¤g]<|   C                         ¼   ·  I   r ˜   •   ·  · L   Ú—   •   ·  · L   Ú•   £ 	`
+ÿÿÿÿP-`– `‘@PÔ   ;ËZæÔ   ‹                        ÙÈ   Ú¹   I   ˜   •   ¹   I   ÜI   ßv  Ú•   ¹   I   ˜   •   ¹   I   ÜI   ßv  Ú•
+   ¹   I   ˜   •   ¹   I   ÜI   ßv  Ú•   £&	`“ ` PI	`“ ` PI	`“ ` PI
+P€<   4 )<                          ÙÈ   Ú¹   l   ;   Ú£f@_    ?Šòæ    Q                        ·  ›   •   Ú¼   ±   •   ¾    ¼  r ¾    ¾   r ¾    ¾   r Ş  €  £ ` &ÿÿÿîP%ÿÿÿîPÿÿÿîPÿÿÿP#Q€€€è   ½³&sè   ¦                       ÙÈ   Ú¹   ¾    8   ¼   ±   ;   g   g      h       h      h   h    g      h       h      h   h   ;   8      ;   	   ;	   ;
+   r ;   Ú£f0D #+/¨ ­ %*O PIP€€€  ¡ƒüe  ¾           	               ¶      ›   •   Ú¶   •   š–   •   Ú¾    ¼ 	  g   8   ¾   ;   g   8      ;	   h    ;
+   h    l   8   g   8   ¾   ;   h    ;   g   8   ¾   ;   h    ;   v •   Ú£ `² C%*%™@E%%”@%”@6P9P€€x   Õ@Ò´x   C                          g   8   ¼   ;   h    8   ¾   ;   h   8   ¾   ;   h    £ `%/%/%OQ€8   =U¤B8                          ÙÈ   Ú¹    ;   Ú£f	P€8   =¸C-8                          ÙÈ   Ú¹    ;   Ú£fP€<   ~æ<                          ÙÈ   Ú¹      ;   Ú£f
+P€8   Xµ–Ş8                          ÙÈ   Ú¹   ;   Ú£fP€<   w9¨<                          ÙÈ   Ú¹   g    ;   Ú£fP€8   =em8                          ÙÈ   Ú¹    ;   Ú£fP€8   =€é8                          ÙÈ   Ú¹    ;   Ú£fP€8   =em8                          ÙÈ   Ú¹    ;   Ú£fP€´   }ï5´   ˆ                    
+  ÙÈ   Ú¼   ±   ÜJ¹   v  ÚÜJ¹   v  ÚÜJ¹   v  ÚÜJ¹   v  ÚÜJ¹   v  ÚÜJ¹   v  ÚÜJ¹   v  ÚJ¹   v  Ú¹   ·  L   Ú¹   · L   Ú£í `-`-P€t  eõ\®T  Õ                      ¸  É   ÚÙÉ   Ú¬­   Úl   ­   Ú· ˜€   •   ¬­  Ú¼   I   ÜI   ß· ¼   · r ­  Ú¾    ¹  I   r ˜"   •   ¹  ÜI   ß¹   v Ú—   •	   ¹    ¹  v Ú•
+   Í•
+   ¼   I   ÜI   ß¼   · r ÜI   ß¹   v ÚÍ£ '&`J	`&`‘ ÿÿÿİP(`	ÿÿÿÿP-	`ÿÿÿöP 	`ÿÿÿÿPO`‘ ÿÿÿ÷P
+&ÿÿÿöP%P€€t        Ä   ÿÿÿÿ   -   v          Àk­Õ   X                        ¼   ·  ˜   •   ·  —   •   ¼   •   L   Ú¼   ¼   L   Ú¼   I   ÜI   ßv  Ú£ `ª ` `‘ 
+P$P€€€ˆ  «·]²                 L     $¸  É   ÚÙÉ   ÚØÇ ÚË   ¼  ›   •   Ú¼  I   •   ˜   •   ¼  ¢Ì£•   ¼   ¼  ¼  I   r š!   •	   Ú¼   · ¼  I   r •   ˜   •   ¼  I   ¢Ì£•   ¯   Ú¼   · Jr š   •   Ú· I   •   ˜  •   · J   š   •   Ú· JI   •   ˜š   •   ¬­   Ú· JÜI   ßk	   
+   r ÜI   ßk      r ­   Ú¨¶   ÜI   ß¹   r É   Ú—3   •!    ¢ª¬­  Ú­  Ú¶      · J0%Ş  € ¥Í•%   Í—P   •%   · J   š    •)   Ú¶   ÜI   ß· Jr •.   ˜   •/   · JÉ   Ú•0   ¼  ¼  L   Ú¼  · L   Ú¼  ÜI   ß¼  ¼   v Ú¼  ÜI   ßv  Ú¼  I   ™3   •8   ¼  ¼  I   I   ÜI   ßl   r L   Ú•=   ¼  I   ™3   •?   ¼  ¼  I   I   ÜI   ßl   r L   Ú•D   ¼  I   ™3   •F   ¼  ¼  I   I   ÜI   ßl   r L   Ú•K   ¼  I   ¢Ì£Ì£• %	`‘ 
+š `E1H	`
+ÿÿÿøP”  
+ÿÿÿóP’ `J1H`(	`
+ÿÿÿÿP¥ `° /&`
+ÿÿÿøP
+=
+ÿÿÿøP!`ÿÿÿúP– +`Hÿÿÿ¨P•@`— ÿÿÿøP“ 	`@` `.`ÿÿÿíP$`P$	`” `› HÿÿÿöPN 	`” `› :ÿÿÿöPN(	`” `› HÿÿÿöPN0`*Tˆ  x        ö  ÿÿÿÿ    L              ¦               ‹          s  &                           M     ´   )$A´   u                        ¼  I   š#   •   Ú·  I   ¼  I   I   •   ˜=   •   ¼  L   Ú¼  ÜI   ß¼  ¼   ±   ·  I   v Ú•   £ ` Ÿ `,`
+ÿÿÿÚPIP€ˆ   r,,ˆ   M                        ¼  I   ˜=   •   ¼  L   Ú¼  ÜI   ß¼  ¼   ±   ·  I   v Ú•   £ `” `,`
+ÿÿÿÚPIP€   ( ›¡€   E                         ¼  I   ˜5   •   ¼  L   Ú¼  ÜI   ß¼  ¼   ±   v Ú•   £ `” `,`
+ÿÿÿíPIP€€  ÑÅg  Ä                       ÙÈ   Ú¹   I      ˜*   •   ¹   I   ÜI   ßv  Ú¹   L   Ú•   ¹   I      ˜*   •   ¹   I   ÜI   ßv  Ú¹   L   Ú•   ¹   I      ˜*   •   ¹   I   ÜI   ßv  Ú¹   L   Ú•   £&	`š ` P$`M	`š ` P$`M		`š ` P$`MP€@   BZ"º@                           ÙÈ   Ú¹   ÜI   ßv  Ú£&`P$P<   4 )<                          ÙÈ   Ú¹   l   ;   Ú£f@_Œ   KìÈŒ   G                        ·  ›   •   Ú¼   ±   •   ¾    ¼  r ¾    ¾   r Ş  €  £ ` !ÿÿÿîP)ÿÿÿîPÿÿÿ½P#Q€€€t   Š$pt   >                       ÙÈ   Ú¹   ¾    8      ;   ¼   ±   ;   ;   r ;   Ú£f0D +*/F PIP€p   Æ:ˆ$p   =                       ÙÈ   Ú¹   ¾    8   ¼   ±   ;   ¼   I   ;   r ;   Ú£f0D %+/O PIPà   zTZâà   ˜                          ¶      ›   •   Ú¶   •   šp   •   Ú¾    ¼   g   8   ¾   ;   h    8   ¾   ;   g   8	   
+   ;   ;   h    ;   h   l   v •   Ú£ `² C%/%*%*•@
+5A6P9P€€`   Á¦_…`   /                          g   8   ¼   ;   h    8   ¾   ;   h    £ `%/%OQ€,  x-ëô,  ¾               +        ¬­   Ú·  Ü ˜   •   Ú8   •   ­   Ú8   ¼   ±   ;   g
+   ¹   I   ›$   •   Ú8   ¼  ;   ¼  ;   •   h    ¹   I   ›$   •   Ú8	   ¼  ;   ¼  ;   •   h   ¹   I
+   ›$   •   Ú8   ¼  ;   ¼  ;   •   h   ¹   I   ›$   •   Ú8   ¼  ;   ¼  ;   •   h   ¼  h   8   ¼  ;   ¹   I   ;   h   8   ¼  ;   ¹   I   ;   h   8   ¼  ;   ¹   I   ;   h   8   ¼  ;   ¹   I   ;   h   ¼  h	   ;    £¦ `%/™ 	*	” 
+™ 	*	” 
+™ 	*	” 
+™ 	*	” 
+
+%	*	“ 
+%	*	“ 
+%	*	“ 
+%	*	“ 
+OQ€   ¯MgÇ   ´               +        ¬­   Ú·  Ü ˜   •   Ú8   •   ­   Ú8   ¼   ±   ;   g	   ¹   I   ›$   •   Ú8   ¼  ;   ¼  ;   •   h    ¹   I   ›$   •   Ú8	   ¼  ;   ¼  ;   •   h   ¹   I
+   ›$   •   Ú8   ¼  ;   ¼  ;   •   h   ¹   I   ›$   •   Ú8   ¼  ;   ¼  ;   •   h   8   ¼  ;   ¹   I   ;   h   8   ¼  ;   ¹   I   ;   h   8   ¼  ;   ¹   I   ;   h   8   ¼  ;   ¹   I   ;   h   ¼  h   ;    £¦ `%/™ 	*	” 
+™ 	*	” 
+™ 	*	” 
+™ 	*	” 
+%	*	“ 
+%	*	“ 
+%	*	“ 
+%	*	“ 
+OQ€<   4 )<                          ÙÈ   Ú¹   l   ;   Ú£f@_T   ×R…6T   '                        ·  ›   •   Ú¼   ±   •   Ş  €   £ `¢ P#Q€€¨   |HZt¨   j                       ÙÈ   Ú¹   ¾    8   ¼   ±   ;   g   ¼  h    ¼	  h   ;   g   ¼  h    ¼	  h   ;   r ;   Ú£f0D "+/
+/
+
+O PIP€L   ãœ´yL                          ÙÈ   Ú¹   ¾    8   r ;   Ú£f
+ÿÿÿïP	P(   û{Ú“(                            ÙÈ   Ú£ô   „i‰ñô   ¬           	               ¶      ›   •   Ú¶   •   š„   •   Ú¾    ¼   g   8   ¾   ;   g   8   g   ¼   h    ¼ 	  h   ;   g   ¼   h    ¼ 	  h   ;	   h    ;
+   h    v •   Ú£ `² C%*%
+/
+
+0B6P9P€3õØ  `  `  `	  `    `  `  p  `  p%  
+  `     @)  %  *  (    `   @  `+  C  
+    @      `  `  `  `  `  p%    `    @)  %  *  (    `1    `+  C  
+    @      `  `D  O  5  -  L  6  C    `C    `D  O  5    `L  <    `  `L  <    @(  ³     p  `"  `   P@  #  `'  `(  `  %  `&  `  p$  `  p%  )  `    @)  %  *  (  *  `+  `F  D  E  E  ,  `-  `F  «  .  ˆ   G  D  -  .  `0  `1  `F  /  `§  @    p2  `+  C  
+    @    3  `6  `:  `;  `  8  `9  `'  p7  `&  p%  <  `    @)  %  *  (  =  `>  `?  `+  C  
+  	  @    A  `T  B  `T  U  C  `
+  @P  D  `V  E  `  W  F  `  X  G  `  Y  H  `L  ``  M  `a  N  `b  O  `c  P  `d  Q  `e  R  `f  S  `g  T  `h  U  `”  V  `  i  W  `  j  X  `  k  Y  `l  Z  `m  [  `n  \  `  @o  ]  `  @p  ^  ``  a  b  c  d  e  f  g  }  `  `a  `  _  `v  p%  b  `    @)  %  *  (  c  `f  i  `  W  d  `f  j  `  X  e  `f  k  `  Y  f  `f  l  `  T  g  `f  l  `  T  h  `f  m  `  U  i  `f  m  `  U  j  `f  n  `  V  k  `f  n  `  V  l  `f  o  `  P  m  `f  o  `  P  p  `‚  n  `o  `T  ~  C      €  R  p‚  q  `T  t  `…  r  `s  `U   P  ~  C      €  U  p…  u  `v  `P  C  g  p  #  y  `b  O  z  `P  g      @†  ”  {  `”  w  `x  `”  a  #          X  ph  €    @Y  pe  Z  p‡  |  `b  O  g  P  †  W  ‹    @$  }  `V    `V      ~  `³   ^  p€  `  L  (  P  †  `   ‰  `‡  `ˆ  `  @³   c  p  `‚  `O  ƒ  `  @„  `e  y   "      …  `  a  p    b  pc  B  F  C  T  U  e  P  Š  `  @1  –  ‘  d  /  Œ  `     ‹  `-  W  —  ”  h      e  p  `  P  U       `Â     `‘  `  P  €  E     `-  W  —      g  pW      h  p“  `Â   ”  `•  `  P     ’  `-  W  —      j  pX      k  p™  `–  `—  `-  W  —    P  U    O  ˜  `  @³   m  pš  `U  P  b  N  †  W  ‹    @$  ›  `U  X  ‹    @$  P  T  ‚  œ  `T  Y  ‹    @$  P    `  #    `p  P  Ÿ  `   `Ÿ  C     ¢  *  £  ¤    -  «  _  ¡  `¢  `Ÿ  C     ¢  *  £  ¤  ¤  `  @    @  @  @  @  @  @  ©  ¨     @!  @"  @#  @$  @%  @£  `+  C  
+    @    y  p¨  `–  ©  `…   ª  `¬  «  `1  ¬  `­  ­  `®  ®  `¯  ¯  `°  °  `±  ²  `$  –  U  ´  P  ³  `´  P  ´  `´  ±  `–  …   ¬  ±  W  €  †  p¯  X  ‡  p°  Y  ˆ  p¶  `·  `       µ  `‘  p%  ¸  `  &  @  ˆ   ²  Ñ  Ğ  '  @µ  Ò  Ï  ¹  `1  ´  º  `®  ´  »  `´  ¼  `½  `…   º  »  -  ¼  1  ¾  `¿  `¾  À  `¿  À  Á  `Â  Ä  Å  Æ  Ç  Ä  `¿  Æ  Â  Å  ¼  1  §  ¬  É  Â  `Ã  `¿  ­  ®  Œ  pÅ  `–      €  (  @e  Â   Æ  `Ê  Ë  Ç  `Ê  Ë  È  `¯  Í  °  ±  Ê  `+  @  ,  @  -  @   É  `+  C  
+  )  @    *  @Ô  Ó  ©  ”  p.  @/  @  ²  0  @µ  Î  `²  Ï  `¬  Ğ  `ˆ   "  Ñ  `¿  Ò  `­  Ó  `W  Ô  `X  Õ  `Y  Ö  `²  ¬  Ø  `Ù  `     ×  `§  p%  Ú  `  1  @²  ^    ã  â  Û  `  2  @)  %  *  (  Ş  `"  ¿  ¬  É  Ü  `İ  `Ÿ  pß  `²      €  Â   ä  `¿  $  ²  U  Ç  P  å  `¿  Ç  P  æ  `¿  Ç  à  `á  `-  ¿  ­  "  F  â  `§    PÛ    Pİ  Q  Ş  ã  `]  ß  D  O  5  Ç  à  W  ²  €  ¡  pX  ¢  pY  £  pç  `W  C  Í  X  Y  è  `à  ê  `6  @  7  @   é  `+  C  
+  3  @    4  @	  5  @²  ^  ã  ©  «  pí  `ï  `ğ  `î  `¯  p%  ñ  `  8  @  ñ  ò  ğ  ò  `  9  @ó  ó  `:  @;  @è  ê  <  @ë  ì  b  =  @c  >  @d  ?  @@  @f  í  A  @e  B  @g  C  @|  é  ô  `D  @E  @è  ê  F  @ë  ì  b  G  @c  H  @d  I  @J  @f  í  K  @e  L  @g  M  @|  é  õ  `+  C  
+  N  @    O  @ñ  ò  ©     `  p£  L     `  `  p  p  p  p#    p	  p  `  `  p  p  p
+  p/    p  p  p  p  p  p  `   `!  `  p   p  p  p  pB    pF    pE    pD  !  p"  p4  `5  `)  p%  p(  p#  pN  $  pO  *  p@  `+  p,  p-  p.  p/  p0  p1  p2  p  Z  [  \  ]  I  `J  `K  `3  p4  p5  p6  p7  p8  p9  p:  p;  p<  p=  p>  p?  p@  pA  pB  pC  pD  pP  pu  pw  pE  pW  F  pX  G  pY  H  pT  I  pJ  pU  K  pL  pV  M  pN  pP  O  pQ  p}  S  pƒ  T  p„  V  p~  W  p[  p‰  \  pŒ  ]  p  _  p†  `  p  d  pÂ   f  p˜  i  pš  l  p›  n  pÃ  o  p…  p  p‚  q  pœ  r  p  s  p  t  p¥  x  p¥  `¦  `§  `z  p{  p|  p}  p~  p  p€  p  p‚  p…  p  p’  pƒ  p²  „  pµ  ‰  p·  Š  p´  ‹  pÇ    pÂ    p¼    pÌ  “  pË  `Ì  `Í  `•  p–  p—  p˜  p™  pš  p›  pœ  p  p¦  p¨  p©  p  p   p×  ¤  pà  ¥  pª  pë  `ì  `²  p®  p°  p±  p¬  pæ  ­  pî  ³  pÿX„¤  Ø                            £       #      "        ô      "       õ      !       '              ô      "       "      £                !       ,      £ *      /      "         ÷      "       2        #      ÷      "       .      £  ,              ! 3   	   3         <      7         >      8         E      :         B      ù      ! M      =      £ N      ú      " b      B      "  h   	   F      "  q      E      "  u      D      "  r      û      ! X      ú      " U      ü      ! R      J        [      ú      " Q      ?      £  y              ! €      K      £ ’      N      "  “      O      "  ˆ      ş      " …      ÿ      ! ‚      R        ‹      ş      "       M      £  ”              ! ›           "            "             " £           " ¥           " ¨           " «           " ®      S      £ ¯           " ±           " ³           " µ           " ·           " ¹           " »           " ½           " ¿           " Á           " Ã           " Æ           " É           " Ì           " Î           " Ğ           " Ò           " Õ           " ï      q      $  ô      r      $  ù      s      $  ş      t      $       u      %       v      $       w      %       x      $       y      %       z      $  !     {      %  Ø   
+   _      £  (  
+   }      "  &          ! 2     ƒ      "  6     „      "  4          ! B     ~      "  U     #      "  I          ! L     e      !
+ S     ‡      !
+ f  
+   ‰      "  p     Œ      "  v           "  r          ! y     †      "  ‡            "  ~     	     ! ‚     
+     !           ! «     Â       "  §          ! Ã     ˜      "  º          ! ¼          ! Ö     š      "  Î          ! Ğ          ! â     ›      "  á          ! ğ  
+   Ã      "  ú  	   …      "       ‚      "  
+     œ      "             "             "    	   ¥      "  å           " â      §        è           " 8             ! &               @          " B          " D          " F          " H          " J          " L          " N          " P          "      ³      %  ‚     ¶      %  ]     «      £  R          ! X          ! [          ! …     ·      "  ‡     ´      "  ¥     Ç      "  ›  
+   È      !
+ ³     Â      "  ¶     ¼      "  ¹     Ì      "  p          " k     Î        s          " Å             ! ¾               ×          " Ù          " Û          " Ş          " à          " â          " ä          " æ          " è     Ö      £    	   Ç      "       È      !
+      ×      "            !           !           ! <     à      "  B     Ì      "  ï          " ë     á        ò          " ú          " I             ! D               i     æ      "       î      "  [          " Y     ï        ^          " e          " X     å      £  ™             ! H©Ò      İ‡      İ‡                 İ  æ  İ  æ  '                G  f  9  f  *              p  ¢  p  ¢  -   
+             ‰  Ÿ  ‰  Ÿ  -   "             ë  š  Ç  š  /   0           ­    ­    3   
+           Z         )                  ¯     ¯  8               Ô  İ  Ô  İ  =   !             2  W  ,  W  @   	           a  Ø  a  Ø  C   
+             —  Ø  i  Ø  C   ?           ã  d  ã  d  F   
+              g    g  ?   %             j  	  j  	  K                	  Ô  	  Ô  P               ç  +  Õ  +  x               =  Š  ,  Š  {             €   ›  ‹  ›  ~               (  ‚  (  ‚     !           ²  »  ²  »  “                 =    =  –               L  h  A  h  —               s  *  k  *  ¢               @  i  -  i  ²             ‚ }  Z  l  Z  µ               è  T  è  T  ¹   /           d  ¨  d  ¨  ¾   
+             }  ¥  }  ¥  ¾   "             å     ¾     À   3           ³  &  ³  &  Ä   
+           z Ú  )  Ú  )  •              ,  ¾  ,  ¾  É               Û  ä  Û  ä  Î                D  i  =  i  Ñ   
+              ²  l  ²  Ô              ¼  ú  ¼  ú  ×   
+             Õ  ÷  Õ  ÷  ×   "             ;  ò    ò  Ù   2             v    v  İ   
+           Z   y    y  Ğ               |    |    â               ‘  œ  ‘  œ  ë               É  ç  É  ç  ï                 -    -  ó               T  ^  T  ^  ÷                 A    A  ş               ç    ç                  Ä  ì  Ä  ì               2 '  ï  '  ï  ç                                                             (     (                ,  2  ,  2                6  O  6  O                S  a  S  a                e  l  e  l                p  v  p  v                z    z                  ‘     ‘                   ¤  Í  ¤  Í                Ñ  ó  Ñ  ó                ÷      ÷                    $   0   $   0                  4   @   4   @   !              D   O   D   O   "              S   e   S   e   #              i   ‚   i   ‚   $              T!  ²!  =!  ²!  +              g"  ·"  W"  ·"  4              ‰#  ç#  r#  ç#  =              Y$  §$  J$  §$  C              ¹$  J%  ª$  J%  F             …%  Ó%  v%  Ó%  P              å%  v&  Ö%  v&  S             ¥&  ç&  œ&  ç&  ]              ó&  f'  ê&  f'  `             ª'  ú'  š'  ú'  j              (  £(  ı'  £(  m            " }+  t-  ê  xU  €        	   ‚ Å-  N/  ·-  N/                Ù.  /  Ù.  /  ™  '           /  ´/  /  ´/  £             ‚ ë/  »1  è/  »1  ©              1  E1  1  E1  ²  '           2  3  ğ1  3  ¾            ‚ ±3  G6  £3  G6  Ê              v4  «4  v4  «4  Í  =            ı4  Ü5  ı4  Ü5  Ï              ë5  6  ë5  6  Ô             Ñ6  œ8  Ã6  œ8  Ş             æ8  9  Ş8  9  î             ‚ 59  ¼9  -9  ¼9  ô              Q9  ¶9  Q9  ¶9  õ             ş9  9:  ó9  9:  ş             ‚ Š:  @  {:  @                <  ?<  <  ?<    !            l<  =  l<  =    +            ¥<  é<  ¥<  é<              ‚ @  ›B  ›@  ›B  0              iA  îA  iA  îA  5  6          ‚ “C  \E  wC  \E  C              )D  OD  )D  OD  G               zD  TE  zD  TE  G  j          ‚ ;F  ¹G  5F  ¹G  U  	            ÑF  ÷F  ÑF  ÷F  Y               G  ±G  G  ±G  Y  c          ‚ ®H  ”J  §H  ”J  b  
+            öI  ;J  öI  ;J  j             âJ  ĞK  ßJ  ĞK  w             L  ÛL  ıK  ÛL  ‚             M  ¦M  M  ¦M               ñM  =N  çM  =N  ™             tN  ÔN  kN  ÔN                 1O  £Q  #O  £Q  §               R  —S  ıQ  —S  »              ¡S  U  ¡S  U  Ã  
+             ÊS  U  ©S  U  Ã  2           U  uU  U  uU  Æ  
+             {U  ŸX  {U  ŸX  Ë               V  •X  ùU  •X  Î              ÛX  ëX  ÛX  ëX  õ              ïX  öX  ïX  öX  ö              úX  şX  úX  şX  ÷              Y  Y  Y  Y  ø              	Y  Y  	Y  Y  ù              Y  $Y  Y  $Y  ú              (Y  7Y  (Y  7Y  û              ;Y  QY  ;Y  QY  ü              UY  kY  UY  kY  ı              |Y  ËY  oY  ËY  ş             áY  dZ  ÎY  dZ              ¢ rZ  Œ]  ½X  Çj  
+     	        v[  	\  v[  	\    Y            }\  Ä\  }\  Ä\    K            M]  €]  M]  €]    Y           ¡]  À]  ]  À]                 Í]  Ãb  Ã]  Ãb  #            ‚ Ñb  æf  Æb  æf  H              ¦c  He  ¦c  He  N              óf  Fg  éf  Fg  g              Sg  ßg  Ig  ßg  j             íg  i  âg  i  q              i  Úi  i  Úi  |  
+             6i  Úi  i  Úi  |  4           åi  Äj  åi  Äj    
+             Êj  ~l  Êj  ~l  ˆ               ”k  l  Œk  l                °l  ¹l  °l  ¹l                 ½l  Ál  ½l  Ál  ¡              Ål  Ïl  Ål  Ïl  ¢              Ól  ál  Ól  ál  £              ål  ôl  ål  ôl  ¤              øl  m  øl  m  ¥              m  m  m  m  ¦              m  2m  m  2m  §             " Am  m  —l  pz  ¨           ‚ œm  šo  ‘m  šo  ¬              İm  Vn  İm  Vn  ­            Â ¦o  ®v  o  ®v  ¼              «s  {t  «s  {t  Õ  O            ât  …u  ât  …u  İ  A            v  ‹v  v  ‹v  å  O            ûv  ¶x  óv  ¶x  ñ              Äx  áx  ¹x  áx  ÿ              ëx  —y  ëx  —y    
+             y  —y  óx  —y    /           ¢y  z  ¢y  z    
+            z  mz  z  mz  
+  
+             sz  û{  sz  û{                 {  ñ{  ‡{  ñ{                 ”|  €  |  €  %              €  éƒ  w€  éƒ  F             óƒ  N„  óƒ  N„  d  
+             „  N„  ûƒ  N„  d  1           Y„  ş„  Y„  ş„  g  
+            	…  '…  	…  '…  l  
+            |  *…  |  *…  !               -…  7†  -…  7†  n             mÎı”                                                             !                     $                                                                         #          	  	                                                                                                                                                                                                      
+                                                                                                                      
+  
+                                                                                               	                                            ÿÿÿÿ\      \  x     ÿÿÿÿ-      -  y     ÿÿÿÿ,      ,  z     ÿÿÿÿK      K  {     ÿÿÿÿ>      >  |     ÿÿÿÿª      ª  }     ÿÿÿÿL      L  ~     ÿÿÿÿ!      !       ÿÿÿÿ          €     ÿÿÿÿä      ä       ÿÿÿÿ=      =  ‚     ÿÿÿÿÕ      Õ  ƒ     ÿÿÿÿ^      ^  „     ÿÿÿÿS      S  …     ÿÿÿÿ[      [  †     ÿÿÿÿ]      ]  ‡     ÿÿÿÿZ      Z  ˆ                                5¡İ JÁ?¬¬LÇs     1fCÔfC
+^FæÓhœ9   Ç    O^partitionKey=%28http%2Clocalhost%2C4200%29,:http://localhost:4200/@fs/home/marion/Documents/angular-projects/wolrkproject2/Sarstedt/.angular/cache/17.3.6/vite/deps/@ngx-translate_core.js?v=6ba1be97 necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: text/javascript
+Cache-Control: max-age=31536000,immutable
+Etag: W/"87dd-ZenjHvKoW7gSrUBmORUkl+tJkcM"
+Date: Thu, 02 May 2024 10:19:37 GMT
+Content-Length: 34781
+ original-response-headers Access-Control-Allow-Origin: *
+Content-Type: text/javascript
+Cache-Control: max-age=31536000,immutable
+Etag: W/"87dd-ZenjHvKoW7gSrUBmORUkl+tJkcM"
+Date: Thu, 02 May 2024 10:19:37 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 34781
+ ctid 2 uncompressed-len 0 net-response-time-onstart 16 net-response-time-onstop 17 alt-data 1;34781,javascript/moz-module-bytecode-20231211174248-8l alt-data-from-child 1  %Ù
