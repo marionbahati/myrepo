@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="awa-expId" content="vscw_aaflight1016_treatment:103440;" />
+	<meta name="awa-env" content="prod" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="hNs7DXrTySP_X-0P_AC0WulAXvUwgSXEmgfcO2r79dw" />
+
+	<!-- Twitter and Facebook OpenGraph Metadata-->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@code" />
+
+	    <meta name="description"
+        content="Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.  Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows." />
+    <meta name="msvalidate.01" content="D7003A550372D1205E5408F00BF1923B" />
+    <!-- Twitter and Facebook OpenGraph Metadata-->
+    <meta property="og:title" content="Visual Studio Code - Code Editing. Redefined" />
+    <meta property="og:description"
+        content="Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.  Visual Studio Code is free and available on your favorite platform - Linux, macOS, and Windows." />
+    <meta property="og:image" content="https://code.visualstudio.com/opengraphimg/opengraph-home.png" />
+    <meta property="og:url" content="https://code.visualstudio.com/" />
+    <link href="https://code.visualstudio.com" rel="canonical" />
+
+
+	<link rel="shortcut icon" href="/favicon.ico" sizes="128x128" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+	<title>Visual Studio Code - Code Editing. Redefined</title>
+
+	<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/dist/v2/style.css">
+
+	<script src="https://consentdeliveryfd.azurefd.net/mscc/lib/v2/wcp-consent.js"></script>
+	<script type="text/javascript" src="https://js.monitor.azure.com/scripts/c/ms.analytics-web-4.min.js"></script>
+	
+	<script type="text/javascript">
+	// Leave as var; siteConsent is initialized and referenced elsewhere.
+	var siteConsent = null;
+	
+	const GPC_DataSharingOptIn = false;
+	WcpConsent.onInitCallback(function () {
+		window.appInsights = new oneDS.ApplicationInsights();
+		window.appInsights.initialize({
+			instrumentationKey: "1a3eb3104447440391ad5f2a6ee06a0a-62879566-bc58-4741-9650-302bf2af703f-7103",
+			propertyConfiguration: {
+				userConsented: false,
+				gpcDataSharingOptIn: false,
+				callback: {
+					userConsentDetails: siteConsent ? siteConsent.getConsent : undefined
+				},
+			},
+			cookieCfg: {
+				ignoreCookies: ["MSCC"]
+			},
+			webAnalyticsConfiguration:{ // Web Analytics Plugin configuration
+				urlCollectQuery: true,
+				urlCollectHash: true,
+				autoCapture: {
+					scroll: true,
+					pageView: true,
+					onLoad: true,
+					onUnload: true,
+					click: true,
+					resize: true,
+					jsError: true
+				}
+			}
+		}, []);
+	
+		window.appInsights.getPropertyManager().getPropertiesContext().web.gpcDataSharingOptIn = GPC_DataSharingOptIn;
+	});
+	</script>
+	<link rel="alternate" type="application/atom+xml" title="RSS Feed for code.visualstudio.com" href="/feed.xml" />
+</head>
+
+<body  class="home">
+	<!-- Setting theme here to avoid FOUC -->
+	<script>
+		function setTheme(themeName) {
+			if (themeName === 'dark') {
+				document.documentElement.removeAttribute('data-theme'); // dark is default, so no data-theme attribute needed
+			}
+
+			if (themeName === 'light') {
+				document.documentElement.setAttribute('data-theme', themeName);
+			}
+			return;
+		}
+
+		// Determine initial theme: user preference or system preference
+		let theme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		setTheme(theme); // Apply the initial theme
+
+		// Listen for changes in the system theme preference
+		window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+			if (!localStorage.getItem('theme')) { // Only if no user preference is saved
+				setTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+	</script>
+
+	<div id="main">
+			<div class="navbar-fixed-container">
+				<div class="navbar navbar-inverse navbar-fixed-top " data-spy="affix" data-offset-top="1">
+					<div id='cookie-banner'></div>		<nav role="navigation" aria-label="Top Level">
+						<div class="container">
+							<div class="nav navbar-header">
+								<a class="navbar-brand" href="/"><span>Visual Studio Code</span></a>
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Expand and Collapse Menu">
+				                    <span class="icon-bar"></span>
+				                    <span class="icon-bar"></span>
+				                    <span class="icon-bar"></span>
+					    		</button>
+				            </div>
+				            <div class="navbar-collapse collapse">
+								<ul class="nav navbar-nav navbar-left">
+									<li ><a id="nav-docs" href="/docs">Docs</a></li>
+									<li ><a id="nav-updates" href="/updates">Updates</a></li>
+									<li ><a id="nav-blogs" href="/blogs">Blog</a></li>
+									<li ><a id="nav-extend" href="/api">API</a></li>
+									<li><a href="https://marketplace.visualstudio.com/VSCode" target="_blank" rel="noopener" id="nav-extensions">Extensions</a></li>
+									<li ><a id="nav-faqs" href="/docs/supporting/faq">FAQ</a></li>
+									<li class='search visible-xs visible-sm'
+										><a href="/Search">Search</a></li>
+									<li ><a id="nav-copilot" href="/docs/copilot/overview">GitHub Copilot</a></li>
+								</ul>
+				                </ul>
+			
+								<ul class="nav navbar-nav navbar-right" role="presentation">
+									<li>
+										<button type="button" class="theme-switch" id="theme-toggle">
+											<img class="theme-icon-light" src="/assets/icons/theme-light.svg" alt="Switch to the dark theme" />
+											<img class="theme-icon-dark" src="/assets/icons/theme-dark.svg" alt="Switch to the light theme" />
+										</button>
+									</li>
+									<li>
+										<a href="/Search" title="Search" class="btn search-btn" id="nav-search">
+											<img class="search-icon-light" src="/assets/icons/search.svg" width="16px" height="16px" alt="Search" />
+											<img class="search-icon-dark" src="/assets/icons/search-dark.svg" width="16px" height="16px" alt="Search" />
+										</a>
+									</li>
+									<li class="search" role="presentation">
+										<form class="nav-search search-form" role="search" aria-label="Search">
+											<div class="input-group" role="presentation">
+												<input type="text" name="q" class="search-box form-control" placeholder="Search Docs" aria-label="Search text"/>
+												<span class="input-group-btn">
+													<button tabindex="0" class="btn" type="submit" aria-label="Search">
+														<img class="search-icon-dark" src="/assets/icons/search-dark.svg" alt="Search" />
+														<img class="search-icon-light" src="/assets/icons/search.svg" alt="Search" />
+													</button>
+												</span>
+											</div>
+										</form>						</li>
+									<!-- this was hiden in the home and download page, keeping it for now -->
+									<li><a class="link-button" href="/Download" id="nav-download">
+									<span>Download</span></a></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>			<div class="updates-banner home ">
+				<div class="container">
+					<p class="message"><a href="/updates" id="banner-link-updates">Version 1.95</a> is now available! Read about the new features and fixes from October.</p>
+				</div>
+				<div tabindex="0" role="button" title="Dismiss this update" class="dismiss-btn" id="banner-dismiss-btn"><span class="sr-only">Dismiss this update</span><span aria-hidden="true" class="glyph-icon"></span></div>
+			</div>			<!-- This div wraps around the entire site -->
+			<!-- The body itself should already have a main tag -->
+			<div id="main-content">
+				<div class="container home">
+    <div class="hero-content col-sm-12">
+        <div class="hero-text">
+            <h1>Code faster with AI</h1>
+            <p class="hero-description">Visual Studio Code with GitHub Copilot supercharges your code with AI-powered suggestions, right in your editor. </p>
+            <div class="download-content-wrapper">
+                <div id="download-buttons" class="download-hero alt-downloads">
+                    <!-- Download for user's current OS -->
+                    <div class="primary-buttons">
+                        <button type="button" class="link-button dlink" data-os="osx" id="download-buttons-osx">Download for macOS</button>
+                        <button type="button" class="link-button dlink" data-os="win" id="download-buttons-win">Download for Windows</button>
+                        <div class="linux">
+                            <button type="button" class="link-button dlink deb-btn" data-os="linux64_deb" id="download-linux64_deb" id="download-buttons-linux64_deb"><img src="/assets/icons/download.svg" width="18px" height="18px" alt="Download VS Code"/>.deb<small>Debian, Ubuntu...</small></button>
+                            <button type="button" class="link-button dlink rpm-btn" data-os="linux64_rpm_repo" id="download-linux64_rpm_repo" id="download-buttons-linux64_rpm_repo"><img src="/assets/icons/download.svg" width="18px" height="18px" alt="Download VS Code"/>.rpm<small>Red Hat, Fedora...</small></button>
+                            <div class="collapse" id="linux32-downloads-insiders">
+                                <ul class="list-unstyled text-center">
+                                    <li><a class="dlink" data-os="linux32_deb" id="download-buttons-linux32_deb"><strong>.deb</strong> (x86)</a></li>
+                                    <li><a class="dlink" data-os="linux32_rpm" id="download-buttons-linux32_rpm"><strong>.rpm</strong> (x86)</a></li>
+                                    <li><a class="dlink" data-os="linux32" id="download-buttons-linux32"><strong>.tar.gz</strong> (x86)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button type="button" class="link-button dlink other-os" href="/Download">Download<small class="build-type">Stable Build</small></button>
+                        <a class="link-button secondary" href="https://github.com/settings/copilot?utm_source=vscode-landing-2&utm_medium=abovefold&utm_campaign=2024q3-em-MSFT-signup" target="_blank" rel="noopener">Try GitHub Copilot</a>
+                    </div>
+                    
+                </div>
+                <p id="download-matrix-label" class="hero-alt-download-links"><a href="https://vscode.dev/" target="_blank" rel="noopener" title="For quick code edits locally or remotely on GitHub and Azure Repos." id="download-buttons-web">Web</a>, <a href="/insiders" id="download-buttons-insiders">Insiders edition</a>, or <a href="/Download">other platforms</a></p>
+                <p class="terms">By using VS Code, you agree to its <span class="wrap-together"><a href="https://code.visualstudio.com/license" target="_blank" rel="noopener" title="View the Visual Studio Code license.">license</a> and <a href="https://go.microsoft.com/fwlink/?LinkId=521839" target="_blank" rel="noopener" title="View the Microsoft privacy statement.">privacy statement</a>.</span></p>
+            </div>        </div>
+        <img src="/assets/home/home-screenshot-copilot.png" class="hero-image dark" alt="Visual Studio Code in action with AI-powered suggestions from GitHub Copilot, built-in terminal and powerful extensions for all languages and tools">
+        <img src="/assets/home/home-screenshot-copilot-light.png" class="hero-image light" alt="Visual Studio Code in action with AI-powered suggestions from GitHub Copilot, built-in terminal and powerful extensions for all languages and tools">
+    </div>
+</div>
+
+<div class="container">
+    <div class="swimlane copilot row">
+        <div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="value-prop-intro">
+                    <h2>Code with GitHub Copilot</h2>
+                    <p>Write code faster and smarter with GitHub Copilot, your AI pair programmer.</p>
+                    <a href="https://github.com/settings/copilot?utm_source=vscode-landing-2&utm_medium=swim&utm_campaign=2024q3-em-MSFT-signup"
+                        target="_blank" rel="noopener">Try GitHub Copilot free for 30 days</a>
+                </div>
+                <div class="secondary-value-prop">
+                    <p><a href="https://code.visualstudio.com/docs/copilot/ai-powered-suggestions" rel="noopener"
+                            class="value-prop-bold">Completions</a> present suggestions automatically to help you code more
+                        efficiently.</p>
+                </div>
+                <div class="secondary-value-prop">
+                    <p><a href="https://code.visualstudio.com/docs/copilot/copilot-chat" rel="noopener"
+                            class="value-prop-bold">Copilot Chat</a> understands the context of your code, workspace,
+                        extensions, settings, and more.</p>
+                </div>
+                <div class="secondary-value-prop">
+                    <p><a href="https://code.visualstudio.com/docs/copilot/getting-started#_refactor-your-code-through-ai-chat"
+                            rel="noopener" class="value-prop-bold">Inline Chat</a> enables you to iteratively generate edits
+                        and get answers to quick questions, directly on your code.</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-8">
+                <img id="completions-dark" src="/assets/home/swimlane-copilot.png" class="swimlane-image dark" loading="lazy"
+                    alt="GitHub Copilot suggesting a code change">
+                <img id="completions-light" src="/assets/home/swimlane-copilot-light.png" class="swimlane-image light"
+                    loading="lazy" alt="GitHub Copilot suggesting a code change">
+            </div>
+        </div>
+    </div>
+
+    <div class="swimlane row">
+        <div>
+            <div class="col-sm-6 col-lg-4">
+                <h2>Code in any language</h2>
+                <p>VS Code supports almost every major programming language. Several ship in the box, like JavaScript, TypeScript, CSS, and HTML, but extensions for others can be found in the VS Code Marketplace.</p>
+            </div>
+                <div class="languages col-sm-6 col-lg-8">
+                    <div><img src="/assets/home/language-js.png" alt="JavaScript icon"><code>JavaScript</code></div>
+                    <div><img src="/assets/home/language-ts.png" alt="TypeScript icon"><code>TypeScript</code></div>
+                    <div><img src="/assets/home/language-python.png" alt="Python icon"><code>Python</code></div>
+                    <div><img src="/assets/home/language-cs.png" alt="C# icon"><code>C#</code></div>
+                    <div><img src="/assets/home/language-cpp.png" alt="C++ icon"><code>C++</code></div>
+                    <div><img src="/assets/home/language-html.png" alt="HTML icon"><code>HTML</code></div>
+                    <div><img src="/assets/home/language-java.png" alt="Java icon"><code>Java</code></div>
+                    <div><img src="/assets/home/language-json.png" alt="JSON icon"><code>JSON</code></div>
+                    <div><img src="/assets/home/language-php.png" alt="PHP icon"><code>PHP</code></div>
+                    <div><img src="/assets/home/language-markdown.png" alt="Markdown icon"><code>Markdown</code></div>
+                    <div><img src="/assets/home/language-powershell.png" alt="Powershell icon"><code>Powershell</code></div>
+                    <div><img src="/assets/home/language-yaml.png" alt="YAML icon"><code>YAML</code></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="extensions-container row">
+            <div class="extensions-container-content row">
+                <div class="col-sm-6 col-lg-4">
+                    <h2>Code with Extensions</h2>
+                    <p>Whether you're a beginner or an expert, we've got you covered. Choose from hundreds of extensions to power up your VS Code experience.</p>
+                    <a href="https://code.visualstudio.com/docs/editor/extension-marketplace" rel="noopener">Learn more about extensions</a>
+                </div>
+                <div class="col-sm-6 col-lg-8">
+                    <div class="extensions-grid-container">
+                        <div class="extensions-grid">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python" target="_blank" rel="noopener" class="extension-tile">
+                                <img src="/assets/images/python-extension.png" loading="lazy" alt="Python extension icon">
+                                <div class="extension-tile-details">
+                                    <h3>Python</h3>
+                                    <p>Adds rich language support for Python</p>
+                                </div>
+                            </a>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank" rel="noopener" class="extension-tile">
+                                <img src="/assets/images/copilot-extension.png" loading="lazy"
+                                    alt="GitHub Copilot extension icon">
+                                <div class="extension-tile-details">
+                                    <h3>GitHub Copilot</h3>
+                                    <p>Your AI pair programmer</p>
+                                </div>
+                            </a>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools" target="_blank" rel="noopener" class="extension-tile">
+                                <img src="/assets/images/c-extension.png" loading="lazy" alt="C/C extension icon">
+                                <div class="extension-tile-details">
+                                    <h3>C/C++</h3>
+                                    <p>Adds rich language support for C/C++</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="extensions-grid">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter" target="_blank" rel="noopener" class="extension-tile">
+                                <img src="/assets/images/jupyter-extension.png" loading="lazy"
+                                    alt="Jupyter extension icon">
+                                <div class="extension-tile-details">
+                                    <h3>Jupyter</h3>
+                                    <p>Language support for Jupyter Notebooks</p>
+                                </div>
+                            </a>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target="_blank" rel="noopener" class="extension-tile">
+                                <img src="/assets/images/gitlens-extension.png" loading="lazy"
+                                    alt="GitLens extension icon">
+                                <div class="extension-tile-details">
+                                    <h3>GitLens</h3>
+                                    <p>Supercharge your Git experience</p>
+                                </div>
+                            </a>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit" target="_blank" rel="noopener" class="extension-tile">
+                                <img src="/assets/images/cs-dev-kit-extension.png" loading="lazy"
+                                    alt="C# Dev Kit extension icon">
+                                <div class="extension-tile-details">
+                                    <h3>C# Dev Kit</h3>
+                                    <p>Powerful tools for your C# environment</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="extensions-grid">
+                            <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces" target="_blank" rel="noopener" class="extension-tile">
+                                <img src="/assets/images/github-pull-requests-extension.png" loading="lazy"
+                                    alt="GitHub Codespaces extension icon">
+                                <div class="extension-tile-details">
+                                    <h3>GitHub Codespaces</h3>
+                                    <p>Fully configured dev environments in the cloud</p>
+                                </div>
+                            </a>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github" target="_blank" rel="noopener" class="extension-tile">
+                                <img src="/assets/images/github-pull-requests-extension.png" loading="lazy"
+                                    alt="GitHub Pull Requests extension icon">
+                                <div class="extension-tile-details">
+                                    <h3>GitHub Pull Requests</h3>
+                                    <p>Collaborate on issues and pull requests</p>
+                                </div>
+                            </a>
+                            <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" target="_blank" rel="noopener" class="extension-tile">
+                                <img src="/assets/images/remote-extension.png" loading="lazy"
+                                    alt="Remote Development extension icon">
+                                <div class="extension-tile-details">
+                                    <h3>Remote Development</h3>
+                                    <p>Open folders in a container on a remote machine</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="extensions-grid-caption">
+                        <p>View 50k+ extensions in the <a href="https://marketplace.visualstudio.com/vscode" rel="noopener" target="_blank">Extension Marketplace</a></p>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+        <div class="swimlane row">
+            <div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="value-prop-intro">
+                    <h2>Fully customizable</h2>
+                    <p>Customize your VS Code UI and layout so that it fits your coding style.</p>
+                    </div>
+                    <div class="secondary-value-prop">
+                        <p><a href="https://code.visualstudio.com/docs/getstarted/themes" rel="noopener">Color themes</a> let you modify the colors in VS Code's user interface to suit your preferences and work environment.</p>
+                    </div>
+                    <div class="secondary-value-prop">
+                        <p><a href="https://code.visualstudio.com/docs/getstarted/settings#_settings-sync" rel="noopener" class="value-prop-bold">Settings Sync</a> enables you to share your user settings across your VS Code instances with the Settings Sync feature.</p>
+                    </div>
+                    <div class="secondary-value-prop">
+                        <p><a href="https://code.visualstudio.com/docs/editor/profiles" rel="noopener" class="value-prop-bold">Profiles</a> let you create sets of customizations and quickly switch between them or share them with others.</p>                        
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-8">
+                    <img src="/assets/home/swimlane-customized.png" class="swimlane-image dark" loading="lazy" alt="Selecting the GitHub Dark theme with a quick pick">
+                    <img src="/assets/home/swimlane-customized-light.png" class="swimlane-image light" loading="lazy" alt="Selecting the GitHub Dark theme with a quick pick">
+                </div>
+            </div>
+        </div>
+
+        <div class="swimlane row">
+            <div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="value-prop-intro">
+                    <h2>Code anywhere</h2>
+                    <p>Code wherever you're most productive, whether you're connected to the cloud, a remote repository, or in the browser with VS Code for the Web (vscode.dev).</p>
+                    </div>
+                    <div class="secondary-value-prop">
+                        <p><a href="https://code.visualstudio.com/docs/sourcecontrol/overview" rel="noopener">Built-in Source Control</a> empowers you with Git support out-of-the-box. Many other source control providers are available through extensions.</p>
+                    </div>
+                    <div class="secondary-value-prop">
+                        <p><a href="https://code.visualstudio.com/docs/remote/codespaces" rel="noopener" class="value-prop-bold">GitHub Codespaces</a> provides cloud-powered development environments for any activity - whether it's a long-term project, or a short-term task like reviewing a pull request.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-8">
+                    <img src="/assets/home/swimlane-anywhere.png" class="swimlane-image dark" loading="lazy" alt="vscode.dev in an Edge browser tab">
+                    <img src="/assets/home/swimlane-anywhere-light.png" class="swimlane-image light" loading="lazy" alt="vscode.dev in an Edge browser tab">
+                </div>
+            </div>
+        </div>
+
+		<div class="row">
+			<div class="secondary-tagline col-sm-12">
+				<h2>Code with rich features</h2>
+				<p>There's a lot more to an editor. Whether it's using built-in features or rich extensions, there's something for everyone.</p>
+			</div>
+			<div class="feature-grid col-sm-12">
+				<a href="https://code.visualstudio.com/docs/terminal/basics" class="feature-card">
+					<img src="/assets/icons/codicon-terminal.svg" alt="terminal icon">
+					<h3 class="feature-card-title">Integrated terminal</h3>
+					<p>Use your favorite shell whether it's zsh, pwsh, or git bash, all inside the editor.
+					</p>
+				</a>
+				<a href="https://code.visualstudio.com/docs/editor/debugging" class="feature-card">
+					<img src="/assets/icons/codicon-debug.svg" alt="debug icon">
+					<h3 class="feature-card-title">Run code</h3>
+					<p>Run and debug your code without leaving your editor.</p>
+				</a>
+				<a href="https://code.visualstudio.com/docs/sourcecontrol/overview" class="feature-card">
+					<img src="/assets/icons/codicon-version-control.svg" alt="branching icon">
+					<h3 class="feature-card-title">Version control</h3>
+					<p>Built-in support for git and many other source control providers.</p>
+				</a>
+				<a href="https://code.visualstudio.com/docs/editor/tasks" class="feature-card">
+					<img src="/assets/icons/codicon-build-tasks.svg" alt="tools icon">
+					<h3 class="feature-card-title">Build tasks</h3>
+					<p>Run tools and analyze their results from within VS Code.</p>
+				</a>
+				<a href="https://code.visualstudio.com/updates/v1_66#_local-history" class="feature-card">
+					<img src="/assets/icons/codicon-local-history.svg" alt="history icon">
+					<h3 class="feature-card-title">Local history</h3>
+					<p>Never lose your changes with automatically tracked local history.</p>
+				</a>
+				<a href="https://code.visualstudio.com/docs/getstarted/themes" class="feature-card">
+					<img src="/assets/icons/codicon-themes.svg" alt="palette icon">
+					<h3 class="feature-card-title">Themes</h3>
+					<p>Your theme is an extension of your personality. Add some flair to your editor and add your touch.</p>
+				</a>
+				<a href="https://code.visualstudio.com/docs/editor/accessibility" class="feature-card">
+					<img src="/assets/icons/codicon-accessibility.svg" alt="keyboard icon">
+					<h3 class="feature-card-title">Accessibility</h3>
+					<p>Optimized experience for screen readers, high contrast themes, and keyboard-only navigation.</p>
+				</a>
+				<a href="https://code.visualstudio.com/docs/editor/vscode-web" class="feature-card">
+					<img src="/assets/icons/codicon-web.svg" alt="globe icon">
+					<h3 class="feature-card-title">Web support</h3>
+					<p>Whether you are on your phone, tablet, or desktop, you can access your code from anywhere.</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+    
+</div>
+			</div>
+	</div>
+
+	<footer role="contentinfo" class="container">
+		<div class="footer-container">
+			<div class="footer-row">
+				<div class="footer-social">
+					<ul class="links">
+						<li>
+							<a href="https://go.microsoft.com/fwlink/?LinkID=533687"><img src="/assets/icons/x-icon.svg" class="x-icon" alt="Follow us on X"></a>
+						</li>
+						<li>
+							<a href="https://github.com/microsoft/vscode"><img src="/assets/icons/github-icon.svg" alt="VS Code on Github"></a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@code"><img src="/assets/icons/youtube-icon.svg" alt="VS Code on YouTube"></a>
+						</li>
+						<script>
+							function manageConsent() {
+								if (siteConsent && siteConsent.isConsentRequired) {
+									siteConsent.manageConsent();
+								}
+							}
+						</script>
+					</ul>
+					<a id="footer-microsoft-link" class="microsoft-logo" href="https://www.microsoft.com">
+						<img src="/assets/icons/microsoft.svg" alt="Microsoft homepage" />
+					</a>
+				</div>
+			</div>
+			<div class="footer-row">
+				<ul class="links">
+					<li><a id="footer-support-link" href="https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=d66407ed-3967-b000-4cfb-2c318cad363d"
+							target="_blank" rel="noopener">Support</a></li>
+					<li><a id="footer-privacy-link" href="https://go.microsoft.com/fwlink/?LinkId=521839"
+							target="_blank" rel="noopener">Privacy</a></li>
+					<li style="display: none;"><a id="footer-cookie-link" style="cursor: pointer;" onclick="manageConsent()"
+							target="_blank" rel="noopener">Manage Cookies</a></li>
+					<li><a id="footer-terms-link" href="https://www.microsoft.com/legal/terms-of-use"
+							target="_blank" rel="noopener">Terms of Use</a></li>
+					<li><a id="footer-license-link" href="/License"
+							target="_blank" rel="noopener">License</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script src="/dist/index.js"></script>
+
+	
+
+	<script type="application/ld+json">
+		{
+			"@context" : "http://schema.org",
+			"@type" : "SoftwareApplication",
+			"name" : "Visual Studio Code",
+			"softwareVersion": "1.95",
+			"offers": {
+				"@type": "Offer",
+				"price": "0",
+				"priceCurrency": "USD"
+			},
+			"applicationCategory": "DeveloperApplication",
+			"applicationSubCategory": "Text Editor",
+			"alternateName": "VS Code",
+			"datePublished": "2021-11-03",
+			"operatingSystem": "Mac, Linux, Windows",
+			"logo": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+			"screenshot": "https://code.visualstudio.com/assets/home/home-screenshot-win.png",
+			"releaseNotes": "https://code.visualstudio.com/updates",
+			"downloadUrl": "https://code.visualstudio.com/download",
+			"license": "https://code.visualstudio.com/license",
+			"softwareRequirements": "https://code.visualstudio.com/docs/supporting/requirements",
+			"url" : "https://code.visualstudio.com",
+			"author": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"maintainer": {
+				"@type": "Organization",
+				"name": "Microsoft"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "https://code.visualstudio.com/Search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			},
+			"sameAs" : [
+				"https://en.wikipedia.org/wiki/Visual_Studio_Code",
+				"https://twitter.com/code",
+				"https://www.youtube.com/code",
+				"https://www.tiktok.com/@vscode",
+				"https://github.com/microsoft/vscode"
+			]
+		}
+	</script>
+</body>
+</html>ìƒtx”Î      g+(Hg+(IGƒ»™g+(H   M    O^partitionKey=%28https%2Cvisualstudio.com%29,:https://code.visualstudio.com/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/2 200 
+content-type: text/html; charset=utf-8
+content-length: 32451
+etag: W/"7ec3-LE/mW+7+x76DVdKqpCwOF2LXJMA"
+strict-transport-security: max-age=31536000; includeSubDomains
+x-cache-info: L1_T2
+accept-ranges: bytes
+date: Wed, 06 Nov 2024 08:26:48 GMT
+cache-control: s-maxage=300
+request-context: appId=cid-v1:
+content-security-policy: frame-ancestors 'self'
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-powered-by: ASP.NET
+x-azure-ref: 20241106T082648Z-r1cf5f84dd6jkddchC1DUSpw4g00000002t000000001766b
+x-cache: TCP_HIT
+x-fd-int-roxy-purgeid: 0
+X-Firefox-Spdy: h2
+ original-response-headers date: Wed, 06 Nov 2024 08:25:58 GMT
+content-type: text/html; charset=utf-8
+content-length: 32451
+cache-control: s-maxage=300
+etag: W/"7ec3-LE/mW+7+x76DVdKqpCwOF2LXJMA"
+strict-transport-security: max-age=31536000; includeSubDomains
+request-context: appId=cid-v1:
+content-security-policy: frame-ancestors 'self'
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-powered-by: ASP.NET
+x-azure-ref: 20241106T082558Z-r1cf5f84dd6jkddchC1DUSpw4g00000002t0000000016zt5
+x-cache: TCP_HIT
+x-fd-int-roxy-purgeid: 0
+x-cache-info: L1_T2
+accept-ranges: bytes
+X-Firefox-Spdy: h2
+ ctid 1 uncompressed-len 0 net-response-time-onstart 142 net-response-time-onstop 148   ~Ã

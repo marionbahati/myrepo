@@ -1,0 +1,138 @@
+<div>
+    <div>
+        <div style="display: flex;margin-left: 10vw;padding-top: 5%;" class="top">
+            <img style="width: 120px;height: 120px;margin-left: 4%;" src="assets/images/gear-icon-png-2226.png" alt="">
+            <div> <img class="line" style="padding-top: 20%;"
+                    src="assets/images/iconmonstr-line-one-vertical-lined-96.png" alt="">
+            </div>
+            <h1 class="test" style="padding-top: 5%;margin-left: -10px;">{{'SystemTest'|translate}}</h1>
+        </div>
+        <hr style="width: 80%;font-size: larger;font-weight: bold;margin: auto;border: 2px solid black; ">
+
+
+    </div>
+    <!-- <app-player></app-player> -->
+</div>
+
+<div class="row">
+    <div class=" col d-flex justify-content-evenly mt-5">
+        <div class="d-flex">
+            <h2 (click)="playWissenschaft()" #Brand>
+                <a> @if (scienceIsLoading ) {
+                    <div class="spinner"
+                        style="position: absolute;margin-top: -9px;margin-left: -10px;margin-right: -10px;">
+                    </div>
+
+                    }
+                    <img style="border: 2px solid;border-radius: 50px;padding: 5px;"
+                        src="assets/icons/wissenschaftIcon.png" alt="Wissenschaft" alt="">
+                    <span> <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                        {{'Brand'|translate}}</span>
+                </a>
+            </h2>
+
+        </div>
+        <div class="d-flex" (click)="playDiangnostik()" #diagnostik>
+            <h2>
+                <a> @if (diagnosIsLoadiang ) {
+                    <div class="spinner"
+                        style="position: absolute;margin-top: -9px;margin-left: -10px;margin-right: -10px;">
+                    </div>
+
+                    }
+                    <img style="border: 2px solid;border-radius: 50px;padding: 5px;" src="assets/icons/diagnostik.svg"
+                        alt="Diagnosis">
+                    <span> <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                        {{'Diagnosis'|translate}}</span>
+
+                </a>
+            </h2>
+
+        </div>
+        <div class="d-flex">
+            <h2 (click)="playWissenschaft()" #wissenschaft>
+                <a> @if (scienceIsLoading ) {
+                    <div class="spinner"
+                        style="position: absolute;margin-top: -9px;margin-left: -10px;margin-right: -10px;">
+                    </div>
+
+                    }
+                    <img style="border: 2px solid;border-radius: 50px;padding: 5px;"
+                        src="assets/icons/wissenschaftIcon.png" alt="Wissenschaft" alt="">
+                    <span> <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                        {{'Science'|translate}}</span>
+                </a>
+            </h2>
+
+        </div>
+
+    </div>
+</div>
+<!-- <div class="row">
+    <div class=" col d-flex justify-content-evenly" style="padding-top: 3%;">
+
+        <div>
+            <h2 (click)="brandClicked()" id="1" #brand>
+                <a>@if (isLoading ) {
+
+                    <div class="spinner"
+                        style="position: absolute;margin-top: 45px;margin-left: -4px;margin-right: -1px;"></div>
+                    }
+                    <img src="assets/icons/sarsedt.png" alt="Diagnostik">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+
+
+                        {{'Brand'|translate}}</span>
+                </a>
+
+            </h2>
+        </div>
+
+        <div class="d-flex" (click)="playDiangnostik()" id="2" #diagnostik>
+            <h2>
+                <a> @if (diagnosIsLoadiang ) {
+                    <div class="spinner"
+                        style="position: absolute;margin-top: 45px;margin-left: -4px;margin-right: -1px;"></div>
+
+                    }
+
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+                        <img style="border: 2px solid; padding: 5px;" src="assets/icons/diagnostik.svg" alt="">
+                        {{'Diagnosis'|translate}}</span>
+
+                </a>
+            </h2>
+
+        </div>
+        <div class="d-flex">
+            <h2 (click)="playWissenschaft()" id="3" #wissenschaft>
+                <a> @if (scienceIsLoading ) {
+                    <div class="spinner"
+                        style="position: absolute;margin-top: 45px;margin-left: -4px;margin-right: -1px;"></div>
+
+                    }
+                    <img style="border: 2px solid; padding: 5px;" src="assets/icons/wissenschaftIcon.png"
+                        alt="Wissenschaft">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+
+                        {{'Science'|translate}}</span>
+
+                </a>
+            </h2>
+
+        </div>
+    </div>
+</div> -->
+
+
+
+<div class="wrapper" style="margin-left: 60%; display: flex;margin-top: 6%;margin-bottom: 2%;">
+    <h2>
+        <input style="width: 20rem;" type="range" min="0" max="1" step="0.01"
+            (input)="video().setVolumeFromEvent($event)">
+
+        <!-- <input style="margin-left: -25px;" type="range" min="0" max="1" step="0.01"
+            (input)="video().setVolumeFromEvent($event)">  -->
+    </h2>
+
+</div>

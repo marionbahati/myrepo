@@ -1,0 +1,31 @@
+<div class="container">
+
+    <label>Filter City: &nbsp; </label>
+    <input [(ngModel)]='City'>
+    <button type="button" (click)="onCityFilter()">Search</button>
+    <button type="button" (click)="onCityFilterClear()">Clear</button> &nbsp;
+    
+    <label>Sort by &nbsp;</label>
+    <select [(ngModel)] = 'SortbyParam'>
+      <option value="City">City</option>
+      <option value="Price">country</option>
+
+
+    <table class="table table table-success table-striped ">
+        <thead>
+          <tr >
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">COUNRY</th>
+            <th scope="col">CITY</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+        
+         
+           
+         
+        </tbody>
+      </table>
+

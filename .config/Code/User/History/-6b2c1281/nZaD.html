@@ -1,0 +1,12 @@
+<div>
+    <input type="text" [(ngModel)]="parentCompany" placeholder="Enter parent company name" />
+    <select [(ngModel)]="connectionType">
+        <option value="customer">Customer</option>
+        <option value="partner">Partner</option>
+        <!-- Add other connection types as needed -->
+    </select>
+    <input type="number" [(ngModel)]="depth" placeholder="Enter connection depth" />
+    <button (click)="fetchConnections()">Show Connections</button>
+</div>
+
+<div id="graph"></div>

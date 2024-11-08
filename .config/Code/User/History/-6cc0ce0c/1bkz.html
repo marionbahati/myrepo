@@ -1,0 +1,134 @@
+<!-- <video #videoPlayer  style="width: 200px;height: 200px;margin-left: 50px;">
+        
+    <source src="{{videosource}}" type="video/mp4">
+  </video> -->
+
+<div>
+    <div>
+        <div style="display: flex;margin-left: 10vw;padding-top: 5%;">
+            <img style="width: 120px;height: 120px;margin-left: 5%;" src="assets/images/gear-icon-png-2226.png" alt="">
+            <div> <img style="padding-top: 10%;" src="assets/images/iconmonstr-line-one-vertical-lined-96.png" alt="">
+            </div>
+            <h1 style="padding-top: 4%;">{{'SystemTest'|translate}}</h1>
+        </div>
+        <hr style="width: 80%;font-size: larger;font-weight: bold;margin: auto;border: 2px solid black;">
+
+    </div>
+
+</div>
+<div class="row">
+    <div class=" col d-flex justify-content-evenly" style="padding-top: 3%;">
+
+        <div>
+            <h2 (click)="clickedTrue()" id="1" #brand>
+                <a>@if (isLoading ) {
+
+                    <div class="spinner"
+                        style="position: absolute;margin-top: 46px;margin-left: -3px;margin-right: -2px;"></div>
+                    }
+                    <img src="assets/icons/sarsedt.png" alt="Diagnostik">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+
+
+                        {{'Brand'|translate}}</span>
+                </a>
+
+            </h2>
+        </div>
+
+        <div class="d-flex" (click)="playDiangnostik()" id="2" #diagnostik>
+            <h2>
+                <a> @if (diagnosIsLoadiang ) {
+                    <div class="spinner"
+                        style="position: absolute;margin-top: 42px;margin-left: -10px;margin-right: 2px;"></div>
+
+                    }
+
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+                        <img style="border: 2px solid; padding: 5px;" src="assets/icons/diagnostik.svg" alt="">
+                        {{'Diagnosis'|translate}}</span>
+
+                </a>
+            </h2>
+
+        </div>
+        <div class="d-flex">
+            <h2 (click)="playWissenschaft()" id="3" #wissenschaft>
+                <a> @if (scienceIsLoading ) {
+                    <div class="spinner"
+                        style="position: absolute;margin-top: 42px;margin-left: -10px;margin-right: 2px;"></div>
+
+                    }
+                    <img style="border: 2px solid; padding: 5px;" src="assets/icons/wissenschaftIcon.png"
+                        alt="Wissenschaft">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+
+                        {{'Science'|translate}}</span>
+
+                </a>
+            </h2>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="wrapper" style="margin-left: 60%; display: flex;margin-top: 6%;margin-bottom: 2%;">
+    <h2>
+        <input style="width: 20rem;" type="range" min="0" max="1" step="0.01" [(ngModel)]="videoVolume"
+            (input)="setVolume()">
+    </h2>
+
+</div>
+
+<!-- <div class=" mw-100"
+    style="background-color: black; color: white; height: 25vh; position: fixed; bottom: 0; width: 100%;margin-top: 20vh;padding-left: 10%;padding-top: 2%;">
+    <div class="row">
+        <div class="col" routerLink="/test">
+            <h2>
+                <img style="margin-right: 10px;" src="assets/icons/arrow-left-circle.svg" alt="back">
+                <span style="line-height: 160px;padding-right: 10px;">{{'Back'|translate}}</span>
+
+            </h2>
+        </div>
+
+        <div class="col" (click)="abspielen()">
+            <h2>
+                <img style="margin-right: 10px;" src="assets/icons/starticon.svg" alt="start">
+                <span style="line-height: 160px;padding-right: 10px;">Start</span>
+
+
+            </h2>
+        </div>
+        <div class="col">
+            <h2 (click)="restart()">
+                <img style="margin-right: 10px;" src="assets/icons/reset_white.svg" alt="reset"><span
+                    style="line-height: 160px;padding-right: 10px;">Reset</span>
+            </h2>
+        </div>
+        <div class="col">
+            <h2>
+                @if (!isMuted) {
+                <img (click)="toggleMute()" [hidden]="isMuted" src="assets/icons/volumeIcon.svg" alt="volume">
+
+
+                }
+                @if (isMuted) {
+
+                <img (click)="hideit()" src="assets/icons/muteIcon.svg" alt="mute">
+                }
+                <br>
+
+            </h2> <input style="margin-left: -20px;" type="range" min="0" max="1" step="0.01" [(ngModel)]="videoVolume"
+                (input)="setVolume()">
+        </div>
+        <div class="col " style="padding: 30px;padding-top: 70px;">
+            <h2>
+                <a (click)="switchLanguage('de')" style="color: red;padding-right: 10px;">DE</a> | <a
+                    style="padding-left: 10px;" (click)="switchLanguage('en')" s>EN</a>
+
+            </h2>
+        </div>
+    </div>
+</div>  -->

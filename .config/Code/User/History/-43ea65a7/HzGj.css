@@ -1,0 +1,9 @@
+.nav{
+background-color:#ffffff ;
+}
+@media screen and (min-width:768px){
+    .navbar-brand{
+        margin-right: 0;
+        padding: 0;
+    }
+}

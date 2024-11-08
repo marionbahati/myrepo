@@ -1,0 +1,22 @@
+{
+   "show": "Show",
+   "welcome":"Welcome",
+   "subjects":"themes",
+   "delete":"Delete",
+   "diagnosis":"Diagnostics",
+   "science":"Life Sciences",
+   "brand":"Brand",
+   "Test":"Test",
+   "gesamtshow":"Overall Show",
+   "individuell":"Individually",
+   "Themenauswahl":"Topic selection",
+   "back":"Back",
+   "themenfilme":"Subject",
+    "individuallezusammenstellung":"Individual order",
+    "auswahlThemenfilme":"Themed films selection",
+    "choose":"Order selections",
+    "Sprachauswahl":"Language selection",
+    "contentsprache":"Please select the language of the content.",
+    "texteingabe":"Enter text",
+    "systemTest":"System testing"
+}

@@ -1,0 +1,15 @@
+#mum{
+position: relative;
+opacity: 1;
+}
+#kid{
+position: absolute;
+bottom: 0;
+color: black;
+justify-content: center;
+align-items: center;
+
+}
+#strc{
+    max-width: 100%;
+}

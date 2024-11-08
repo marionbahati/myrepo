@@ -1,0 +1,10 @@
+file:///home/marion/Documents/angular-projects/1/test-app/src/app/app.config.ts {"mtime":1703150064007,"ctime":1703150064007,"size":227,"etag":"3bl89i2js7a","orphaned":false,"typeId":""}
+import { ApplicationConfig } from '@angular/core';
+import { provideRouter } from '@angular/router';
+
+
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [provideRouter(routes)]
+};

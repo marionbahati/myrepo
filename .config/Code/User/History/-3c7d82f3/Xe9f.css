@@ -1,0 +1,16 @@
+.quick-example{
+    margin: 1rem;
+    padding: 1rem;
+    background: hsl(200, 50%, 50%);
+    border-radius: .5rem;
+    display: grid;
+    grid-template-rows: 0fr;
+
+}
+.quick-example > div{
+    overflow: hidden;
+
+}
+.quick-example:hover{
+   grid-template-rows: 1fr; 
+}

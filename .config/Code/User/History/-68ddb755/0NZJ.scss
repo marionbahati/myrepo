@@ -1,0 +1,17 @@
+img {
+   font-size: 50px;
+   width: 60px;
+   height: 60px;
+   margin: 50px;
+}
+
+@media screen and (max-width: 576px) {
+   .a {
+      margin-right: -10%;
+      margin-left: 10%;
+   }
+
+   .b {
+      margin-left: -10%;
+   }
+}

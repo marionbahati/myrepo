@@ -1,0 +1,66 @@
+<div style="display: flex;flex-direction: row;justify-content: space-around; width: 100vw;
+height: 6em;background-color: aliceblue;padding-top: 1%;">
+    <h1>E-Commerce</h1>
+    <h1 routerLink="/oder" routerLinkActive="active">Track Order</h1>
+    <h1 routerLink="/signup" routerLinkActive="active">Register</h1>
+    <h1 routerLink="/login" routerLinkActive="active">Login</h1>
+    <button type="button" class="btn btn-primary position-relative" (click)="openCart()" (toggle)="!carty"
+        {{ReadMore?"Read More":"Read Less"}}>
+        Cart
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{cart}}
+            <span class="visually-hidden">unread messages</span>
+        </span>
+    </button>
+
+
+</div>
+<div style="display: flex;flex-direction: row;justify-content: space-around; width: 100vw;
+height: 6em;padding-top: 2%;">
+    <div>
+        <h2>Sofa</h2>
+        <h2>Green</h2>
+        <h3>$40</h3>
+        <div style="display: flex;">
+            <button (click)="addtoCart()" style="margin-right: 2px;">Add to cart</button>
+            <button (click)="removeFromCart()">Remove</button>
+        </div>
+    </div>
+    <div>
+        <h2>Sofa</h2>
+        <h2>Green</h2>
+        <h3>$40</h3>
+        <div style="display: flex;">
+            <button (click)="addtoCart()" style="margin-right: 2px;">Add to cart</button>
+            <button (click)="removeFromCart()">Remove</button>
+        </div>
+
+    </div>
+    <div>
+        <h2>chair</h2>
+        <h2>Red</h2>
+        <h3>$80</h3>
+        <div style="display: flex;">
+            <button (click)="addtoCart()" style="margin-right: 2px;">Add to cart</button>
+            <button (click)="removeFromCart()">Remove</button>
+        </div>
+    </div>
+    <div>
+        <h2>Bed</h2>
+        <div style="display: flex;">
+            <h2 style="margin-right: 2em;">Black</h2>
+            <h3>$90</h3>
+        </div>
+
+        <div style="display: flex;">
+            <button (click)="addtoCart()" style="margin-right: 1em;">Add to cart</button>
+            <button (click)="removeFromCart()">Remove</button>
+        </div>
+
+
+    </div>
+    <div style="height: 50em; border: 2px solid;width: 15em; visibility: hidden;" #carty>
+
+    </div>
+</div>
+<router-outlet></router-outlet>

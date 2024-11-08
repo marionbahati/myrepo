@@ -1,0 +1,17 @@
+.nav{
+background-color:#ffffff ;
+}
+@media screen and (min-width:768px){
+    .navbar-brand{
+        margin-right: 0;
+        padding: 0;
+    }
+}
+.navbar .navbar-nav .nav-link{
+    padding: 0.5rem 2rem;
+}
+
+.hero div,.about-us,.contact{
+    max-width: 50%;
+
+}

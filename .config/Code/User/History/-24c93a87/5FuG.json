@@ -1,0 +1,10 @@
+{
+    "editor.fontSize": 20,
+    "window.zoomLevel": -1,
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    }
+}

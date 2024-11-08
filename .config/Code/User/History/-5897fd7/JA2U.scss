@@ -1,0 +1,45 @@
+img {
+   font-size: 50px;
+   width: 80px;
+   height: 80px;
+
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+   .row {
+      margin-top: 10vh;
+   }
+
+   .row .d-flex {
+      display: flex;
+      flex-direction: column;
+      display: block;
+      margin-left: 10%;
+      gap: 6em;
+
+      height: 30vh;
+   }
+
+   hr {
+      margin-top: 3px;
+
+   }
+
+   #divider {
+      margin-bottom: 10px;
+   }
+
+   #topic {
+      margin-top: -20%;
+      margin-bottom: 5%;
+   }
+
+   .row .d-flex img {
+      width: 60px;
+      height: 60px;
+   }
+
+}

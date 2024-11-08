@@ -1,0 +1,12 @@
+file:///home/marion/project/workProject/src/app/app.component.ts {"mtime":1709812855124,"ctime":1709812855124,"size":213,"etag":"3c3e4qdan6r","orphaned":false,"typeId":""}
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {
+  title = 'workProject';
+  constructor(){}
+}

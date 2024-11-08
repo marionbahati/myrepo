@@ -1,0 +1,27 @@
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <input type="text" name="search" [{ngModel}]="searchText">
+        </div>
+      </nav>
+    <hr>
+<table class="table table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NAME</th>
+        <th scope="col">COUNRY</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let her of heroes | filter:searchText">
+        <th scope="row">{{her.id}}</th>
+        <td>{{her.name}}</td>
+        <td>{{her.country}}</td>
+       
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

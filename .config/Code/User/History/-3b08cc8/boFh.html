@@ -1,0 +1,11 @@
+<h1 i18n>Trying out new stuff</h1>
+<h2 i18n>I hope it will work </h2>
+<H3 i18n>Peace</H3>
+<!-- <button (click)="changeLocale()">{{ languageToggle }}</button>
+<button (click)="changeLocale()">de</button> -->
+
+<div *ngFor="let locale of locales">
+    <a href="/{{ locale.localeCode }}/">
+        {{ locale.label }}
+    </a>
+</div>

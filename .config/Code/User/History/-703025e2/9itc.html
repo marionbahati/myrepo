@@ -1,0 +1,54 @@
+<mat-card>
+  <mat-card-content>
+    <div style="height: 10vh;width: 80vw;background-color: black;color: white;">
+      <h1>header</h1>
+    </div>
+    <mat-grid-list cols="4" rowHeight="30vh">
+      @for (tile of tiles; track tile) {
+      <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows"
+        [style.background]="tile.color">{{tile.text}}</mat-grid-tile>
+      }
+    </mat-grid-list>
+
+    <!-- <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Doloribus quis fuga culpa in amet aliquid sequi, velit perspiciatis,
+        ducimus rerum, veritatis deserunt quod obcaecati? Maiores illum sunt
+        quia ea dolor? Tempora eveniet amet quia ducimus obcaecati non laboriosam
+        minima, ab, doloribus earum omnis? Minima cupiditate maiores,
+        possimus perferendis ex aut?</mat-grid-tile>
+      <mat-grid-tile>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Doloribus quis fuga culpa in amet aliquid sequi, velit perspiciatis,
+        ducimus rerum, veritatis deserunt quod obcaecati? Maiores illum sunt
+        quia ea dolor? Tempora eveniet amet quia ducimus obcaecati non laboriosam
+        minima, ab, doloribus earum omnis? Minima cupiditate maiores,
+        possimus perferendis ex aut?</mat-grid-tile>
+      <mat-grid-tile>3Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Doloribus quis fuga culpa in amet aliquid sequi, velit perspiciatis,
+        ducimus rerum, veritatis deserunt quod obcaecati? Maiores illum sunt
+        quia ea dolor? Tempora eveniet amet quia ducimus obcaecati non laboriosam
+        minima, ab, doloribus earum omnis? Minima cupiditate maiores,
+        possimus perferendis ex aut?</mat-grid-tile>
+      <mat-grid-tile>4Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Doloribus quis fuga culpa in amet aliquid sequi, velit perspiciatis,
+        ducimus rerum, veritatis deserunt quod obcaecati? Maiores illum sunt
+        quia ea dolor? Tempora eveniet amet quia ducimus obcaecati non laboriosam
+        minima, ab, doloribus earum omnis? Minima cupiditate maiores,
+        possimus perferendis ex aut?</mat-grid-tile>
+    </mat-grid-list> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </mat-card-content>
+</mat-card>

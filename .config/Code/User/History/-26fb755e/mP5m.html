@@ -1,0 +1,9 @@
+<p>search works!</p>
+<input type="text" placeholder="search" class="form-control" [(ngModel)]="filteresString">
+<hr>
+<div class="div">
+    <ul *ngFor="let use of users">
+        <li>{{use.name}}</li>
+        <li>{{use.gender}}</li>
+      </ul> 
+</div>

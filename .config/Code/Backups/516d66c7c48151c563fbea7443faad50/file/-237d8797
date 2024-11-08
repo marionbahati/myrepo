@@ -1,0 +1,11 @@
+file:///home/marion/Documents/angular-projects/addtocart/cart/src/components/productlist/productlist.component.html {"mtime":1709811138087,"ctime":1709810117315,"size":134,"etag":"3c3e2e1ki4a","orphaned":false,"typeId":""}
+
+
+    @for (product of products; track $index) {
+   <div class="product">
+<h3>{{product.name}}</h3>
+<h4>{{product.price}}</h4>
+<button (click)="addToCart(product)">Add to cart</button></div>
+    }
+
+

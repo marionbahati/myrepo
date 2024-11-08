@@ -1,0 +1,13 @@
+#mum{
+position: relative;
+opacity: 1;
+}
+#kid{
+position: absolute;
+right: 0;
+bottom: 0;
+color: white;
+justify-content: center;
+align-items: center;
+
+}

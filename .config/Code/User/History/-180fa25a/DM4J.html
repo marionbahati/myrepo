@@ -1,0 +1,67 @@
+<hr style="margin-top: 2%;width: 90%;margin: auto;border: 2px solid black;">
+
+
+<div style="display: flex; padding: 30px;justify-content: center;align-items: center;margin-top: 15vh;cursor: pointer;">
+    <div style="display: flex;margin-right: 50px;" routerLink="/themenfilme">
+        <img style="width: 110px;height: 100px;" src="assets/images/film-outline.256x256.png" alt="Videos">
+        <img style="height: 100px;width: 100px;" src="assets/images/iconmonstr-line-one-vertical-lined-96.png" alt="">
+        <h2 style="padding-right: 25px; margin-top: 20px; ">{{'Themenfilme' |translate}}</h2>
+    </div>
+    <div style="display: flex;" routerLink="/individuelleZusammenstellung">
+        <img style="width: 110px;height: 100px;" src="assets/images/film-outline.256x256.png" alt="Videos">
+        <img style="height: 100px;width: 100px;" src="assets/images/iconmonstr-line-one-vertical-lined-96.png" alt="">
+        <h2 style="padding-right: 10px;margin-top: 20px; ">{{'Individuallezusammenstellung'| translate}}</h2>
+    </div>
+</div>
+
+
+
+
+<div class=" mw-100"
+    style="background-color: black; color: white; height: 25vh; position: fixed; bottom: 0; width: 100%;margin-top: 20vh;padding-left: 10%;padding-top: 2%;">
+    <div class="row">
+        <div class="col" routerLink="/seite3">
+            <h2>
+                <img style="margin-right: 5px;" src="assets/icons/starticon.svg" alt="Back">
+                <span style="line-height: 160px;padding-right: 10px;">{{'Back'|translate}}</span>
+            </h2>
+        </div>
+
+        <div class="col">
+            <h2>
+                <img style="margin-right: 10px;" src="assets/icons/starticon.svg" alt="Start">
+                <span style="line-height: 160px;padding-right: 10px;">Start</span>
+            </h2>
+        </div>
+        <div class="col">
+
+            <h2><img style="margin-right: 10px;" src="assets/icons/reset_white.svg" alt="Reset"> <span
+                    style="line-height: 160px;padding-right: 10px;">Reset</span>
+            </h2>
+        </div>
+        <div class="col" style="margin-top: 3%;">
+            <h2>
+                @if (!isMuted) {
+                <img (click)="toggleMute()" [hidden]="isMuted" src="assets/icons/volumeIcon.svg" alt="volume">
+
+
+                }
+                @if (isMuted) {
+
+                <img (click)="hideit()" src="assets/icons/muteIcon.svg" alt="mute">
+                }
+                <br>
+
+
+            </h2><br> <input style="margin-left: -20px;" type="range" min="0" max="1" step="0.01"
+                [(ngModel)]="videoVolume" (input)="setVolume()">
+        </div>
+        <div class="col " style="padding-top: 70px;">
+            <h2>
+                <a (click)="switchLanguage('de')" style="color: red;padding-right: 10px;">DE</a> | <a
+                    style="padding-left: 10px;" (click)="switchLanguage('en')" s>EN</a>
+
+            </h2>
+        </div>
+    </div>
+</div>

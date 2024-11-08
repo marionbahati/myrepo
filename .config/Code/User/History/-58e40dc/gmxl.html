@@ -1,0 +1,48 @@
+<div class="row" style="display: flex;justify-content: center;align-items: center;padding-top: 18%;">
+
+
+    <div class=" col d-flex justify-content-evenly" style="margin-bottom: 5%;">
+
+        <div>
+            <h1 (click)="goToWelcome()">
+                <a>
+                    <img src="assets/icons/welcomeIcone.svg" alt="Willkommen">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+                        <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                        {{'Welcome'|translate}}</span>
+
+                </a>
+
+            </h1>
+        </div>
+
+
+        <div class="d-flex">
+            <h1 routerLink="/show">
+                <a>
+                    <img src="assets/icons/showIcon.svg" alt="Show">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+                        <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                        {{'Show'|translate}}</span>
+
+                </a>
+            </h1>
+
+        </div>
+        <div class="d-flex">
+            <h1 routerLink="/individuell">
+                <a>
+                    <img src="assets/icons/individuell.svg" alt="Individuell">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+                        <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                        {{'Individuell'|translate}}</span>
+
+                </a>
+            </h1>
+
+        </div>
+    </div>
+    <div style="height: 25vh;width: 100%; background-color: black;
+    position: fixed;bottom: 0;left: 0;">
+
+    </div>

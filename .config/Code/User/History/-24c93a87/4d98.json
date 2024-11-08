@@ -1,0 +1,9 @@
+{
+    "editor.fontSize": 20,
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    }
+}

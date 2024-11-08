@@ -1,0 +1,13 @@
+file:///home/marion/Documents/angular-projects/productLandingPage/productLanding/src/Dockerfile {"mtime":1706786513629,"ctime":1706786513629,"size":0,"etag":"3brbi23nf0","orphaned":false,"typeId":""}
+FROM node:21-alpine3.11 as angular
+
+WORKDIR /app
+
+COPY . .
+RUN npm install
+RUN npm run build
+
+
+WORKDIR /usr/local/apache2/htdocs
+COPY --from=angular /app/dist/productLanding .
+

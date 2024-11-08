@@ -1,0 +1,39 @@
+<div>
+
+
+    <hr style="color: black; width: 80%; margin: auto;border: 2px solid black;">
+
+</div>
+
+<div>
+    <div class=" row " id="a">
+
+        <h2 style="margin-left: 5%;margin-bottom: 2%; padding-top: 1%;">{{'Choose'|translate}} </h2>
+        <div class=" col " *ngFor="let item of items" (click)="pushtoThemAuswahl(item)" style="margin-left: 5%;">
+            <h3>
+                <img class="icn" [src]="item.icon" alt="{{ item.name }} icon"><span>
+                    <!-- <img id="line" src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt=""> -->
+                    {{item.name|translate}}</span>
+
+            </h3>
+        </div>
+    </div>
+    <hr style="color: black; width: 90%; margin: auto;border: 2px solid black;margin-top: 2em;">
+    <div class=" row mt-4" style="padding-left: 1%;" id="b">
+
+        <div class=" col " id="selectedElements" *ngFor="let auswahl of themenAuswahl" (click)="markAsClicked(auswahl)">
+            <img [ngClass]="{'bd':auswahl.name=='brand'}" class="icn" [src]="auswahl.icon"
+                alt="{{ auswahl.name }} icon">
+            {{ auswahl.clicked ? '' : '' }}
+
+
+            @if (auswahl.clicked ) {
+
+            <div class="spinner" style="position: absolute;margin-top: -10px;margin-left: 20px;margin-right: 20px;">
+            </div>
+
+
+            }
+
+
+        </div>

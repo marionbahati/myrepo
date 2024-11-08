@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { Router } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule ,ROUTES} from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  title = 'pageLayouts';
+  
+  
+  
+    
+
+}

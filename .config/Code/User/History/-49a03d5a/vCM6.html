@@ -1,0 +1,31 @@
+<div class="container">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Navbar</a>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <hr>
+<table class="table table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">NAME</th>
+        <th scope="col">COUNRY</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let her of heroes">
+        <th scope="row">{{her.id}}</th>
+        <td>{{her.name}}</td>
+        <td>{{her.country}}</td>
+       
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

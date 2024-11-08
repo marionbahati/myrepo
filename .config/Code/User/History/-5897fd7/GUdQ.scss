@@ -1,0 +1,34 @@
+img {
+   font-size: 50px;
+   width: 80px;
+   height: 80px;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+   .row {
+      display: flex;
+      flex-direction: column;
+
+      gap: 5em;
+
+   }
+
+   .row .col {
+      flex-basis: 100%;
+
+      gap: 3em;
+      display: block;
+   }
+
+   .row .col #individuel img {
+      margin-left: 1%;
+   }
+
+   .row .col #line {
+      display: none;
+   }
+
+}

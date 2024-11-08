@@ -1,0 +1,39 @@
+<div id='player'>
+  <video id='video-element' (timeupdate)="updateProgressBar()" #player>
+    <source src='https://www.w3schools.com/html/mov_bbb.mp4' type='video/mp4'>
+    <source src='https://www.w3schools.com/html/mov_bbb.ogg' type='video/ogg'>
+  </video>
+ 
+
+
+<div class=" mw-100" style="background-color: black; color: white;margin-top: 30vh; height: 25vh;">
+  <div class="row">
+
+    <div class="col" (click)="goToMainmenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-skip-backward-fill" viewBox="0 0 16 16">
+        <path
+          d="M.5 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L8.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L1 7.248V4a.5.5 0 0 0-.5-.5" />
+      </svg>| Back
+    </div>
+    <div class="col" (click)="playPauseVideo()" >
+      <button id='btnPlayPause' class='play' title='play' accesskey="P"  #btnPlayPause><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+      </svg></button>
+    </div>
+    <div class="col" (click)='replayVideo();'>
+      <button id='btnReplay' class='replay' title='replay' accesskey="R" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+        <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+        <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
+      </svg></button>
+    </div>
+    <div class="col" (change)="setVolume()">
+      <input type="range" class=""  id="volume-bar" title="volume" min="0" max="1" step="0.1" value="1" #volumeBar>
+     
+    </div>
+    <div class="col " style="padding: 30px;padding-top: 70px;">
+      <a style="color: red;">DE</a> | <a s>EN</a>
+
+    </div>
+  </div>
+</div>

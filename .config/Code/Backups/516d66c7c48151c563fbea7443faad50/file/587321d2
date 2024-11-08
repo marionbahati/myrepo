@@ -1,0 +1,19 @@
+file:///home/marion/Documents/angular-projects/addtocart/cart/src/app/Services/cart.service.ts {"mtime":1709810177628,"ctime":1709810177628,"size":133,"etag":"3c3e13jja49","orphaned":false,"typeId":""}
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CartService {
+private items:any=[]
+
+  constructor() { }
+
+  addToCart(product:any){
+    this.items.push(product);
+  }
+
+  getITems(){
+    return this.items;
+  }
+}

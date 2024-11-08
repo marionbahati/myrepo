@@ -1,0 +1,30 @@
+<mat-form-field>
+
+    <mat-label></mat-label>
+  
+    <textarea
+    type="text"
+     matInput
+      ngxTouchKeyboard
+  
+      #touchKeyboard="ngxTouchKeyboard">
+
+    </textarea>
+  
+    <button
+  
+      mat-icon-button
+  
+      matSuffix
+  
+      type="button"
+  
+      (click)="touchKeyboard.togglePanel()"
+  
+    >
+  
+     
+  
+    </button>
+  
+  </mat-form-field>

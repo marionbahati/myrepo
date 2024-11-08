@@ -1,0 +1,16 @@
+{
+    "editor.fontSize": 20,
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "workbench.editorAssociations": {
+        "*.zip": "default"
+    },
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": -1
+}
