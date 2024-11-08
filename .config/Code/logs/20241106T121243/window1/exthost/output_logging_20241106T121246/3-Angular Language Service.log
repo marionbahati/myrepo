@@ -1,0 +1,18 @@
+[Info  - 12:13:10] Angular language server process ID: 16115
+[Info  - 12:13:10] Imported typescript/lib/tsserverlibrary is version 5.5.3.
+[Info  - 12:13:10] Using @angular/language-service v18.2.0-rc.0 from /home/marion/.vscode/extensions/angular.ng-template-18.2.0/node_modules/@angular/language-service/index.js
+[Info  - 12:13:10] Logging is turned off. To enable, run command 'Open Angular server log'.
+[Info  - 12:13:12] Disabling language service for /home/marion/Downloads/d3trials/tsconfig.json because project is not an Angular project ('@angular/core' could not be found).
+[Error - 12:20:41] No config file for /home/marion/Downloads/d3trials/src/app/app.component.html
+[Error - 12:20:41] No config file for /home/marion/Downloads/d3trials/src/app/app.component.html
+[Error - 12:20:41] No config file for /home/marion/Downloads/d3trials/src/app/app.component.html
+[Error - 12:20:41] No config file for /home/marion/Downloads/d3trials/src/app/app.component.html
+[Error - 12:20:42] No config file for /home/marion/Downloads/d3trials/src/app/app.component.html
+[Error - 12:20:42] No config file for /home/marion/Downloads/d3trials/src/app/app.component.html
+[Error - 12:22:56] No config file for /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.html
+[Error - 12:22:56] No config file for /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.html
+[Error - 12:22:56] No config file for /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.html
+[Error - 12:23:18] No config file for /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.html
+[Error - 12:24:31] No config file for /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts
+[Error - 12:24:31] No config file for /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts
+[Error - 12:24:31] No config file for /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts

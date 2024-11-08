@@ -1,0 +1,23 @@
+/* .triangle-range-background-slider {
+    position: relative;
+    display: block;
+    margin-top: -27px;
+    height: 20px;
+    background: url('https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg'); 
+    background-size: 100% auto;
+    z-index: 1;
+  } */
+
+  .triange-range-background-slider {
+    position: relative; 
+    display: block; 
+    margin-top: -27px; 
+    border-top: 10px solid transparent; 
+    border-right: 100px solid #3071a9; 
+    border-bottom: 10px solid transparent;
+    z-index: 1; 
+}
+
+  input[type=range] {
+    position: relative;
+    z-index: 3;}

@@ -1,0 +1,60 @@
+import { Component, ViewChild } from '@angular/core';
+
+import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+
+import { TranslatePipe } from '@ngx-translate/core';
+import { VideoService } from '../services/video.service';
+@Component({
+  selector: 'app-show',
+  templateUrl: './show.component.html',
+  styleUrl: './show.component.scss',
+
+})
+export class ShowComponent {
+  constructor(private router: Router, private translate: TranslateService, private _video: VideoService
+  ) {
+  }
+
+  //video functions
+  @ViewChild('videoPlayer') videoPlayer: any;
+  @ViewChild('brand') brand: any;
+  @ViewChild('diagnostik') diagnostik: any;
+  @ViewChild('wisenschaft') wisenschaft: any;
+
+  isLoading: boolean = false;
+  diagnosIsLoadiang: boolean = false;
+  scienceIsLoading: boolean = false;
+
+
+
+  isClicked: boolean = false;
+  startFilm: boolean = false;
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+
+  }
+  playBrand() {
+    this.isLoading = true;
+    this._video.setVideoURL('https://cdn.pixabay.com/video/2023/09/24/182082-867762198_large.mp4');
+    this._video.reset();
+    this.isLoading = false;
+
+  }
+  playDiangnostik() {
+    this._video.setVideoURL('https://cdn.pixabay.com/video/2023/09/24/182082-867762198_large.mp4');
+    this._video.reset();
+  }
+  playWissenschaft() {
+    this._video.setVideoURL('https://cdn.pixabay.com/video/2023/09/24/182082-867762198_large.mp4');
+    this._video.reset();
+  }
+
+
+
+
+
+
+
+}

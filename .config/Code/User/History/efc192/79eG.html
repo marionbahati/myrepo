@@ -1,0 +1,21 @@
+<div>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Enter node name" />
+    <button (click)="filterGraph()">Search</button>
+
+    <div>
+        <label>Available Relations</label>
+        <select [(ngModel)]="selectedRelation" (change)="filterGraph()">
+            <option value="">none</option>
+            <option *ngFor="let rel of available_relations" [value]="rel">{{rel}}</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Center Company</label>
+        <select [(ngModel)]="selectedCenterCompany" (change)="filterGraph()">
+            <option *ngFor="let company of available_companies" [value]="company">{{company}}</option>
+        </select>
+    </div>
+</div>
+
+<figure id="netgraph"></figure>

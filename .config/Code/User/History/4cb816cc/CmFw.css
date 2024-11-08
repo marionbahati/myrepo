@@ -1,0 +1,12 @@
+
+#bgimg{
+    width: 100vh;
+    height: 50vh;
+    background-image:url(https://plus.unsplash.com/premium_photo-1674289121415-ec50cba976b6?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+.pp{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

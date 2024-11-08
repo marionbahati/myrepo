@@ -1,0 +1,38 @@
+<div class="row ">
+  <hr style="width: 90%;margin: auto;border: 2px solid black;">
+</div>
+
+<div class="row">
+  <h2 style="margin-left: 20%;padding-top: 30px;padding-bottom: 1%;">{{'Texteingabe'|translate}}: </h2>
+  <div style="text-align:center">
+    <input style="border-radius: 10px;padding-bottom: 1%;" (input)="onInputChange($event)" class="input" value={{value}}
+      placeholder="" />
+    <div style="text-align:center" class="simple-keyboard"></div>
+
+  </div>
+</div>
+
+
+<div class=" mw-100" style="background-color: black; color: white; height: 23vh;padding-top: 1%;margin-top: 2%;">
+  <div class="row">
+
+    <div class="col" (click)="showTextInputValue()" style="margin-left: 20%;display: flex;padding-top: 2%;">
+      <h2>
+        <img style="padding-right: 10px; width: 60px;height: 60px;" src="assets/icons/okIcon.svg" alt="OK">OK
+      </h2>
+    </div>
+    <div class="col" (click)="value=''" style="display: flex;padding-top: 2%;">
+      <h2>
+
+        <img style="width: 50px;height: 50px;" src="assets/icons/deleteIcone.svg" alt="delete">
+        {{'Delete'| translate}}
+      </h2>
+    </div>
+    <div class="col " style="padding-top: 3%; display: flex;">
+      <h2> <a style="color: red;padding-right: 10px;" (click)="switchLanguage('de')">DE</a></h2>
+      <h2>|</h2>
+      <h2 routerLink="/wissenschaft"><a style="padding-left: 10px;" (click)="switchLanguage('en')">EN</a></h2>
+
+    </div>
+  </div>
+</div>

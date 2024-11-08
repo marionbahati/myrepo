@@ -1,0 +1,46 @@
+<div class="container" id="container">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: cadetblue;">
+    <div class="container-fluid">
+   
+        
+
+      <button mat-button [matMenuTriggerFor]="belowMenu" style="background-color: rgb(92, 136, 49);">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home">
+      </mat-icon>
+    </button>
+      <mat-menu #belowMenu="matMenu" yPosition="below" style="height: 300px; width: 200px; ">
+        <button mat-menu-item routerLink="/profile" style="border: 2px black solid;background-color: rgb(201, 89, 111);">PROFILE</button>
+        <button mat-menu-item routerLink="/imagebg" style="border: 2px black solid;background-color: rgb(92, 64, 69);">IMAGE</button>
+        <button mat-menu-item routerLink="/design"  style="border: 2px black solid;">DESIGN</button>
+     
+      </mat-menu>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/profile">PROFILE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/imagebg">IMAGE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/places">PLACES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/design">DESIGN</a>
+          </li>
+
+          <button mat-button (click)="openDialog('3000ms', '1500ms')">Open dialog</button>
+
+
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</div>

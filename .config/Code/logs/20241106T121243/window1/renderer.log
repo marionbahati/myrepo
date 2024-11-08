@@ -1,0 +1,16 @@
+2024-11-06 12:12:45.161 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-python.python' wants API proposal 'registerIssueDataProvider' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2024-11-06 12:12:45.583 [info] Started local extension host with pid 15935.
+2024-11-06 12:12:48.201 [info] [perf] Render performance baseline is 32ms
+2024-11-06 12:13:48.798 [error] [File Watcher (parcel)] Inotify limit reached (ENOSPC) (path: /home/marion)
+2024-11-06 12:24:16.940 [error] Incompatible: Can't install 'danielpayet.ng-lint-ast-viewer' extension because it is not compatible with the current version of Visual Studio Code (version 1.85.1).
+    at Y.O (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:72651)
+    at async /usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:63033
+    at async Promise.allSettled (index 0)
+    at async Y.installGalleryExtensions (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:62957)
+    at async Y.installFromGallery (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:62546)
+2024-11-06 12:24:16.980 [error] Can't install 'danielpayet.ng-lint-ast-viewer' extension because it is not compatible with the current version of Visual Studio Code (version 1.85.1).: Incompatible: Can't install 'danielpayet.ng-lint-ast-viewer' extension because it is not compatible with the current version of Visual Studio Code (version 1.85.1).
+    at Y.O (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:72651)
+    at async /usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:63033
+    at async Promise.allSettled (index 0)
+    at async Y.installGalleryExtensions (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:62957)
+    at async Y.installFromGallery (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:62546)

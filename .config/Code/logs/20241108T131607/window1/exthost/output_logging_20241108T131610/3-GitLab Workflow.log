@@ -1,0 +1,21 @@
+2024-11-08T13:16:15:456 [warning]: There is no GitLab account available with access to suggestions
+2024-11-08T13:16:15:561 [info]: Extracted urls: []
+2024-11-08T13:16:15:561 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:15:595 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:15:595 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:15:595 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:15:595 [info]: Found 0 projects for urls: []
+2024-11-08T13:16:15:597 [warning]: There is no GitLab account available with access to suggestions
+2024-11-08T13:16:16:211 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:17:212 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:18:213 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:19:214 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:20:214 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:21:215 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-08T13:16:32:354 [info]: Extracted urls: [
+      "https://github.com/marionbahati/myrepo.git"
+    ]
+2024-11-08T13:16:32:356 [info]: Found 0 projects for urls: [
+      "https://github.com/marionbahati/myrepo.git"
+    ]
+2024-11-08T13:16:32:360 [warning]: There is no GitLab account available with access to suggestions

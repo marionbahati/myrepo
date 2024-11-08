@@ -1,0 +1,38 @@
+2024-11-08 13:21:11.669 [info] Log level: Info
+2024-11-08 13:21:11.669 [info] Validating found git in: "git"
+2024-11-08 13:21:11.669 [info] Using git "2.43.2" from "git"
+2024-11-08 13:21:11.674 [info] > git rev-parse --show-toplevel [5ms]
+2024-11-08 13:21:11.681 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2024-11-08 13:21:11.706 [info] Open repository: /home/marion
+2024-11-08 13:21:11.720 [info] > git config --get commit.template [3ms]
+2024-11-08 13:21:11.746 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [13ms]
+2024-11-08 13:21:11.751 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-08 13:21:12.191 [info] > git fetch [484ms]
+2024-11-08 13:21:12.191 [info] Auto packing the repository in the background for optimum performance.
+See "git help gc" for manual housekeeping.
+warning: The last gc run reported the following. Please correct the root cause
+and remove .git/gc.log
+Automatic cleanup will not be performed until the file is removed.
+
+warning: There are too many unreachable loose objects; run 'git prune' to remove them.
+2024-11-08 13:21:12.191 [info] > git rev-parse refs/remotes/origin/master [440ms]
+2024-11-08 13:21:12.328 [info] > git config --get commit.template [6ms]
+2024-11-08 13:21:12.329 [info] > git config --get commit.template [19ms]
+2024-11-08 13:21:12.364 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [21ms]
+2024-11-08 13:21:12.375 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-08 13:21:12.378 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [23ms]
+2024-11-08 13:21:12.417 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-08 13:21:12.417 [info] > git rev-parse refs/remotes/origin/master [42ms]
+2024-11-08 13:21:12.588 [info] > git rev-parse refs/remotes/origin/master [172ms]
+2024-11-08 13:21:13.726 [info] > git config --local branch.master.github-pr-owner-number [105ms]
+2024-11-08 13:21:15.022 [info] > git status -z -uall [2416ms] (cancelled)
+2024-11-08 13:21:25.616 [info] > git config --get commit.template [5ms]
+2024-11-08 13:21:25.626 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2024-11-08 13:21:25.634 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-08 13:21:25.636 [info] > git rev-parse refs/remotes/origin/master [2ms]
+2024-11-08 13:21:27.195 [info] > git status -z -uall [1552ms] (cancelled)
+2024-11-08 13:26:13.280 [info] > git config --local branch.master.github-pr-owner-number [2ms]
+2024-11-08 13:31:13.309 [info] > git config --local branch.master.github-pr-owner-number [4ms]
+2024-11-08 13:36:13.343 [info] > git config --local branch.master.github-pr-owner-number [6ms]
+2024-11-08 13:41:13.371 [info] > git config --local branch.master.github-pr-owner-number [4ms]
+2024-11-08 13:46:13.396 [info] > git config --local branch.master.github-pr-owner-number [2ms]

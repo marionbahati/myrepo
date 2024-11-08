@@ -1,0 +1,33 @@
+2024-11-06 09:17:09.857 [warning] /home/marion/.ssh/config: ENOENT: no such file or directory, open '/home/marion/.ssh/config'
+2024-11-06 09:17:09.857 [info] Activation> Extension version: 0.78.1
+2024-11-06 09:17:10.483 [info] Looking for git repository
+2024-11-06 09:17:10.484 [info] Found 0 repositories during activation
+2024-11-06 09:17:10.484 [info] Git repository found, initializing review manager and pr tree view.
+2024-11-06 09:17:10.515 [info] Registering git provider
+2024-11-06 09:17:10.515 [info] Review+0> Validate state in progress
+2024-11-06 09:17:10.515 [info] Review+0> Validating state...
+2024-11-06 09:17:10.515 [info] Review+1> Validate state in progress
+2024-11-06 09:17:10.515 [info] Review+1> Validating state...
+2024-11-06 09:17:10.515 [info] Review+2> Validate state in progress
+2024-11-06 09:17:10.515 [info] Review+2> Validating state...
+2024-11-06 09:17:11.026 [info] Found GitHub remote for folder /home/marion/visualisation/d3visualisation
+2024-11-06 09:17:11.049 [info] Found GitHub remote for folder /home/marion/visualisation/d3trials
+2024-11-06 09:17:11.076 [info] Found GitHub remote for folder /home/marion/visualisation
+2024-11-06 09:17:11.789 [info] Trying to use globalState for assignableUsers.
+2024-11-06 09:17:12.219 [info] Trying to use globalState for assignableUsers.
+2024-11-06 09:17:12.280 [info] Review+0> No matching pull request metadata found locally for current branch main
+2024-11-06 09:17:12.388 [info] Trying to use globalState for assignableUsers.
+2024-11-06 09:17:12.409 [info] Review+2> No matching pull request metadata found locally for current branch master
+2024-11-06 09:17:12.495 [info] Using globalState assignableUsers for 1.
+2024-11-06 09:17:12.610 [info] Review+1> No matching pull request metadata found locally for current branch main
+2024-11-06 09:17:12.885 [info] Using globalState assignableUsers for 1.
+2024-11-06 09:17:12.991 [info] Using globalState assignableUsers for 1.
+2024-11-06 09:17:13.186 [info] Review+0> No matching pull request metadata found on GitHub for current branch main
+2024-11-06 09:17:13.186 [info] Review+1> No matching pull request metadata found on GitHub for current branch main
+2024-11-06 09:17:13.192 [info] Review+2> No matching pull request metadata found on GitHub for current branch master
+2024-11-06 09:17:13.660 [info] Repo state for file:///home/marion/visualisation/d3trials changed.
+2024-11-06 09:17:13.660 [info] Repo file:///home/marion/visualisation/d3trials has already been setup.
+2024-11-06 09:17:13.662 [info] Repo state for file:///home/marion/visualisation changed.
+2024-11-06 09:17:13.662 [info] Repo file:///home/marion/visualisation has already been setup.
+2024-11-06 09:17:13.668 [info] Repo state for file:///home/marion/visualisation/d3visualisation changed.
+2024-11-06 09:17:13.668 [info] Repo file:///home/marion/visualisation/d3visualisation has already been setup.

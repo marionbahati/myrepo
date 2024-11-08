@@ -1,0 +1,5 @@
+2024-11-06 12:11:31.590 [warning] /home/marion/.ssh/config: ENOENT: no such file or directory, open '/home/marion/.ssh/config'
+2024-11-06 12:11:31.590 [info] Activation> Extension version: 0.78.1
+2024-11-06 12:11:31.747 [info] Looking for git repository
+2024-11-06 12:11:31.747 [info] Found 0 repositories during activation
+2024-11-06 12:11:31.747 [info] Git repository found, initializing review manager and pr tree view.

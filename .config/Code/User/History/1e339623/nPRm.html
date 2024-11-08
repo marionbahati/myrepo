@@ -1,0 +1,22 @@
+<p>table works!</p>
+<div class="container">
+    <table class="table table table-success table-striped">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Country</th>
+          <th scope="col">City</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pep of people">
+          <th scope="row">{{pep.id}}</th>
+          <td>{{pep.name}}</td>
+          <td>{{pep.country}}</td>
+          <td>{{pep.city}}</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>

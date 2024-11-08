@@ -1,0 +1,11 @@
+2024-11-08T13:21:14:526 [warning]: There is no GitLab account available with access to suggestions
+2024-11-08T13:21:14:538 [info]: Extracted urls: []
+2024-11-08T13:21:14:542 [info]: Found 0 projects for urls: []
+2024-11-08T13:21:14:543 [warning]: There is no GitLab account available with access to suggestions
+2024-11-08T13:21:27:194 [info]: Extracted urls: [
+      "https://github.com/marionbahati/myrepo.git"
+    ]
+2024-11-08T13:21:27:194 [info]: Found 0 projects for urls: [
+      "https://github.com/marionbahati/myrepo.git"
+    ]
+2024-11-08T13:21:27:195 [warning]: There is no GitLab account available with access to suggestions

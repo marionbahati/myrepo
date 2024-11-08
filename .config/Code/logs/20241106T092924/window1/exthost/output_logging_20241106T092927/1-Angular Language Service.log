@@ -1,0 +1,5 @@
+[Info  - 09:29:30] Angular language server process ID: 6866
+[Info  - 09:29:30] Imported typescript/lib/tsserverlibrary is version 5.5.3.
+[Info  - 09:29:30] Using @angular/language-service v18.2.0-rc.0 from /home/marion/.vscode/extensions/angular.ng-template-18.2.0/node_modules/@angular/language-service/index.js
+[Info  - 09:29:30] Logging is turned off. To enable, run command 'Open Angular server log'.
+[Info  - 09:29:43] Enabling language service for /home/marion/visualisation/d3visualisation/tsconfig.json.

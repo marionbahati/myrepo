@@ -1,0 +1,46 @@
+2024-11-06 12:12:49.509 [info] Log level: Info
+2024-11-06 12:12:49.509 [info] Validating found git in: "git"
+2024-11-06 12:12:49.510 [info] Using git "2.43.2" from "git"
+2024-11-06 12:12:49.510 [info] > git rev-parse --show-toplevel [7ms]
+2024-11-06 12:12:49.510 [info] > git rev-parse --git-dir --git-common-dir [18ms]
+2024-11-06 12:12:49.510 [info] Open repository: /home/marion
+2024-11-06 12:12:49.510 [info] > git rev-parse --show-toplevel [11ms]
+2024-11-06 12:12:49.510 [info] > git config --get commit.template [30ms]
+2024-11-06 12:12:49.539 [info] > git rev-parse --show-toplevel [20ms]
+2024-11-06 12:12:49.554 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [23ms]
+2024-11-06 12:12:49.566 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-06 12:12:49.569 [info] > git rev-parse refs/remotes/origin/master [3ms]
+2024-11-06 12:12:49.587 [info] > git rev-parse --show-toplevel [33ms]
+2024-11-06 12:12:49.862 [info] > git fetch [399ms]
+2024-11-06 12:12:49.891 [info] > git status -z -uall [306ms] (cancelled)
+2024-11-06 12:12:49.892 [info] > git config --get commit.template [17ms]
+2024-11-06 12:12:49.907 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [7ms]
+2024-11-06 12:12:49.908 [info] > git config --get commit.template [17ms]
+2024-11-06 12:12:49.957 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-06 12:12:49.960 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [54ms]
+2024-11-06 12:12:49.968 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-06 12:12:49.969 [info] > git rev-parse refs/remotes/origin/master [11ms]
+2024-11-06 12:12:49.972 [info] > git rev-parse refs/remotes/origin/master [4ms]
+2024-11-06 12:12:50.144 [info] > git check-ignore -v -z --stdin [9ms]
+2024-11-06 12:12:50.147 [info] > git config --local branch.master.github-pr-owner-number [145ms]
+2024-11-06 12:12:51.315 [info] > git check-ignore -v -z --stdin [30ms]
+2024-11-06 12:12:51.337 [info] > git status -z -uall [1359ms] (cancelled)
+2024-11-06 12:13:06.838 [info] > git check-ignore -v -z --stdin [6ms]
+2024-11-06 12:13:10.030 [info] > git show --textconv :Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [29ms]
+2024-11-06 12:13:10.057 [info] > git ls-files --stage -- /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [27ms]
+2024-11-06 12:17:49.479 [info] > git config --local branch.master.github-pr-owner-number [4ms]
+2024-11-06 12:17:52.860 [info] > git ls-files --stage -- /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [1ms]
+2024-11-06 12:17:52.876 [info] > git show --textconv :Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [30ms]
+2024-11-06 12:20:40.730 [info] > git show --textconv :Downloads/d3trials/src/app/app.component.html [35ms]
+2024-11-06 12:20:40.764 [info] > git ls-files --stage -- /home/marion/Downloads/d3trials/src/app/app.component.html [37ms]
+2024-11-06 12:20:50.152 [info] > git show --textconv :Downloads/d3trials/src/app/app.component.ts [12ms]
+2024-11-06 12:20:50.155 [info] > git ls-files --stage -- /home/marion/Downloads/d3trials/src/app/app.component.ts [4ms]
+2024-11-06 12:21:24.235 [info] > git show --textconv :Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [23ms]
+2024-11-06 12:21:24.242 [info] > git ls-files --stage -- /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [8ms]
+2024-11-06 12:21:30.332 [info] > git show --textconv :Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [13ms]
+2024-11-06 12:21:30.341 [info] > git ls-files --stage -- /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [11ms]
+2024-11-06 12:22:49.498 [info] > git config --local branch.master.github-pr-owner-number [2ms]
+2024-11-06 12:22:56.472 [info] > git show --textconv :Downloads/d3trials/src/app/components/newgraph/newgraph.component.html [19ms]
+2024-11-06 12:22:56.475 [info] > git ls-files --stage -- /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.html [3ms]
+2024-11-06 12:24:31.695 [info] > git show --textconv :Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [19ms]
+2024-11-06 12:24:31.739 [info] > git ls-files --stage -- /home/marion/Downloads/d3trials/src/app/components/newgraph/newgraph.component.ts [44ms]

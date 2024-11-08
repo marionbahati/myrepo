@@ -1,0 +1,6 @@
+<p>parent works!</p>
+<app-child [sharedMassage]="massage"
+(massageEvent)="receivingMassage($event)"
+></app-child>
+<p>{{receivedmasage}}</p>
+

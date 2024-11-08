@@ -1,0 +1,41 @@
+
+
+
+<div class="container mt=5px">
+    <h1 >TODO APPLICATION</h1>
+    <hr>
+<form (ngSubmit)="onSubmit(taskForm)"    #taskForm="ngForm" id="submitForm">
+    <div class="form-group">
+     
+      <input type="text" class="form-control" id="task"  placeholder="Enter  a Task"  ngModel name="task" required>
+      <small *ngIf="taskForm.invalid && taskForm.dirty" id="errorMassage" class="form-text text-danger">Required field</small>
+    </div>
+    
+    <button
+    [disabled]="taskForm.invalid"
+     id="submitbtn" type="submit" 
+    class="btn btn-primary">Submit</button>
+  </form >
+
+  <hr>
+  <table class="table">
+    <thead>
+      <tr >
+        <th scope="col">Task</th>
+        <th scope="col">Completed</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Save</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of taskArray; index as i">
+       <td><input type="text" class="form-control" id="taskInTable"  value="{{t.taskName}}" ></td>
+        <td><input (change)="onCheck(i)" type="checkbox" id="myCheckbox"></td>
+        <td><Button (click)="onDelete(i)" class="btn btn-danger btn-sm">Delete</Button></td> 
+        <td><Button (click)="onEdit(i)" class="btn btn-primary btn-sm">Edit</Button></td> 
+        <td><Button (click)="onSave(i)" class="btn btn-warning btn-sm">Save</Button></td> 
+    
+    </tbody>
+  </table>
+</div>

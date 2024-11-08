@@ -1,0 +1,69 @@
+<hr style="width: 90%;margin: auto;margin: auto; border: 2px solid black;">
+
+<h2 style="margin-left: 5%; padding-top: 5%;">{{'Themenauswahl'| translate}}</h2>
+
+<div class="row">
+    <div class="col" style="display: flex;justify-content: center;align-items: center;flex-direction: row;
+        padding-top: 5%;padding-left: 10%; " id="col1">
+        <div class="col" style="display: flex;flex-direction: row;padding-top: 3%;padding-right: 3%;column-gap: 5px;">
+
+            <h2 (click)="playBrand()">
+                <a>@if (isLoading ) {
+
+                    <div class="spinner"
+                        style="position: absolute;margin-top: 42px;margin-left: -10px;margin-right: 2px;"></div>
+                    }
+                    <img style="border: none;margin-right: 0px;" src="assets/icons/sarsedt.png" alt="Marke">
+                    <img class="line" src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                    <span style="margin-top: 15px;" style="line-height: 160px;"> {{'Brand'|translate}}</span>
+                </a>
+
+            </h2>
+        </div>
+
+        <div class="col" (click)="playDiangnostik()">
+            <h2>
+                <a> @if (diagnosIsLoadiang ) {
+                    <div class="spinner"
+                        style="position: absolute;margin-top: 42px;margin-left: -10px;margin-right: 2px;">
+                    </div>
+
+                    }
+                    <img style="border: 2px solid; padding: 5px;border-radius: 50px;"
+                        src="assets/icons/diagnosisIcon.png" alt="Diagnostik">
+
+                    <img class="line" src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+                        {{'Diagnosis'|translate}}</span>
+
+                </a>
+            </h2>
+
+        </div>
+    </div>
+    <div class="col" id="col2">
+        <div class="col" style="display: flex;flex-direction: row; padding-top: 3%;">
+
+            <h2 (click)="playWissenschaft()">
+                <a> @if (scienceIsLoading ) {
+                    <div class="spinner"
+                        style="position: absolute;margin-top: 42px;margin-left: -10px;margin-right: 2px;">
+                    </div>
+
+                    }
+                    <img style="border: 2px solid; padding: 5px;border-radius: 50px;"
+                        src="assets/icons/wissenschaftIcon.png" alt="Wissenschaft">
+
+                    <img class="line" src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                    <span style="margin-top: 15px;" style="line-height: 160px;"> {{'Science'|translate}}</span>
+
+                </a>
+            </h2>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- <div style="width: 200px;height: 200px;"> <app-player></app-player></div> -->

@@ -1,0 +1,15 @@
+2024-11-08 13:15:42.814 [info] Getting Manifest... angular.ng-template
+2024-11-08 13:15:42.902 [info] Installing extension: angular.ng-template
+2024-11-08 13:15:47.888 [info] Extension signature is verified: angular.ng-template
+2024-11-08 13:15:48.642 [info] Extracted extension to file:///home/marion/.vscode/extensions/angular.ng-template-19.0.0: angular.ng-template
+2024-11-08 13:15:48.650 [info] Renamed to /home/marion/.vscode/extensions/angular.ng-template-19.0.0
+2024-11-08 13:15:48.651 [info] Extracting extension completed. angular.ng-template
+2024-11-08 13:15:48.661 [info] Extension installed successfully: angular.ng-template
+2024-11-08 13:15:48.666 [info] Marked extension as uninstalled angular.ng-template-18.2.0
+2024-11-08 13:15:48.749 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/marion/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/marion/.vscode/extensions/extensions.json.vsctmp'
+    at r.create (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30056)
+    at a (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30170)
+    at s.fb (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36175)
+    at s.stat (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28621)
+    at async E.stat (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15732)
+    at async Y.tb (/usr/share/code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:111319)

@@ -1,0 +1,16 @@
+2024-11-06 12:25:31.193 [info] Added views:workbench.panel.markers.view in workbench.panel.markers
+2024-11-06 12:25:31.193 [info] Added views:workbench.panel.output in workbench.panel.output
+2024-11-06 12:25:31.193 [info] Added views:terminal in terminal
+2024-11-06 12:25:31.193 [info] Added views:outline in workbench.view.explorer
+2024-11-06 12:25:31.193 [info] Added views:workbench.scm in workbench.view.scm
+2024-11-06 12:25:31.193 [info] Added views:workbench.view.search in workbench.view.search
+2024-11-06 12:25:31.193 [info] Added views:timeline in workbench.view.explorer
+2024-11-06 12:25:31.193 [info] Added views:workbench.explorer.fileView in workbench.view.explorer
+2024-11-06 12:25:31.614 [info] Added views:pr:github,issues:github in workbench.view.extension.github-pull-requests
+2024-11-06 12:25:31.615 [info] Added views:dockerContainers,dockerImages,dockerRegistries,dockerNetworks,dockerVolumes,vscode-docker.views.dockerContexts,vscode-docker.views.help in workbench.view.extension.dockerView
+2024-11-06 12:25:31.618 [info] Added views:targetsContainers,devVolumes in workbench.view.remote
+2024-11-06 12:25:31.908 [info] Added views:workbench.debug.variablesView,workbench.debug.watchExpressionsView,workbench.debug.callStackView,workbench.debug.breakPointsView in workbench.view.debug
+2024-11-06 12:25:31.989 [info] Added views:workbench.panel.repl.view in workbench.panel.repl
+2024-11-06 12:25:32.139 [info] Added views:~remote.forwardedPorts in ~remote.forwardedPortsContainer
+2024-11-06 12:25:35.251 [info] Added views:issuesAndMrs in workbench.view.extension.gitlab-workflow
+2024-11-06 12:25:35.786 [info] Added views:workbench.panel.comments in workbench.panel.comments

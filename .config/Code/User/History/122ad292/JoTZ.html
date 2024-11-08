@@ -1,0 +1,29 @@
+
+<div>
+    <div class="card mt-3">
+        <div class="card-body">
+            <form [formGroup]="registerForm"  action="/action_page.php">
+                <div class="mb-3 mt-3">
+
+                  <div class="mb-3">
+                    <label for="pwd" class="form-label">Full name</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter full names" formControlName="fullname">
+                  </div>
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+                </div>
+                <div class="mb-3">
+                  <label for="pwd" class="form-label">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" formControlName="password">
+                </div>
+
+                <div class="mb-3">
+                  <label for="pwd" class="form-label"> Confirm Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Confirm-password" formControlName="confirmpassword">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Register</button>
+              </form> 
+        </div>
+      </div>
+</div>

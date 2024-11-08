@@ -1,0 +1,46 @@
+import { Subject } from 'rxjs';
+/**
+ * Reference to a keyboard dispatched from the keyboard service.
+ */
+export class MatKeyboardRef {
+    constructor(instance, containerInstance, _overlayRef) {
+        this._overlayRef = _overlayRef;
+        /** Subject for notifying the user that the keyboard has closed. */
+        this._afterClosed = new Subject();
+        /** Subject for notifying the user that the keyboard has opened and appeared. */
+        this._afterOpened = new Subject();
+        // Sets the readonly instance of the keyboard content component.
+        this.instance = instance;
+        this.containerInstance = containerInstance;
+        // Finish dismiss on exitting
+        containerInstance.onExit.subscribe(() => this._finishDismiss());
+    }
+    /** Dismisses the keyboard. */
+    dismiss() {
+        if (!this._afterClosed.closed) {
+            this.containerInstance.exit();
+        }
+    }
+    /** Marks the keyboard as opened */
+    _open() {
+        if (!this._afterOpened.closed) {
+            this._afterOpened.next();
+            this._afterOpened.complete();
+        }
+    }
+    /** Gets an observable that is notified when the keyboard is finished closing. */
+    afterDismissed() {
+        return this._afterClosed.asObservable();
+    }
+    /** Gets an observable that is notified when the keyboard has opened and appeared. */
+    afterOpened() {
+        return this.containerInstance.onEnter;
+    }
+    /** Cleans up the DOM after closing. */
+    _finishDismiss() {
+        this._overlayRef.dispose();
+        this._afterClosed.next();
+        this._afterClosed.complete();
+    }
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoia2V5Ym9hcmQtcmVmLmNsYXNzLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vLi4vc3JjL2NvcmUvc3JjL2NsYXNzZXMva2V5Ym9hcmQtcmVmLmNsYXNzLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLE9BQU8sRUFBYyxPQUFPLEVBQUUsTUFBTSxNQUFNLENBQUM7QUFJM0M7O0dBRUc7QUFDSCxNQUFNLE9BQU8sY0FBYztJQWN6QixZQUFZLFFBQThCLEVBQ3hDLGlCQUFnRCxFQUN4QyxXQUF1QjtRQUF2QixnQkFBVyxHQUFYLFdBQVcsQ0FBWTtRQWRqQyxtRUFBbUU7UUFDM0QsaUJBQVksR0FBaUIsSUFBSSxPQUFPLEVBQUUsQ0FBQztRQUVuRCxnRkFBZ0Y7UUFDeEUsaUJBQVksR0FBaUIsSUFBSSxPQUFPLEVBQUUsQ0FBQztRQVdqRCxnRUFBZ0U7UUFDaEUsSUFBSSxDQUFDLFFBQVEsR0FBRyxRQUFRLENBQUM7UUFDekIsSUFBSSxDQUFDLGlCQUFpQixHQUFHLGlCQUFpQixDQUFDO1FBRTNDLDZCQUE2QjtRQUM3QixpQkFBaUIsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLEdBQUcsRUFBRSxDQUFDLElBQUksQ0FBQyxjQUFjLEVBQUUsQ0FBQyxDQUFDO0lBQ2xFLENBQUM7SUFFRCw4QkFBOEI7SUFDOUIsT0FBTztRQUNMLElBQUksQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLE1BQU0sRUFBRTtZQUM3QixJQUFJLENBQUMsaUJBQWlCLENBQUMsSUFBSSxFQUFFLENBQUM7U0FDL0I7SUFDSCxDQUFDO0lBRUQsbUNBQW1DO0lBQ25DLEtBQUs7UUFDSCxJQUFJLENBQUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxNQUFNLEVBQUU7WUFDN0IsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLEVBQUUsQ0FBQztZQUN6QixJQUFJLENBQUMsWUFBWSxDQUFDLFFBQVEsRUFBRSxDQUFDO1NBQzlCO0lBQ0gsQ0FBQztJQUVELGlGQUFpRjtJQUNqRixjQUFjO1FBQ1osT0FBTyxJQUFJLENBQUMsWUFBWSxDQUFDLFlBQVksRUFBRSxDQUFDO0lBQzFDLENBQUM7SUFFRCxxRkFBcUY7SUFDckYsV0FBVztRQUNULE9BQU8sSUFBSSxDQUFDLGlCQUFpQixDQUFDLE9BQU8sQ0FBQztJQUN4QyxDQUFDO0lBRUQsdUNBQXVDO0lBQy9CLGNBQWM7UUFDcEIsSUFBSSxDQUFDLFdBQVcsQ0FBQyxPQUFPLEVBQUUsQ0FBQztRQUUzQixJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksRUFBRSxDQUFDO1FBQ3pCLElBQUksQ0FBQyxZQUFZLENBQUMsUUFBUSxFQUFFLENBQUM7SUFDL0IsQ0FBQztDQUNGIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgT3ZlcmxheVJlZiB9IGZyb20gJ0Bhbmd1bGFyL2Nkay9vdmVybGF5JztcbmltcG9ydCB7IE9ic2VydmFibGUsIFN1YmplY3QgfSBmcm9tICdyeGpzJztcbmltcG9ydCB7IE1hdEtleWJvYXJkQ29udGFpbmVyQ29tcG9uZW50IH0gZnJvbSAnLi4vY29tcG9uZW50cy9rZXlib2FyZC1jb250YWluZXIva2V5Ym9hcmQtY29udGFpbmVyLmNvbXBvbmVudCc7XG5pbXBvcnQgeyBNYXRLZXlib2FyZENvbXBvbmVudCB9IGZyb20gJy4uL2NvbXBvbmVudHMva2V5Ym9hcmQva2V5Ym9hcmQuY29tcG9uZW50JztcblxuLyoqXG4gKiBSZWZlcmVuY2UgdG8gYSBrZXlib2FyZCBkaXNwYXRjaGVkIGZyb20gdGhlIGtleWJvYXJkIHNlcnZpY2UuXG4gKi9cbmV4cG9ydCBjbGFzcyBNYXRLZXlib2FyZFJlZjxUPiB7XG5cbiAgLyoqIFN1YmplY3QgZm9yIG5vdGlmeWluZyB0aGUgdXNlciB0aGF0IHRoZSBrZXlib2FyZCBoYXMgY2xvc2VkLiAqL1xuICBwcml2YXRlIF9hZnRlckNsb3NlZDogU3ViamVjdDxhbnk+ID0gbmV3IFN1YmplY3QoKTtcblxuICAvKiogU3ViamVjdCBmb3Igbm90aWZ5aW5nIHRoZSB1c2VyIHRoYXQgdGhlIGtleWJvYXJkIGhhcyBvcGVuZWQgYW5kIGFwcGVhcmVkLiAqL1xuICBwcml2YXRlIF9hZnRlck9wZW5lZDogU3ViamVjdDxhbnk+ID0gbmV3IFN1YmplY3QoKTtcblxuICAvKiogVGhlIGluc3RhbmNlIG9mIHRoZSBjb21wb25lbnQgbWFraW5nIHVwIHRoZSBjb250ZW50IG9mIHRoZSBrZXlib2FyZC4gKi9cbiAgaW5zdGFuY2U6IE1hdEtleWJvYXJkQ29tcG9uZW50O1xuXG4gIC8qKiBUaGUgaW5zdGFuY2Ugb2YgdGhlIGNvbXBvbmVudCBtYWtpbmcgdXAgdGhlIGNvbnRlbnQgb2YgdGhlIGtleWJvYXJkLiAqL1xuICBjb250YWluZXJJbnN0YW5jZTogTWF0S2V5Ym9hcmRDb250YWluZXJDb21wb25lbnQ7XG5cbiAgY29uc3RydWN0b3IoaW5zdGFuY2U6IE1hdEtleWJvYXJkQ29tcG9uZW50LFxuICAgIGNvbnRhaW5lckluc3RhbmNlOiBNYXRLZXlib2FyZENvbnRhaW5lckNvbXBvbmVudCxcbiAgICBwcml2YXRlIF9vdmVybGF5UmVmOiBPdmVybGF5UmVmKSB7XG4gICAgLy8gU2V0cyB0aGUgcmVhZG9ubHkgaW5zdGFuY2Ugb2YgdGhlIGtleWJvYXJkIGNvbnRlbnQgY29tcG9uZW50LlxuICAgIHRoaXMuaW5zdGFuY2UgPSBpbnN0YW5jZTtcbiAgICB0aGlzLmNvbnRhaW5lckluc3RhbmNlID0gY29udGFpbmVySW5zdGFuY2U7XG5cbiAgICAvLyBGaW5pc2ggZGlzbWlzcyBvbiBleGl0dGluZ1xuICAgIGNvbnRhaW5lckluc3RhbmNlLm9uRXhpdC5zdWJzY3JpYmUoKCkgPT4gdGhpcy5fZmluaXNoRGlzbWlzcygpKTtcbiAgfVxuXG4gIC8qKiBEaXNtaXNzZXMgdGhlIGtleWJvYXJkLiAqL1xuICBkaXNtaXNzKCkge1xuICAgIGlmICghdGhpcy5fYWZ0ZXJDbG9zZWQuY2xvc2VkKSB7XG4gICAgICB0aGlzLmNvbnRhaW5lckluc3RhbmNlLmV4aXQoKTtcbiAgICB9XG4gIH1cblxuICAvKiogTWFya3MgdGhlIGtleWJvYXJkIGFzIG9wZW5lZCAqL1xuICBfb3BlbigpIHtcbiAgICBpZiAoIXRoaXMuX2FmdGVyT3BlbmVkLmNsb3NlZCkge1xuICAgICAgdGhpcy5fYWZ0ZXJPcGVuZWQubmV4dCgpO1xuICAgICAgdGhpcy5fYWZ0ZXJPcGVuZWQuY29tcGxldGUoKTtcbiAgICB9XG4gIH1cblxuICAvKiogR2V0cyBhbiBvYnNlcnZhYmxlIHRoYXQgaXMgbm90aWZpZWQgd2hlbiB0aGUga2V5Ym9hcmQgaXMgZmluaXNoZWQgY2xvc2luZy4gKi9cbiAgYWZ0ZXJEaXNtaXNzZWQoKTogT2JzZXJ2YWJsZTx2b2lkPiB7XG4gICAgcmV0dXJuIHRoaXMuX2FmdGVyQ2xvc2VkLmFzT2JzZXJ2YWJsZSgpO1xuICB9XG5cbiAgLyoqIEdldHMgYW4gb2JzZXJ2YWJsZSB0aGF0IGlzIG5vdGlmaWVkIHdoZW4gdGhlIGtleWJvYXJkIGhhcyBvcGVuZWQgYW5kIGFwcGVhcmVkLiAqL1xuICBhZnRlck9wZW5lZCgpOiBPYnNlcnZhYmxlPHZvaWQ+IHtcbiAgICByZXR1cm4gdGhpcy5jb250YWluZXJJbnN0YW5jZS5vbkVudGVyO1xuICB9XG5cbiAgLyoqIENsZWFucyB1cCB0aGUgRE9NIGFmdGVyIGNsb3NpbmcuICovXG4gIHByaXZhdGUgX2ZpbmlzaERpc21pc3MoKSB7XG4gICAgdGhpcy5fb3ZlcmxheVJlZi5kaXNwb3NlKCk7XG5cbiAgICB0aGlzLl9hZnRlckNsb3NlZC5uZXh0KCk7XG4gICAgdGhpcy5fYWZ0ZXJDbG9zZWQuY29tcGxldGUoKTtcbiAgfVxufVxuIl19

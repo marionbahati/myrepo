@@ -1,0 +1,62 @@
+<div>
+
+    <hr style="margin-top: 6%;width: 90%;margin: auto; border: 2px solid black;">
+    <div class="row " id="divider">
+        <h2 id="topic" style="margin-top: 3%;margin-left: 15%;">{{'Themenauswahl'|translate}}</h2>
+    </div>
+    <div class="row">
+        <div class=" col d-flex justify-content-evenly mt-5">
+            <div class="d-flex">
+                <h2 (click)="playWissenschaft()" #Brand>
+                    <a> @if (scienceIsLoading ) {
+                        <div class="spinner"
+                            style="position: absolute;margin-top: -9px;margin-left: -10px;margin-right: -10px;">
+                        </div>
+
+                        }
+                        <img style="border: 2px solid;border-radius: 50px;padding: 5px;"
+                            src="assets/icons/wissenschaftIcon.png" alt="Wissenschaft" alt="">
+                        <span> <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                            {{'Brand'|translate}}</span>
+                    </a>
+                </h2>
+
+            </div>
+            <div class="d-flex" (click)="playDiangnostik()" #diagnostik>
+                <h2>
+                    <a> @if (diagnosIsLoadiang ) {
+                        <div class="spinner"
+                            style="position: absolute;margin-top: -9px;margin-left: -10px;margin-right: -10px;">
+                        </div>
+
+                        }
+                        <img style="border: 2px solid;border-radius: 50px;padding: 5px;"
+                            src="assets/icons/diagnostik.svg" alt="Diagnosis">
+                        <span> <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                            {{'Diagnosis'|translate}}</span>
+
+                    </a>
+                </h2>
+
+            </div>
+            <div class="d-flex">
+                <h2 (click)="playWissenschaft()" #wissenschaft>
+                    <a> @if (scienceIsLoading ) {
+                        <div class="spinner"
+                            style="position: absolute;margin-top: -9px;margin-left: -10px;margin-right: -10px;">
+                        </div>
+
+                        }
+                        <img style="border: 2px solid;border-radius: 50px;padding: 5px;"
+                            src="assets/icons/wissenschaftIcon.png" alt="Wissenschaft" alt="">
+                        <span> <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                            {{'Science'|translate}}</span>
+                    </a>
+                </h2>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

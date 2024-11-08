@@ -1,0 +1,12 @@
+// import { KeyboardAnimationState } from './keyboard-animation-state.enum';
+//
+// export enum KeyboardAnimationTransition {
+//   Hide = `${KeyboardAnimationState.Visible} => ${KeyboardAnimationState.Hidden}`,
+//   Show = `${KeyboardAnimationState.Void} => ${KeyboardAnimationState.Visible}`
+// }
+export var KeyboardAnimationTransition;
+(function (KeyboardAnimationTransition) {
+    KeyboardAnimationTransition["Hide"] = "visible => hidden";
+    KeyboardAnimationTransition["Show"] = "void => visible";
+})(KeyboardAnimationTransition || (KeyboardAnimationTransition = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoia2V5Ym9hcmQtYW5pbWF0aW9uLXRyYW5zaXRpb24uZW51bS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3NyYy9jb3JlL3NyYy9lbnVtcy9rZXlib2FyZC1hbmltYXRpb24tdHJhbnNpdGlvbi5lbnVtLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDRFQUE0RTtBQUM1RSxFQUFFO0FBQ0YsNENBQTRDO0FBQzVDLG9GQUFvRjtBQUNwRixpRkFBaUY7QUFDakYsSUFBSTtBQUVKLE1BQU0sQ0FBTixJQUFZLDJCQUdYO0FBSEQsV0FBWSwyQkFBMkI7SUFDckMseURBQTBCLENBQUE7SUFDMUIsdURBQXdCLENBQUE7QUFDMUIsQ0FBQyxFQUhXLDJCQUEyQixLQUEzQiwyQkFBMkIsUUFHdEMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyBpbXBvcnQgeyBLZXlib2FyZEFuaW1hdGlvblN0YXRlIH0gZnJvbSAnLi9rZXlib2FyZC1hbmltYXRpb24tc3RhdGUuZW51bSc7XG4vL1xuLy8gZXhwb3J0IGVudW0gS2V5Ym9hcmRBbmltYXRpb25UcmFuc2l0aW9uIHtcbi8vICAgSGlkZSA9IGAke0tleWJvYXJkQW5pbWF0aW9uU3RhdGUuVmlzaWJsZX0gPT4gJHtLZXlib2FyZEFuaW1hdGlvblN0YXRlLkhpZGRlbn1gLFxuLy8gICBTaG93ID0gYCR7S2V5Ym9hcmRBbmltYXRpb25TdGF0ZS5Wb2lkfSA9PiAke0tleWJvYXJkQW5pbWF0aW9uU3RhdGUuVmlzaWJsZX1gXG4vLyB9XG5cbmV4cG9ydCBlbnVtIEtleWJvYXJkQW5pbWF0aW9uVHJhbnNpdGlvbiB7XG4gIEhpZGUgPSAndmlzaWJsZSA9PiBoaWRkZW4nLFxuICBTaG93ID0gJ3ZvaWQgPT4gdmlzaWJsZSdcbn1cbiJdfQ==

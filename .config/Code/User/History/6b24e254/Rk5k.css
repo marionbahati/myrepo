@@ -1,0 +1,6 @@
+.card{
+    transition: height 3s;
+}
+.card:hover{
+    border-bottom:40px;
+}

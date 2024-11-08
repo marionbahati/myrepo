@@ -1,0 +1,23 @@
+const developers=[{
+      id:1,
+      name:"Marion",
+      gender:"female"
+    },{
+      id:2,
+      name:"Fred",
+      gender:"male"
+    },
+  {
+      id:3,
+      name:"Daniel",
+      gender:"male"
+  },
+  {
+    id:4,
+    name:"Marion",
+    gender:"female"
+  }]
+//data filtering
+  let filter= developers.filter((obj)=>{
+    return obj.name=='Marion'
+  })

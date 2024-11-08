@@ -1,0 +1,106 @@
+<ng-container>
+    <div class="footer   mw-100 " [ngClass]="getClasses()"
+        style="background-color: black; color: white; height: 25vh; position: fixed; bottom: 0; width: 100%;margin-top: 20vh;padding-top: 1%;padding-left: 10%;">
+        <div class="row ">
+            <div class="col"
+                style="display: flex;flex-direction: row;padding-top: 3%;padding-right: 3%;column-gap: 5px;" id="col1">
+                <div class="col" (click)="goBack()" id="back">
+                    <h2>
+                        <img src="assets/icons/back.svg" alt="Back">
+                        <span>
+                            {{'Back'|translate}} </span>
+                    </h2>
+                </div>
+
+                <div class="col" (click)="video().togglePlayPause()">
+                    <h2>
+                        <img style="margin-right: 10px;" src="assets/icons/starticon.svg" alt="Start">
+                        <span>Start</span>
+                    </h2>
+                </div>
+                <div class="col" (click)="video().reset()">
+                    <h2> <img style="margin-right: 10px;" src="assets/icons/reset_white.svg" alt="Reset">
+                        <span>Reset</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="col" style="display: flex;flex-direction: row; padding-top: 3%;" id="col2">
+                <div class=" col" id="vol">
+                    <h2>
+                        @if (!video().isMuted()) {
+                        <img id="vol" (click)="video().toggleMute()" style="position: relative;"
+                            [hidden]="video().isMuted()" src="assets/icons/volumeIcon.svg" alt="Volume">
+
+                        }
+                        @if (video().isMuted()) {
+                        <img id="vol" (click)="video().toggleMute()" src="assets/icons/volume-mute.svg" alt="Mute">
+
+                        }
+
+                    </h2><br> <input style="margin-left: -25px;" type="range" min="0" max="1" step="0.01"
+                        (input)="video().setVolumeFromEvent($event)">
+                </div>
+
+                <div class="col" style="padding-top: 2%;margin-left: -15em;">
+                    <h2 id="lng">
+                        <a (click)="switchLanguage('de')" style="color: red;padding-right: 10px;">DE</a> | <a
+                            style="padding-left: 10px;" (click)="switchLanguage('en')">EN</a>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+
+<!-- <ng-container>
+    <div class="footer   mw-100 " [ngClass]="getClasses()"
+        style="background-color: black; color: white; height: 25vh; position: fixed; bottom: 0; width: 100%;margin-top: 20vh;padding-left: 10%;padding-top: 1%;">
+        <div class="row ">
+            <div class="col" (click)="goBack()" id="back">
+                <h2>
+                    <img style="margin-right: 10px;" src="assets/icons/back.svg" alt="Back">
+                    <span style="line-height: 160px;padding-right: 15px;padding-left: 5px;">
+                        {{'Back'|translate}} </span>
+                </h2>
+            </div>
+
+            <div class="col" (click)="video().togglePlayPause()">
+                <h2>
+                    <img style="margin-right: 10px;" src="assets/icons/starticon.svg" alt="Start">
+                    <span style="line-height: 160px;padding-right: 10px;">Start</span>
+                </h2>
+            </div>
+            <div class="col" (click)="video().reset()">
+                <h2> <img style="margin-right: 10px;" src="assets/icons/reset_white.svg" alt="Reset">
+                    <span style="line-height: 160px;padding-right: 10px;">Reset</span>
+                </h2>
+            </div>
+
+            <div class=" col" id="vol" style="padding-top: 3%;">
+                <h2>
+                    @if (!video().isMuted()) {
+                    <img (click)="video().toggleMute()" style="position: relative;" [hidden]="video().isMuted()"
+                        src="assets/icons/volumeIcon.svg" alt="Volume">
+
+                    }
+                    @if (video().isMuted()) {
+                    <img (click)="video().toggleMute()" src="assets/icons/volume-mute.svg" alt="Mute">
+
+                    }
+
+                </h2><br> <input style="margin-left: -25px;" type="range" min="0" max="1" step="0.01"
+                    (input)="video().setVolumeFromEvent($event)">
+            </div>
+
+            <div class="col" id="lng" style="padding-top: 3%;">
+                <h2>
+                    <a (click)="switchLanguage('de')" style="color: red;padding-right: 10px;">DE</a> | <a
+                        style="padding-left: 10px;" (click)="switchLanguage('en')">EN</a>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+
+</ng-container> -->

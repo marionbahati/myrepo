@@ -1,0 +1,43 @@
+
+<div>
+    <div class="card mt-3">
+        <div class="card-body">
+            <form [formGroup]="registerForm"  action="/action_page.php">
+                <div class="mb-3 mt-3">
+
+                  <div class="mb-3">
+                    <label for="pwd" class="form-label">Full name</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter full names" formControlName="fullname">
+                    <span *ngIf="fullname.invalid && (fullname.dirty|| fullname.invalid) ">
+                      <div *ngIf="fullname.errors?.['required']">Full name is required</div>
+                      <div ngIf="fullname.errors?.['fullname']">Fullname  should be valid</div>
+
+                    </span>
+                  </div>
+                  <label for="email" class="form-label">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+                  <span *ngIf="email.invalid && (email.dirty|| email.invalid) ">
+                    <div *ngIf="email.errors?.['required']">Email name is required</div>
+                    <div ngIf="email.errors?.['email']">Email should be valid</div>
+
+                  </span>
+                </div>
+                <div class="mb-3">
+                  <label for="pwd" class="form-label">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" formControlName="password">
+                  <small *ngIf="password.invalid && (password.dirty) || password.touched" class="border-style: solid; border-color: red;">
+                    <div *ngIf="password.errors?.['required']">Email is required</div>
+                    <div ngIf="password.errors?.['password']">Email should be valid</div>
+                    </small>
+                </div>
+
+                <div class="mb-3">
+                  <label for="pwd" class="form-label"> Confirm Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Confirm-password" formControlName="confirmpassword">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Register</button>
+              </form> 
+        </div>
+      </div>
+</div>

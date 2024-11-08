@@ -1,0 +1,36 @@
+<div style="border: 1px solid rgb(130, 129, 134);">
+    <h1 style="margin-left: 25vw;">CODESCHAFFER KUNDEN</h1>
+    <div style="display: flex;margin-top: 3vh;margin-left: 25vw;margin-bottom: 1vh;">
+        <label for="inputField">Kunde wählen:</label>
+        <select (change)="setCompany($event)">
+            <option *ngFor="let company of graphAdapter().getAvailableCompanyNames()" [value]="company">{{company}}
+            </option>
+
+        </select>
+
+        <button (click)="deleteSearchterm()" style="background-color: rgb(212, 160, 160);">Löschen</button>
+
+
+    </div>
+
+    <div style="display: flex;flex-direction: row;margin-left: 30vw;margin-top: 2vh;margin-left: 22vw;">
+        <div style="margin-right: 10px;">
+            <label>Beziehungstypen</label>
+            <select (change)="setRelation($event)">
+                <option value="">none</option>
+                <option *ngFor="let rel of graphAdapter().getAvailableRelations()" [value]="rel">{{rel}}</option>
+            </select>
+        </div>
+
+
+    </div>
+    <div *ngIf="relationsStringList.length > 0" style="margin-top: 20px;margin-left: 15vw">
+        <h3>Verfügbare Beziehungen für {{ selected_company }}</h3>
+        <ul>
+            <li *ngFor="let relation of relationsStringList">{{ relation }}</li>
+        </ul>
+    </div>
+    <figure id="netgraph" style="margin-left: 5vw;"></figure>
+
+
+</div>

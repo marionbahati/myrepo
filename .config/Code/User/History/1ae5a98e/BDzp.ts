@@ -1,0 +1,594 @@
+import { Component } from '@angular/core';
+import * as d3 from 'd3';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { SimulationNodeDatum, color, selectAll } from 'd3';
+import { GraphdataService } from '../graphdata.service';
+import { first } from 'rxjs';
+import { Company } from '../interfaces/company';
+
+interface d3link { source: any, target: any };
+interface d3node { index: number, name: string, group: number };
+@Component({
+  selector: 'app-newgraph',
+  standalone: true,
+  imports: [FormsModule, CommonModule],
+  templateUrl: './newgraph.component.html',
+  styleUrl: './newgraph.component.scss'
+})
+export class NewgraphComponent {
+  [x: string]: any;
+  relatntype!: string;
+
+
+  constructor(private data: GraphdataService) {
+
+  }
+  searchTerm: string = '';
+  private nodes: d3node[] = [];
+
+  private links: d3link[] = [];
+  selected_company: string = '';
+  private svg: any;
+  private margin = 20;
+  private width = 1200 - (this.margin * 2);
+  private height = 900 - (this.margin * 2);
+  available_relations: string[] = [];
+  available_companies: string[] = [];
+  relation_filter = ''
+  center_of_view = 'Codeschaffer'
+  relationsList: string[] = [];
+  private chosenRelationType: any;
+  private chosenCenterCompany: any;
+
+
+  //NEW
+  ausgewählterkunde: any;
+  ausgewählteBeziehung: any;
+  gesuchtKunde: any;
+  verfügbare_Beziehungen: string[] = [];
+  verfügbare_Kunden: string[] = [];
+  beziehungenListe: string[] = [];
+  muttergesellschaft = "codeschaffer";
+  quellLink!: string;
+  zielLink!: string;
+  beziehungen: string[] = [];
+  chosenRelation!: string;
+  chosen!: string
+
+
+
+
+  ngOnInit(): void {
+    if (this.data.isReady()) {
+      this.draw();
+    } else {
+      this.data.ready$.pipe(first()).subscribe({
+        next: () => this.draw()
+      })
+    }
+  }
+  relationChanged(event: any) {
+    this.addFilterAndCreateLinks(event);
+  }
+  getAvailableCompanies() {
+    // map the list of companies to a list of only their names
+    this.available_companies = this.data.getCompanies().map((c: Company) => c.name);
+
+
+
+  }
+  //above getavailabelcompa
+  // kunden(){
+  //   this.verfügbare_Kunden=this.service.getCompanies().map((f:Company)=> f.name);
+  // }
+  getAvailableRelations() {
+    // the list of relation-types
+    let relations: string[] = [];
+    // iterate over every company
+    for (let c of this.data.getCompanies()) {
+      // iterate over earch company's relation
+      for (let relation of c.Relations) {
+        // if the relation is not already in the list
+        if (!relations.includes(relation.relation_type)) {
+          // add it
+          relations.push(relation.relation_type);
+
+        }
+
+      }
+    }
+    // save the available relations to property "available_relations"
+    this.available_relations = relations;
+  }
+  //firmaBeziehung(){
+
+  // for(let company of this.service.getCompanies()){
+  //   for(let beziehung of company.Relations){
+  //     if(!beziehung.includes(beziehung.relation_type)){
+  //       this.beziehungen.push(beziehung.relation_type);
+  //     }
+  //   }
+  // }
+  //this.verfügbare_Beziehungen= beziehungen;
+  //}
+  createNodes() {
+    this.nodes = this.data.getCompanies().map(
+      (c: Company, i: number, arr: Company[]) => {
+        // this is the format wanted by d3 (see "nodes" above)
+        return { index: i, name: c.name, group: 0 }
+      }
+    );
+  }
+  // createNodes(){
+  //   this.nodes = this.service.getCompanies().map(
+  //     (c: Company, i: number, arr: Company[]) => {
+  //       // this is the format wanted by d3 (see "nodes" above)
+  //       return { index: i, name: c.name, group: 0 }
+  //     }
+  //   );
+  // }
+
+  getNodeByName(n: string) {
+    // this.nodes is an array
+    // Array.find() returns the first element of the array for that the condition evaluates to true
+    // if none matches, undefined is returned
+    return this.nodes.find(v => v.name == n);
+  }
+  // lookup a company of type "Company" by Id
+  // then lookup the corresponding node (see this.nodes) by the companies "name"
+  getNodeById(id: number) {
+    let company = this.data.getCompanies().find((x: Company) => x.id == id);
+    if (company) {
+      return this.getNodeByName(company.name)
+    }
+    return undefined;
+  }
+
+  // check if a link ("link") is in an array of links "list"
+  hasLink(list: d3link[], link: d3link) {
+    for (let l of list) {
+      if (link.source == l.source && link.target == l.target) {
+        return true;
+      }
+    }
+    return false;
+  }
+  //ABOVE HASLINK
+  //   isLinkAreadyAdded(list: d3link[], lnk: d3link){
+  //     for(let n of list){
+  //       if(lnk.source===n.source && lnk.target===n.target){
+  //         return true;
+  //       }
+  //     }
+  // return false;
+  //   }
+
+  alleLinksGenerieren() {
+    let links: d3link[] = [];
+
+    //let quellFirma=this.service.getCompanies().find(firma => company.name === this. muttergesellschaft);
+    //if(!quellFirma){
+    //return ;
+    //}
+    //this.quellLink=this.getNodeByName(quellFirma.name);
+    // for(let kunde of this.service.getCompanies()){
+    // if(kunde.name !== this.muttergesellschaft){
+    // this.zielLink=this.getNodeByName(kunde.name)
+    // }
+    //}
+    // if (this.zielLink) {
+    // let link = {
+    // source: quellLink,  
+    //  target: zielLink    
+    //};
+    // Only add the link if it is not already in the list
+    //     if (!this. isLinkAreadyAdded(links, link)) {
+    //       links.push(link);
+    //     }
+    //   }
+    // }
+
+  }
+
+
+  createAllLinks() {
+    let links: d3link[] = [];
+
+    // Find the central company node with the name "Codeschaffer"
+    let centralCompany = this.data.getCompanies().find(company => company.name === 'Codeschaffer');
+
+    if (!centralCompany) {
+
+      return;
+    }
+
+    let centralNode = this.getNodeByName(centralCompany.name); // Get the D3 node for "Codeschaffer"
+
+    // Ensure the central node exists
+
+
+    // Iterate through all companies and create links from the center node to each of them
+    for (let company of this.data.getCompanies()) {
+      // Ensure we are not linking the central node to itself
+      if (company.name !== 'Codeschaffer') {
+        let targetNode = this.getNodeByName(company.name); // Get the D3 node for the target company
+
+        // Ensure the target node exists before creating the link
+        if (targetNode) {
+          let link = {
+            source: centralNode,  // Set the source as the central node
+            target: targetNode    // Set the target as the current company node
+          };
+
+          // Only add the link if it is not already in the list
+          if (!this.hasLink(links, link)) {
+            links.push(link);
+          }
+        }
+      }
+    }
+
+    // Set the links array to include all the generated links
+    this.links = links;
+
+
+
+
+  }
+
+
+  setToSearchterm() {
+    this.searchTerm = this.selected_company;
+  }
+  setupData() {
+    this.getAvailableCompanies();
+    this.getAvailableRelations();
+    this.createNodes();
+    this.createAllLinks();
+
+    this.setToSearchterm();
+  }
+
+  draw() {
+    this.setupData();
+    this.createSvg();
+    this.drawGraph(this.nodes, this.links);
+  }
+
+  private createSvg(): void {
+    this.svg = d3.select('figure#netgraph')
+      .append('svg')
+      .attr('width', this.width + (this.margin * 2))
+      .attr('height', this.height + (this.margin * 2))
+      .append('g');
+  }
+
+  private drawGraph(nodes: any, links: any): void {
+    const simulation = d3.forceSimulation(nodes)
+      .force('charge', d3.forceManyBody().strength(-3500))
+      .force('center', d3.forceCenter(this.width / 2, this.height / 2))
+      .force('link', d3.forceLink(links).id((d: any) => d.index))
+      .force('collision', d3.forceCollide().radius(-4000))
+      .force('link', d3.forceLink(this.links).id((d: any) => d.index).distance(200))
+      .on('tick', ticked);
+
+    const link = this.svg
+      .append('g')
+      .selectAll('line')
+      .data(links)
+      .enter()
+      .append('line')
+      .attr('stroke-width', 2)
+      .style('stroke', 'orange');
+
+    const node = this.svg
+      .append('g')
+      .selectAll('circle')
+      .data(nodes)
+      .enter()
+      .append('circle')
+      .attr('r', 25)
+      .attr('fill', (d: any, i: number) => d3.schemeCategory10[i % 10])
+      .call(d3.drag()
+        .on('start', (e, d) => dragstarted(e, <SimulationNodeDatum>d))
+        .on('drag', (e, d) => dragged(e, <SimulationNodeDatum>d))
+        .on('end', (e, d) => dragended(e, <SimulationNodeDatum>d))
+      );
+
+    const text = this.svg
+      .append('g')
+      .selectAll('text')
+      .data(nodes)
+      .enter()
+      .append('text')
+      .style('stroke', (d: any, i: number) => d3.schemeCategory10[i % 10])
+      .text((d: any) => d.name);
+
+
+    function ticked() {
+      node
+        .attr('cx', (d: any) => d.x)
+        .attr('cy', (d: any) => d.y);
+
+
+      link
+        .attr('x1', (d: any) => d.source.x * 1)
+        .attr('y1', (d: any) => d.source.y * 1)
+        .attr('x2', (d: any) => d.target.x * 1)
+        .attr('y2', (d: any) => d.target.y * 1);
+
+      text
+        .attr('dx', (d: any) => d.x * 1)
+        .attr('dy', (d: any) => d.y * 1);
+
+
+    }
+
+    function dragstarted(event: any, d: SimulationNodeDatum) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+    }
+
+    function dragged(event: any, d: SimulationNodeDatum) {
+      d.fx = event.x;
+      d.fy = event.y;
+    }
+
+    function dragended(event: any, d: SimulationNodeDatum) {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+    }
+  }
+
+  reloadPage() {
+    window.location.reload()
+  }
+  DeleteSEarchterm() {
+    this.searchTerm = "";
+    setTimeout(() => {
+      this.reloadPage()
+    }, 100);
+  }
+
+  // KundenbeziehungenAnzeigen(){
+  //  this.beziehungenListe=[];
+  //  const gesuchtNode = this.nodes.find(node => node.name.toLowerCase() == this.gesuchtKunde.toLowerCase());
+  //  for (let firma of this.service.getCompanies()) {
+  //   if(firma.name.toLowerCase()=== this.gesuchtKunde.toLowerCase()){
+  //     for (let beziehung of (firma?.Relations || [])) {
+  //       let ziel_node = this.getNodeById(beziehung.ObjectID);
+  //       if(ziel_node){
+  //         this.beziehungenListe.push('${this.beziehung.relation_type} : ${this.ziel_node.name}');
+  //       }
+  //     }
+  //   }
+  //   if (this.beziehungenListe.length === 0) {
+  //     this.beziehungenListe.push(`${this.gesuchtKunde} ist ein nur kunde von Codeschaffer.Weitere bekannte Beziehungen gibt es nicht`);
+  //   }
+  // }
+  // }
+  displaySearchTermRelations() {
+    // Clear the previous relations list
+    this.relationsList = [];
+
+    //  Find the searched node based on the search term
+    const searchedNode = this.nodes.find(node => node.name.toLowerCase() === this.searchTerm.toLowerCase());
+
+    // Loop through companies and find relations for the searched company
+    for (let company of this.data.getCompanies()) {
+      if (company.name.toLowerCase() === this.searchTerm.toLowerCase()) {
+        // Collect relation types and target company names for the searched node
+        for (let relation of company.Relations ?? []) {
+          let targetCompany = this.getNodeById(relation.ObjectID); // Find the related company by its ID
+          if (targetCompany) {
+            // Add a string combining the relation type and the target company name
+            this.relationsList.push(`${relation.relation_type}  : ${targetCompany.name}`);
+          }
+        }
+      }
+    }
+
+    //  If no relations were found, display a message indicating that
+    if (this.relationsList.length === 0) {
+      this.relationsList.push(`${this.searchTerm} ist ein nur kunde von Codeschaffer.Weitere bekannte Beziehungen gibt es nicht`);
+    }
+  }
+
+  //   drawSearchedLinks(event: any) {
+  //     let links: d3link[] = [];
+  //     let Gesuchte_nodes: any[] = [];
+  //     let binding_nodes:any[] = [];
+  //     this.beziehungenListe=[];
+  //     const kundeAuswahl = this.ausgewählterkunde;
+  //     const beziehungAuswahl = this.ausgewählteBeziehung;
+  //     const gesuchtNode = this.nodes.find(node => node.name.toLowerCase() == this.gesuchtKunde.toLowerCase());
+  //     //  for (let firma of this.service.getCompanies()) {
+  //     // let quell_node = firma;
+  //     // for (let beziehung of (firma?.Relations || [])) {
+  //     //   let ziel_node = this.getNodeById(beziehung.ObjectID);
+  //     if(ziel_node){
+  // this.beziehungenListe.push('${this.kundeAuswahl} ist Kunde von Codeschaffer');
+  //     }
+  //     if(this.beziehungenListe.length===0){
+
+  //       this.beziehungenListe.push
+  //     }
+
+  // if (chosenRelation === "" || chosenRelation === beziehung.relation_type) {
+  //   let link = {
+  //     source: quell_node,
+  //     target: ziel_node
+  //   };
+
+  //     if (quell_node && ziel_node && !this. isLinkAreadyAdded(links, link)) {
+  //       links.push(link);
+  //     }
+  //   }
+  // }
+  // if(gesuchtNode){
+  //   const chosenLinks=links.filter(link => link.source===gesuchtNode|| link.target ===gesuchtNode );
+  //   //remove duplicates by puuting them in a set
+  //   binding_nodes = Array.from(new Set([
+  //     gesuchtNode,
+  //     ...chosenLinks.map(link => link.source),
+  //     ...chosenLinks.map(link => link.target)
+  //   ]));
+  // }
+  //this.KundenbeziehungenAnzeigen();
+  //  d3.select('figure#netgraph').selectAll('*').remove();
+  //  this.createSvg();
+  //  this.drawGraph( binding_nodes, chosenLinks );
+
+  //  // Highlight the searched node by increasing its size and adding a border
+  //  this.svg.selectAll('circle')
+  //    .filter((d: any) => d.name === this.gesuchtKunde)
+  //    .attr('r', 30) // Make the circle bigger
+  //    .attr('stroke', 'red') // Add a red border
+  //    .attr('stroke-width', 5); // Make the border thicker
+
+  //  // Re-run the simulation to adjust positions
+  //  const simulation = d3.forceSimulation(binding_nodes)
+  //    .force('charge', d3.forceManyBody().strength(-100))  // Push nodes apart
+  //    .force('center', d3.forceCenter(this.width / 2, this.height / 2))
+  //    .force('link', d3.forceLink(chosenLinks).id((d: any) => d.index).distance(30))  // Space out links
+  //    .force('collision', d3.forceCollide().radius(30))  // Avoid overlapping
+
+  //    .on('tick', () => {
+  //      // Update positions of all elements in the SVG as simulation runs
+  //      this.svg.selectAll('circle')
+  //        .attr('cx', (d: any) => d.x)
+  //        .attr('cy', (d: any) => d.y);
+
+  //      this.svg.selectAll('line')
+  //        .attr('x1', (d: any) => d.source.x)
+  //        .attr('y1', (d: any) => d.source.y)
+  //        .attr('x2', (d: any) => d.target.x)
+  //        .attr('y2', (d: any) => d.target.y);
+
+  //      this.svg.selectAll('text')
+  //        .attr('dx', (d: any) => d.x)
+  //        .attr('dy', (d: any) => d.y);
+  //    });
+
+  //  // Keep the searched node fixed in the center of the graph
+  //  simulation.nodes().forEach((node: any) => {
+  //    if (node.name === this.gesuchtKunde) {
+  //      node.fx = this.width / 2;
+  //      node.fy = this.height / 2;
+  //    }
+  //  });
+  // }
+  // }
+
+
+  addFilterAndCreateLinks(event: any) {
+    // Initialize an empty list of links and connected nodes
+    let links: d3link[] = [];
+    let connectedNodes: any[] = [];
+    this.relationsList = [];
+
+    // Get the selected filter values from the component's properties
+    const selectedCompany = this.selected_company;
+    const selectedRelation = this.relation_filter;
+
+    // Find the node that matches the user's search term, if it exists
+    const searchedNode = this.nodes.find(node => node.name.toLowerCase() === this.searchTerm.toLowerCase());
+
+    // Loop through all companies in the data
+    for (let company of this.data.getCompanies()) {
+
+      // Treat each company as a source node
+      let sourceNode = company;
+
+      // Loop through the company's relations (if any)
+      for (let relation of (company?.Relations || [])) {
+        let targetNode = this.getNodeById(relation.ObjectID);
+        //display
+        if (targetNode) {
+          // Add a string combining the relation type and the target company name
+          this.relationsList.push(`${relation.relation_type}  : ${targetNode.name}`);
+        }
+
+        // Check if this relation matches the selected filter, if any
+        if (selectedRelation === "" || selectedRelation === relation.relation_type) {
+          let link = {
+            source: sourceNode,
+            target: targetNode
+          };
+
+          // Add the link only if it’s not already in the list
+          if (sourceNode && targetNode && !this.hasLink(links, link)) {
+            links.push(link);
+          }
+        }
+      }
+    }
+
+    // If a searched node was found, filter links to show only its connections
+    if (searchedNode) {
+      const filteredLinks = links.filter(link => link.source === searchedNode || link.target === searchedNode);
+
+      // Include the searched node and all connected nodes in a set to remove duplicates
+      connectedNodes = Array.from(new Set([
+        searchedNode,
+        ...filteredLinks.map(link => link.source),
+        ...filteredLinks.map(link => link.target)
+      ]));
+
+      // Show relationships involving the searched term
+      this.displaySearchTermRelations();
+
+      // Clear any existing graph and prepare to redraw
+      d3.select('figure#netgraph').selectAll('*').remove();
+      this.createSvg();
+      this.drawGraph(connectedNodes, filteredLinks);
+
+      // Highlight the searched node by increasing its size and adding a border
+      this.svg.selectAll('circle')
+        .filter((d: any) => d.name === this.searchTerm)
+        .attr('r', 30) // Make the circle bigger
+        .attr('stroke', 'red') // Add a red border
+        .attr('stroke-width', 5); // Make the border thicker
+
+      // Re-run the simulation to adjust positions
+      const simulation = d3.forceSimulation(connectedNodes)
+        .force('charge', d3.forceManyBody().strength(-100))  // Push nodes apart
+        .force('center', d3.forceCenter(this.width / 2, this.height / 2))
+        .force('link', d3.forceLink(filteredLinks).id((d: any) => d.index).distance(30))  // Space out links
+        .force('collision', d3.forceCollide().radius(30))  // Avoid overlapping
+
+        .on('tick', () => {
+          // Update positions of all elements in the SVG as simulation runs
+          this.svg.selectAll('circle')
+            .attr('cx', (d: any) => d.x)
+            .attr('cy', (d: any) => d.y);
+
+          this.svg.selectAll('line')
+            .attr('x1', (d: any) => d.source.x)
+            .attr('y1', (d: any) => d.source.y)
+            .attr('x2', (d: any) => d.target.x)
+            .attr('y2', (d: any) => d.target.y);
+
+          this.svg.selectAll('text')
+            .attr('dx', (d: any) => d.x)
+            .attr('dy', (d: any) => d.y);
+        });
+
+      // Keep the searched node fixed in the center of the graph
+      simulation.nodes().forEach((node: any) => {
+        if (node.name === this.searchTerm) {
+          node.fx = this.width / 2;
+          node.fy = this.height / 2;
+        }
+      });
+    }
+  }
+
+
+}
+
+
+

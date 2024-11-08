@@ -1,0 +1,35 @@
+<div>
+    <div class="card mt-3">
+        <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                <div class="mb-3 mt-3">
+                  <label for="email" class="form-label">Email:</label>
+                  <input formControlName="email" type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+
+                  <small *ngIf="email.invalid && (email.dirty) || email.touched" class="border-style: solid; border-color: red;">
+                    <div *ngIf="email.errors?.['required']">Email is required</div>
+                    <div ngIf="email.errors?.['email']">Email should be valid</div>
+                    </small>
+
+                </div>
+              
+                <div class="mb-3">
+                  <label for="pwd" class="form-label">Password:</label>
+                  <input formControlName="password" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+
+                  <small *ngIf="password.invalid && (password.dirty) || password.touched" class="border-style: solid; border-color: red;">
+                    <div *ngIf="password.errors?.['required']">Email is required</div>
+                    <div ngIf="password.errors?.['password']">Email should be valid</div>
+                    </small>
+
+                </div>
+                
+                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Sign in</button>
+                <div class="div mt-3">
+                    Not a member? <a routerLink="/register">SIGN UP</a>
+
+                </div>
+              </form> 
+        </div>
+      </div>
+</div>

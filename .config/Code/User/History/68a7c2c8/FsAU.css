@@ -1,0 +1,16 @@
+
+.trans{
+    width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+
+
+.trans:hover{
+width: 100%;
+
+}
+.trans, .pp:hover{
+    visibility: visible;
+}

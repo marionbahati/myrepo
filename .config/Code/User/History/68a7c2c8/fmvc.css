@@ -1,0 +1,12 @@
+
+.trans{
+    width: 100px;
+  height: 100px;
+  background: red;
+  transition: border 2s;
+}
+
+
+.trans:hover{
+border: 10px;
+}

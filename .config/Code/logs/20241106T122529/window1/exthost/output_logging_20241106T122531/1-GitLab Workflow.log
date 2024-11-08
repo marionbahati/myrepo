@@ -1,0 +1,33 @@
+2024-11-06T12:25:36:563 [warning]: There is no GitLab account available with access to suggestions
+2024-11-06T12:25:36:572 [info]: Extracted urls: []
+2024-11-06T12:25:36:587 [info]: Found 0 projects for urls: []
+2024-11-06T12:25:36:589 [warning]: There is no GitLab account available with access to suggestions
+2024-11-06T12:25:48:975 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:49:976 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:51:016 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:52:017 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:53:016 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:54:017 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:55:018 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:56:019 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:57:019 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:58:020 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:25:59:020 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:00:021 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:01:023 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:02:023 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:03:023 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:04:024 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:05:025 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:05:656 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:06:026 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:07:027 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:09:026 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:10:027 [warning]: GitExtensionWrapper is missing repository for file:///home/marion
+2024-11-06T12:26:11:106 [info]: Extracted urls: [
+      "https://github.com/marionbahati/myrepo.git"
+    ]
+2024-11-06T12:26:11:106 [info]: Found 0 projects for urls: [
+      "https://github.com/marionbahati/myrepo.git"
+    ]
+2024-11-06T12:26:11:107 [warning]: There is no GitLab account available with access to suggestions

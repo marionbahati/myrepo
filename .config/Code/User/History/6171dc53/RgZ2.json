@@ -1,0 +1,19 @@
+
+
+{
+ 
+ "vorzeigen":"show",
+ "Willkommen":"welcome",
+ "Themen":"themes",
+ "Löschen":"delete",
+ "Diagnostik":"diagnosis",
+ "Wissenschaft":"science",
+" Marke": "brand",
+ "Test":"test",
+ "Gesamtshow":"gesamtshow",
+ "diagnosticsVideo":"Diagnostik Video",
+ "wissenschaftVideo":"Wissenschaft Video",
+ "Individuell":"individuell",
+ "Themenauswahl":"Themenauswahl",
+ "Zurück":"Back"
+}

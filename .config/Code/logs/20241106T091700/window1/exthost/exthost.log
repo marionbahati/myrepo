@@ -1,0 +1,1096 @@
+2024-11-06 09:17:03.459 [info] Extension host with pid 3081 started
+2024-11-06 09:17:03.459 [info] Skipping acquiring lock for /home/marion/.config/Code/User/workspaceStorage/9b1cedd0498fbee4bc1f86815034c962.
+2024-11-06 09:17:03.675 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-11-06 09:17:03.701 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:typescript'
+2024-11-06 09:17:03.758 [info] ExtensionService#_doActivateExtension Angular.ng-template, startup: false, activationEvent: 'onLanguage:typescript'
+2024-11-06 09:17:04.859 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-11-06 09:17:05.839 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-11-06 09:17:05.924 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-11-06 09:17:06.223 [info] Eager extensions activated
+2024-11-06 09:17:06.459 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 09:17:06.462 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 09:17:06.506 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2024-11-06 09:17:06.619 [info] ExtensionService#_doActivateExtension GitLab.gitlab-workflow, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 09:17:06.903 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-containers, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 09:17:07.064 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 09:17:07.941 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.941 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.941 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.941 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.942 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.943 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.944 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.947 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.950 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.950 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:07.987 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 09:17:09.260 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.268 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.272 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.276 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.279 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.284 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.290 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.291 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.301 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.305 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.309 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.313 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.314 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.320 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.322 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.324 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.328 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.329 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.329 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.330 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.330 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.331 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.331 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.337 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.339 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.340 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.341 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.342 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.346 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.351 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.358 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.361 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.366 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.370 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.371 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.372 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.372 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.373 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.374 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.375 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.375 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.376 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.376 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.377 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.377 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.378 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.378 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:17:09.379 [error] Error: Git error
+	at ChildProcess.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:990935)
+	at ChildProcess.emit (node:events:525:35)
+	at ChildProcess._handle.onexit (node:internal/child_process:291:12)
+2024-11-06 09:22:08.561 [info] Extension host terminating: renderer closed the MessagePort
+2024-11-06 09:22:08.567 [error] TypeError: Cannot read properties of undefined (reading 'dispose')
+	at Rm.removeReviewManager (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2229:44185)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2242:4235)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2043:446996)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at /home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2130:27689
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367)
+2024-11-06 09:22:08.568 [error] TypeError: Cannot read properties of undefined (reading 'dispose')
+	at Rm.removeReviewManager (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2229:44185)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2242:4235)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2043:446996)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at /home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2130:27689
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367)
+2024-11-06 09:22:08.591 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at f.I [as value] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:924696)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.592 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at e (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2077:10038)
+	at Object.n [as setContext] (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2077:10153)
+	at xp.updateActiveReviewCount (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2130:22828)
+	at xp.removeRepo (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2130:23973)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2242:4217)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2043:446996)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at /home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2130:27689
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.592 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at e (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2077:10038)
+	at Object.n [as setContext] (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2077:10153)
+	at _m.setReviewModeContexts (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2229:13442)
+	at _m.removePrFromView (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2229:14091)
+	at Fc.clear (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2111:25780)
+	at Fc.dispose (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2113:167)
+	at Rm.removeReviewManager (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2229:44185)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2242:4235)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2043:446996)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at /home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2130:27689
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.594 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at qL.updateExtensionStatus (/home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:889:8397)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at #c (/home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:889:7248)
+	at /home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:889:6942
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.595 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at f.I [as value] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:924696)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.595 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at qL.updateExtensionStatus (/home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:889:8397)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at #c (/home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:889:7248)
+	at /home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:889:6942
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.595 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at f.I [as value] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:924696)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.595 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at set b [as b] (/usr/share/code/resources/app/extensions/github/dist/extension.js:2:322364)
+	at /usr/share/code/resources/app/extensions/github/dist/extension.js:2:323005
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.595 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at e (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2077:10038)
+	at Object.n [as setContext] (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2077:10153)
+	at xp.updateActiveReviewCount (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2130:22828)
+	at xp.removeRepo (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2130:23973)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2242:4217)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at f.value (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2043:446996)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2119)
+	at /home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2130:27689
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.595 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at qL.updateExtensionStatus (/home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:889:8397)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at #c (/home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:889:7248)
+	at /home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:889:6942
+	at f.value (/usr/share/code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/usr/share/code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /usr/share/code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/usr/share/code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/usr/share/code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.595 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at l2.reset (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2229:7420)
+	at l2.dispose (/home/marion/.vscode/extensions/github.vscode-pull-request-github-0.78.1/dist/extension.js:2229:7691)
+	at s (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-11-06 09:22:08.596 [info] Extension host with pid 3081 exiting with code 0
+2024-11-06 09:22:08.598 [error] Canceled: Canceled
+	at new g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/usr/share/code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at Vz (/home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:496:1228)
+	at async /home/marion/.vscode/extensions/gitlab.gitlab-workflow-5.17.0/extension.js:496:1397 setContext undefined

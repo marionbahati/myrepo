@@ -1,0 +1,33 @@
+2024-11-08 13:16:13.526 [warning] /home/marion/.ssh/config: ENOENT: no such file or directory, open '/home/marion/.ssh/config'
+2024-11-08 13:16:13.526 [info] Activation> Extension version: 0.78.1
+2024-11-08 13:16:14.350 [info] Looking for git repository
+2024-11-08 13:16:14.350 [info] Found 0 repositories during activation
+2024-11-08 13:16:14.350 [info] Git repository found, initializing review manager and pr tree view.
+2024-11-08 13:16:14.352 [info] Registering git provider
+2024-11-08 13:16:14.352 [info] Review+0> Validate state in progress
+2024-11-08 13:16:14.352 [info] Review+0> Validating state...
+2024-11-08 13:16:14.455 [info] Found GitHub remote for folder /home/marion
+2024-11-08 13:16:14.796 [info] Trying to use globalState for assignableUsers.
+2024-11-08 13:16:15.004 [info] Review+0> No matching pull request metadata found locally for current branch master
+2024-11-08 13:16:15.062 [info] Using globalState assignableUsers for 1.
+2024-11-08 13:16:15.460 [info] Review+0> No matching pull request metadata found on GitHub for current branch master
+2024-11-08 13:16:30.339 [info] Repo state for file:///home/marion changed.
+2024-11-08 13:16:30.339 [info] Repo file:///home/marion has already been setup.
+2024-11-08 13:39:44.432 [info] Review+0> Validate state in progress
+2024-11-08 13:39:44.435 [info] Review+0> Validating state...
+2024-11-08 13:39:45.987 [info] Found GitHub remote for folder /home/marion
+2024-11-08 13:39:45.989 [info] Using in-memory cached assignable users.
+2024-11-08 13:39:46.083 [info] Review+0> No matching pull request metadata found locally for current branch master
+2024-11-08 13:39:46.556 [info] Review+0> No matching pull request metadata found on GitHub for current branch master
+2024-11-08 13:42:31.220 [info] Review+0> Validate state in progress
+2024-11-08 13:42:31.220 [info] Review+0> Validating state...
+2024-11-08 13:42:32.213 [info] Found GitHub remote for folder /home/marion
+2024-11-08 13:42:32.214 [info] Using in-memory cached assignable users.
+2024-11-08 13:42:32.311 [info] Review+0> No matching pull request metadata found locally for current branch master
+2024-11-08 13:42:32.697 [info] Review+0> No matching pull request metadata found on GitHub for current branch master
+2024-11-08 13:43:09.497 [info] Review+0> Validate state in progress
+2024-11-08 13:43:09.501 [info] Review+0> Validating state...
+2024-11-08 13:43:10.475 [info] Found GitHub remote for folder /home/marion
+2024-11-08 13:43:10.475 [info] Using in-memory cached assignable users.
+2024-11-08 13:43:10.527 [info] Review+0> No matching pull request metadata found locally for current branch master
+2024-11-08 13:43:10.882 [info] Review+0> No matching pull request metadata found on GitHub for current branch master

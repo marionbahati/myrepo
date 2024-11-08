@@ -1,0 +1,7 @@
+[Added Associations]
+text/plain=code.desktop;
+application/javascript=code.desktop;
+
+[Default Applications]
+x-scheme-handler/eclipse+installer=_home_marion_Downloads_eclipse-installer_.desktop
+x-scheme-handler/eclipse+command x-scheme-handler/eclipse+mpc=_home_marion_eclipse_java-2024-06_eclipse_.desktop

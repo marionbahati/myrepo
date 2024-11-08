@@ -1,0 +1,66 @@
+<div>
+
+    <div class="nav" [ngClass]="getClasses()" style="margin-bottom: 2%; ">
+        <div class=" d-flex mt-5 " style="margin-left: -20%;">
+            <div class="d-flex" style="margin-right: 5%;">
+
+                <a routerLink="/welcome" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <img src="assets/icons/welcomeIcone.svg" alt="Welcome">
+                    <span style="line-height: 90px;border-radius: 2px;">
+                        {{'Welcome'|translate}}</span>
+                </a>
+
+
+            </div>
+            <div class="d-flex header-link  rounded-pill" style="margin-right: 30%;">
+
+                <a routerLink="/show" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                    <img src="assets/icons/showIcon.svg" alt="Show">
+
+                    <span style="line-height: 90px;border-radius: 2px; ">
+                        {{'Show'|translate}}</span>
+
+                </a>
+
+
+            </div>
+            <div class="d-flex header-link  rounded-pill">
+
+                <a routerLink="/individuell" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+
+                    <img src="assets/icons/individuell.svg" alt="Individuell">
+                    <span style="line-height: 90px;border-radius: 2px;">
+                        {{'Individuell'|translate}}</span>
+                </a>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- <div class="nav  " [ngClass]="getClasses()" style="margin-bottom: 2%;">
+
+
+    <a id="welcom" class="header-link rounded-pill" routerLink="/welcome" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+        <img src="assets/icons/welcomeIcone.svg" alt="Welcome">
+        <span style="margin-top: 5px;border-radius: 2px;line-height: 90px;">{{'Welcome'|translate}}</span>
+    </a>
+
+    <a class="header-link  rounded-pill" routerLink="/show" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+        <img src="assets/icons/showIcon.svg" alt="Show">
+        <span style="border-radius: 5px;line-height: 90px;">{{'Show'|translate}}</span>
+    </a>
+
+    <a class="header-link rounded-pill" routerLink="/individuell" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">
+        <img src="assets/icons/individuell.svg" alt="Individuell">
+        <span style="line-height: 90px;border-radius: 2px;">{{'Individuell'|translate}}</span>
+    </a>
+
+
+</div> -->

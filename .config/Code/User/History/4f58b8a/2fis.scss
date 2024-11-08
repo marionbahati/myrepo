@@ -1,0 +1,156 @@
+.nav {
+
+    transition: max-height 0.4s;
+
+    &.testshow,
+    &.translate,
+
+    &.test {
+        display: none;
+        overflow: none;
+        max-height: 0;
+        padding-top: 0;
+    }
+
+    &.page1 {
+        display: none;
+
+    }
+
+    &.seite3 {
+        display: none;
+        overflow: none;
+        max-height: 20em;
+    }
+
+
+    &.frontpage {
+        display: none;
+    }
+
+    // &.welcome {
+    //     padding-top: 2%;
+    // }
+
+
+
+    &.wissenschaft {
+        padding-top: 3%;
+
+    }
+
+    &.wissenschaft #welcom {
+        color: rgb(202, 34, 34);
+        font-weight: bolder;
+        text-decoration-thickness: 120px;
+
+    }
+
+
+
+
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    padding-top: 5%;
+
+
+    a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-decoration: none;
+        color: black;
+        align-content: center;
+        align-items: center;
+        gap: 1.5em;
+
+
+        &.disabled {
+            color: grey;
+
+            &.visited {
+                color: grey;
+            }
+
+
+        }
+
+        &.active span {
+            color: rgb(202, 34, 34);
+            font-weight: bolder;
+            text-decoration-thickness: 120px;
+
+        }
+
+        &:hover {
+
+            text-decoration: none;
+            color: black;
+            background-color: rgb(226, 223, 223);
+
+
+        }
+
+        &:visited {
+            color: black;
+
+        }
+
+        &:active {
+            color: rgb(10, 0, 0);
+        }
+
+        img {
+            aspect-ratio: 1/1;
+            width: 3em;
+        }
+
+        span {
+            font-size: 2em;
+            margin-left: -40px;
+        }
+
+    }
+}
+
+
+
+
+img {
+    font-size: 50px;
+    width: 80px;
+    height: 80px;
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .nav .d-flex {
+        width: 40%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        display: block;
+        margin-left: 5%;
+        gap: 1em;
+        margin-top: -5%;
+
+    }
+
+    .nav .d-flex span {
+        padding-left: 30px;
+    }
+
+    .nav .d-flex img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav :hover {
+        text-decoration: none;
+    }
+
+
+}

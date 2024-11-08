@@ -1,0 +1,110 @@
+<div class="row " style="padding-top: 5%;">
+
+
+    <div class=" col d-flex justify-content-evenly">
+
+        <div>
+            <h2 (click)="goToWelcome()" id="fade">
+                <a>
+                    <img src="assets/icons/welcomeIcone.svg" alt="Welcome">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+                        <img src="assets/images/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                        {{'Welcome'|translate}}</span>
+                </a>
+
+            </h2>
+        </div>
+
+
+        <div class="d-flex">
+            <h2 routerLink="/show" id="fade">
+                <a>
+                    <img src="assets/icons/showIcon.svg" alt="Show">
+                    <span style="margin-top: 15px;" style="line-height: 160px;">
+                        <img src="assets/images/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                        {{'Show'|translate}}</span>
+
+                </a>
+            </h2>
+
+        </div>
+        <div class="d-flex">
+            <h2 routerLink="/individuell">
+                <a>
+                    <img src="assets/icons/individuell.svg" alt="Individuell"><span style="margin-top: 15px;"
+                        style="line-height: 160px;">
+                        <img src="assets/images/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                        {{'Individuell'|translate}}</span>
+
+                </a>
+            </h2>
+
+        </div>
+    </div>
+</div>
+<div>
+
+    <hr style="width: 90%;margin: auto; border: 2px solid rgb(0, 0, 0);">
+
+
+</div>
+<div style="display: flex; padding: 30px;justify-content: center;align-items: center;margin-top: 15vh;">
+    <div style="display: flex;margin-right: 50px;" routerLink="/cubeIndividuell">
+        <img style="width: 120px; height: 100px;" src="assets/images/iconmonstr-fullscreen-23-96.png" alt="Cube Only">
+        <img style="width: 100px; height: 100px;" src="assets/images/iconmonstr-line-one-vertical-lined-96.png" alt="">
+        <h1 style="padding-right: 25px;margin-top: 20px; ">Cube Only</h1>
+    </div>
+    <div style="display: flex;" routerLink="/videoIndividuell">
+        <img style="width: 120px; height: 100px;" src="assets/images/film-outline.256x256.png" alt="Videos">
+        <img style="width: 100px; height: 100px;" src="assets/images/iconmonstr-line-one-vertical-lined-96.png" alt="">
+        <h1 style="padding-right: 20px;margin-top: 25px; ">Videos</h1>
+    </div>
+</div>
+
+
+<div class=" mw-100"
+    style="background-color: black; color: white; height: 25vh; position: fixed; bottom: 0; width: 100%;margin-top: 20vh;padding-left: 10%;padding-top: 1%;">
+    <div class="row">
+        <div class="col" routerLink="/seite3">
+            <h2>
+                <img style="margin-right: 5px;" src="assets/icons/back.svg" alt="Back">
+                <span style="line-height: 160px;padding-right: 10px;padding-left: 5px;">
+                    {{'Back'|translate}} </span>
+            </h2>
+        </div>
+
+        <div class="col" (click)="playPause()">
+            <h2>
+                <img src="assets/icons/starticon.svg" alt="">
+                <span style="line-height: 160px;padding-right: 10px;">Start</span>
+            </h2>
+        </div>
+        <div class="col" (click)="restart()">
+            <h2> <img src="assets/icons/reset_white.svg" alt="Reset">
+                <span style="line-height: 160px;padding-right: 10px;">Reset</span>
+            </h2>
+        </div>
+        <div class="col" style="margin-top: 3%;">
+            <h2>
+                @if (!isMuted) {
+                <img (click)="toggleMute()" style="position: relative;" [hidden]="isMuted"
+                    src="assets/icons/volumeIcon.svg" alt="Volume">
+
+                }
+                @if (isMuted) {
+                <img (click)="hideit()" src="assets/icons/volume-mute.svg" alt="Mute">
+
+                }
+
+            </h2><br> <input style="margin-left: -25px;" type="range" min="0" max="1" step="0.01"
+                [(ngModel)]="videoVolume" (input)="setVolume()">
+        </div>
+        <div class="col " style="padding-top: 70px;">
+            <h2>
+                <a (click)="switchLanguage('de')" style="color: red;padding-right: 10px;">DE</a> | <a
+                    style="padding-left: 10px;" (click)="switchLanguage('en')" s>EN</a>
+            </h2>
+
+        </div>
+    </div>
+</div>

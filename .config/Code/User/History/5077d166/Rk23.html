@@ -1,0 +1,13 @@
+<div class="row ">
+  <hr style="width: 90%;margin: auto;border: 2px solid black;">
+</div>
+
+<div class="row">
+  <h2 style="margin-left: 20%;padding-top: 30px;padding-bottom: 1%;">{{'Texteingabe'|translate}}: </h2>
+  <div style="text-align:center">
+    <input style="border-radius: 10px;padding-bottom: 1%;" (input)="onInputChange($event)" class="input" value={{value}}
+      placeholder="" />
+    <div style="text-align:center" class="simple-keyboard"></div>
+
+  </div>
+</div>

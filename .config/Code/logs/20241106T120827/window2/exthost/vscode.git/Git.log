@@ -1,0 +1,20 @@
+2024-11-06 12:09:56.387 [info] Log level: Info
+2024-11-06 12:09:56.388 [info] Validating found git in: "git"
+2024-11-06 12:09:56.388 [info] Using git "2.43.2" from "git"
+2024-11-06 12:09:56.388 [info] > git rev-parse --show-toplevel [4ms]
+2024-11-06 12:09:56.388 [info] > git rev-parse --git-dir --git-common-dir [8ms]
+2024-11-06 12:09:56.388 [info] Open repository: /home/marion
+2024-11-06 12:09:56.389 [info] > git config --get commit.template [16ms]
+2024-11-06 12:09:56.412 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [15ms]
+2024-11-06 12:09:56.424 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-06 12:09:56.428 [info] > git rev-parse refs/remotes/origin/master [4ms]
+2024-11-06 12:09:56.801 [info] > git fetch [453ms]
+2024-11-06 12:09:56.837 [info] > git status -z -uall [399ms] (cancelled)
+2024-11-06 12:09:56.838 [info] > git config --get commit.template [20ms]
+2024-11-06 12:09:56.896 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [43ms]
+2024-11-06 12:09:56.897 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [50ms]
+2024-11-06 12:09:56.897 [info] > git config --get commit.template [61ms]
+2024-11-06 12:09:56.903 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-06 12:09:56.912 [warning] ENOENT: no such file or directory, open '/home/marion/.git/refs/remotes/origin/master'
+2024-11-06 12:09:56.913 [info] > git rev-parse refs/remotes/origin/master [1ms]
+2024-11-06 12:09:56.915 [info] > git rev-parse refs/remotes/origin/master [12ms]

@@ -1,0 +1,32 @@
+2024-11-06 12:25:31.955 [info] Extension host with pid 17490 started
+2024-11-06 12:25:31.955 [info] Skipping acquiring lock for /home/marion/.config/Code/User/workspaceStorage/c4f70ef94bd327dc9af641c51028476c.
+2024-11-06 12:25:31.997 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2024-11-06 12:25:32.007 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2024-11-06 12:25:32.052 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-11-06 12:25:32.338 [info] Eager extensions activated
+2024-11-06 12:25:32.389 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 12:25:32.392 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 12:25:32.434 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onStartupFinished', root cause: GitHub.vscode-pull-request-github
+2024-11-06 12:25:32.471 [info] ExtensionService#_doActivateExtension ms-vscode-remote.remote-containers, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 12:25:32.605 [info] ExtensionService#_doActivateExtension GitHub.vscode-pull-request-github, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 12:25:35.325 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2024-11-06 12:25:35.386 [info] ExtensionService#_doActivateExtension ritwickdey.LiveServer, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 12:25:35.440 [info] ExtensionService#_doActivateExtension GitLab.gitlab-workflow, startup: false, activationEvent: 'onStartupFinished'
+2024-11-06 12:25:48.357 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:typescript'
+2024-11-06 12:25:48.424 [info] ExtensionService#_doActivateExtension Angular.ng-template, startup: false, activationEvent: 'onLanguage:typescript'
+2024-11-06 12:25:48.777 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-11-06 12:26:07.883 [warning] [Decorations] CAPPING events from decorations provider vscode.git 18861
+2024-11-06 12:26:11.075 [warning] [Decorations] CAPPING events from decorations provider vscode.git 18861
+2024-11-06 12:26:12.392 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2024-11-06 12:28:38.421 [warning] [Decorations] CAPPING events from decorations provider vscode.git 18861
+2024-11-06 12:31:40.928 [warning] [Decorations] CAPPING events from decorations provider vscode.git 18861
+2024-11-06 12:33:05.801 [warning] [Decorations] CAPPING events from decorations provider vscode.git 18861
+2024-11-06 12:33:17.905 [warning] [Decorations] CAPPING events from decorations provider vscode.git 20000
+2024-11-06 12:33:20.985 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2024-11-06 12:34:02.587 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2024-11-06 12:35:23.942 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2024-11-06 12:35:26.546 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2024-11-06 12:36:37.810 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2024-11-06 12:38:28.938 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2024-11-06 12:38:41.387 [warning] [Decorations] CAPPING events from decorations provider vscode.git 20000
+2024-11-06 12:38:44.872 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000

@@ -1,0 +1,19 @@
+#card{
+    transition: width 3s;
+}
+#card:hover{
+    width: 500px;
+}
+h1{
+    font-family: 'Courgette', cursive;
+}
+#pg{
+    font-family: 'Rubik Maps', system-ui; 
+}
+h5{
+    font-family: 'Paytone One', sans-serif; 
+    font-size: larger; 
+}
+.bil{
+    width: 100vh;
+}

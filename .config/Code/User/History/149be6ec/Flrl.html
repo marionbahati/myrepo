@@ -1,0 +1,228 @@
+<mat-card>
+  <mat-card-content>
+    <div style="background-color: rgb(48, 125, 148); color: white;padding: 30px;">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary  " style="background-color: rgb(85, 85, 104); color: white;border-radius: 25px;">
+        <div class="container-fluid ">
+          <a class="navbar-brand " href="#" style="color: rgb(15, 207, 175);">MARION SCHOOLS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/start">Start</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Aktuelles</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Unsere Schule
+                </a>
+                <ul class="dropdown-menu" style="background-color: aliceblue;">
+                  <li><a class="dropdown-item" href="#">MausKlasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Zebrakalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Delfinkalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">MausKlasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Zebrakalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Delfinkalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">MausKlasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Zebrakalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Delfinkalasse</a></li>
+                  
+      
+                </ul>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+
+<div>
+    <div style="position: relative;">
+      <img 
+        src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="img-fluid " alt="..." style="height: 50vh;width: 100%;">
+    
+    <div  class="position-absolute top-50 start-50 translate-middle" >
+      <button mat-button [matMenuTriggerFor]="animals"  style="padding-left: 50px;border-radius: 25px; padding-right: 50px;padding-top: 30px;padding-bottom: 30px;">ABOUT US</button>
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+</mat-menu>
+
+<mat-menu #vertebrates="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+  <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+  <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+  <button mat-menu-item>Birds</button>
+  <button mat-menu-item>Mammals</button>
+</mat-menu>
+
+<mat-menu #invertebrates="matMenu">
+  <button mat-menu-item i18n>Insects</button>
+  <button mat-menu-item>Molluscs</button>
+  <button mat-menu-item>Crustaceans</button>
+  <button mat-menu-item>Corals</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+
+<mat-menu #fish="matMenu">
+  <button mat-menu-item>Baikal oilfish</button>
+  <button mat-menu-item>Bala shark</button>
+  <button mat-menu-item>Ballan wrasse</button>
+  <button mat-menu-item>Bamboo shark</button>
+  <button mat-menu-item>Banded killifish</button>
+</mat-menu>
+
+<mat-menu #amphibians="matMenu">
+  <button mat-menu-item>Sonoran desert toad</button>
+  <button mat-menu-item>Western toad</button>
+  <button mat-menu-item>Arroyo toad</button>
+  <button mat-menu-item>Yosemite toad</button>
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Banded Day Gecko</button>
+  <button mat-menu-item>Banded Gila Monster</button>
+  <button mat-menu-item>Black Tree Monitor</button>
+  <button mat-menu-item>Blue Spiny Lizard</button>
+  <button mat-menu-item disabled>Velociraptor</button>
+</mat-menu>
+</div>
+    </div>
+  </div>
+    <div class="row" style="background-color: aliceblue;">
+      <div class="col text-center p-5">
+        <h2>{{ currentDate | date }}</h2>
+        <h1>Schulanmeldungen 2023 (zum Schuljahr 2024/25)</h1>
+        <p >
+ 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Veniam aperiam et magni. Veniam sapiente rem eum id
+          similique eligendi quam architecto praesentium itaque
+           eaque vero provident, corrupti, ex, ipsa facere hic
+          soluta expedita nemo repellendus quibusdam distinctio!
+           Nostrum aperiam perspiciatis mollitia quis accusantium
+          expedita, eos molestiae ea, repellat, architecto perfer
+          endis. Voluptate eveniet, eos itaque aliquam aut
+          perferendis. Quod, vel? Iusto dicta amet eveniet ratione 
+          facere enim, dignissimos voluptates laudantium?
+          Quidem sunt vitae cumque non natus provident maxime perfe
+          endis eius voluptatibus alias expedita eos,
+          molestias aspernatur nobis dicta architecto nulla sed r
+          atione? Inventore repellendus iste molestias reiciendis
+          nemo doloribus quia illo, nobis quo debitis magnam beatae.
+           Asperiores provident nemo veritatis quam illo, ab
+          dolorem repellat et facere voluptatum veniam totam dicta 
+          culpa, neque dolorum ex voluptatibus sed inventore
+          animi ut odio maiores corrupti! Quis unde eaque recusandae,
+           nesciunt optio numquam perspiciatis cumque nostrum
+          voluptatem cum eius eos soluta alias illo earum.
+        </p>
+      </div>
+
+    </div>
+<div class="row" style="background-color: rgb(48, 125, 148); padding: 30px; color: white;">
+  <div class="col" >
+    <p class="text-center">Herzlich Wilkommen</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col text-center p-5">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708"/>
+              <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708"/>
+            </svg>
+              GOVERNANCE
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <svg style="font-weight: bold;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
+            </svg>
+                   ENVIRONMENT
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <svg style="font-weight: 900;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+            </svg>
+              OUR POLICY
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="pt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Obcaecati sed asperiores possimus accusantium voluptates vel</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Obcaecati sed asperiores possimus accusantium voluptates vel</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Obcaecati sed asperiores possimus accusantium voluptates vel</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Obcaecati sed asperiores possimus accusantium voluptates vel</p>
+  </div>
+</div>
+
+<div class="row" style=" background-color: rgb(48, 125, 148);">
+  <div class="col mx-auto  text-center" style="max-width: 30%; color: white; ">
+    <h1 style="padding-top: 20px;text-decoration-line: underline;">Wichtige Links</h1>
+    <mat-list>
+      <mat-list-item>Start</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Impressum</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Datenschutz</mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
+  </div>
+
+</div>
+
+
+
+  </mat-card-content>
+</mat-card>

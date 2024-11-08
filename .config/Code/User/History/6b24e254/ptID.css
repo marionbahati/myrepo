@@ -1,0 +1,15 @@
+#card{
+    transition: height 3s;
+}
+#card:hover{
+    border-bottom:40px;
+}
+h1{
+    font-family: 'Courgette', cursive;
+}
+#pg{
+    font-family: 'Rubik Maps', system-ui; 
+}
+h3{
+    font-family: 'Paytone One', sans-serif;  
+}

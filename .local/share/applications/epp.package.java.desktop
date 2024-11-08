@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Terminal=false
+Encoding=UTF-8
+Version=1.1
+Name=Eclipse IDE for Java Developers - 2024-06
+StartupWMClass=Eclipse
+Exec=/home/marion/eclipse/java-2024-06/eclipse/eclipse
+Categories=Development;IDE;Eclipse
+Icon=/home/marion/eclipse/java-2024-06/eclipse/icon.xpm

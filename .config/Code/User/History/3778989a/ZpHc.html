@@ -1,0 +1,43 @@
+
+<div class="container" style="max-height: 100%;">
+  
+  
+    <div class="text-center align-middle"
+      style="display: flex; align-items: center;justify-content: center; padding-top: 60%;">
+  
+      <a (click)="switchLanguage('de')">Deutsch</a>
+      <div>|</div>
+      <a (click)="switchLanguage('en')">English</a>
+    </div>
+  
+    <hr style="width: 80%; margin: auto;color: red;font-weight: bold; ">
+    <p class="text-center">{{'hello'|translate}}</p>
+    <div>
+      <p class="text-center mt-3"></p>
+    </div>
+  </div>
+  <div>
+  
+  </div>
+  <div class="row d-flex text-center" >
+    <div>
+      <a routerLink="page1" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left"
+          viewBox="0 0 16 16">
+          <path
+            d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
+        </svg></a>
+    </div>
+    <div>
+      <a routerLink="page2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right"
+          viewBox="0 0 16 16">
+          <path
+            d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
+        </svg></a>
+    </div>
+  </div>
+  <div>
+  
+    
+  </div>

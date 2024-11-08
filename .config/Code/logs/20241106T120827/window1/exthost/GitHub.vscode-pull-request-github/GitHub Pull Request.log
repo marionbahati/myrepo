@@ -1,0 +1,55 @@
+2024-11-06 12:08:37.401 [warning] /home/marion/.ssh/config: ENOENT: no such file or directory, open '/home/marion/.ssh/config'
+2024-11-06 12:08:37.401 [info] Activation> Extension version: 0.78.1
+2024-11-06 12:08:39.510 [info] Looking for git repository
+2024-11-06 12:08:39.510 [info] Found 0 repositories during activation
+2024-11-06 12:08:39.510 [info] Git repository found, initializing review manager and pr tree view.
+2024-11-06 12:08:39.515 [info] Registering git provider
+2024-11-06 12:08:39.515 [info] Review+0> Validate state in progress
+2024-11-06 12:08:39.515 [info] Review+0> Validating state...
+2024-11-06 12:08:39.515 [info] Review+1> Validate state in progress
+2024-11-06 12:08:39.515 [info] Review+1> Validating state...
+2024-11-06 12:08:39.515 [info] Review+2> Validate state in progress
+2024-11-06 12:08:39.515 [info] Review+2> Validating state...
+2024-11-06 12:08:39.515 [info] Review+3> Validate state in progress
+2024-11-06 12:08:39.515 [info] Review+3> Validating state...
+2024-11-06 12:08:39.515 [info] Review+4> Validate state in progress
+2024-11-06 12:08:39.515 [info] Review+4> Validating state...
+2024-11-06 12:08:39.625 [info] Repo state for file:///home/marion/visualisation/d3visualisationgraph changed.
+2024-11-06 12:08:39.625 [info] Repo file:///home/marion/visualisation/d3visualisationgraph has already been setup.
+2024-11-06 12:08:39.702 [info] Repo state for file:///home/marion/visualisation/d3visualisationgraph-1 changed.
+2024-11-06 12:08:39.702 [info] Repo file:///home/marion/visualisation/d3visualisationgraph-1 has already been setup.
+2024-11-06 12:08:39.762 [info] Found GitHub remote for folder /home/marion/visualisation/d3visualisation
+2024-11-06 12:08:39.783 [info] Found GitHub remote for folder /home/marion/visualisation/d3trials
+2024-11-06 12:08:39.813 [info] Found GitHub remote for folder /home/marion/visualisation
+2024-11-06 12:08:40.172 [info] Trying to use globalState for assignableUsers.
+2024-11-06 12:08:40.680 [info] Review+3> No matching pull request metadata found locally for current branch main
+2024-11-06 12:08:40.814 [info] Trying to use globalState for assignableUsers.
+2024-11-06 12:08:40.884 [info] Trying to use globalState for assignableUsers.
+2024-11-06 12:08:41.022 [info] Using globalState assignableUsers for 1.
+2024-11-06 12:08:41.091 [info] Review+4> No matching pull request metadata found locally for current branch main
+2024-11-06 12:08:41.114 [info] Review+2> No matching pull request metadata found locally for current branch main
+2024-11-06 12:08:41.303 [info] Using globalState assignableUsers for 1.
+2024-11-06 12:08:41.305 [info] Using globalState assignableUsers for 1.
+2024-11-06 12:08:41.476 [info] Review+3> No matching pull request metadata found on GitHub for current branch main
+2024-11-06 12:08:41.476 [info] Review+2> No matching pull request metadata found on GitHub for current branch main
+2024-11-06 12:08:41.817 [info] Review+4> No matching pull request metadata found on GitHub for current branch main
+2024-11-06 12:08:41.823 [info] GitHubServer> Received fallback response from the server: {"error":"API V3 is no longer supported. Use API V4 instead."}
+2024-11-06 12:08:41.823 [warning] No remotes found. The following remotes are missing: origin, upstream
+2024-11-06 12:08:41.823 [info] No GitHub remotes found for folder /home/marion/visualisation/d3visualisationgraph-1
+2024-11-06 12:08:41.825 [info] Trying to use globalState for assignableUsers.
+2024-11-06 12:08:42.057 [info] Using globalState assignableUsers for 0.
+2024-11-06 12:08:42.142 [info] GitHubServer> Received fallback response from the server: {"error":"API V3 is no longer supported. Use API V4 instead."}
+2024-11-06 12:08:42.142 [warning] No remotes found. The following remotes are missing: origin, upstream
+2024-11-06 12:08:42.142 [info] No GitHub remotes found for folder /home/marion/visualisation/d3visualisationgraph
+2024-11-06 12:08:42.146 [info] Trying to use globalState for assignableUsers.
+2024-11-06 12:08:42.191 [info] Review+0> No matching pull request metadata found locally for current branch main
+2024-11-06 12:08:42.191 [info] Review+0> No matching pull request metadata found on GitHub for current branch main
+2024-11-06 12:08:42.289 [info] Review+1> No matching pull request metadata found locally for current branch main
+2024-11-06 12:08:42.290 [info] Review+1> No matching pull request metadata found on GitHub for current branch main
+2024-11-06 12:08:42.292 [info] Repo state for file:///home/marion/visualisation/d3visualisation changed.
+2024-11-06 12:08:42.292 [info] Repo file:///home/marion/visualisation/d3visualisation has already been setup.
+2024-11-06 12:08:42.307 [info] Repo state for file:///home/marion/visualisation/d3trials changed.
+2024-11-06 12:08:42.307 [info] Repo file:///home/marion/visualisation/d3trials has already been setup.
+2024-11-06 12:08:42.337 [info] Using globalState assignableUsers for 0.
+2024-11-06 12:08:42.387 [info] Repo state for file:///home/marion/visualisation changed.
+2024-11-06 12:08:42.387 [info] Repo file:///home/marion/visualisation has already been setup.

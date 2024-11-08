@@ -1,0 +1,18 @@
+<div>
+    <label for="relationType">Filter by Relation Type:</label>
+    <select [(ngModel)]="selectedRelation" (change)="updateGraph()">
+        <option value="none">None</option>
+        <option value="customer_of">Customer Of</option>
+        <option value="parent_of">Parent Of</option>
+        <option value="subsidiary_of">Subsidiary Of</option>
+        <option value="partner_of">Partner Of</option>
+    </select>
+</div>
+
+<div>
+    <label for="searchCompany">Search Company:</label>
+    <input type="text" [(ngModel)]="searchTerm" (input)="search()" placeholder="Enter company name">
+</div>
+
+<!-- Graph container for D3.js -->
+<div #graphContainer class="graph-container"></div>

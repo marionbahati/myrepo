@@ -1,0 +1,35 @@
+2024-11-04T14:43:26:973 [warning]: There is no GitLab account available with access to suggestions
+2024-11-04T14:43:27:114 [info]: Extracted urls: []
+2024-11-04T14:43:27:115 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-04T14:43:27:122 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-04T14:43:27:122 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-04T14:43:27:122 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-04T14:43:27:122 [info]: Found 0 projects for urls: []
+2024-11-04T14:43:27:123 [warning]: There is no GitLab account available with access to suggestions
+2024-11-04T14:43:27:397 [info]: Extracted urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-04T14:43:27:399 [info]: Found 0 projects for urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-04T14:43:27:402 [warning]: There is no GitLab account available with access to suggestions
+2024-11-04T15:23:20:268 [info]: Extracted urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-04T15:23:20:269 [info]: Extracted urls: [
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-04T15:23:20:270 [info]: Extracted urls: []
+2024-11-04T15:23:20:355 [info]: More recent project update in progress, discarding findings for urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-04T15:23:20:355 [info]: More recent project update in progress, discarding findings for urls: [
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-04T15:23:20:356 [info]: Found 0 projects for urls: []

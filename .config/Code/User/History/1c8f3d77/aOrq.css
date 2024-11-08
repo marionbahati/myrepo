@@ -1,0 +1,45 @@
+/* .triangle-range-background-slider {
+    position: relative;
+    display: block;
+    margin-top: -27px;
+    height: 20px;
+    background: url('https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg'); 
+    background-size: 100% auto;
+    z-index: 1;
+  } */
+
+  /* .triange-range-background-slider {
+    position: relative; 
+    display: block; 
+    margin-top: -27px; 
+    border-top: 10px solid transparent; 
+    border-right: 100px solid #3071a9; 
+    border-bottom: 10px solid transparent;
+    z-index: 1; 
+} */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+  input[type=range] {
+    position: relative;
+    z-index: 3;}

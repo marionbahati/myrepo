@@ -1,0 +1,36 @@
+2024-11-06T09:17:13:026 [warning]: There is no GitLab account available with access to suggestions
+2024-11-06T09:17:13:211 [info]: Extracted urls: []
+2024-11-06T09:17:13:211 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T09:17:13:220 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T09:17:13:220 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T09:17:13:221 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T09:17:13:221 [info]: Found 0 projects for urls: []
+2024-11-06T09:17:13:222 [warning]: There is no GitLab account available with access to suggestions
+2024-11-06T09:17:13:646 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T09:17:13:669 [info]: Extracted urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T09:17:13:670 [info]: Found 0 projects for urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T09:17:13:671 [warning]: There is no GitLab account available with access to suggestions
+2024-11-06T09:22:08:566 [info]: Extracted urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T09:22:08:567 [info]: Extracted urls: [
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T09:22:08:568 [info]: Extracted urls: []
+2024-11-06T09:22:08:595 [info]: More recent project update in progress, discarding findings for urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T09:22:08:595 [info]: More recent project update in progress, discarding findings for urls: [
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T09:22:08:596 [info]: Found 0 projects for urls: []

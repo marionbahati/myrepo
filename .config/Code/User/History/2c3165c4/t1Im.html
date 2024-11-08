@@ -1,0 +1,33 @@
+<div [ngClass]="'frontpage'">
+  <div class="row" style="padding-top: 10%;">
+    <hr style=" width: 90%;margin-left: auto;margin-right: auto;border: 2px solid black;">
+  </div>
+  <div>
+    <div class="itemwrap" style="display: flex;margin: auto;margin-left: 33%;margin-top: 15vh;">
+      <div routerLink="/testShow" style="display: flex;flex-direction: column;" class="a">
+        <img style="width: 150px;height: 150px; margin-right: 20px;" src="assets/images/gear-icon-png-2226.png" alt="">
+        <div>
+          <h1>{{'SystemTest'|translate}}</h1>
+        </div>
+
+      </div>
+
+      <img class="line" style="height: 200px;margin-top: 59px;"
+        src="assets/images/iconmonstr-line-one-vertical-lined-240(3).png" alt="">
+      <div routerLink="/translate" style="display: flex; flex-direction: column;" class="b">
+
+        <img style="width: 100px;height: 100px; margin-right: 20px;" src="assets/icons/play-circle.svg" alt="">
+        <div>
+          <h1 style="margin-top:20px ;">{{'Show'|translate}}</h1>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div style="height: 25vh;width: 100%; background-color: black;
+   position: fixed; bottom: 0;left: 0;">
+
+      </div>
+    </div>
+  </div>

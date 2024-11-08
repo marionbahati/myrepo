@@ -1,0 +1,121 @@
+<div class="row " style="padding-top: 5%;">
+
+
+  <div class=" col d-flex justify-content-evenly">
+
+      <div>
+          <h2 (click)=" goToWelcome()" id="fade">
+              <a>
+                <img src="assets/icons/welcomeIcone.svg" alt="Welcome">
+                  <span style="margin-top: 15px;" style="line-height: 160px;">
+                      <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                      {{'Welcome'|translate}}</span>
+              </a>
+
+          </h2>
+      </div>
+
+      <div class="d-flex">
+          <h2 routerLink="/show" id="fade">
+              <a>
+                <img src="assets/icons/showIcon.svg" alt="Show">
+                  <span style="margin-top: 15px;" style="line-height: 160px;">
+                      <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                      {{'Show'|translate}}</span>
+
+              </a>
+          </h2>
+
+      </div>
+      <div class="d-flex">
+          <h2 routerLink="/individuell">
+              <a>
+                <img src="assets/icons/individuell.svg" alt="Individuell">
+                 <span style="margin-top: 15px;" style="line-height: 160px;">
+                      <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+                      {{'Individuell'|translate}}</span>
+
+              </a>
+          </h2>
+
+      </div>
+  </div>
+</div>
+<div>
+
+  <hr style="margin-top: 6%;width: 90%;margin: auto; border: 2px solid black;">
+  <div class="row mt-5">
+    <h2 style="margin-top: 30px;margin-left: 15%;">{{'Themenauswahl'|translate}}</h2>
+  </div>
+  <div class="row">
+    <div class=" col d-flex justify-content-evenly mt-5">
+
+      <div class="d-flex" (click)="playDiangnostik()" id="2" #diagnostik>
+        <h2>
+          <a> @if (diagnosIsLoadiang ) {
+            <div class="spinner" style="position: absolute;margin-top: -9px;margin-left: -10px;margin-right: -10px;">
+            </div>
+
+            }
+            <img style="border: 2px solid;border-radius: 50px;padding: 5px;" src="assets/icons/diagnostik.svg" alt="Diagnosis">
+          <span> <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+            {{'Diagnosis'|translate}}</span>
+            
+          </a>
+        </h2>
+
+      </div>
+      <div class="d-flex">
+        <h2 (click)="playWissenschaft()" id="3" #wissenschaft >
+          <a> @if (scienceIsLoading ) {
+            <div class="spinner" style="position: absolute;margin-top: -9px;margin-left: -10px;margin-right: -10px;">
+            </div>
+
+            }
+           <img style="border: 2px solid;border-radius: 50px;padding: 5px;" src="assets/icons/wissenschaftIcon.png" alt="Wissenschaft" alt="">
+           <span> <img src="assets/icons/iconmonstr-line-one-vertical-lined-64.png" alt="">
+              {{'Science'|translate}}</span>
+          </a>
+        </h2>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class=" mw-100"
+style="background-color: black; color: white; height: 25vh; position: fixed; bottom: 0; width: 100%;margin-top: 20vh;padding-left: 10%;padding-top: 2%;">
+<div class="row">
+    <div class="col" routerLink="/seite3">
+     <h2>
+      <img src="assets/icons/back.svg" alt="Back">
+       <span style="line-height: 160px;padding-right: 10px;padding-left: 10px;">{{'Back'|translate}}</span>
+    </h2></div>
+
+    <div class="col" (click)="abspielen()">
+       <h2> 
+        <img src="assets/icons/starticon.svg" alt="Start"><span style="line-height: 160px;padding-right: 10px;padding-left: 10px;">Start</span>
+    </h2></div>
+    <div class="col" (click)="restart()">
+       <h2> <img src="assets/icons/reset_white.svg" alt="Reset"> <span style="line-height: 160px;padding-right: 10px;padding-left: 10px;">Reset</span></h2>
+    </div>
+    <div class="col" style="margin-top: 3%;">
+     <h2>
+       </h2> @if (!isMuted) {
+        <img (click)="toggleMute()" style="position: relative;" [hidden]="isMuted" src="assets/icons/volumeIcon.svg" alt="Volume">
+       
+        }
+        @if (isMuted) {
+            <img (click)="hideit()"  src="assets/icons/volume-mute.svg" alt="Mute">
+        
+    }
+       <br> <input style="margin-left: -25px;"  style="margin-left: -40px;" type="range" min="0" max="1" step="0.01" [(ngModel)]="videoVolume" (input)="setVolume()">
+    </div>
+    <div class="col " style="padding-top: 70px;">
+        <h2>
+        <a (click)="switchLanguage('de')" style="color: red;padding-right: 10px;">DE</a> | <a
+            style="padding-left: 10px;" (click)="switchLanguage('en')" s>EN</a>
+
+        </h2></div>
+</div>
+</div>

@@ -1,0 +1,69 @@
+2024-11-04 14:43:23.837 [warning] /home/marion/.ssh/config: ENOENT: no such file or directory, open '/home/marion/.ssh/config'
+2024-11-04 14:43:23.837 [info] Activation> Extension version: 0.78.1
+2024-11-04 14:43:25.483 [info] Looking for git repository
+2024-11-04 14:43:25.483 [info] Found 0 repositories during activation
+2024-11-04 14:43:25.483 [info] Git repository found, initializing review manager and pr tree view.
+2024-11-04 14:43:25.513 [info] Registering git provider
+2024-11-04 14:43:25.513 [info] Review+0> Validate state in progress
+2024-11-04 14:43:25.513 [info] Review+0> Validating state...
+2024-11-04 14:43:25.513 [info] Review+1> Validate state in progress
+2024-11-04 14:43:25.513 [info] Review+1> Validating state...
+2024-11-04 14:43:25.513 [info] Review+2> Validate state in progress
+2024-11-04 14:43:25.513 [info] Review+2> Validating state...
+2024-11-04 14:43:25.724 [info] Found GitHub remote for folder /home/marion/visualisation/d3visualisation
+2024-11-04 14:43:25.744 [info] Found GitHub remote for folder /home/marion/visualisation/d3trials
+2024-11-04 14:43:25.789 [info] Found GitHub remote for folder /home/marion/visualisation
+2024-11-04 14:43:26.227 [info] Trying to use globalState for assignableUsers.
+2024-11-04 14:43:26.620 [info] Review+0> No matching pull request metadata found locally for current branch main
+2024-11-04 14:43:26.658 [info] Using globalState assignableUsers for 1.
+2024-11-04 14:43:26.710 [info] Trying to use globalState for assignableUsers.
+2024-11-04 14:43:26.740 [info] Trying to use globalState for assignableUsers.
+2024-11-04 14:43:26.871 [info] Review+2> No matching pull request metadata found locally for current branch master
+2024-11-04 14:43:26.895 [info] Review+1> No matching pull request metadata found locally for current branch main
+2024-11-04 14:43:26.971 [info] Using globalState assignableUsers for 1.
+2024-11-04 14:43:26.971 [info] Using globalState assignableUsers for 1.
+2024-11-04 14:43:27.229 [info] Review+0> No matching pull request metadata found on GitHub for current branch main
+2024-11-04 14:43:27.229 [info] Review+1> No matching pull request metadata found on GitHub for current branch main
+2024-11-04 14:43:27.335 [info] Review+2> No matching pull request metadata found on GitHub for current branch master
+2024-11-04 14:43:27.377 [info] Repo state for file:///home/marion/visualisation/d3trials changed.
+2024-11-04 14:43:27.377 [info] Repo file:///home/marion/visualisation/d3trials has already been setup.
+2024-11-04 14:43:27.387 [info] Repo state for file:///home/marion/visualisation changed.
+2024-11-04 14:43:27.387 [info] Repo file:///home/marion/visualisation has already been setup.
+2024-11-04 14:43:27.396 [info] Repo state for file:///home/marion/visualisation/d3visualisation changed.
+2024-11-04 14:43:27.396 [info] Repo file:///home/marion/visualisation/d3visualisation has already been setup.
+2024-11-04 14:44:20.937 [info] Review+0> Validate state in progress
+2024-11-04 14:44:20.937 [info] Review+0> Validating state...
+2024-11-04 14:44:21.022 [info] Found GitHub remote for folder /home/marion/visualisation/d3visualisation
+2024-11-04 14:44:21.023 [info] Using in-memory cached assignable users.
+2024-11-04 14:44:21.102 [info] Review+0> No matching pull request metadata found locally for current branch main
+2024-11-04 14:44:21.623 [info] Review+0> No matching pull request metadata found on GitHub for current branch main
+2024-11-04 14:44:24.131 [info] Review+1> Validate state in progress
+2024-11-04 14:44:24.131 [info] Review+1> Validating state...
+2024-11-04 14:44:24.222 [info] Found GitHub remote for folder /home/marion/visualisation/d3trials
+2024-11-04 14:44:24.223 [info] Using in-memory cached assignable users.
+2024-11-04 14:44:24.252 [info] Review+1> No matching pull request metadata found locally for current branch main
+2024-11-04 14:44:24.649 [info] Review+1> No matching pull request metadata found on GitHub for current branch main
+2024-11-04 14:45:25.613 [info] Review+0> Validate state in progress
+2024-11-04 14:45:25.613 [info] Review+0> Validating state...
+2024-11-04 14:45:25.690 [info] Found GitHub remote for folder /home/marion/visualisation/d3visualisation
+2024-11-04 14:45:25.691 [info] Using in-memory cached assignable users.
+2024-11-04 14:45:25.739 [info] Review+0> No matching pull request metadata found locally for current branch main
+2024-11-04 14:45:26.193 [info] Review+0> No matching pull request metadata found on GitHub for current branch main
+2024-11-04 14:45:31.696 [info] Review+0> Validate state in progress
+2024-11-04 14:45:31.696 [info] Review+0> Validating state...
+2024-11-04 14:45:31.732 [info] Found GitHub remote for folder /home/marion/visualisation/d3visualisation
+2024-11-04 14:45:31.732 [info] Using in-memory cached assignable users.
+2024-11-04 14:45:31.825 [info] Review+0> No matching pull request metadata found locally for current branch main
+2024-11-04 14:45:32.172 [info] Review+0> No matching pull request metadata found on GitHub for current branch main
+2024-11-04 14:46:25.628 [info] Review+1> Validate state in progress
+2024-11-04 14:46:25.628 [info] Review+1> Validating state...
+2024-11-04 14:46:25.637 [info] Found GitHub remote for folder /home/marion/visualisation/d3trials
+2024-11-04 14:46:25.638 [info] Using in-memory cached assignable users.
+2024-11-04 14:46:25.705 [info] Review+1> No matching pull request metadata found locally for current branch main
+2024-11-04 14:46:26.064 [info] Review+1> No matching pull request metadata found on GitHub for current branch main
+2024-11-04 15:20:46.825 [info] Review+0> Validate state in progress
+2024-11-04 15:20:46.825 [info] Review+0> Validating state...
+2024-11-04 15:20:46.919 [info] Found GitHub remote for folder /home/marion/visualisation/d3visualisation
+2024-11-04 15:20:46.920 [info] Using in-memory cached assignable users.
+2024-11-04 15:20:46.943 [info] Review+0> No matching pull request metadata found locally for current branch main
+2024-11-04 15:20:47.327 [info] Review+0> No matching pull request metadata found on GitHub for current branch main

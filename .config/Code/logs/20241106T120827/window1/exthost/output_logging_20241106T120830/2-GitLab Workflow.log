@@ -1,0 +1,62 @@
+2024-11-06T12:08:40:776 [warning]: There is no GitLab account available with access to suggestions
+2024-11-06T12:08:41:449 [info]: Extracted urls: []
+2024-11-06T12:08:41:449 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T12:08:41:473 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T12:08:41:473 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T12:08:41:473 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T12:08:41:473 [info]: Found 0 projects for urls: []
+2024-11-06T12:08:41:474 [warning]: There is no GitLab account available with access to suggestions
+2024-11-06T12:08:42:260 [warning]: GitExtensionWrapper is missing repository for file:///home/marion/visualisation/d3visualisation
+2024-11-06T12:08:42:392 [info]: Extracted urls: [
+      "http://git.codeschaffer.de/marion/d3visualisationgraph.git",
+      "http://git.codeschaffer.de/marion/d3visualisationgraph.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:08:42:392 [info]: Found 0 projects for urls: [
+      "http://git.codeschaffer.de/marion/d3visualisationgraph.git",
+      "http://git.codeschaffer.de/marion/d3visualisationgraph.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:08:42:393 [warning]: There is no GitLab account available with access to suggestions
+2024-11-06T12:09:49:898 [info]: Extracted urls: [
+      "http://git.codeschaffer.de/marion/d3visualisationgraph.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:09:49:900 [info]: Extracted urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:09:49:907 [info]: Extracted urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:09:49:908 [info]: Extracted urls: [
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:09:49:914 [info]: Extracted urls: []
+2024-11-06T12:09:50:031 [info]: More recent project update in progress, discarding findings for urls: [
+      "http://git.codeschaffer.de/marion/d3visualisationgraph.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:09:50:032 [info]: More recent project update in progress, discarding findings for urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:09:50:033 [info]: More recent project update in progress, discarding findings for urls: [
+      "https://github.com/marionbahati/d3trials.git",
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:09:50:033 [info]: More recent project update in progress, discarding findings for urls: [
+      "https://github.com/marionbahati/d3trials.git"
+    ]
+2024-11-06T12:09:50:034 [info]: Found 0 projects for urls: []

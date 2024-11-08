@@ -1,0 +1,204 @@
+<mat-card>
+  <mat-card-content>
+    <div style="background-color: rgb(48, 125, 148); color: white;padding: 30px;">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary " style="background-color: rgb(85, 85, 104); color: white;border-radius: 25px;">
+        <div class="container-fluid ">
+          <a class="navbar-brand " href="#" style="color: rgb(15, 207, 175);">MARION SCHOOLS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Start</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Aktuelles</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Unsere Schule
+                </a>
+                <ul class="dropdown-menu" style="background-color: aliceblue;">
+                  <li><a class="dropdown-item" href="#">MausKlasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Zebrakalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Delfinkalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">MausKlasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Zebrakalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Delfinkalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">MausKlasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Zebrakalasse</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Delfinkalasse</a></li>
+                  
+      
+                </ul>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+    </div>
+
+<div>
+    <div >
+      <img style="position: relative;"
+        src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="img-fluid " alt="..." style="height: 50vh;width: 100%;">
+    </div>
+    <div >
+      <button mat-button [matMenuTriggerFor]="animals" style="position: absolute; top: 300px;left: 800px;padding-left: 50px;border-radius: 25px; padding-right: 50px;padding-top: 30px;padding-bottom: 30px;">ABOUT US</button>
+<mat-menu #animals="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+  <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+</mat-menu>
+
+<mat-menu #vertebrates="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
+  <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
+  <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
+  <button mat-menu-item>Birds</button>
+  <button mat-menu-item>Mammals</button>
+</mat-menu>
+
+<mat-menu #invertebrates="matMenu">
+  <button mat-menu-item>Insects</button>
+  <button mat-menu-item>Molluscs</button>
+  <button mat-menu-item>Crustaceans</button>
+  <button mat-menu-item>Corals</button>
+  <button mat-menu-item>Arachnids</button>
+  <button mat-menu-item>Velvet worms</button>
+  <button mat-menu-item>Horseshoe crabs</button>
+</mat-menu>
+
+<mat-menu #fish="matMenu">
+  <button mat-menu-item>Baikal oilfish</button>
+  <button mat-menu-item>Bala shark</button>
+  <button mat-menu-item>Ballan wrasse</button>
+  <button mat-menu-item>Bamboo shark</button>
+  <button mat-menu-item>Banded killifish</button>
+</mat-menu>
+
+<mat-menu #amphibians="matMenu">
+  <button mat-menu-item>Sonoran desert toad</button>
+  <button mat-menu-item>Western toad</button>
+  <button mat-menu-item>Arroyo toad</button>
+  <button mat-menu-item>Yosemite toad</button>
+</mat-menu>
+
+<mat-menu #reptiles="matMenu">
+  <button mat-menu-item>Banded Day Gecko</button>
+  <button mat-menu-item>Banded Gila Monster</button>
+  <button mat-menu-item>Black Tree Monitor</button>
+  <button mat-menu-item>Blue Spiny Lizard</button>
+  <button mat-menu-item disabled>Velociraptor</button>
+</mat-menu>
+
+    </div>
+  </div>
+    <div class="row" style="background-color: aliceblue;">
+      <div class="col text-center p-5">
+        <h2>DATE</h2>
+        <h1>Schulanmeldungen 2023 (zum Schuljahr 2024/25)</h1>
+        <p >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Veniam aperiam et magni. Veniam sapiente rem eum id
+          similique eligendi quam architecto praesentium itaque
+           eaque vero provident, corrupti, ex, ipsa facere hic
+          soluta expedita nemo repellendus quibusdam distinctio!
+           Nostrum aperiam perspiciatis mollitia quis accusantium
+          expedita, eos molestiae ea, repellat, architecto perfer
+          endis. Voluptate eveniet, eos itaque aliquam aut
+          perferendis. Quod, vel? Iusto dicta amet eveniet ratione 
+          facere enim, dignissimos voluptates laudantium?
+          Quidem sunt vitae cumque non natus provident maxime perfe
+          endis eius voluptatibus alias expedita eos,
+          molestias aspernatur nobis dicta architecto nulla sed r
+          atione? Inventore repellendus iste molestias reiciendis
+          nemo doloribus quia illo, nobis quo debitis magnam beatae.
+           Asperiores provident nemo veritatis quam illo, ab
+          dolorem repellat et facere voluptatum veniam totam dicta 
+          culpa, neque dolorum ex voluptatibus sed inventore
+          animi ut odio maiores corrupti! Quis unde eaque recusandae,
+           nesciunt optio numquam perspiciatis cumque nostrum
+          voluptatem cum eius eos soluta alias illo earum.
+        </p>
+      </div>
+
+    </div>
+<div class="row" style="background-color: rgb(48, 125, 148); padding: 30px; color: white;">
+  <div class="col" >
+    <p class="text-center">Herzlich Wilkommen</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col text-center p-5">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+       Obcaecati sed asperiores possimus accusantium voluptates vel.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Obcaecati sed asperiores possimus accusantium voluptates vel</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Obcaecati sed asperiores possimus accusantium voluptates vel</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Obcaecati sed asperiores possimus accusantium voluptates vel</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Obcaecati sed asperiores possimus accusantium voluptates vel</p>
+  </div>
+</div>
+
+<div class="row" style=" background-color: rgb(48, 125, 148);">
+  <div class="col mx-auto  text-center" style="max-width: 30%; color: white; ">
+    <h1 style="padding-top: 20px;">Wichtige Links</h1>
+    <mat-list>
+      <mat-list-item>Start</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Impressum</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>Datenschutz</mat-list-item>
+    </mat-list>
+    <mat-divider></mat-divider>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,115 @@
+2024-11-06 12:08:34.155 [info] Log level: Info
+2024-11-06 12:08:34.155 [info] Validating found git in: "git"
+2024-11-06 12:08:34.155 [info] Using git "2.43.2" from "git"
+2024-11-06 12:08:34.155 [info] > git rev-parse --show-toplevel [2ms]
+2024-11-06 12:08:34.155 [info] > git rev-parse --git-dir --git-common-dir [31ms]
+2024-11-06 12:08:34.155 [info] Open repository: /home/marion/visualisation
+2024-11-06 12:08:34.155 [info] > git config --get commit.template [19ms]
+2024-11-06 12:08:34.155 [info] > git rev-parse --show-toplevel [50ms]
+2024-11-06 12:08:34.262 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [34ms]
+2024-11-06 12:08:34.274 [info] > git rev-parse --git-dir --git-common-dir [16ms]
+2024-11-06 12:08:34.302 [info] Open repository: /home/marion/visualisation/d3visualisation
+2024-11-06 12:08:34.362 [info] > git status -z -uall [89ms]
+2024-11-06 12:08:34.363 [info] > git config --get commit.template [25ms]
+2024-11-06 12:08:35.204 [info] > git fetch [903ms]
+2024-11-06 12:08:35.209 [info] > git fetch [1156ms]
+2024-11-06 12:08:35.212 [info] > git rev-parse --show-toplevel [853ms]
+2024-11-06 12:08:35.439 [info] > git config --get commit.template [258ms]
+2024-11-06 12:08:35.637 [info] > git rev-parse --git-dir --git-common-dir [205ms]
+2024-11-06 12:08:35.736 [info] Open repository: /home/marion/visualisation/d3trials
+2024-11-06 12:08:35.738 [info] > git config --get commit.template [319ms]
+2024-11-06 12:08:35.739 [info] > git config --get commit.template [352ms]
+2024-11-06 12:08:35.740 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [367ms]
+2024-11-06 12:08:36.209 [info] > git check-ignore -v -z --stdin [204ms]
+2024-11-06 12:08:36.226 [info] > git rev-parse --show-toplevel [147ms]
+2024-11-06 12:08:36.226 [info] > git config --get commit.template [172ms]
+2024-11-06 12:08:36.227 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [193ms]
+2024-11-06 12:08:36.304 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [100ms]
+2024-11-06 12:08:36.305 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [168ms]
+2024-11-06 12:08:36.472 [info] > git rev-parse --git-dir --git-common-dir [170ms]
+2024-11-06 12:08:36.536 [info] Open repository: /home/marion/visualisation/d3visualisationgraph
+2024-11-06 12:08:36.537 [info] > git fetch [802ms]
+2024-11-06 12:08:36.698 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [252ms]
+2024-11-06 12:08:36.904 [info] > git config --get commit.template [208ms]
+2024-11-06 12:08:36.905 [info] > git rev-parse --show-toplevel [224ms]
+2024-11-06 12:08:36.905 [info] > git config --get commit.template [271ms]
+2024-11-06 12:08:36.905 [info] > git config --get commit.template [325ms]
+2024-11-06 12:08:37.318 [info] > git check-ignore -v -z --stdin [336ms]
+2024-11-06 12:08:37.319 [info] > git status -z -uall [318ms]
+2024-11-06 12:08:37.319 [info] > git rev-parse --git-dir --git-common-dir [216ms]
+2024-11-06 12:08:37.385 [info] Open repository: /home/marion/visualisation/d3visualisationgraph-1
+2024-11-06 12:08:37.455 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [139ms]
+2024-11-06 12:08:37.458 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [157ms]
+2024-11-06 12:08:37.458 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [245ms]
+2024-11-06 12:08:37.874 [warning] ENOENT: no such file or directory, open '/home/marion/visualisation/d3visualisationgraph/.git/refs/remotes/origin/main'
+2024-11-06 12:08:37.937 [info] > git config --get commit.template [519ms]
+2024-11-06 12:08:38.031 [info] > git rev-parse refs/remotes/origin/main [157ms]
+2024-11-06 12:08:38.137 [info] > git config --get commit.template [318ms]
+2024-11-06 12:08:38.204 [info] > git status -z -uall [68ms]
+2024-11-06 12:08:38.425 [info] > git status -z -uall [87ms]
+2024-11-06 12:08:38.425 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [222ms]
+2024-11-06 12:08:38.499 [warning] ENOENT: no such file or directory, open '/home/marion/visualisation/d3visualisationgraph-1/.git/refs/remotes/origin/main'
+2024-11-06 12:08:38.504 [info] > git config --get commit.template [82ms]
+2024-11-06 12:08:38.535 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [238ms]
+2024-11-06 12:08:38.535 [info] > git fetch [2000ms]
+2024-11-06 12:08:38.535 [info] Missing or invalid credentials.
+Skip silent fetch commands
+Missing or invalid credentials.
+Skip silent fetch commands
+remote: HTTP Basic: Access denied. If a password was provided for Git authentication, the password was incorrect or you're required to use a token instead of a password. If a token was provided, it was either incorrect, expired, or improperly scoped. See https://git.codeschaffer.de/help/topics/git/troubleshooting_git.md#error-on-git-fetch-http-basic-access-denied
+fatal: Authentication failed for 'https://git.codeschaffer.de/marion/d3visualisationgraph.git/'
+2024-11-06 12:08:38.580 [info] > git rev-parse refs/remotes/origin/main [81ms]
+2024-11-06 12:08:38.664 [info] > git status -z -uall [69ms]
+2024-11-06 12:08:38.735 [info] > git config --get commit.template [156ms]
+2024-11-06 12:08:38.935 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [279ms]
+2024-11-06 12:08:39.212 [warning] ENOENT: no such file or directory, open '/home/marion/visualisation/d3visualisationgraph/.git/refs/remotes/origin/main'
+2024-11-06 12:08:39.214 [info] > git check-ignore -v -z --stdin [351ms]
+2024-11-06 12:08:39.215 [info] > git status -z -uall [119ms]
+2024-11-06 12:08:39.215 [info] > git config --get commit.template [293ms]
+2024-11-06 12:08:39.225 [info] > git rev-parse refs/remotes/origin/main [12ms]
+2024-11-06 12:08:39.228 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [88ms]
+2024-11-06 12:08:39.264 [info] > git fetch [1880ms]
+2024-11-06 12:08:39.264 [info] Missing or invalid credentials.
+Skip silent fetch commands
+Missing or invalid credentials.
+Skip silent fetch commands
+remote: HTTP Basic: Access denied. If a password was provided for Git authentication, the password was incorrect or you're required to use a token instead of a password. If a token was provided, it was either incorrect, expired, or improperly scoped. See https://git.codeschaffer.de/help/topics/git/troubleshooting_git.md#error-on-git-fetch-http-basic-access-denied
+fatal: Authentication failed for 'https://git.codeschaffer.de/marion/d3visualisationgraph.git/'
+2024-11-06 12:08:39.439 [warning] ENOENT: no such file or directory, open '/home/marion/visualisation/d3visualisationgraph/.git/refs/remotes/origin/main'
+2024-11-06 12:08:39.557 [info] > git config --get commit.template [88ms]
+2024-11-06 12:08:39.557 [info] > git rev-parse refs/remotes/origin/main [118ms]
+2024-11-06 12:08:39.569 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [146ms]
+2024-11-06 12:08:39.602 [warning] ENOENT: no such file or directory, open '/home/marion/visualisation/d3visualisationgraph-1/.git/refs/remotes/origin/main'
+2024-11-06 12:08:39.622 [info] > git status -z -uall [53ms]
+2024-11-06 12:08:39.644 [info] > git rev-parse refs/remotes/origin/main [43ms]
+2024-11-06 12:08:39.646 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [26ms]
+2024-11-06 12:08:39.670 [warning] ENOENT: no such file or directory, open '/home/marion/visualisation/d3visualisationgraph-1/.git/refs/remotes/origin/main'
+2024-11-06 12:08:39.673 [info] > git rev-parse refs/remotes/origin/main [3ms]
+2024-11-06 12:08:39.700 [info] > git status -z -uall [6ms]
+2024-11-06 12:08:40.680 [info] > git config --local branch.main.github-pr-owner-number [312ms]
+2024-11-06 12:08:41.090 [info] > git config --local branch.main.github-pr-owner-number [160ms]
+2024-11-06 12:08:41.113 [info] > git config --local branch.main.github-pr-owner-number [233ms]
+2024-11-06 12:08:41.171 [info] > git show --textconv :src/app/newgraph/newgraph.component.ts [44ms]
+2024-11-06 12:08:41.225 [info] > git ls-files --stage -- /home/marion/visualisation/d3visualisation/src/app/newgraph/newgraph.component.ts [61ms]
+2024-11-06 12:08:41.381 [info] > git cat-file -s abecd5196609e98354ccbcfca703017b0107e229 [78ms]
+2024-11-06 12:08:41.578 [info] > git config --get commit.template [23ms]
+2024-11-06 12:08:41.578 [info] > git config --get commit.template [46ms]
+2024-11-06 12:08:41.578 [info] > git config --get commit.template [65ms]
+2024-11-06 12:08:41.579 [info] > git config --get commit.template [80ms]
+2024-11-06 12:08:41.579 [info] > git config --get commit.template [93ms]
+2024-11-06 12:08:41.730 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [37ms]
+2024-11-06 12:08:41.730 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [50ms]
+2024-11-06 12:08:41.731 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [93ms]
+2024-11-06 12:08:41.731 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [124ms]
+2024-11-06 12:08:41.757 [warning] ENOENT: no such file or directory, open '/home/marion/visualisation/d3visualisationgraph/.git/refs/remotes/origin/main'
+2024-11-06 12:08:41.776 [warning] ENOENT: no such file or directory, open '/home/marion/visualisation/d3visualisationgraph-1/.git/refs/remotes/origin/main'
+2024-11-06 12:08:41.776 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [57ms]
+2024-11-06 12:08:41.782 [info] > git rev-parse refs/remotes/origin/main [26ms]
+2024-11-06 12:08:42.018 [info] > git status -z -uall [209ms]
+2024-11-06 12:08:42.018 [info] > git rev-parse refs/remotes/origin/main [242ms]
+2024-11-06 12:08:42.190 [info] > git config --local branch.main.github-pr-owner-number [279ms]
+2024-11-06 12:08:42.288 [info] > git status -z -uall [246ms]
+2024-11-06 12:08:42.288 [info] > git status -z -uall [199ms]
+2024-11-06 12:08:42.288 [info] > git status -z -uall [149ms]
+2024-11-06 12:08:42.288 [info] > git config --local branch.main.github-pr-owner-number [102ms]
+2024-11-06 12:08:42.386 [info] > git status -z -uall [100ms]

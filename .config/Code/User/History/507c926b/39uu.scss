@@ -1,0 +1,88 @@
+svg {
+  font-size: 50px;
+  width: 60px;
+  height: 60px;
+
+}
+
+#fade {
+  opacity: 0.5;
+}
+
+ul {
+  text-align: center;
+}
+
+//  keyboard
+input {
+  margin-left: 100px;
+  width: 40%;
+  height: 200px;
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid;
+  box-sizing: border-box;
+
+}
+
+.simple-keyboard {
+  width: 80%;
+  margin-left: 10%;
+
+  margin-top: 2px;
+
+
+}
+
+.simple-keyboard.myTheme1 {
+  // background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.simple-keyboard.myTheme1 .hg-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  // background: rgba(0, 0, 0, 0.5);
+  color: white;
+
+}
+
+.simple-keyboard.myTheme1 .hg-button:active {
+  background: #1c4995;
+  color: white;
+}
+
+#root .simple-keyboard.myTheme1+.simple-keyboard-preview {
+  background: #1c4995;
+}
+
+@media screen and (max-width: 576px) {
+  #footer .col {
+    margin-left: 0px;
+    padding-top: 10vh;
+    width: 30%;
+    line-height: 40px;
+
+  }
+
+  h2 {
+    display: block;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+
+  #footer .col {
+    padding-top: 10%;
+
+  }
+
+}

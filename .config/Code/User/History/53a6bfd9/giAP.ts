@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import { NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { filter } from 'rxjs';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss'
+})
+export class HeaderComponent {
+  route: string = '';
+  constructor(private router: Router) {
+    this.router.events.subscribe(
+      {
+        next: (e: RouterEvent) => {
+
+        }
+      }
+    )
+  }
+}

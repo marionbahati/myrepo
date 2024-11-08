@@ -1,0 +1,37 @@
+img {
+    font-size: 50px;
+    width: 80px;
+    height: 70px;
+
+}
+
+
+@media screen and (max-width: 576px) {
+    .itemwrap {
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        margin-top: 30px;
+        gap: 5em;
+    }
+
+    .itemwrap .a {
+        margin-right: 5em;
+    }
+
+    .itemwrap .a h1 {
+        margin-top: 75px;
+    }
+
+    .itemwrap .b {
+        margin-right: 12em;
+    }
+
+    .itemwrap .line {
+
+
+        display: none;
+
+    }
+
+}
